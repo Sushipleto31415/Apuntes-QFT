@@ -1,0 +1,159 @@
+\documentclass[twoside]{report}
+\usepackage{subfiles}
+\usepackage{graphicx} %Requerido para insertar imágenes
+\usepackage[paper=letterpaper, left=1in,right=1in,top=1in,bottom=1in ]{geometry}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+
+\newcommand*\vtick{\textsc{\char13}}
+
+%Personalización de pies de página y encabezados
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\textcolor[RGB]{127,127,127}{Mecánica Clásica}}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,RE]{Amaro A. Díaz Concha}
+
+
+
+%Columnas más bonitas
+\usepackage{tabularx, xcolor}
+\definecolor{tcc}{RGB}{217,217,217} % Color de fondo para celdas
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\renewcommand{\arraystretch}{1.5}
+
+
+
+%Símbolos matemáticos más bonitos
+\usepackage{amsmath, amssymb, physics}
+\numberwithin{equation}{chapter} % Numeración por sección
+
+
+
+%Estilo de la bibliografía
+\usepackage[square,numbers,sort&compress]{natbib}
+\bibliographystyle{apsrev4-1} % Estilo físico
+
+
+
+\makeatletter
+\renewcommand{\part}[1]{%
+  \chapter*{#1} % Usamos \chapter* para que no se numere el "part"
+  \addcontentsline{toc}{part}{#1} % Añadimos el "part" al índice
+  \vspace{-1.5cm}  % Reducir el espacio debajo del título
+}
+\makeatother
+
+\begin{document}
+
+\subfile{portada}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+
+\subfile{caps/intro}
+
+\tableofcontents
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\newpage
+
+
+
+\subfile{caps/sumario}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subfile{caps/cap2/sistema-de-referencia}
+
+\subfile{caps/cap2/sistema-de-coordenadas}
+
+\subfile{caps/cap2/bases-coordenadas}
+
+\subfile{caps/cap2/simbolos-de-christoffel}
+
+\subfile{caps/cap2/espacio-dual}
+
+\subfile{caps/cap2/operadores-diferenciales}
+
+\subfile{caps/cap2/prop-y-res-cap2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap3/reduccion-un-cuerpo}
+
+\subfile{caps/cap3/ec-de-movimiento}
+
+\subfile{caps/cap3/ec-binet}
+
+\subfile{caps/cap3/prob-kepler}
+
+\subfile{caps/cap3/3-cuerpos}
+
+\subfile{caps/cap3/prop-y-res-cap3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap4/ligaduras}
+
+\subfile{caps/cap4/formalismo-lagran}
+
+\subfile{caps/cap4/formulacion-hamilton}
+
+\subfile{caps/cap4/dalembert}
+
+\subfile{caps/cap4/principio-hamilton}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap5/transf-canonicas}
+
+\subfile{caps/cap5/invariantes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap6/hamilton-jacobi}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap7/topologia}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          CAPÍTULO 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subfile{caps/cap8/transf-galileo}
+
+\subfile{caps/cap8/michelson-morley}
+
+\subfile{caps/cap8/transf-lorentz}
+
+\newpage
+
+\bibliography{biblio}
+
+
+\end{document}

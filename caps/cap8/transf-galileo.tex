@@ -1,0 +1,160 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\chapter{Relatividad especial}
+A finales del siglo \emph{XIX}, la comunidad de físicos tenía dos grandes descripciones de fenómenos físicos, las cuales eran incompatibles, ellas eran, la mecánica Newtoniana y la teoría electromagnética de Maxwell. Por una parte, la teoría Newtoniana asumía que todos los marcos de referencia inerciales eran equivalentes entre sí, mientras que derivado de las ecuaciones onde de Maxwell, la velocidad de la luz debía ser la misma en todos los marcos de referencia inerciales. El físico alemán \emph{Albert Einstein} desarrolló una teoría especial de relatividad la cual reemplazaba la teoría de mecánica Newtoniana  por una teoría la cual era consistente con la teoría electromagnética. En este capítulo veremos los postulados que llevaron al desarrollo de la teoría especial de la relatividad y las consecuencias que tuvieron estos en la física. [Hablar del formulamiento lagrangeano para marcos relativistas etc etc].
+
+\section{Transformaciones de Galileo}
+En la mecánia Newtoniana, un conjunto de leyes se aplican para un marco de referecia inercial, el cual está definido por la primera ley de Newton, 
+\begin{quote}
+    "\ Todo cuerpo continúa en su estado de reposo o de movimiento uniforme y restilíneo a menos que este sea obligado a cambiar dicho estado por fuerzas que actúan sobre él.\ "
+\end{quote}
+Considere dos marcos de referencia inverciales denotados por $S$ y $S\vtick$ los cuales tiene coordenadas dadas por $(t,x,y,z)$ y $(t\vtick,x\vtick,y\vtick,z\vtick)$ respectivamente. Sin perder generalidad se puede asumir que los ejes x de $S$ y $S\vtick$ están alineados. Ahora, sea $S\vtick$ un marco de referencia inercial el cual está en movimiento continuo y uniforme a una velocidad $v$ en la dirección $+x$. \\
+La mecánica Newtoniana asume que el las coordenadas del espacio-tiempo en $S$ están relacionadas con $S\vtick$ de la siguiente forma:
+\begin{equation} \label{transf-galileo}
+    \begin{aligned}
+        t\vtick&=t \\
+        x\vtick&=x-Vt \\
+        y\vtick&=y \\
+        z\vtick&=z
+    \end{aligned}
+\end{equation}
+Este conjunto se llama \emph{transformaciones de Galileo} las cuales son una expresión matemática del \emph{principio de relatividad de Galileo}:
+\begin{quote}
+    "\ Ningún experimento mecánico realizado en el interior (aislado) de un sistema de Galileo permite poner de manifiesto el movimiento de este sistema con relación a cualquier otro sistema de Galileo"
+\end{quote}
+\begin{quote} "Ningún experimento mecánico realizado en el interior (aislado) de un sistema de Galileo permite poner de manifiesto el movimiento de este sistema con relación a cualquier otro sistema de Galileo." \end{quote}
+
+
+Para estos sistemas de referencia sigue que la segunda ley de Newton:
+\begin{equation*}
+    \vec{F}=\dot{\vec{p}}
+\end{equation*}
+la cual relaciona la fuerza aplicada a un cuerpo $\vec{F}$ y el momentum $\vec{p}$, permanece invariante bajo transformaciones de Galileo, esto significa que la misma segunda ley de Newton es válida de la misma forma para ambos marcos de referencia inerciales $S$ y $S\vtick$, así mediante \eqref{transf-galileo} se tiene
+\begin{align*}
+    v\vtick& = \frac{dx\vtick}{dt}= \frac{d}{dt}(x-Vt)=v-
+    V \Rightarrow \boxed{v\vtick=v-V}\\
+    a\vtick& =\frac{dv\vtick}{dt}=\frac{d}{dt}(v-V)=\frac{dv}{dt}=a \Rightarrow \boxed{a\vtick=a}
+\end{align*}
+De lo cual se concluye que, bajo transformaciones de Galileo, la velocidad claramente resulta relativa para cada marco de referencia inercial, sin embargo, la aceleración es invariante bajo el grupo de transformaciones de Galileo. Luego, dado que en la mecánica de Newton de tiene que la masa es invariante, o sea:
+\begin{equation*}
+    m\vtick=m \Rightarrow \vec{F}\vtick=\vec{F}
+\end{equation*}
+Así, las ecuaciones de Newton son invariantes bajo el grupo de transformaciones de Galileo. Ello quiere decir que, tanto en $S$ como en $S\vtick$ se cumplen exactamente las mismas leyes. En consecuencia, no existe forma alguna de discernir experimentalmente si es $S$ el que se traslada con respecto a $S\vtick$ o $S\vtick$ con respecto a $S$, con lo cual, los siguientes casos son totalmente equivalentes
+\begin{equation}
+    \begin{aligned}
+        t\vtick &= t \quad & t\vtick &= t \\
+        x\vtick &= x - Vt \quad & \Leftrightarrow \quad x\vtick &= x + Vt \\
+        y\vtick &= y \quad & y\vtick &= y \\
+        z\vtick &= z \quad & z\vtick &= z
+    \end{aligned}
+\end{equation}
+Así se concluye que en la mecánica de Newton los conceptos de velocidad y trayectoria son relativos. \\
+Para ilustrar esto, se tiene el siguiente experimento lógico. \\
+Se considera el caso de un observador dentro de un tren sin ventanas, que se mueve a velocidad constante en línea recta. Si este observador dejara caer una pelota de masa \emph{m}  al suelo, percibiría que la trayectoria de la pelota es recta, igual que si estuviera en reposo sobre la tierra. Desde su perspectiva, no existiría forma de distinguir si el tren está en movimiento uniforme o en reposo. \\
+
+Ahora bien, si un observador externo como Superman, estacionario fuera del tren, utilizara su visión de rayos X para observar la caída de la pelota de masa \emph{m}, notaría que esta describe una trayectoria curva. Esto se debe a que la pelota mantiene la velocidad horizontal del tren al momento de ser soltada. \\ 
+La persona que se encuentra dentro del tren mediante sus experimentos de dejar caer la pelota, concluye que la velocidad del tren debe ser cero, pero, Superman observa que no es así, sin embargo, para ambos observadores las leyes de la física son las mismas y como se comprobó anteriormente, ambos observadores siguen la misma segunda ley de Newton. De ello se puede concluir que, para la mecánica Newtoniana bajo transformaciones de Galileo
+\begin{itemize}
+    \item La velocidad es relativa
+    \item La aceleración es absoluta
+    \item La masa es absoluta
+    \item La trayectoria es relativa
+    \item La fuerza es absoluta
+    \item La distancia entre dos puntos es absoluta
+    \item El intervalo de tiempo entre dos eventos es absoluto, es decir, el tiempo es absoluto
+\end{itemize}
+Ahora se realiza la siguiente pregunta: \\
+\\
+\textbf{¿Satisfacen las leyes de la teoría electromagnética de Maxwell, el principio de relatividad de Galileo?} \\
+\\
+La respuesta corta a esta pregunta es, no, el porqué se verá a continuación. \\
+Entre los años 1854 y 1865, el físico y matemático Escocés \emph{James C. Maxwell} desarolló la teoría electromagnética, cuyas ecuaciones fundamentales se conocen como las ecuaciones de maxwell, las cuales constan de cuatro \footnote{En el paper original de Maxwell "\ A dynamical theory of the electromagnetic field\ " (1865) en el cual se presentaban 8 ecuaciones diferentes, de las cuales, 6 se separaban para cada eje cartesiano, resultando en un set de 20 ecuaciones, posteriormente, bajo notación de Heaveside, se reducirían a lo que conocemos hoy en día.} ecuaciones las cuales describen los campo eléctricos y magnéticos
+\begin{equation}
+    \begin{aligned}
+        \vec{\nabla} \cdot \vec{E}& = \frac{\rho}{\varepsilon_0} \\
+        \vec{\nabla} \cdot \vec{B}& = 0 \\
+        \vec{\nabla} \times \vec{E} & = -\partial_t \vec{B} \\
+        \vec{\nabla} \times \vec{B} & = \mu_0 \left( \vec{J} + \varepsilon_0 \partial_t \vec{E} \right)
+    \end{aligned}
+\end{equation}
+Las cuales, en el vacío sin cargas se reducen a el siguiente conjunto:
+\begin{equation}
+    \begin{aligned}
+        \vec{\nabla} \cdot \vec{E}& = 0 \\
+        \vec{\nabla} \cdot \vec{B}& = 0 \\
+        \vec{\nabla} \times \vec{E} & = -\partial_t \vec{B} \\
+        \vec{\nabla} \times \vec{B} & = \mu_0  \varepsilon_0 \partial_t \vec{E}
+    \end{aligned}
+\end{equation}
+Es importante notar que las ecuaciones de maxwell en el vacío forman un conjunto compatible, por tanto ahora es importante analizar dicha compatibilidad, para ello habrá que manipular las ecuaciones tal que dependan solo de $\vec{E}$ ó $\vec{B}$.
+Para ello habrá que subir el orden de las derivadas en las ecuaciones, tal que, tomando el rotacional de la ley de Gauss para magnetismo
+\begin{align*}
+    \vec{\nabla} \times \vec{\nabla} \times \vec{B} & = \varepsilon_0 \mu_0 \vec{\nabla} \times \partial_t \vec{E} \\
+    & = \varepsilon_0 \mu_0 \partial_t (\vec{\nabla} \times \vec{E}) \quad , \quad \text{como} \quad \vec{\nabla} \times \vec{E}  = -\partial_t \vec{B} \\
+    & = \varepsilon_0 \mu_0 \partial_t (- \partial_t \vec{B}) \\
+    & = - \varepsilon_0 \mu_0 \partial^2_{t^2} \vec{B}
+\end{align*}
+Ahora usando la identidad dada por
+\begin{equation} \label{identidad-rotacional}
+     \vec{\nabla} \times \vec{\nabla} \times \vec{A}=\vec{\nabla} (\vec{\nabla}\cdot \vec{A}) - \nabla^2\vec{A}
+\end{equation}
+Reemplazando $\vec{A}$ por la inducción magnética $\vec{B}$ se tiene lo siguiente
+\begin{align*}
+        \vec{\nabla} \times \vec{\nabla} \times \vec{B} & = \vec{\nabla} (\vec{\nabla}\cdot \vec{B}) - \nabla^2\vec{B} \quad , \quad \text{como} \quad \vec{\nabla} \cdot \vec{B} = 0 \\
+        & = \nabla^2\vec{B}
+\end{align*}
+Introduciendo el resultado en la expresión anterior se obtiene que: 
+\begin{equation} \label{onda-mag}
+    \nabla^2\vec{B}-\varepsilon_0\mu_0 \partial^2_{t^2}\vec{B}=0 
+\end{equation}
+Ahora mediante el mismo procedimiento, se toma el rotacional a la ley de Faraday:
+\begin{align*}
+     \vec{\nabla} \times \vec{\nabla} \times \vec{E} & = -\vec{\nabla} \times \partial_t\vec{B} \\
+     & = - \partial_t(\vec{\nabla} \times \vec{B}) \quad , \quad \text{como} \quad \vec{\nabla} \times \vec{B}  = \mu_0  \varepsilon_0 \partial_t \vec{E} \\
+     & = \varepsilon_0\mu_0 \partial_t(\partial_t \vec{E}) \\
+     & =  \varepsilon_0\mu_0 \partial^2_{t^2} \vec{E}
+\end{align*}
+Reemplazando $\vec{A}$ por $\vec{E}$ en la identidad \eqref{identidad-rotacional} se obtiene que:
+\begin{align*}
+    \vec{\nabla} \times \vec{\nabla} \times \vec{E}& =\vec{\nabla} (\vec{\nabla}\cdot \vec{E}) - \nabla^2\vec{E} \quad , \quad \text{como} \quad \vec{\nabla} \cdot \vec{E}=0 \\
+    & = -\nabla^2\vec{E}
+\end{align*}
+Entonces, usando este resultado en la expresión anterior se obtiene que:
+\begin{equation} \label{onda-elec}
+        \nabla^2\vec{E}-\varepsilon_0\mu_0 \partial^2_{t^2}\vec{E}=0 
+\end{equation}
+Las ecuaciones \eqref{onda-mag} y \eqref{onda-elec} tienen la forma general de la ecuación de onda
+\begin{equation} \label{ec-onda}
+    \nabla^2\Psi - \varepsilon_0 \mu_0 \partial^2_{t^2}\Psi=0
+\end{equation}
+Estas ondas son llamadas ondas electromagnéticas, para las cuales la rapidez de propagación de la onda, en el vació, es constante ($\varepsilon_0$ y $\mu_0$ son constantes universales, las cuales fueron describiertas por F. Hertz en el Karlsruhe, 1887), esta constante de propagación $\frac{1}{\sqrt{\varepsilon_0\mu_0}}$ corresponde a la velocidad de la luz en el vacío y su valor numérico es de $c=2.98 \cdot 10^{8}$ [m/s].  \\
+Esto condujo a Maxwell a postular que \textbf{la luz es una onda electromagnética}. \\
+Ahora, para responder a la pregunta de forma más completa, es necesario mostrar que las ecuaciones de maxwell cambian su forma matemática bajo una transformación de Galileo, o sea, las ecuaciones de Maxwell no son invariantes de forma bajo una transformación de Galileo. Tampoco son invariante de forma las ecuaciones de onda electromagnéticas. \\
+Se mostrará que las ecuaciones de onda electromagnética no son invariantes bajo una transformación de Galileo. Para ello se trabajará con una sola dimensión espacial:
+\begin{equation}
+    \begin{aligned}
+        t\vtick & = t \\
+        x \vtick & = x + Vt
+    \end{aligned}
+\end{equation}
+Entonces, los términos de derivada parcial
+\begin{align*}
+    \frac{\partial}{\partial t} & =\frac{\partial t\vtick}{\partial t} \frac{\partial }{\partial t\vtick} + \frac{\partial x\vtick}{\partial t}\frac{\partial}{\partial x\vtick}=\frac{\partial}{\partial t\vtick} + V\frac{\partial}{\partial x\vtick} \\
+    \frac{\partial}{\partial x} & = \frac{\partial t\vtick}{\partial x}\frac{\partial}{\partial t\vtick} + \frac{\partial x\vtick}{\partial x}\frac{\partial}{\partial x\vtick} = \frac{\partial}{\partial x\vtick}
+\end{align*}
+Así,
+\begin{align*}
+     \frac{\partial^2}{\partial t^2} & = \frac{\partial^2}{\partial t^2\vtick} + V^2\frac{\partial^2}{\partial x^2\vtick}-2V \frac{\partial^2}{\partial x\vtick \partial t\vtick} \\
+     \frac{\partial^2}{\partial x^2} & = \frac{\partial^2}{\partial x^2\vtick}
+\end{align*}
+Así, reemplazando esto en la ecuación de onda electromagnética \eqref{ec-onda} se obtiene que:
+\begin{equation}
+    \frac{\partial^2\Psi}{\partial x^2} - \frac{1}{c^2}\frac{\partial^2\Psi}{\partial t^2} = \left( 1- \frac{V^2}{c^2}\right)\frac{\partial^2\Psi}{\partial x^2\vtick}  - \frac{1}{c^2}\frac{\partial^2\Psi}{\partial t^2\vtick} + \frac{2V}{c^2}\frac{\partial^2\Psi}{\partial x\vtick \partial t\vtick}=0
+\end{equation}
+La cual corresponde a la ecuación de onda con respecto al sistema no inercial $S\vtick$, la cual claramente no es invariante bajo transformaciones de Galileo. \\
+Con lo cual se puede decir que, las ecuaciones de Maxwell predicen la existencia de ondas electromagnéticas las cuales se propagan a una velocidad constante, la velocidad de la luz $c$, el medio en el cual estas ondas se propagan fue llamado, en el siglo $XIX$, éter. El sistema de referencia inercial con respecto al cual las ecuaciones de Maxwell son particularmente simples fue el sistema elegido por Maxwell para presentar sus ecuaciones y estaba en reposo con respecto al éter y fue llamado sistema éter. El éter es llamado también el éter luminífero, lo que significa portador de luz.
+[Explayarse más]
+\end{document}

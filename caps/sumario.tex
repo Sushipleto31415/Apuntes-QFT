@@ -1,0 +1,50 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+
+\vspace{3cm}
+\chapter{Sumario de principios elementales}
+Cuando se escucha por vez primera el término mecánica clásica lo primero que se le viene a la cabeza son calcular Lagrangeanos, Hamiltonianos y problemas imposibles, pero, nada de eso será posible ain conocer los conceptos previos necesarios para llevar a cabo tales proezas. \\
+
+El movimiento de los cuerpos materiales supone el objeto de una de las más antiguas investigaciones realizadas por los pioneros de lo que hoy conocemos como física. De sus esfuerzos ha evolucionado un vasto campo conocido como la \emph{Mecánica analítica} o \emph{dinámica}, o simplemente \emph{mecánica} \footnote{Decir mecánica como sinónimo de dinámica es incorrecto, mientras que la dinámica se centra en analizar el porqué del movimiento, o sea, las fuerzas, mientras que la mecánica se centra en analizar el mismo porqué pero con el añadido de analizar el movimiento de los cuerpos, o sea, la mecánica es la unión de la cinemática con la dinámica.}. En el siglo \textit{XX} se ha acuñado el término \emph{Mecánica Clásica} para hacer la distinción de ella frente a nuevas teorías físicas, especialmente la distinción frente a la mecánica cuántica. Por tanto, seguiremos el uso de este término para incluir el tipo de mecánica que surge de la teoría especial de la relatividad, \cite{goldstein2002classical}.
+
+\section{Mecánica de una partícula}
+Como ya sabrán de vuestros cursos de física pasados, la mecánica de una partícula se puede expresar de la siguiente manera. \\
+Sea $\vec{r}$  el vector \footnote{Es común denotar a los vectores por tan solo una letra en negrita} radio de una partícula hacia algún dado origen correspondiente a un sistema de coordenadas y $\vec{v}$ su velocidad vectorial tal que
+\begin{equation}
+    \vec{v}=\frac{d\vec{r}}{dt}
+\end{equation}
+Es completamente válido y algo más estético usar notación de Newton en vez de notación de Leibniz para referirse a la derivada temporal de un vector posición.
+\begin{align*}
+    \vec{v} & =\frac{d\vec{r}}{dt}  \quad & \text{Notación de Leibniz} \\
+    \vec{v} & = \dot{\vec{r}} \quad & \text{Notación de Newton}
+\end{align*}
+Luego ,se le dice el \emph{momentum lineal} $\vec{p}$ de una partícula al producto escalar entre su masa y su velocidad
+\begin{equation}
+    \vec{p}=m\vec{v}
+\end{equation}
+En consecuencia de las interacciones de un cuerpo con objetos externos a él y campos, la partícula puede experimentar fuerzas de diferentes tipos, como lo puede ser ,e.g electrodinámico o gravitacional; la suma vectorial de dichas fuerzas ejercidas sobre la partícula es la fuerza total $\vec{F}$. Ahora, en 1687, cuando los tigres solían fumar y los pingüinos vestían de gala, Sir Isaac Newton publico su opus magnum, Philosophiæ Naturalis Principia Mathematica, \cite{newton1687principia}, el cual postula que la fuerza total ejercida sobre una partícula es igual a la tasa de cambio de su momemtum lineal, lo que hoy conocemos como la \textbf{segunda ley de Newton}, en términos matemáticos esto sería
+\begin{equation}
+    \boxed{\vec{F}=\frac{d \vec{p}}{dt}=\dot{\vec{p}}}
+\end{equation}
+ó
+\begin{equation} \label{segunda-ley-general}
+    \vec{F}=\frac{d(m\vec{v})}{dt}
+\end{equation}
+En la mayoría de las instancias que trabajaremos, la masa de la partícula se mantiene constante, con lo cual la equación \eqref{segunda-ley-general} se reduce a la siguiente expresión
+\begin{equation}
+    \vec{F}=m\dot{\vec{v}}
+\end{equation}
+A $ \dot{\vec{v}} $ o bien, la tasa de cambio en el tiempo de la velocidad de la partícula, le llamaremos aceleración, y estará denotado por $\vec{a}$, tal que
+\begin{equation} \label{segunda-ley-colegio}
+    \vec{F}=m\vec{a}
+\end{equation}
+La cual es la archiconocida expresión que todos aprendemos en el colegio para la segunda ley de Newton. \\
+Esta ecuación, en la mayoría de los casos, constituye una ecuación diferencial orinaria de segundo orden, mayoría ya que podría existir el caso en que $\vec{F}$ dependa de un orden de derivada mayor a 2. \\
+Esta ecuación siendo válida en contextos de un marco de referencia inercial, también llamado \emph{sistema Galileano}. \\
+Incluso dentro de la mecánica clásica, como muchas otras cosas, el sistema inercial es una idealización, pero, en la práctica, ningún sistema cumplirá con tales requerimientos, a lo cual, una suficiente aproximación, llamado \emph{sistema de laboratorio} \footnote{se le llama sistema de laboratorio a cualquier marco de referencia que cumpla con las condiciones para un marco inercial, se suele usar un sistema pegado a la tierra como ejemplo de tal.} será suficiente. \\
+En física, muchas propiedades y conclusiones pueden ser expresadas a través de teorías de conservaciones, las cuales indican bajo cuales condiciones ciertas cantidades físicas son constantes a lo largo del tiempo, la ecuación \eqref{segunda-ley-general} nos da una pista de una de ellas. \\
+\emph{Si la fuerza total aplicada sobre una partícula es cero, entonces $\dot{\vec{p}}=0$ y el momentum lineal $\vec{p}$ es conservado a lo largo del tiempo.} \\
+\end{document}

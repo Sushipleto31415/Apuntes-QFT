@@ -1,0 +1,79 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{operadores diferenciales clásicos}
+
+El operador gradiente de un campo escalar $f$ para cualquier coordenada está dado por
+\begin{equation}
+    \vec{\nabla}f=\sum_{i=1}^{dim({V})}\sum_{j=1}^{dim({V})} g^{ij}\vec{e_j}\frac{\partial f}{\partial x^i}
+\end{equation}
+El operador divergencia de un campo vectorial $\vec{A}$ está dado por
+\begin{equation}
+    \vec{\nabla}\cdot\vec{A}=
+    \frac{1}{\sqrt{g}}\sum_{i=1}^{dim(V)}
+    \frac{\partial}{\partial{x^i}} \left( \sqrt{g}A^i \right)
+\end{equation}
+Luego si tenemos que $A^i=\frac{{\text{\~{A}}}^i}{|\vec{e}_i|}$ podemos escribir el operador de la siguiente manera
+\begin{equation}
+    \vec{\nabla}\cdot\vec{A}=
+    \frac{1}{\sqrt{g}}\sum_{i=1}^{dim(V)}
+    \frac{\partial}{\partial{x^i}} \left( \sqrt{g}\frac{{\text{\~{A}}}^i}{|\vec{e}_i|} \right)
+\end{equation}
+El operador laplaciano, siendo la divergencia de un gradiente, se puede escribir de la siguiente manera
+\begin{equation}
+    \vec{\nabla}^2f=\frac{1}{\sqrt{g}}\sum_{i=1}^{dim({V})}\sum_{j=1}^{dim({V})} \frac{\partial}{\partial{x^i}} \left( \sqrt{g} g^{ij} \frac{\partial f}{\partial x^j}\right)
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \textbf{Ejemplos:}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Aceleración y velocidad}
+La velocidad se define como
+\begin{equation}
+    \vec{v}=\sum_{i=1}^{dim(V)}\dot{x}^i\vec{e}_i
+\end{equation}
+Luego, su modulo está dado por
+\begin{equation}
+    |\vec{v}|=\sqrt{ \sum_{i=1}^{dim({V})}\sum_{j=1}^{dim({V})} g{ij}\dot{x}^i \dot{x}^j  }
+\end{equation}
+Ahora, la aceleración tiene una definición mas tediosa.
+\begin{equation}
+    \vec{a}=\sum_{i=1}^{dim(V)} \left( \frac{dv^i}{dt} + \sum_{j=1}^{dim({V})}\sum_{k=1}^{dim({V})} \Gamma_{jk}^i v^j v^k \right) \vec{e}_i
+\end{equation}
+O de forma mas compacta
+\begin{equation}
+    \vec{a}=\sum_{i=1}^{dim(V)}a^i \vec{e}_i
+\end{equation}
+Con
+\begin{equation}
+    a^i=\frac{dv^i}{dt} +\sum_{j=1}^{dim({V})}\sum_{k=1}^{dim({V})} \Gamma_{jk}^i v^j v^k 
+\end{equation}
+Cuyo módulo está dado por la siguiente expresión
+\begin{equation}
+    peo
+\end{equation}
+Recordar que, $\Gamma_{ij}^k$ son los símbolos de Christophel, los cuales están definidos por
+\begin{equation}
+    \Gamma_{ij}^k=\frac{1}{2}\sum_{l=1}^{dim(V)}g^{kl}\left( \frac{\partial g_{il}}{\partial x^j}+\frac{\partial g_{lj}}{\partial x^i}- \frac{\partial g_{ij}}{\partial x^l} \right) 
+\end{equation}
+Los cuales, cuando se cumple la ortogonalidad en el sistema de coordenadas cumplen con la siguiente propiedad
+\begin{equation}
+    \Gamma_{ij}^k=\Gamma_{ji}^k
+\end{equation}
+Lo cual reduce significativamente los cálculos a hacer.\\
+Habiendo definido formalmente la aceleración para cualquier sistema coordenado (no necesariamente ortogonal)  la \textbf{segunda ley de Newton} se puede escribir de la siguiente forma
+\begin{equation}
+    m\sum_{i=1}^{dim(V)} \left( \frac{dv^i}{dt} + \sum_{j=1}^{dim({V})}\sum_{k=1}^{dim({V})} \Gamma_{jk}^i v^j v^k \right) \vec{e}_i=\sum_{i=1}^{dim(V)}F^i\vec{e}_i
+\end{equation}
+Ahora como las bases coordenadas son independientes linealmente, se tiene que,
+\begin{equation}
+    m \left( \frac{dv^i}{dt} + \sum_{j=1}^{dim({V})}\sum_{k=1}^{dim({V})} \Gamma_{jk}^i v^j v^k \right)=F^i
+\end{equation}
+Que hermoso. \\
+Pensar que eso es igual a esto $\vec{F}=\dot{\vec{\emph{p}}}$
+ 
+\end{document}
