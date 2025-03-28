@@ -1,0 +1,102 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cuarta clase}
+Entonces, en la última clase, los principios de la relatividad especial, implican la invariancia del intervalo. \\
+La conservación del intervalo implica que:
+\begin{equation}
+    c^2dt^2-dx^2-dy^2-dz^2=c^2d\bar{t}^2-d\bar{x}^2-d\bar{y}^2-d\bar{z}^2
+\end{equation}
+Hay 10 tipos de transformaciones continuas que preservan el intervalo, las cuales son 
+\begin{itemize}
+    \item  1 Traslación temporal
+    \item 2 Traslaciones espaciales
+    \item 3 Rotaciones (las rotaciones son con el eje temporal fijo)
+    \item 3 Boosts
+\end{itemize}
+Las rotaciones espaciales son del tipo
+\begin{equation}
+    \tilde{t}=t ,\quad \tilde{x}=x+a , \quad \tilde{y}= y, \quad \tilde{z}=z
+\end{equation}
+Las rotacione son del tipo
+\begin{align*}
+    \tilde{t} & = t \\
+
+    \tilde{x} &  = \cos{\theta}x- \sin{\theta}y \\
+    \tilde{y} &  = \sin{\theta}x + \cos{\theta}y \\
+    \tilde{z}  & = z
+\end{align*}
+Boost a lo largo del eje x 
+\begin{align*}
+    \tilde{t} & = \frac{t-v_x/c^2}{\sqrt{q-v^2/c^2}} \\
+    \tilde{x} & = \frac{x-v_xt}{\sqrt{1-v^2/c^2}} \\
+    \tilde{y} & = y\\
+    \tilde{z} & = z
+\end{align*}
+Boost a lo largo del eje y, boost a lo largo del eje z. \\
+Vimos que en el límite no relativista $c \to \infty$
+\begin{equation}
+    \tilde{t} = t , \quad \tilde{x}= x-vt,\quad \tilde{y}=y , \quad \tilde{z} 
+\end{equation}
+Lo cual corresponde al conocido boost de Galileo, el cual describe la posición mediante la velocidad relativa entre dos observadores inerciales (velocidad constante). \\
+Asumamos que la partícula se mueve
+\begin{equation*}
+    \frac{d\tilde{x}}{dt}=\tilde{v}, \quad \frac{dx}{dt}=v
+\end{equation*}
+Con lo cual tenemos $\tilde{v}$ vs $v$, a lo cual
+\begin{equation*}
+    \frac{d\tilde{x}}{dt}=\frac{dx}{dt}-V\frac{dt}{d\tilde{t}}=\frac{dx}{dt}-V\cancel{\frac{dt}{d\tilde{t}}}
+\end{equation*}
+Con lo cual la composición de velocidades en el límite no relativista es 
+\begin{equation}
+    \tilde{v}=v-V
+\end{equation}
+Lo cual no es compatible con la unicidad del valor de la rapidez de la luz en el vacío. Con lo cual es necesario encontrar una composición de velocidades que cumpla con los postulados de la relatividad especial. Para ello
+\begin{align*}
+    d\tilde{x} & =\frac{dx-Vdt}{\sqrt{1-V^2/c^2}}\\
+    d\tilde{t} & = \frac{dt-v/c^2}{\sqrt{1-V^2/c^2}}
+\end{align*}
+Con lo cual
+\begin{align*}
+    \tilde{v}&=\frac{d\tilde{x}}{d\tilde{t}}=\frac{dx-Vdt}{dt-V/c^2dx} \cdot \frac{\frac{1}{dt}}{\frac{1}{dt}} \\
+    & = \frac{\frac{dx}{dt}-V}{1-V/c^2\frac{dx}{dt}}
+\end{align*}
+Así, la suma de velocidades relativista está dado por
+\begin{equation}
+\tilde{v_x}=\frac{v_x-V}{1-\frac{v}{c^2}v_x}
+\end{equation}
+Ahora veamos el caso en el cual $v_x=c$ 
+\begin{align*}
+    \tilde{v_x}=\frac{c-V}{1-\frac{V}{c^2}c} = \frac{c-V}{\frac{c-V}{c}}=c
+\end{align*}
+\begin{equation}
+  i\bar{h} \partial_t \Phi= -\frac{\bar{h}^2}{2m}\nabla^2\Phi
+\end{equation}
+En lo cual, el término $\frac{-\bar{h}^2}{2m}\nabla^2\Phi=\frac{p^2}{2m}\nabla^2\Phi$
+Con lo cual, la relación de dispersión queda tal que: 
+\begin{align*}
+    E& =mc^2\sqrt{1-\frac{p^2}{m^2c^2}} \\
+     & = mc^2\left(  1+\frac{1}{2}\frac{p^2}{m^2c^2} + \frac{1}{4}\frac{p^4}{m^4c^4}\right) = mc^2 + \frac{p^2}{2m} + \frac{p^4}{4m^3c^2}
+\end{align*}
+Quedó de tarea el probar la invariancia de la acción ante composición de velocidades
+\subsection{Preguntas clase 4}
+
+\subsubsection*{Pregunta 1}
+Demuestre que la acción 
+\begin{equation}
+  S[x(t)]=-mc^2\int dt \sqrt{1-\frac{1}{c^2}\left( \frac{dx}{dt}\right)^2}
+\end{equation}
+reproduce la acción de la partícula libre no-relativista, módulo una constante aditiva. \\
+\\
+
+\textbf{Solución:}
+\\
+%\subsubsection*{}
+
+
+\end{document}

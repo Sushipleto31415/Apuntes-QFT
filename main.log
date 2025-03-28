@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  28 MAR 2025 00:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  28 MAR 2025 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -538,7 +538,14 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
 (spanish)                faked small caps on input line 2.
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -546,17 +553,20 @@ Package spanish Warning: Replacing `OT1/cmr/bx/sc' by
 
 [1
 
-] (./caps/sumario.tex
+] (./caps/cap1/clase1.tex
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
+) (./caps/cap1/clase2.tex
+./caps/cap1/clase2.tex:5: Undefined control sequence.
+l.5 ...ceptuál algo más general de la mecán\ica
+                                                   clásica ya que necesitam...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
@@ -568,17 +578,213 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
 [3]
 
-[4]
+[4]) (./caps/cap1/clase3.tex
 
 [5]
 
 [6]
 
-[7]
+[7]) (./caps/cap1/clase4.tex
 
 [8]
+Runaway argument?
+ \tilde {t} & = t \\ 
+./caps/cap1/clase4.tex:29: Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.29 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
-[9])
+./caps/cap1/clase4.tex:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./caps/cap1/clase4.tex:29: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.29 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./caps/cap1/clase4.tex:29: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.29 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+./caps/cap1/clase4.tex:30: Package amsmath Error: \tilde allowed only in math mode.
+
+See the amsmath package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30     \tilde{x}
+                   &  = \cos{\theta}x- \sin{\theta}y \\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./caps/cap1/clase4.tex:30: Misplaced alignment tab character &.
+l.30     \tilde{x} &
+                      = \cos{\theta}x- \sin{\theta}y \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./caps/cap1/clase4.tex:30: Missing $ inserted.
+<inserted text> 
+                $
+l.30     \tilde{x} &  = \cos{
+                             \theta}x- \sin{\theta}y \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./caps/cap1/clase4.tex:31: Misplaced alignment tab character &.
+l.31     \tilde{y} &
+                      = \sin{\theta}x + \cos{\theta}y \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./caps/cap1/clase4.tex:32: Misplaced alignment tab character &.
+l.32     \tilde{z}  &
+                      = z
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./caps/cap1/clase4.tex:33: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.33 \end{align*}
+                 
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./caps/cap1/clase4.tex:33: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.33 \end{align*}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./caps/cap1/clase4.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 \end{align*}
+                 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./caps/cap1/clase4.tex:33: Missing } inserted.
+<inserted text> 
+                }
+l.33 \end{align*}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./caps/cap1/clase4.tex:33: Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.33 \end{align*}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./caps/cap1/clase4.tex:33: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.33 \end{align*}
+                 
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (76.62447pt too wide) detected at line 33
+[]
+ []
+
+./caps/cap1/clase4.tex:33: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.33 \end{align*}
+                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./caps/cap1/clase4.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 \end{align*}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./caps/cap1/clase4.tex:33: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.33 \end{align*}
+                 
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
+
+ []
+
+)
 
 [10] (./main.aux
 LaTeX Info: Redefining \. on input line 9.
@@ -594,15 +800,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17115 strings out of 475171
- 325971 string characters out of 5767095
- 724737 words of memory out of 5000000
- 39796 multiletter control sequences out of 15000+600000
+ 17141 strings out of 475171
+ 326598 string characters out of 5767095
+ 723740 words of memory out of 5000000
+ 39811 multiletter control sequences out of 15000+600000
  564582 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,18n,93p,439b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,93p,443b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on main.pdf (13 pages, 211879 bytes).
+Output written on main.pdf (13 pages, 214661 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream

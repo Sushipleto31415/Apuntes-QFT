@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743133844.59033 "main.tex" "main.pdf" "main" 1743133844.98641 0
+["pdflatex"] 1743199498.79574 "main.tex" "main.pdf" "main" 1743199499.20747 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1742685315 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -148,11 +148,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1743048905 5306876 69c328245ae101f6bc10b01e1f2bf9d5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1743048899 2008243 25ab9ebb846d37db78d4defc435bfdd9 ""
+  "caps/cap1/clase1.tex" 1743176932.89612 185 89c3de6ad73717d3432bba709b7fe614 ""
+  "caps/cap1/clase2.tex" 1743176947.89084 10002 edf562a8f8064713999afd493fd26ef2 ""
+  "caps/cap1/clase3.tex" 1743176964.66665 7965 31e1f3df5090a6bccd8b8e36206eec92 ""
+  "caps/cap1/clase4.tex" 1743199497.28998 3821 1fefff48326a681fb48ad5448ac4f122 ""
   "caps/intro.tex" 1743036575.04116 1391 d2972667efc47e2f8c69ae623d5d9514 ""
-  "caps/sumario.tex" 1743133842.97622 28470 ffd48145843013afca3a3847533c0378 ""
-  "main.aux" 1743133844.93801 553 cd1929e42b02ddb55d980e6129a349c0 "pdflatex"
-  "main.tex" 1743133595.4776 3886 8a282ba2e41e908fc9f16382aebc7723 ""
-  "main.toc" 1743133844.93895 170 b2c8d58e6f1ecec97558d06f498bdeca "pdflatex"
+  "main.aux" 1743199499.151 1057 f63e2627d67a8ede7b25b7369ca2ea89 "pdflatex"
+  "main.tex" 1743176593.65746 2357 3da5f7fae6e6e8fcbcabe31e7ae0732e ""
+  "main.toc" 1743199499.15302 469 9b7db9d29a0741cb4020489a687a3924 "pdflatex"
   "portada.tex" 1743018276.05872 470 b1488d6d47f38d09b26b0091368483e4 ""
   (generated)
   "main.aux"

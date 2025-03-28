@@ -1,0 +1,142 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tercera clase}
+Si tenenmos en cuenta el lagrangeano para una partícula libre no relativista, como sigue
+\begin{equation}
+    L=\frac{1}{2}m|\vec{v}|^2
+\end{equation}
+Para el cual, si introducimos una variación infinitesimal, en específico, una transformación espacial, de la siguiente manera
+\begin{equation}
+    \delta S= S[\vec{r}+\delta \vec{r}] - S[\vec{r}]=0
+\end{equation}
+en lo cual $\delta\vec{r}=\vec{\epsilon}$ se le llamará a la traslación espacial, tendremos que por el teorema de Noether, el siguiente término se mantendrá constante
+\begin{align}
+    c^{te} &=\partial_{\dot{\vec{r}}} L \cdot \delta \vec{r} - \cancel{B} \\
+    & = \partial_{\dot{x}}L \delta x + \partial_{\dot{y}}l \delta y + \partial_{z}L\delta z
+\end{align}
+Ahora bien, usaremos la siguiene notación para las coordenadas $\partial_{\dot{\vec{r}}}L \xrightarrow{}\partial_{\dot{x^k}}L $ en lo cual $x^k=(x,y,z)$. Ahora bien, el término constante lo podemos escribir como
+\begin{equation}
+    c^{te}=\partial_{\dot{x^k}}L \epsilon^k
+\end{equation}
+Lo cual si tomamos la derivada del lagrangeano para una partícula libre no relativista
+\begin{align}
+    \partial_{\dot{x^k}}L & =\frac{1}{2} \partial_{\dot{x^k}} \\
+    & = \frac{1}{2}m (\delta_k^i \dot{x^i} + \dot{x^i}\delta_k^i) \\
+    & = m\dot{x^k}
+\end{align}
+Así y por tanto, se concluye que el término que, por teorema de Noether se conserva, es el siguiente
+\begin{equation}
+    c^{te}=m\dot{x^k}\epsilon^k
+\end{equation}
+Lo cual, en términos simples, nos dice que para toda coordenada $x^k$, el momento lineal se conserva para transformaciones espaciales, lo que viene siendo la primera ley de newton.
+\begin{equation}
+    c^{te}=mv_x
+\end{equation}
+Para la partícula libre no relativista, nuevamente, tenemos este lagrangeano
+\begin{equation}
+    L=\frac{1}{2}m|\vec{v}|^2
+\end{equation}
+En lo cual tenemos que, la energía $E=\frac{1}{2}m|\vec{v}|^2$ será invariante bajo transformaciones temporales y que, el momento lineal $\vec{p}=m\vec{v}$ será invariante bajo transformaciones espaciales. Con ello, podemos formular la relación de dispersión no relativista, la cual está dada por
+\begin{equation}
+    E=\frac{|\vec{p}|}{2m}
+\end{equation}
+\subsection*{Relatividad especial:}
+\begin{enumerate}
+    \item Todos los observadores inerciales son equivalentes, mediante experimentos físicos no puedo dar cuenta si estoy en movimiento rectilíneo uniforme o no, experimento del tren. 
+    \item Todos los observadores inerciales están de acuerdo en que la luz en el vació se mueve a una rapidez constante, $c=300000$[km/s].
+    \item Principio de homogeneidad del espacio-tiempo: todos los puntos e instantes son equivalentes, las leyes que rigen la física serán las mismas aquí y en la quebrá del ají .
+    \item Isotropía del espacio tiempo: todas las direcciones son equivalentes.
+\end{enumerate}
+Notar que la relatividad de los observadores no inerciales lleva a la gravitación, lo mismo sucede con la suposición que los rayos de luz no necesariamente viajan en línea recta, nuevamente nos llevará a la gravitación. \\
+Notemos que cuando tenemos dos boost en diferentes direcciones, esto, no corresponde a un boost puro, si no que lleva consigo una rotación en el espacio- tiempo, este fenómeno es llamado como Precesión de Thomas. 
+\textbf{Landau volumen II, teoría clásica de campos, primeras 5 páginas del capítulo} \\
+Los principios 1 y 4 implican que, si tenemos dos eventos, que ocurren en instantes diferentes en el espacio tiempo. Sean dos observadores, K y $\bar{K}$ para los cuales, los dos eventos tendrán etiquetas distintas, es decir
+\begin{itemize}
+    \item Con respecto al sistema $K$ los eventos tendrán coordenadas $(t_1,x_1,y_1,z_1)$ y $$(t_2,x_2,y_2,z_2)$$
+    \item Con respecto al sistema $\bar{K}$ los eventos tendrán coordenadas $(\bar{t_1},\bar{x_1},\bar{y_1},\bar{z_1})$ y $(\bar{t_2},\bar{x_2},\bar{y_2},\bar{z_2})$
+\end{itemize}
+Ahora, dichos eventos podrán ser observados en diferente orden de sucesos, o no, dependiendo se su relación entre sí en su causalidad, si existe causalidad entre uno y otro, entonces su ordena estará fijo, segunda ley de la termodinámica, pero en caso que no hay causalidad entre sí, dichos eventos podrán ser observados en orden distintos dependiendo del observador.\\
+\textbf{Invariacia del intervalo:} Consecuencia del principio de la relatividad especial, formulación de la métrica de minkwosky
+\begin{equation}
+    c^2(t_2-t_1)^2-(x_2-x_1)^2-(y_2-y_1)^2-(z_2-z_1)^2=c^2(\bar{t_2}-\bar{t_1})^2-(\bar{x_2}-\bar{x_1})^2-(\bar{y_2}-\bar{y_1})^2-(\bar{z_2}-\bar{z_1})^2
+\end{equation}
+La conservación del interalo entre eventos P y Q tiene consecuencias dramáticas. ¿Y entonces qué? Primero asumiremos que P y Q están infinitesimalmente cerca, esto significa que
+\begin{align*}
+    t_2 & =t_1+dt \\
+    x_2 & = x_1 + dx \\
+    y_2 & = y_1 + dy \\
+    z_2 & = z_1 + dz
+\end{align*}
+y además
+\begin{align*}
+    \bar{t_2} & = \bar{t_1}+\bar{dt} \\
+    \bar{x_2} & = \bar{x_1} + \bar{dx} \\
+    \bar{y_2} & = \bar{y_1} + \bar{dy} \\
+    \bar{z_2} & = \bar{z_1} + \bar{dz}
+\end{align*}
+La conservación del intervalo implica que:
+\begin{equation}
+    c^2dt^2-dx^2-dy^2-dz^2=c^2d\bar{t}^2-d\bar{x}^2-d\bar{y}^2-d\bar{z}^2
+\end{equation}
+Ahora nos preguntamos, si nos damos las coordenadas con cachirulo, o sea, con respecto al observador inercial, ¿cómo se podrán escribir en función de las coordenadas sin cachirulo?
+Para ello nos encontramos con un sistema de ecuaciones diferenciale parciales con 10 componentes, lo cual puede sonar feo, pero es la forma de obtener las transformaciones de lorentz en todas las dimensiones
+\begin{align*}
+     & c^2\left( \partial_t \bar{t} dt + \partial_x\bar{t}dx + \bar{t}_y dy+ \bar{t}_z dz\right) \\
+    & - \left(  \partial_t \bar{x}dt +\partial_x \bar{x}dx+\partial_y \bar{x}dy+\partial_z \bar{x}dz\right) \dots
+\end{align*}
+Existen 10 transformaciones parametrizadas por 10 parámetros continuos, relativistas
+\begin{itemize}
+    \item  1 Traslación temporal
+    \item 2 Traslaciones espaciales
+    \item 3 Rotaciones (las rotaciones son con el eje temporal fijo)
+    \item 3 Boosts
+\end{itemize}
+Traslación temporal
+\begin{align*}
+    \bar{t} & = t + a \\
+    \bar{x} &= x , \quad \bar{y} & =y, \quad \bar{z}=z
+\end{align*}
+Traslación espacial en x
+\begin{align*}
+        \bar{t} & = t \\
+    \bar{x} &= x  + h_x, \quad \bar{y} & =y, \quad \bar{z}=z
+\end{align*}
+y así con todas las coordenadas. \\
+Ahora bien, las rotaciones en el espacio serán, rotaciones en un plano $(x,y)$ que es equivalente a una rotación alrededor del eje $z$, 
+\begin{align*}
+    \bar{t} & =t \\
+    \bar{x} & = \cos{\alpha}x - \sin{\alpha}y \\
+    \bar{y} & = \sin{\alpha}x + \cos{\alpha}y \\
+    \bar{z} & =z
+\end{align*}
+$\alpha \in [0,2\pi]$. \\
+Lo que implica  que, nuestro intervalo invariante será
+\begin{align*}
+    c^dt^2-(\cos{\alpha}dx-\sin{\alpha}dy)^2-(\sin{\alpha}dx + \cos{\alpha}dy)^2 - dz^2 \\
+    = c^2dt^2 - dx^2 - dy^2-dz^2
+\end{align*}
+O sea, las rotaciones nos dejan invariante el invervalo (métrica de minkowsky)
+En rotación en el plano $(y,z)$ le llamaremos $\theta \in [0,2\pi]$ y en rotaciones en el plano $(z,x)$ llamaremos al ángulo $\phi\in[0,2\pi]$. \\
+Boost a lo largo del eje x:
+\begin{align*}
+    \bar{t} & = \frac{t-v/c^2x}{\sqrt{q-v^2/c^2}} \\
+    \bar{x} & = \frac{x-vt}{\sqrt{1-v^2/c^2}} \\
+    \bar{y} & = y \\
+    \bar{z} & = z
+\end{align*}
+\textbf{Tarea: probar que deja el intervalo invariante} \\
+Boost a lo largo del eje y:
+\begin{align*}
+    \bar{t} &  = \frac{t-v_y/c^2 y}{\sqrt{1-{v_y}^2/c^2}} \\
+    \bar{x} & = x \\
+    \bar{y} & = \frac{y-v_y/c^2 y }{\sqrt{1-{v_y}^2/c^2}}
+\end{align*}
+\textbf{Tarea: boost a lo largo del eje z} y tomamos c $\to \infty$ sakurai de cuantica
+
+\end{document}
