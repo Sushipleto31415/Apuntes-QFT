@@ -28,7 +28,7 @@ Sea la acción $S[q(t)]$, donde $q(t)$ son las coordenadas generalizadas del sis
 
 \begin{equation}
     S[q(t)] = \int dt L(q, \dot{q})
-\end{equation}
+\end{equation} 
 
 Ahora, ¿Cómo cambia $S$ si $q(t)$ cambia un poco?\\
 
@@ -40,16 +40,16 @@ Sea $q(t)$ una función dependiente del tiempo, bien definida en el intervalo $t
 
 \begin{align}
     \delta S &= S[q(t) + \phi(t)] - S[q(t)] \notag \\
-    &= \int_{t_1}^{t_2}dt L(q(t) + \phi(t), \frac{d}{dt}\left(q + \Phi \right)) -\int_{t_1}^{t_2}dt L(q(t), \dot{q}(t)) \label{eq:var-accion1}\\
+    &= \int_{t_1}^{t_2}dt L(q(t) + \phi(t), \frac{d}{dt}\left(q + \Phi \right)) -\int_{t_1}^{t_2}dt L(q(t), \dot{q}(t)) \label{var-accion1}\\
 \end{align}
 
 Además, considerando que: 
 
-\begin{equation}
-    f(x +\epsilon_1, y + \epsilon_2) = f(x,y) + \frac{\partial f}{\partial x}\epsilon_1 + \frac{\partial f}{\partial y}\epsilon_2 + \mathcal{O}(\epsilon_1^2, \epsilon_2^2, \epsilon_1, \epsilon_2) \label{eq:ec_1}
+\begin{equation}\label{ec_1}
+    f(x +\epsilon_1, y + \epsilon_2) = f(x,y) + \frac{\partial f}{\partial x}\epsilon_1 + \frac{\partial f}{\partial y}\epsilon_2 + \mathcal{O}(\epsilon_1^2, \epsilon_2^2, \epsilon_1, \epsilon_2) 
 \end{equation}
 
-Por lo tanto, introduciendo \ref{eq:ec_1} con $f(x +\epsilon_1, y + \epsilon_2) = L(q(t) + \phi(t), \frac{d}{dt}\left(q + \Phi \right))$ en \ref{eq:var-accion1}.
+Por lo tanto, introduciendo \eqref{ec_1} con $f(x +\epsilon_1, y + \epsilon_2) = L(q(t) + \phi(t), \frac{d}{dt}\left(q + \Phi \right))$ en \eqref{var-accion1}.
 
 \begin{align*}
     \delta S &=  \int_{t_1}^{t_2}dt \left( L(q(t),\dot{q}(t)) + \frac{\partial L}{\partial q}\Phi + \frac{\partial L}{\partial \dot{q}} \frac{d\Phi}{dt} \right) -  \int_{t_1}^{t_2}dt L(q(t), \dot{q}(t))\\ 
@@ -63,10 +63,10 @@ Por lo tanto, introduciendo \ref{eq:ec_1} con $f(x +\epsilon_1, y + \epsilon_2) 
 Si se asume que el princiío de acción es estacionario $\delta S = 0$. Entonces: 
 
 \begin{equation}
-    \int_{t_1}^{t_2}dt \Phi \left(\frac{\partial L}{\partial q}- \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \right) = 0 \label{eq:var-accion2}
+    \int_{t_1}^{t_2}dt \Phi \left(\frac{\partial L}{\partial q}- \frac{d}{dt}\left( \frac{\partial L}{\partial \dot{q}} \right) \right) = 0 \label{var-accion2}
 \end{equation}
 
-Finalmente, considerando a $f(t)$ arbitraria, en \ref{eq:var-accion2} el integrando de la integral deberá ser igual a cero. Por lo tanto, 
+Finalmente, considerando a $f(t)$ arbitraria, en \eqref{var-accion2} el integrando de la integral deberá ser igual a cero. Por lo tanto, 
 
 \begin{equation}
     \frac{\partial L}{\partial q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) = 0
