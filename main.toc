@@ -1,5 +1,5 @@
-\babel@toc {nil}{}\relax 
-\contentsline {chapter}{Introducción}{ii}{}%
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Introducción}{\es@scroman {ii}}{}%
 \contentsline {chapter}{\numberline {1}Nociones Previas}{2}{}%
 \contentsline {section}{\numberline {1.1}Primera clase}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Derivación de las Ecuaciones de Euler-Lagrange}{2}{}%
@@ -9,25 +9,25 @@
 \contentsline {subsubsection}{Pregunta 3}{4}{}%
 \contentsline {subsubsection}{Pregunta 4}{4}{}%
 \contentsline {subsubsection}{Pregunta 5}{4}{}%
-\contentsline {section}{\numberline {1.2}Segunda clase}{4}{}%
-\contentsline {subsection}{\numberline {1.2.1}Preguntas clase 2}{8}{}%
-\contentsline {subsubsection}{Pregunta 1}{8}{}%
-\contentsline {subsubsection}{Pregunta 2}{8}{}%
-\contentsline {subsubsection}{Pregunta 3}{8}{}%
-\contentsline {subsubsection}{Pregunta 4}{8}{}%
-\contentsline {subsubsection}{Pregunta 5}{8}{}%
-\contentsline {subsubsection}{Pregunta 6}{8}{}%
-\contentsline {subsubsection}{Pregunta 7}{9}{}%
-\contentsline {section}{\numberline {1.3}Tercera clase}{9}{}%
-\contentsline {subsection}{\numberline {1.3.1}Preguntas clase 3}{12}{}%
-\contentsline {subsubsection}{Pregunta 1}{12}{}%
-\contentsline {subsubsection}{Pregunta 2}{12}{}%
-\contentsline {subsubsection}{Pregunta 3}{12}{}%
-\contentsline {subsubsection}{Pregunta 4}{13}{}%
-\contentsline {section}{\numberline {1.4}Cuarta clase}{13}{}%
-\contentsline {subsection}{\numberline {1.4.1}Preguntas clase 4}{14}{}%
-\contentsline {subsubsection}{Pregunta 2}{15}{}%
-\contentsline {subsubsection}{Pregunta 3}{15}{}%
-\contentsline {subsubsection}{Pregunta 4}{15}{}%
-\contentsline {subsubsection}{Pregunta 5}{15}{}%
-\contentsline {subsubsection}{Pregunta 6}{15}{}%
+\contentsline {section}{\numberline {1.2}Segunda clase}{5}{}%
+\contentsline {subsection}{\numberline {1.2.1}Preguntas clase 2}{9}{}%
+\contentsline {subsubsection}{Pregunta 1}{9}{}%
+\contentsline {subsubsection}{Pregunta 2}{9}{}%
+\contentsline {subsubsection}{Pregunta 3}{9}{}%
+\contentsline {subsubsection}{Pregunta 4}{9}{}%
+\contentsline {subsubsection}{Pregunta 5}{9}{}%
+\contentsline {subsubsection}{Pregunta 6}{10}{}%
+\contentsline {subsubsection}{Pregunta 7}{10}{}%
+\contentsline {section}{\numberline {1.3}Tercera clase}{10}{}%
+\contentsline {subsection}{\numberline {1.3.1}Preguntas clase 3}{13}{}%
+\contentsline {subsubsection}{Pregunta 1}{13}{}%
+\contentsline {subsubsection}{Pregunta 2}{13}{}%
+\contentsline {subsubsection}{Pregunta 3}{14}{}%
+\contentsline {subsubsection}{Pregunta 4}{14}{}%
+\contentsline {section}{\numberline {1.4}Cuarta clase}{14}{}%
+\contentsline {subsection}{\numberline {1.4.1}Preguntas clase 4}{15}{}%
+\contentsline {subsubsection}{Pregunta 2}{16}{}%
+\contentsline {subsubsection}{Pregunta 3}{16}{}%
+\contentsline {subsubsection}{Pregunta 4}{16}{}%
+\contentsline {subsubsection}{Pregunta 5}{16}{}%
+\contentsline {subsubsection}{Pregunta 6}{16}{}%

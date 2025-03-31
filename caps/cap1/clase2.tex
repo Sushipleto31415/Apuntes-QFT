@@ -93,10 +93,10 @@ Ahora veamos que sucede cuando usamos una traslación temporal. \\
 Ahora bien, la variación de la acción de define por
 \begin{align}
     \delta S  & = S[ q + \delta q] - S[q]  \\
-    = \int dt \left[ \frac{m}{2} \left(\frac{d}{dt}\left( q - \epsilon \frac{dq}{dt} \right) \right)^2  - U(q)  - \epsilon \dot{q}\right] - \int dt \left[ \frac{m\dot{q}^2}{2} - U(q) \right] \\
-    = \int dt \left[  \frac{m}{2} (\dot{q}^2 - 2 \epsilon \dot{q}\ddot{q}) - U(q) + \epsilon \dot{q} \partial_tU\right] - \int dt \left[  \frac{m}{2} \dot{q}^2- U(q)\right] \\
-    = \int dt \left[ -m\epsilon \dot{q}\ddot{q} +\epsilon \dot{q} \partial_tU\right] \\
-    = \int dt \frac{d}{dt} \left[   \epsilon \left(  -\frac{m}{2} \dot{q}^2 + U(q)\right) \right]
+   & = \int dt \left[ \frac{m}{2} \left(\frac{d}{dt}\left( q - \epsilon \frac{dq}{dt} \right) \right)^2  - U(q)  - \epsilon \dot{q}\right] - \int dt \left[ \frac{m\dot{q}^2}{2} - U(q) \right] \\
+   & = \int dt \left[  \frac{m}{2} (\dot{q}^2 - 2 \epsilon \dot{q}\ddot{q}) - U(q) + \epsilon \dot{q} \partial_tU\right] - \int dt \left[  \frac{m}{2} \dot{q}^2- U(q)\right] \\
+   & = \int dt \left[ -m\epsilon \dot{q}\ddot{q} +\epsilon \dot{q} \partial_tU\right] \\
+   & = \int dt \frac{d}{dt} \left[   \epsilon \left(  -\frac{m}{2} \dot{q}^2 + U(q)\right) \right]
 \end{align}
 Con lo cual hemos encontrado nuestra función $B$ para esta traslación en particular. Tal que
 \begin{equation}
@@ -199,8 +199,8 @@ Deduzca la transformación infinitesimal que representa una rotación en el plan
 \subsubsection{Pregunta 5}
 Demuestre, explicando cada paso, que una transformación infinitesimal que deja quasi-invariante la acción de un conjunto de grados de libertad $q_A$ con $A=1,\dots ,N$, permite construir una cantidad conservada $Q$. Construya tal cantidad conservada para los siguientes casos
 \begin{align*}
-  S[q(t)] & = \int dt \left[\frac{m}{2}{\dot{q}}^2 - U(q) \right] \quad \text{invariancia bajo traslaciones temporales}
-  S[q(t)] & = \int dt \left[ \frac{m}{2}\frac{dx^i}{dt}\frac{dx^i}{dt}\right] \quad \text{invariancia bajo traslaciones espaciales}
+  S[q(t)] & = \int dt \left[\frac{m}{2}{\dot{q}}^2 - U(q) \right] \quad \text{invariancia bajo traslaciones temporales} \\ 
+  S[q(t)] & = \int dt \left[ \frac{m}{2}\frac{dx^i}{dt}\frac{dx^i}{dt}\right] \quad \text{invariancia bajo traslaciones espaciales} \\
   S[q(t)] & = \int dt \left[  \frac{m}{2}\frac{d\vec{r}}{dt}\cdot \frac{d\vec{r}}{dt}-U(|\vec{r}|)\right] \quad \text{invariancia bajo rotaciones en el plano }(x,y)
 \end{align*}
 Extienda el último caso a al invariancia bajo rotaciones generales, cuya acción finita está dada por $\vec{r}_{\text{transformado}}=O\vec{r}$ con $O$ una matriz ortogonal de determinante $1$. \\
