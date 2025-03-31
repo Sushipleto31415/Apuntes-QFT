@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743282952.53701 "main.tex" "main.pdf" "main" 1743282953.14922 2
+["pdflatex"] 1743395113.44666 "main.tex" "main.pdf" "main" 1743395114.14086 2
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1742685315 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1742685315 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -147,15 +147,15 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1742685315 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1743270123 5311557 9da84c45f5b388655502706482323571 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1743270041 2008240 3e21fe177836136dd46253ca463314bb ""
-  "caps/cap1/clase1.tex" 1743280689.94053 4451 11f3e201e6d3743806b8b03433c9abe5 ""
-  "caps/cap1/clase2.tex" 1743279585.87802 10001 6fe24df6564b59a9523218db0fc5d41a ""
-  "caps/cap1/clase3.tex" 1743279585.87802 7965 31e1f3df5090a6bccd8b8e36206eec92 ""
-  "caps/cap1/clase4.tex" 1743282952.37655 5026 1821154606be3860b96925294c445c90 ""
+  "caps/cap1/clase1.tex" 1743395097.119 5777 9a1901a7a83712fc004712acb9740591 ""
+  "caps/cap1/clase2.tex" 1743394645.13395 14108 f21ed2fef46357928db95074a52eba25 ""
+  "caps/cap1/clase3.tex" 1743391586.94116 8934 afcce5ca4da2b4d2f1185c2b4541d3f8 ""
+  "caps/cap1/clase4.tex" 1743312822.71151 5026 1821154606be3860b96925294c445c90 ""
   "caps/intro.tex" 1743279585.87802 1386 caa679ccecf21e27ce4ae0d6c9996105 ""
   "img/Captura de pantalla 2025-03-29 000744.png" 1743279585.87802 84358 17bb803e9438f9a43f8c1a013b426d6f ""
-  "main.aux" 1743282953.07655 1745 e3b1a1ca76d3be090ade3fe8b3597f94 "pdflatex"
+  "main.aux" 1743395114.05913 3510 c22738846e6e01a6f4297e5fe22fe935 "pdflatex"
   "main.tex" 1743279585.88135 2602 985cbae206d48b874b30c168c21482e6 ""
-  "main.toc" 1743282953.07655 801 09e979bcd1fdfe6c03604b5d3f25424e "pdflatex"
+  "main.toc" 1743395114.06246 1787 cf0e26cef3e8deb8173c2e708845e279 "pdflatex"
   "portada.tex" 1743279585.88135 552 b182dff2e15560b8facf6ba33e3a187c ""
   (generated)
   "main.aux"

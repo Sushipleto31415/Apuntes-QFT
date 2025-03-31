@@ -177,8 +177,70 @@ y así, en transformaciones espaciales la cantidad conservada será el momento l
     m\vec{v}=\vec{p}
 \end{equation}
 
-
-\vspace{3cm}
-\
+\subsection{Preguntas clase 2}
+\subsubsection{Pregunta 1}
+Manipulando la segunda ley de Newton para una partícula en presencia de una energía potencial $U(x(t))$, muestre que la energía es conservada. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 2}
+Deduzla la transformación infinitesimal que representa una traslación en el tiempo actuando sobre un grado de libertad $q(t)$. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 3}
+Deduzla la transformación infinitesimal que representa una traslación espacial del grado de libertad $\vec{r}(t)$.
+\\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 4}
+Deduzca la transformación infinitesimal que representa una rotación en el plano $(x,y)$, actuando sobre la posición de una partícula $\vec{r}(t)=x\hat{x}+y\hat{y}+z\hat{z}$.
+\\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 5}
+Demuestre, explicando cada paso, que una transformación infinitesimal que deja quasi-invariante la acción de un conjunto de grados de libertad $q_A$ con $A=1,\dots ,N$, permite construir una cantidad conservada $Q$. Construya tal cantidad conservada para los siguientes casos
+\begin{align*}
+  S[q(t)] & = \int dt \left[\frac{m}{2}{\dot{q}}^2 - U(q) \right] \quad \text{invariancia bajo traslaciones temporales}
+  S[q(t)] & = \int dt \left[ \frac{m}{2}\frac{dx^i}{dt}\frac{dx^i}{dt}\right] \quad \text{invariancia bajo traslaciones espaciales}
+  S[q(t)] & = \int dt \left[  \frac{m}{2}\frac{d\vec{r}}{dt}\cdot \frac{d\vec{r}}{dt}-U(|\vec{r}|)\right] \quad \text{invariancia bajo rotaciones en el plano }(x,y)
+\end{align*}
+Extienda el último caso a al invariancia bajo rotaciones generales, cuya acción finita está dada por $\vec{r}_{\text{transformado}}=O\vec{r}$ con $O$ una matriz ortogonal de determinante $1$. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 6}
+\textbf{Partícula conforme:}
+Calcule la cantidad conservada asociada a la transformación de simetría $\delta x(t)=\frac{\epsilon}{2}x(t)-\epsilon t\frac{dx(t)}{dt}$, para la acción de la partícula conforme
+\begin{equation}
+  I[x(t)] = \int_{t_1}^{t_2} dt \left( \frac{m}{2}\left( \frac{dx}{dt} \right)^2 - \frac{\alpha}{x^2} \right).
+\end{equation}
+Considerando la cantidad conservada asociada esta simetría, además de la conservación de la energía, encuentre la trayectoria de la partícula $x(t)$ de forma alebraica. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 7}
+\textbf{Lagrangiano para la partícula cargada en el campo electromagnetico.} En este ejercicio utilice notación de índices, y la convención de Einstein. Considere una partícula cargada eléctricamente, de carga $q$, en presencia de un campo electromagnetico externo descrito por los potenciales $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$. Recuerde que el campo eléctrico y el campo magnético se obtienen a partir de estos potenciales mediante las siguientes expresiones
+\begin{align*}
+  \vec{E} & =-\nabla \phi - \partial_t\vec{A} \rightarrow E_i = -\frac{\partial \phi}{\partial x^i} - \frac{\partial A_i}{\partial t} \\
+  \vec{B} & = \nabla \times \vec{A} \rightarrow B_i = \epsilon_{ijk}\frac{\partial A_k}{\partial x^j}
+\end{align*}
+La partícula está descrita por el siguiente Lagrangiano
+\begin{equation*}
+  L=\frac{m}{2}|\vec{v}|^2 - q\phi + q\vec{A}\cdot \vec{v} = \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi(t,x) + qA_i(t,x) \frac{dx_i}{dt}.
+\end{equation*}
+Muestre que el Lagrangiano lleva a la expresión corrrecta para la fuerza de Lorentz, es decir
+\begin{equation}
+  m\vec{a}=q(\vec{E}+\vec{v}\times\vec{B})
+\end{equation}
+Asumiendo que los potenciales no dependen del tiempo, muestre que la acción es invariante bajo traslaciones temporales
+\begin{equation}
+  \delta x^i=\epsilon \dot{x}^i 
+\end{equation}
+y calcule la energía como cantidad conservada en el sistema. \\
+Finalmente, para potenciales generales que dependen tanto de $t$, como de $\vec{x}$, muestre que el Hamiltoniano toma la forma
+\begin{equation}
+  H=\frac{1}{2m}\left( \vec{p}-q\vec{A}(t,\vec{x}) \right)^2 + q\phi(t,\vec{x})
+\end{equation}
+Discuta la diferencia entre $H$, y la energía calculada en el paso anterior. 
+\\
+\\
+\textbf{Solución:}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
