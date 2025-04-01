@@ -1,5 +1,5 @@
-\babel@toc {nil}{}\relax 
-\contentsline {chapter}{Introducción}{ii}{}%
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Introducción}{\es@scroman {ii}}{}%
 \contentsline {chapter}{\numberline {1}Nociones Previas}{2}{}%
 \contentsline {section}{\numberline {1.1}Primera clase}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Derivación de las Ecuaciones de Euler-Lagrange}{2}{}%
@@ -32,4 +32,4 @@
 \contentsline {subsubsection}{Pregunta 5}{17}{}%
 \contentsline {subsubsection}{Pregunta 6}{17}{}%
 \contentsline {section}{\numberline {1.5}Quinta clase}{17}{}%
-\contentsline {subsection}{\numberline {1.5.1}Preguntas quinta clase}{17}{}%
+\contentsline {subsection}{\numberline {1.5.1}Preguntas quinta clase}{20}{}%

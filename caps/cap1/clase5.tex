@@ -2,7 +2,133 @@
 
 \begin{document}
 \section{Quinta clase}
-
+\begin{equation}
+  S_{NR}[x(t)]= \int_{t_1}^{t_2} dt \left(\frac{m}{2}\left( \frac{dx}{dt}\right)^2 \right)
+\end{equation}
+Corresponde a la acción de la partícula libre no relativista, ahora bien, para una partícula relativista se tiene lo siguiente
+\begin{equation}
+  S_{REL}[x(t)]=-mc^2\int_{t_1}^{t_2} dt \sqrt{1-\frac{1}{c^2}\left( \frac{dx}{dt}\right)^2} 
+\end{equation}
+Ahora con dos observadores inerciales $K$ y $\tilde{K}$, para lo cual $K$ tiene coordenadas $(x,y)$ y además $\tilde{K}$ tiene coordenadas  $(\tilde{x},\tilde{t})$, se simplifican mucho los cáculos asumiendo que el eje $x$ está alineado con el movimiento relativo del sistema de referencia $\tilde{K}$. Ahora resulta ser que la acción $S[x(t)]$ es invariante bajo boost. (no entendí la letra). 
+\begin{align*}
+  \tilde{t} & = \frac{t-x\frac{V}{c^2}}{\sqrt{1-\frac{V^2}{c^2}}} \\
+  \tilde{x} & = \frac{x-Vt}{1-\frac{V^2}{c^2}}
+\end{align*}
+En donde,
+\begin{enumerate}
+  \item $V$ es la velocidad relativa de $\tilde{K}$ con respecto a $K$
+  \item $v(t)=\frac{dx}{dt}$ velocidad de la partícula según $K$
+  \item $\tilde{v}(t)=\frac{d\tilde{x}}{dt}$ velocidad de la partícula según $\tilde{K}$ 
+\end{enumerate}
+Además se encuentra que $S_{REL}[x(t)]$ es cuasi-invariante bajo transfomaciones temporales
+\begin{equation}
+  \delta_{TT} x = -\epsilon \frac{dx}{dt}
+\end{equation}
+Lo que implica la conservación de energía relativista, que forma
+\begin{equation}
+  E=\frac{-mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+Además $S_{REL}[x(t)]$ es invariante bajo transformaciones espaciales 
+\begin{equation}
+  \delta_{TE} x = a
+\end{equation}
+Se conserva el momentum lineal relativista
+\begin{equation}
+  p = \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+Estas dos relaciones implicarán la relación de dispersión relativista. 
+\begin{equation}
+  E= \sqrt{p^2m^2 + m^2c^4}
+\end{equation}
+¿ Cuál es la cantidad conservada del boost, que depende explícitamente del tiempo. 
+\begin{equation}
+  \frac{dQ}{dt}=0 \frac{\partial Q}{\partial x}dx + \frac{\partial Q}{\partial t}dt + \frac{\partial Q}{\partial y} + \dots = 0
+\end{equation}
+Obsevarmos que si $p=0 \rightarrow E=mc^2$. Queremos hacer cuántica la relatividad especial con la relación de dispersión relativista.
+\begin{equation}
+  E^2=p^2c^2 + c^2p^4
+\end{equation}
+Argumento eurístico que lleva a la ecuación de Schödinger 
+\begin{equation}
+  p & \rightarrow -i\hbar \frac{\partial}{\partial x} \\
+  E & \rightarrow i\hbar\frac{\partial}{\partial t}
+\end{equation}
+Efecto fotoeléctrico
+\begin{equation}
+  E=\hbar\omega 
+\end{equation}
+Difracción de electrones
+\begin{equation}
+  \lambda = \frac{h}{mv} \quad , \quad \text{relación de Broflie}
+\end{equation}
+en el cual el monento es el siguiente
+\begin{equation}
+  p= \frac{h}{\lambda}
+\end{equation}
+Se tiene la siguiente función de onda plana
+\begin{equation}
+  \Psi=Ae^{-i(\omega t- kx)} \quad , \quad k=\frac{\omega}{\lambda}
+\end{equation}
+Con esta, tenemos que encontrar operadores tal que
+\begin{align*}
+  \hat{E}\Psi  & = \hbar \omega \Psi  \rightarrow   p  = -\hbar \frac{\partial}{\partial x}\\
+  \hat{p}\Psi  & = \frac{h}{\lambda}\Psi \rightarrow  E  = i\hbar \frac{\partial}{\partial t} 
+\end{align*}
+Así, finalmente tenemos la relacion de dispersión relativista y además los operadores energía y momento, lo cual si lo reemplazamos en dicha relación de dispersión queda como sigue
+\begin{align*}
+E^2  & = p^2c^2 + m^2c^4 \\
+  -\hbar \partia^2_t \Psi & = -c\hbar^2\partial^2_x \Psi + m^2c^4 \Psi \quad, \quad /\frac{1}{\hbar^2c^2}\\  
+  \frac{1}{c^2}\paetial_t^2\Psi - \partial^2_x \Psi  + \frac{m^2c^2}{h^2}\Psi &= 0
+\end{align*}
+Con lo cual, hemos llegado a la siguiente ecuación
+\begin{equation}
+  \boxed{\frac{1}{c^2}\partial^2_t\Psi - \partia^2_x\Psi + \frac{m^2c^2}{\hbar^2}\Psi = 0}
+\end{equation}
+La cual corresponde a la ecuación de Klein-Gordon ¿ Podemos demostrar la constancia de una cantidad definida positiva? con $c= 1$ y $\hbar=1$. En este caso, $c=1$ significa que se mueve a la rapidez de la luz, y para rapideces menores sería en factor de por ejemplo un 80$\%$ o $c=0.8$.  \\ 
+\begin{align*}
+  \Psi^*  \partial^2_t \Psi - \Psi^* \partial^2_x - m^2 \Psi^* \Psi  & = 0 \\
+  \Psi \partial^2_t \Psi^* - \Psi \partial^2_x \Psi^* + m^2 \Psi \Psi^*  & = 0 \\ 
+  \Psi^*\parial^2_t \Psi^* - \Psi \partial^2_t \Psi^* \Psi \partial^2_x \Psi^*- \Psi^*\partial^2_x \Psi & = 0 \\
+  \partial_t \left( \Psi^*\partial_t\Psi - \Psi\partial_t\Psi^* \right) + \partial_x\left( \Psi\partial_x \Psi^* - \partial_x\Psi \right) & = 0
+\end{align*}
+Luego, de ello definimos lo siguiente
+\begin{equation}
+  \rho = \Psi^*\partial_t\Psi - \Psi\partial_t\Psi^*
+\end{equation}
+Lo cual no es definido positivo, a diferencia del $\rho_{SSHR}= \Psi^*Psi>0$, si bien $\rho$ es conservado, no admite una interpretación probabilística. Más aún $\rho^*=-\rho \rightarrow \rho$ es puramente imaginario. \\
+$\tilde{\rho}=i\rho$ en donde $\rho\in\mathfrak{R}$ pero su signo no está definido. \\
+Además se define la siquiente corriente de función de onda
+\begin{equation}
+  j= \Psi\partial_x\Psi^* - \Psi^*\partial_x\Psi 
+\end{equation}
+La cual corresponde a una corriente de la función de onda, la cual denotará, en un flujo, cuánta de la función de onda se escapa de la frontera del volumen en la cual está definida. Así, similarmente al caso electromagnético, pero con ondas, podemos escribir una ecuación de continuidad para ondas, la cual está dada por la siguiente expresión:
+\begin{equation}
+  \frac{d}{dt}\left( \int_VdV\rho \right) + \int_{\partial V}\vec{j}\cdot d\vec{S} = 0
+\end{equation}
+La cual es la ecuación de continuidad de la función de onda,  y en la cual, mientras la función no se "escape" del volumen, la densidad de probabilidad $\rho_{SSHR}=\Psi^*\Psi>0$ será conservada. \\ 
+a- signo relativo entre $\Psi^*$ y $\Psi$. En $\rho$, viene de la segudna derivada temporal  ¿ Existe una ecuación de primer orden con respecto al tiempo y primer orden en el espacio relativista? Propongamos tal ecuación
+\begin{align*}
+  \alpha \partial_t \Psi + \beta \partial_x \Psi  & = 0 , \quad / \quad \left( \alpha \partial_t \Psi + \beta \partial_x \Psi \right) \\
+  \alpha^2 \partial^2_t\Psi + \alpha\beta \partial_t \partial_x \Psi + \beta \alpha \partial_x \partial_t + \beta^2 \partial^2_x \Psi  & = 0 
+\end{align*}
+versus la forma funcionald de $E=h\omega$ h barra,  t $\lambda = \frac{h}{mv}$, 
+\begin{align*}
+  \frac{1}{c^2} \partial^2_t\Psi - \partial^2_x \Psi = 0
+\end{align*}
+Por lo tanto, $\alpha^2=1$ y $\beta^2=-1$  así
+\begin{align*}
+ \alpha\partial_t \Psi + \vec{\beta}\cdot \vec{\nabla} \PSsi = 0 \\
+  \vec{\beta}= \{ \beta_1 , \beta_2 , \beta_3m\} = \beta_i \\ 
+  \alpha^2=1 , \quad \beta_i \beta_j = -\delta_{ij} \\
+  \alpha\beta_i + \beta_i \alpha = 0 \quad ,\quad \forall i = 1,2,3 
+\end{align*}
+Así,$\alpha, \beta_1, \beta_2, \beta_3$ serán matrices, pero ¿ De cuánto por cuánto ? \\ Básicamente las beta pegarán como operador matricial a las funciones de onda las cuales serán vectores  así saldrán cuatro fuciones de onda. \\
+Existe un teorema que implica de las cuatro componentes de matrices son al menos de 4x4, las cuales son llamadas matrices de Dirac. 
+\begin{equation}
+  \Psi = e^{-i\frac{E}{h}t}\phi(\vec{x})
+\end{equation}
+Ecuación de Dirac, permite hacer una máquina de movimiento perpertuo, pero Dirac hizo un parche
+en vez de decir que los niveles de energía estuvieran disponibles, se asume que todos están ocupados. lo que nos permite predecir una partícula con la misma masa del electrón pero con carga opuesta, o sea, lo positrones. Pero toda esta interpretación es inesesaria, ya que el $E$ no es la energía, directamente, ya que la energía es el autoestado del Hamintoniano,lo que no debe ir directamente o no siempre en la función de onda. ¿ Donde está el mar de Dirac?, lo otro que puede ocurrir es que si estas partículas fueran neutrinos, lo neutrinos no tienen carga eléctrica, donde están los anti-neutrinos, jaja xd  
 \subsection{Preguntas quinta clase}
 
 \end{document}
