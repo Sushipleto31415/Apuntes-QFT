@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743530539.34356 "main.tex" "main.pdf" "main" 1743530539.86562 2
+["pdflatex"] 1743538214.16734 "main.tex" "main.pdf" "main" 1743538214.70765 2
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1742685315 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742685315 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm" 1742685315 1040 b84415f97d114011685943ade933dc71 ""
@@ -155,15 +155,15 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1743048905 5306876 69c328245ae101f6bc10b01e1f2bf9d5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1743048899 2008243 25ab9ebb846d37db78d4defc435bfdd9 ""
   "caps/cap1/clase1.tex" 1743441258.7792 9965 123555e77cbd71d20bd1f208b35bc27a ""
-  "caps/cap1/clase2.tex" 1743441455.76321 14119 bfa7ea03eeb4778bb1bc84e9a45b635f ""
+  "caps/cap1/clase2.tex" 1743538212.70625 14740 cb9d5bcf98b0cc9d84189212df59e4e0 ""
   "caps/cap1/clase3.tex" 1743426242.20523 8934 afcce5ca4da2b4d2f1185c2b4541d3f8 ""
   "caps/cap1/clase4.tex" 1743510717.83855 6485 fd1b5aa17165d2fe5402c80c25154091 ""
   "caps/cap1/clase5.tex" 1743530537.47294 8169 91b512ed97ef8530059b7d617759458a ""
   "caps/intro.tex" 1743279670.52992 1386 caa679ccecf21e27ce4ae0d6c9996105 ""
   "img/Captura de pantalla 2025-03-29 000744.png" 1743279670.53092 84358 17bb803e9438f9a43f8c1a013b426d6f ""
-  "main.aux" 1743530539.80394 3835 59883fac2999451b432ab4e674e6fe7d "pdflatex"
+  "main.aux" 1743538214.64428 3835 5c5446b2f5e4710b452ab9b5006b064d "pdflatex"
   "main.tex" 1743510717.84055 2631 73baf962b016673b149da4bc49abf3be ""
-  "main.toc" 1743530539.806 1947 c4343722d7b0e8c8ddab967b8b6c4234 "pdflatex"
+  "main.toc" 1743538214.64628 1947 5bb260ccbf0070099ed42aa07bafb2d1 "pdflatex"
   "portada.tex" 1743279670.53692 552 b182dff2e15560b8facf6ba33e3a187c ""
   (generated)
   "main.aux"

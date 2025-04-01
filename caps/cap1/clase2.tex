@@ -215,6 +215,11 @@ Calcule la cantidad conservada asociada a la transformación de simetría $\delt
 Considerando la cantidad conservada asociada esta simetría, además de la conservación de la energía, encuentre la trayectoria de la partícula $x(t)$ de forma alebraica. \\
 \\
 \textbf{Solución:}
+Para encontrar la cantidad conservada es necesario variar la acción con respecto a al transformaciñon de simetría infinitesimal $\delta x(t) = \frac{\epsilon}{2}x(t) - \epsilon t \frac{dx(t)}{dt}$, con lo cual, variamos la acción dada
+\begin{align*}
+  \delta I[x(t)] & = I[x(t) + \delta x(t)] - I[x(t)] \\
+  &= \int_{t_1}^{t_2} dt \left( \frac{m}{2} \left( \frac{d}{dt}(x+\frac{\epsilon}{2}x - \epsilon t \frac{dx}{dt}) \right)^2  - \frac{\alpha}{(x+\frac{\epsilon}{2}-\epsilon t\frac{dx}{dt})^2}\right) - \int_{t_1}^{t_2} dt \left( \frac{m}{2}\left( \frac{dx}{dt} \right)^2  - \frac{\alpha}{x^2}\right)
+\end{align*}
 \subsubsection{Pregunta 7}
 \textbf{Lagrangiano para la partícula cargada en el campo electromagnetico.} En este ejercicio utilice notación de índices, y la convención de Einstein. Considere una partícula cargada eléctricamente, de carga $q$, en presencia de un campo electromagnetico externo descrito por los potenciales $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$. Recuerde que el campo eléctrico y el campo magnético se obtienen a partir de estos potenciales mediante las siguientes expresiones
 \begin{align*}

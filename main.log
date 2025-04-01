@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  1 APR 2025 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  1 APR 2025 17:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -693,12 +693,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--209
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 214--218
+Underfull \hbox (badness 10000) in paragraph at lines 214--219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--246
+Underfull \hbox (badness 10000) in paragraph at lines 245--251
 
  []
 
@@ -714,6 +714,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--147
  []
 
 
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
  []
@@ -724,8 +726,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--155
  []
 
 
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
@@ -733,18 +733,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--159
 ) (./caps/cap1/clase4.tex
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-
 
 [15]
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
@@ -755,13 +755,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--128
  []
 
 
+
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
 
-
-[16]
 Underfull \hbox (badness 10000) in paragraph at lines 141--145
 
  []
@@ -804,6 +804,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
+
+
+[18]
 ./caps/cap1/clase5.tex:82: Undefined control sequence.
 <argument> ...= p^2c^2 + m^2c^4 \\ -\hbar \partia 
                                                   ^2_t \Psi & = -c\hbar ^2\p...
@@ -860,8 +863,6 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-
-[18]
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
@@ -906,6 +907,8 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 99.
 (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+
+[19]
 ./caps/cap1/clase5.tex:124: Undefined control sequence.
 <argument> ... {\beta }\cdot \vec {\nabla } \PSsi 
                                                   = 0 \\ \vec {\beta }= \{ \...
@@ -928,9 +931,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-
-[19])
+)
 
 [20] (./main.aux
 LaTeX Info: Redefining \. on input line 9.
@@ -955,9 +956,9 @@ Here is how much of TeX's memory you used:
  39856 multiletter control sequences out of 15000+600000
  565290 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,18n,93p,819b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,18n,93p,819b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (23 pages, 325137 bytes).
+Output written on main.pdf (23 pages, 325548 bytes).
 PDF statistics:
  180 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams
