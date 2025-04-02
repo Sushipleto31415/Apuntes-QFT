@@ -1,4 +1,4 @@
-PWD /home/amaro-diaz/Repositorios/Apuntes-QFT
+PWD /home/amaro-diaz/Repos/Apuntes-QFT
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main.tex
@@ -35,13 +35,12 @@ INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
 INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-es.ini
+INPUT /usr/share/texmf-dist/tex/generic/babel/errbabel.def
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
@@ -227,11 +226,9 @@ INPUT caps/intro.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -275,6 +272,8 @@ INPUT caps/cap1/clase3.tex
 INPUT ./caps/cap1/clase3.tex
 INPUT ./caps/cap1/clase3.tex
 INPUT caps/cap1/clase3.tex
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./caps/cap1/clase4.tex
 INPUT ./caps/cap1/clase4.tex
 INPUT caps/cap1/clase4.tex
@@ -297,9 +296,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT main.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
@@ -314,3 +311,4 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb

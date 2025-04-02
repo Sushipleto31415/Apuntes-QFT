@@ -2,8 +2,7 @@
 
 \begin{document}
 \section{Segunda clase}
-En la última clase repasamos algo de física de mećanica clásica y vimos una introducción algo general de la necesidad de enontrar un marco conceptuál algo más general de la mecánica clásica ya que necesitamos describir un proceso que ocurre en la naturaleza en el cual el estado inicial no es el mismo del final.
-Supongan que tienen una partícula en precencia de una energía potencial $U(x)$ a lo cual la 2da ley de Newton nos dice lo siguiente
+En la última clase repasamos algo de física de mecánica clásica y vimos una introducción algo general de la necesidad de encontrar un marco conceptual algo más general de la mecánica clásica ya que necesitamos describir un proceso que ocurre en la naturaleza en el cual el estado inicial no es el mismo que el final. Supongamos que tienen una partícula en presencia de una energía potencial $U(x)$ a lo cual, la 2da ley de Newton nos dice lo siguiente: 
 $$ m \frac{d^2x(t)}{dt^2}=-\frac{\partial U(x)}{\partial x }$$
 A lo cual multiplicamos por $\frac{dX}{dt}$
 $$ m \frac{dX}{dt}\frac{d^2x(t)}{dt^2}=-\frac{dX}{dt}\frac{\partial U(x)}{\partial x }$$
@@ -73,11 +72,11 @@ B es una función que depende del tiempo. \\
 Encontraremos que, en el caso que $B=0$ decimos que la acción es invariante, desarollando obtenemos
 \begin{align}
     \delta S &  = \int dt \left( \partial_q L \delta q + \partial_{\dot{q}} L \frac{d}{dt} \delta q \right) \\
-    & = \int dt \left(   \partial_q L + \frac{d}{dt} \partial_{\dot{q}} L  \right) \delta q + \int dt \frac{d}{dt} \left(  \partial_{\dot{q}} \delta q\right)
+    & = \int dt \left(   \partial_q L - \frac{d}{dt} \partial_{\dot{q}} L  \right) \delta q + \int dt \frac{d}{dt} \left(  \partial_{\dot{q}}L \; \delta q\right)
 \end{align}
 Usando la ecuación de movimiento obtenemos:
 \begin{align}
-    \delta S & = \int dt  \frac{d}{dt}\left(   \partial_{\dot{q}} \delta q \right) = \int dt \frac{dB}{dt} \\
+    \delta S & = \int dt  \frac{d}{dt}\left(   \partial_{\dot{q}}L \;\delta q \right) = \int dt \frac{dB}{dt} \\
      & =  \int_{t_1}^{t_2} dt \frac{d}{dt} \left(  \partial_{\dot{q}} L \delta q - B\right) = 0
 \end{align}
 si usted es capaz de encontrar una transformación que deja la accioón quasi-invariante, entonces la siguente cantidad encontrará que es constante
@@ -215,11 +214,64 @@ Calcule la cantidad conservada asociada a la transformación de simetría $\delt
 Considerando la cantidad conservada asociada esta simetría, además de la conservación de la energía, encuentre la trayectoria de la partícula $x(t)$ de forma alebraica. \\
 \\
 \textbf{Solución:}
-Para encontrar la cantidad conservada es necesario variar la acción con respecto a al transformaciñon de simetría infinitesimal $\delta x(t) = \frac{\epsilon}{2}x(t) - \epsilon t \frac{dx(t)}{dt}$, con lo cual, variamos la acción dada
+Para encontrar la cantidad conservada es necesario variar la acción con respecto a al transformaciñon de simetría infinitesimal $\delta x(t) = \frac{\epsilon}{2}x(t) - \epsilon t \frac{dx(t)}{dt}$, para lo cual, tenemos el siguiente Lagrangiano 
+\begin{equation}
+  L = \frac{m}{2}\left( \dot{x} \right)^2 - \frac{\alpha}{x^2}
+\end{equation}
+Ahora, para ver si la acción es invariante o quasi-invariante, variamos la acción y por tanto, el Lagrangiano, la variación de la accion es la siguiente
 \begin{align*}
-  \delta I[x(t)] & = I[x(t) + \delta x(t)] - I[x(t)] \\
-  &= \int_{t_1}^{t_2} dt \left( \frac{m}{2} \left( \frac{d}{dt}(x+\frac{\epsilon}{2}x - \epsilon t \frac{dx}{dt}) \right)^2  - \frac{\alpha}{(x+\frac{\epsilon}{2}-\epsilon t\frac{dx}{dt})^2}\right) - \int_{t_1}^{t_2} dt \left( \frac{m}{2}\left( \frac{dx}{dt} \right)^2  - \frac{\alpha}{x^2}\right)
+  \delta I[x(t)] & = I[x(t)+\delta x(t)]-I[x(t)] \\
+  & = \int_{t_1}^{t_2} dt \left(L[x(t) + \delta x(x)] - L[x(t)]right)
 \end{align*}
+Lo cual, como ya sabemos, luego de una serie de Taylor se reduce a
+\begin{equation*}
+  \delta I[x(t)] = \int_{t_1}^{t_2} dt \left( \partial_{x}L \; \delta x + \partial_{\dot{x}}L\; \delta \dot{x} \right)
+\end{equation*}
+Ahora, sabemos la expresión para el Lagrangiano y para la transformación de simetría, con lo cual solo queda calcular las derivadas parciales que aparecen el la variación y el álgebra subsiguiente
+\begin{align*}
+  \delta I [x(t)] & = \int_{t_1}^{t_2} dt \left[ \frac{2\alpha}{x^3} \left( \frac{\epsilon}{2}x -\epsilon t \dot{x}  \right) -  m\dot{x}\left( \frac{\epsilon}{2}\dot{x} + \epsilon t\ddot{x} \right) \right] \\
+  & = \int_{t_1}^{t_2}  dt \epsilon\left[ \frac{\alpha}{x^2} - \frac{2\alpha t \dot{x}}{x^3} - \frac{m\dot{x}^2}{2} - m t \dot{x}\ddot{x}  \right]
+\end{align*}
+Ahora, para usar el teorema de Noether, que nos dice que, una cantidad conservada $B$ será tal que
+\begin{equation}
+  \delta I[(t)]=\int_{t_1}^{t_2} dt \delta L= \int_{t_1}^{t_2} \frac{dB}{dt} 
+\end{equation}
+Para ello, es necesario dejar a la expresión anterior como una derivada total, con lo cual notamos que el primer término de la integral corresponde a
+\begin{equation*}
+  \frac{\alpha}{x^2} - \frac{2\alpha t \dot{x}}{x^3} = \frac{d}{dt}\left( \frac{\alpha t}{x^2} \right)
+\end{equation*}
+Y además el segundo término es tal que
+\begin{equation*}
+  -\frac{m\dot{x}^2}{2} - mt\dot{x}\ddot{x} = -\frac{d}{dt}\left(\frac{mt\dot{x}^2}{2}\right)
+\end{equation*}
+ Con lo cual es posible reescribir la variación del Lagrangiano tal que
+\begin{align*}
+  \delta I[x(t)]=  \int_{t_1}^{t_2} dt \epsilon \frac{d}{dt}\left( \frac{\alpha t}{x^2}-\frac{mt\dot{x}^2}{2} \right) = \int_{t_1}^{t_2}\frac{dB}{dt}
+\end{align*}
+Con lo cual tenemos que, la cantidad  conservada $B$ es igual a 
+\begin{equation}
+  \boxed{ B = \frac{\alpha t}{x^2} - \frac{mt\dot{x}^2}{2}}
+\end{equation}
+Por tanto, la acción será quasi-invariante con un término de borde $B$. Ahora, para interpretar esta cantidad conservada $B$ y encontrar mediante ella las ecuaciones de movimiento, tendremos en cuenta lo siguiente, $B$ es muy parecido a la energía del sistema, de hecho, la energía del sistema en este caso estará dada por
+\begin{equation*}
+  E=\frac{m\dot{x}^2}{2}+\frac{\alpha}{x^2}
+\end{equation*}
+Con lo cual manipularemos alegebraicamente la expresión de la cantidad conservada $B$ para meterlo en la energía $E$ 
+\begin{align*}
+  B & = \frac{\alpha t}{x^2} - \frac{mt\dot{x}^2}{2} \quad, \quad /\cdot \frac{1}{t} \\  \frac{B}{t} =  \frac{\alpha}{x^2} - \frac{m\dot{x}^2}{2} \\
+  \frac{m\dot{x}^2}{2} = \frac{\alpha}{x^2} - \frac{B}{t}
+\end{align*}
+Así, tenemos una expresión para la energía cinética en términos de la energía potencial y la constante del movimiento $B$, así reemplazamos esto en $E$
+\begin{align*}
+  E & = \frac{\alpha}{x^2} - \frac{B}{t} + \frac{\alpha}{x^2} \\
+  E + \frac{B}{t} & = \frac{2\alpha}{x^2} \\
+  \frac{2\alpha}{E + \frac{B}{t}} & = x^2 \\
+  \sqrt{\frac{2\alpha}{E + \frac{B}{t}}} = x 
+\end{align*}
+Con lo cual hemos obtenido las ecuaciones de movimiento a partir de una cantidad conservada $B$ y la energía $E$ y está dada por
+\begin{equation}
+ \boxed{  x(t)=\sqrt{\frac{2\alpha}{E+\frac{B}{t}}} \quad , \quad \forall t>0 }
+\end{equation}
 \subsubsection{Pregunta 7}
 \textbf{Lagrangiano para la partícula cargada en el campo electromagnetico.} En este ejercicio utilice notación de índices, y la convención de Einstein. Considere una partícula cargada eléctricamente, de carga $q$, en presencia de un campo electromagnetico externo descrito por los potenciales $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$. Recuerde que el campo eléctrico y el campo magnético se obtienen a partir de estos potenciales mediante las siguientes expresiones
 \begin{align*}
@@ -247,5 +299,37 @@ Discuta la diferencia entre $H$, y la energía calculada en el paso anterior.
 \\
 \\
 \textbf{Solución:}
+Para mostrar que dicho Lagrangiano lleva a la fuerza de Lorentz, usaremos las ecuaciones de Euler-Lagrange para $x^i \quad , \quad i=1,\dots,N$ coordenadas, las cuales está dadas por
+\begin{equation}
+  \partial_{x^i} L  - \frac{d}{dt}\partial{\dot{x}^i}L = 0
+\end{equation}
+Con lo cual, calculemos dichos términos
+\begin{align*}
+  \partial_{x^i} L & = \partial_{x^i} \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi + qA_i\dot{x}^i  \right) \\
+  & = -q\partial_{x^i}\phi + q\partial_{x^i}A_j\dot{x}^j
+\end{align*}
+y además
+\begin{align*}
+  \partial_{\dot{x}^i}L & = \partial_{\dot{x}^i} \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi + qA_i\dot{x}^i \right) \\
+  & = m\dot{x}^i + qA_i
+\end{align*}
+Ahora este último término lo diferenciamos en el tiempo tal que 
+\begin{align*}
+  \frac{d}{dt}\partial_{\dot{x}^i} L & = \frac{d}{dt}\left( m\dot{x}^i + qA_i \right) \\
+  & = m\ddot{x} + q\left( \partial_{t}A_i + \partial_{x^j}A_i\dot{x}^j  \right)
+\end{align*}
+Ahora reemplazamos esto en las ecuaciones de Euler-Lagrange como sigue
+\begin{align*}
+  m\ddot{x} & = -\partial_{x^i}\phi + q\partial_{x^j}A_i\dot{x}^j - q\partial_{t}A_i - \partial_{x^j}A_i\dot{x^j} \\
+  & = q\left( -\partial_{x^i}\phi - \partial_{t}A_i \right) + q\left( \partial_{x^i}A_j - \partial_{x^j}A_i \right)\dot{x^j} \\
+  & = qE_i + q\epsilon_{ijk}\dot{x}^jB^k
+\end{align*}
+Con lo cual, esto puede ser escrito de la siguiente forma
+\begin{equation}
+  qE_i + q\epsilon_{ijk}\dor{x}^jB^k = q\vec{E} + q(\vec{v}\times\vec{B})
+\end{equation}
+Con lo cual hemos confirmado que el Lagrangiano para una partícula inmersa en un campo electromagnético, este llevará a las ecuaciones de movimiento que es la fuerza de Lorentz.\\
+Para la siguiente parte se asumirá que los potenciales $\phi$ y $A_i$ son independientes del tiempo. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
