@@ -329,7 +329,80 @@ Con lo cual, esto puede ser escrito de la siguiente forma
   qE_i + q\epsilon_{ijk}\dor{x}^jB^k = q\vec{E} + q(\vec{v}\times\vec{B})
 \end{equation}
 Con lo cual hemos confirmado que el Lagrangiano para una partícula inmersa en un campo electromagnético, este llevará a las ecuaciones de movimiento que es la fuerza de Lorentz.\\
-Para la siguiente parte se asumirá que los potenciales $\phi$ y $A_i$ son independientes del tiempo. 
-
+Para la siguiente parte se asumirá que los potenciales $\phi$ y $A_i$ son independientes del tiempo. \\
+Se tiene la acción
+\begin{equation}
+  S[x^i(t)] = \int_{t_1}^{t_2} dt \; L[\dot{x}^i,x^i,t]
+\end{equation}
+Luego se tiene la siguiente transformación infinitesimal. La cual corresponde a una traslación temporal
+\begin{equation}
+  \delta x^i = \epsilon \dot{x}^i 
+\end{equation}
+Ahora, para mostrar que la acción es invariante, variamos la acción
+\begin{equation}
+  \delta S[x^i(t)] = S[x^i(t) + \delta x^i(t)] - S[x^i(t)] = \int_{t_1}^{t_2} dt \left(L\left[\frac{d}{dt}(x^i(t)+\delta x^i(t), x^i(t)+\delta x^i(t),t)\right] - L[\dot{x}^i, x^i ,t] \right)
+\end{equation}
+Ahora, tomando una serie de Taylor, obtenemos que la variación del Lagrangiano es igual a
+\begin{equation}
+  \delta L = \partial_{x^i}L \;\delta x^i + \partial_{\dot{x}^i} L \; \delta \dot{x}^i
+\end{equation}
+Con lo cual calculamos esta expresión usando la transformación dada y el Lagrangiano para una partícula sumida en un campo electromagnético.
+\begin{align*}
+  \delta L  & = \left( -q\partial_{x^i}\phi +q\partial_{x^i}A_i \dot{x}^i \right)\epsilon \dot{x}^i + \left( m\dot{x}^i + qA_i \right)\epsilon\ddot{x}^i \\
+  & = -q\epsilon \dot{x}^i\partial_{x^i}\phi + q\epsilon {\dot{x}^i}^2\partial_{x^i}A_i + \epsilon m \dot{x}^i \ddot{x}^i + q \epsilon A_i \ddot{x}^i 
+\end{align*}
+Ahora bien, el Lagrangiano es independiente del tiempo podemos escribir lo siguiente
+\begin{equation*}
+  \delta L = \epsilon\left(\partial_{x^i}L \; \dot{x}  + \partial_{\dot{x}^i}L \; \ddot{x}^i + \cancel{\partial_t L }^0\right) = \epsilon\ D_t L
+\end{equation*}
+Con lo cual, la cantidad B será
+\begin{equation*}
+  B = \epsilon L = \epsilonv \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi + qA_i \dot{x} \right)
+\end{equation*}
+y por tanto, mediante el teorema de Noether podemos encontrar una cantidad conservada Q la cual está dada por lo que sigue
+\begin{equation*}
+  \partial_{\dot{x}^i}L \; \delta x^i - B = Q 
+\end{equation*}
+reemplazando el valor que encontramos para la cantidad $B$  y la traslación temporal, se obtiene 
+\begin{equation}
+  \partial_{\dot{x}^i} L \; \epsilon \dot{x}^i  - \epsilon L = Q
+\end{equation}
+Ahora desarollamos esta expresión para encontrar la cantidad Q conservada
+\begin{align*}
+  \epsilon\left( m{\dot{x}^i}\dot{x}^i +qA_i\dot{x}^i  - \frac{m}{2}\dot{x}^i\dot{x}^i + q\phi - qA_i\dot{x}^i\right)  & = Q \\
+  \epsilon \left( \frac{m}{2}\dot{x}^i\dot{x}^i + q\phi \right) & = Q \\
+  \epsilon E  & = Q
+\end{align*}
+Con lo cual, hemos identificado la cantidad conservada $Q$ como la energía del sistema y por tanto, la energía de una partícula sumida en un campo electromagnético cuyos potenciales son idependientes del tiempo es conservada ante traslaciones espaciales. 
+ \\
+ Ahora para el cálculo del Hamiltoniano tenemos que, la definición del Hamiltoniano involucra una transformación de Legendre, lo que se representa de la siguiente forma
+ \begin{equation}
+   H(p_i,x^i,t) = p_i\dot{x}^i - L(\dot{x}^i,x^i,t)
+\end{equation}
+En lo cual, $p_i$ son los momenta generalizados, cuya expresión está dada por
+\begin{equation*}
+  p_i=\partial_{\dot{x}^i}L
+\end{equation*}
+con lo cual, solo queda calcular, los momenta están dados por 
+\begin{align*}
+  \partial_{\dot{x}^i}L  = m\dot{x}^i + qA_i  & = p_i \\
+  \dot{x}^i & = \frac{p_i}{m} - \frac{q}{m}A_i
+\end{align*}
+Con lo cual, reescribimos el Lagrangiano usando los momenta
+\begin{equation*}
+  L = \left( \frac{p_i}{2m} - \frac{q}{2m}A_i \right)^2 -q\phi + qA_i\left( \frac{p_i}{m}-\frac{q}{m}A_i \right)
+\end{equation*}
+Con lo cual, solo queda calcular el Hamiltoniano
+\begin{align*}
+  H & = p_i\left(\frac{p_i}{m} -\frac{q}{m}A_i\right) -\frac{1}{2m}\left( p_i - qA_i \right)^2 +q\phi - qA_i\left( \frac{p_i}{m}-\frac{q}{m}A_i \right) \\
+  & =  \frac{p_i^2}{m} - \frac{qp_iA_i}{m} - \frac{p_i^2}{2m} + \frac{qp_iA_i}{m} - \frac{q^2A_i^2}{2m} + q\phi -  \frac{qp_iA_i}{m} + \frac{qA_i^2}{m} \\
+  & = \frac{p_i^2}{2m} - \frac{qp_iA_i}{m} + \frac{q^2A_i^2}{2m} + q\phi \\
+  & = \frac{(p_i - qA_i)^2}{2m} + q\phi
+\end{align*}
+Con lo cual el Hamiltoniano para una particula sumida en un campo electromagnético está dado por
+\begin{equation}
+  H(p_i,x^i,t) = \frac{(p_i-qA_i)^2}{2m} + q\phi
+\end{equation}
+Ahora, la diferencia entre la energía y el Hamiltoniano recae en que, el Hamiltoniano incluye términos cinéticos, el potencial magnético, y la energía no, lo que permite que la enegía sea una cantidad conservada en traslaciones temporales, o sea, la energía se conserva en el tiempo. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
