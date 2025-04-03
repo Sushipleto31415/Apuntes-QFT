@@ -3,4 +3,74 @@
 \begin{document}
 \section{Preguntas clase 5}
 
+\subsection{Pregunta 1}
+Usando la relación de Plank  $E=\hbar \omega$ y la relación de Broglie $p=\frac{h}{\lambda}$, defina operadores que actuando sobre una onda plana $\psi=Ae^{-i\omega t+ikx}$, implementen las relaciones anteriores de autovalores. \\
+Usando el mapeo de operadores que acaba de deducir, muestre la relación de dispersión no-relativista para una partícula libre, lleva a la ecuación Schrödinger. \\
+Considere la ecuación de Schrödinger para una partícula en tres dimensiones, y muestre que
+\begin{equation*}
+  \frac{\partial \rho}{\partial t} + \vec{\nabla} \cdot \vec{j} = 0.
+\end{equation*}
+donde $\rho=\psi^*\psi$. Encuentre la expresión para $\vec{j}$. Escriba la forma integral de tal ecuación. \\
+Usando la relación de dispersión relativista, $E^2=p^2c^2 + m^2c^4$, repita el procedimiento anterior e interprete su resultado, Considerando la ecuación de Klein-Gordon, muestre que las ondas planas $  \psi=Ae^{-i\frac{E}{h}t + i\frac{E}{h}x}$ lleva a dos familias de ecuaciones, con energía $E$ tanto positiva como negativa. Dibuje tal espectro y discuta si tal espectro es  o no sensato para un sistema físico.\\
+Considee la ecuación de primer orden 
+\begin{align*}
+  \alpha \partial_t \psi \beta_1 \partial_{x^1}\psi + \beta_2 \partial_{x^2}\psi + \beta_3\partial_{x_3}\psi + m\psi  & = 0 \\
+  \alpha \partial_t \psi + \beta_i \partial_i\psi + m\psi & = 0
+\end{align*}
+Actue sobre esta ecuación con el operador $(\alpha \partial_t+\beta_j\partial_j - m)$ y muestre que se recupera la ecuación de Klein-Gordon, siempre y cuando
+\begin{align*}
+  \alpha^2  & = 1 \\
+  \alpha \beta_i + \beta_j \alpha & = 0 \\
+  \beta_i\beta_j = -\delta_{ij}
+\end{align*}
+¿ Es posible realizar estas últimas ecuaciones asumiendo que los cuatro objetos $\alpha$ y $\beta_i$ son números? \\
+\\
+\textbf{Solución:} Para resolver la primera parte del problema, necesitamos operadores que actuando sobre la función de onda plana, dada por
+\begin{equation*}
+  \psi(x,t) = Ae^{-i\omega t + ikx}
+\end{equation*}
+Nos deje las siguientes relaciones, primero, para la relacion de Plank, el operador que actúa sobre la función de onda plana será
+\begin{equation*}
+  \hat{E} = i\hbar \partial_t
+\end{equation*}
+Comprobemoslo:
+\begin{align*}
+  \hat{E}\{\psi(x,t)\}  & = i\hbar \partial_t \left( Ae^{i\omega t + ikx} \right) \\
+  & = i\hbar\cdot (-i\omega) A e^{i\omega t + ikx} \\
+  & = \hbar\omega \psi(x,t)
+\end{align*}
+Con lo cual se concluye que $\hat{E}\{\psi\} = \hbar \omega \psi$. Ahora para el caso de la relación de Broglie, el operador estará dado por los siguiente
+\begin{equation*}
+  \hat{p} = -i\hbar \partial_x
+\end{equation*}
+Comprobemoslo:
+\begin{align*}
+  \hat{p}\{\psi\} & = -i\hbar \partial_x \left( Ae^{-i\omegat+ikx} \right) \\
+  & = -\hbar \cdot \left( ik \right) \psi \\
+  & = \hbar \frac{2\pi}{\lambda} \\
+  & = \frac{h}{\lambda}
+\end{align*}
+Con lo cual se concluye que $\hat{p}\{\psi\}=\frac{h}{\lambda}\psi$.  \\
+La relación de dispersión con potencial clásica corresponde a la siguiente expresión
+\begin{equation}
+  E = \frac{p^2}{2m} + V(x)
+\end{equation}
+Con lo cual, primero obtendremos el operador momenta al cuadrado, el cual será, para $\hat{p}=-i\hbar\nabla$ en lo cual, como en este caso generalizaremos a una función de onda en 3d $\partial_x$ pasa a ser el operador gradiente, con lo cual
+\begin{equation*}
+  \hat{p}^2 = \hbar \nabla^2
+\end{equation*}
+Con lo cual, por ahora, tendremos que la relación de dispersión puede ser escrita de la siguiente manera
+\begin{equation*}
+  E = \frac{\hbar}{2m}\nabla^2 + V(x)
+\end{equation*}
+Ahora nos queda aplicar el operador Energía, el cual está dado por $\hat{E}=i\hbar\partial_t$ lo que en la relación de dipersión es tal que
+\begin{equation*}
+  i\hbar \partial_t = \frac{\hbar}{2m}\nabla^2 + V(x)
+\end{equation*}
+El cual es el operador de la ecuación de Schrödinger, ahora veamos como actúa sobre una función de onda $\Psi(\vec{x},t)$:
+\begin{equation}
+  \frac{\hbar}{2m}\nabla^2\Psi + V(x)\Psi = -i\hbar \partial_t\Psi 
+\end{equation}
+La cual es la archi-conocida ecuación de Schrödinger para una partícula cuántica bajo un potencial $V(x)$. \\
+
 \end{document}

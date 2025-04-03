@@ -8,4 +8,3 @@
 \contentsline {section}{\numberline {1.4}Cuarta clase}{10}{}%
 \contentsline {section}{\numberline {1.5}Quinta clase}{12}{}%
 \contentsline {section}{\numberline {1.6}Sexta clase}{15}{}%
-\contentsline {subsection}{\numberline {1.6.1}Preguntas clase 6}{18}{}%
