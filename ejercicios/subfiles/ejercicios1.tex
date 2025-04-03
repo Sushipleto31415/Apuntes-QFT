@@ -1,0 +1,87 @@
+\documentclass ../main_ej.tex]{subfiles}
+
+\begin{document}
+
+
+\subsection{Preguntas clase 1}
+\subsubsection{Pregunta 1}
+Escriba la ecuación de Schödinger para el àtomo de hidrógeno, incluyendo las contribuciones cinéticas tanto del protón como del electrón, además de la energía potencial de la interacción.
+\\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 2}
+Argumente que la formulación standard de la mecácnia cuántica no-relativista considera un número fijo de partículas y no permite describir transiciónes entre estados con número distinto de partículas. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 3}
+Describa el efecto Compton y diga por qué razón el resultado clásico es distinto al observado. Calcule la longitud de Compton del electrón. \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 4}
+Describa el decaimiento beta ¿Cuál es la vida media de un neutrón? ¿Cómo interpreta tal número? \\
+\\
+\textbf{Solución:}
+\subsubsection{Pregunta 5}
+Deduzca las ecuaciones de Euler-Lagrange, argumentando cláramente cada uno de sus pasos. Explique porqué nunca es necesario preguntarse si la variación $\delta$ conmuta o no con la derivada temporal $\frac{d}{dt}$. Encuentre las ecuaciones de Euler-Lagrange para un Lagrangiano que dependec de un número arbitrario de coordenadas generalizadas $q_i(t)$ con $i=1,\dots ,N$. \\
+\\
+\textbf{Solución:}
+Sea la acción
+\begin{equation}
+  S= \int_{t_1}^{t_2}dt L(\dot{q}^i,q^i,t) 
+\end{equation}
+Para lo cual $q^i(t)\quad , i=1,\dots , N$ son las coordenadas generalizadas las cuales están bien definidas en el intervalo de $t\in[t_1,t_2]$ en los cuales se tiene que las condiciones de borde homogéneas (shell) tal que, aunque las funcion pueda cambiar dentro del intervalo $(t_1,t_2)$ los valores en los extremos $t_1$ y $t_2$ no cambiará. Así, consideraremos una variacion del camino infinitesimal del camino que tomará, la cual denotaremos por $\delta q^i=\Phi^i(t)$ que al igual que las coordenadas, será dependiente del tiempo, la variación de la acción ante esta variacion infinitesimal de camino es denotada por
+\begin{align*}
+  \delta S & =S[q^i(t)+\Phi^i(t)]-S[q^i(t)] \\
+           & = \int_{t_1}^{t_2} L\left[ q^i(t) + \Phi^i(t) , \frac{d}{dt}\left( q^i(t)+\Phi^i(t)\right ),t \right] - \int_{t_1}^{t_2}dtL (q^i(t), \dot{q}^i,t) 
+\end{align*}
+Ahora, se tiene la siguiente dependencia en el Lagrangiano  $L\left[ q^i(t) + \Phi^i(t) , \frac{d}{dt}\left( q^i(t)+\Phi^i(t)\right),t \right]$ para lo cual se tomará una serie de Taylor con respecto al origen como sigue
+\begin{align*} \label{taylor-L}
+  L\left[q^i+\Phi^i, \frac{d}{dt}\left(q^i+ \Phi^i  \right) \right]= L + \partial_{q^i} L \; \Phi^i + \partial_{\dot{q}^i}L \;  \dot{\Phi} + \mathcal{O}({\Phi^i}^2,\dot{\Phi^i}^2 , \Phi^i, \dot{\Phi}^i)
+\end{align*}
+Con lo cual, si introducimos \eqref{taylor-L} sin tomar en cuenta los términos de $ \mathcal{O}({\Phi^i}^2,\dot{\Phi^i}^2 , \Phi^i, \dot{Phi}^i)$ se tiene lo siguiente
+\begin{align*}
+  \delta S  = \int_{t_1}^{t_2} dt \left(  L + \partial_{q^i} L \; \Phi^i + \partial_{\dot{q}^i}L \;  \dot{\Phi} \right) - \int_{t_1}^{t_2} L(q^i,\dot{q}^i,t)  
+\end{align*}
+Ahora, usando regla de Leibniz en el tercer término en la primera integral, se obtiene
+\begin{align*} \label{leibniz}
+  \frac{d}{dt}\left( \partial_{\dot{q}^i} L\; \Phi^i \right) & = \frac{d}{dt}\partial_{\dot{q}^i}\Phi^i + \partial_{\dot{q}^i}(L) \; \dot{\Phi}^i \\
+  \frac{d}{dt}(\partial_{\dot{q}^i}L\;\Phi^i)  -\frac{d}{dt}( \partial_{\dot{q}^i}L)\; \Phi^i = & \partial_{\dot{q}^i}\dot{\Phi}^i
+\end{align*}
+Con lo cual, introduciendo \eqref{leinbiz} en el desarollo, obtenemos lo que sigue
+\begin{align*}
+  \delta S & = \int_{t_1}^{t_2} dt \left[  L + \partial_{q^i} L \; \Phi^i + \frac{d}{dt}(\partial_{\dot{q}^i}L \; \Phi^i)  -\frac{d}{dt} (\partial_{\dot{q}^i}L)\; \Phi^i\right] - \int_{t_1}^{t_2} L(q^i,\dot{q}^i,t)  \\
+  & = \int_{t_1}^{t_2} dt \left[ L - L+ \partial_{\dot{q}^i} L \; \Phi^i - \frac{d}{dt}(\partial_{\dot{q}^i} L)\Phi^i\right]  + \int_{t_1}^{t_2}\frac{d}{dt}(\partial_{\dot{q}^i}L\; \Phi^i)
+\end{align*}
+Notese que el ùltimo término será igual a cero ya que este está evaluado en los los extremos, veamos que, por el teorema fundamental del cálculo:
+\begin{equation*}
+  \int_{t_1}^{t_2}dt \frac{d}{dt} (\partial_{\dot{q}^i}L \; \Phi^i) =  \left[\partial_{\dot{q}^i}L \; \Phi^i\right]_{t_1}^{t_2} = 0
+\end{equation*}
+Ya que, como sabemos $\Phi^i(t_1)=\Phi^i(t_2)=0$ son las condiciones de borde impuestas, así sigue que
+\begin{align*}
+  \delta S & = \int_{t_1}^{t_2} dt \left( \partial_{q^i}L + \frac{d}{dt}(\partial_{\dot{q}^i}L) \right)\Phi^i 
+\end{align*}
+Luego, se sume que el princpio de acción es estacionaro, con lo cual $S\delta \stackrel{!}{=}0$ con lo cual se obtiene
+\begin{equation*}
+  \delta S \stackrel{!}{=}0=\int_{t_1}^{t_2} dt \left( \partial_{q^i}L - \frac{d}{dt} (\partial_{\dot{q}^i}L) \right) \Phi^i
+\end{equation*}
+Ahora, como se ha realizado para un intervalo de tiempos cualesquiera, entonces el integrando será cero para todo tiempo, lo cual es
+\begin{align*}
+  0 & =\left[\partial_{q^i}L-\frac{d}{dt}(\partial_{\dot{q^i}}L)\right] \Phi^i \\
+  & = \partial_{q^i}L- \frac{d}{dt}(\partial_{\dot{q}^i}L)
+\end{align*}
+En donde se ha obviado el caso trivial en el cual $\Phi^i=0$ ya que esta es una función arbitraria. \\ 
+Con lo cual, finalmente se llega a las ecuaciones de Euler-Lagrange para $q^i(t) \quad , i=1,\dots,N$ las cuale están dadas por
+
+\begin{equation}
+  \boxed{\partial_{q^i}L-\frac{d}{dt}(\partial_{\dot{q}^i}L)=0}
+\end{equation}
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -40,7 +40,7 @@ Aplicamos las transformaciones en forma matricial
 \end{equation}
 Ahora, la matriz de transformación se representa como un tensor $\Lambda_\nu^\mu$ de transformacion para el tensor de posiciones $x^\mu$ tal que, la regla de transformación para la posición dentro del espacio tiempo plano de Minkowsky, es bajo la siguiente regla
 \begin{equation}
-  \tilde{x}^\mu=\Lambda^\mu_\nu x^\nu 
+  \tilde{x}^\mu=\Lambda^\mu_\nu x^\nu
 \end{equation}
 en lo cual los índices $\nu$ están contraidos y por tanto, sumados. \\
 Pensamos ahora, en una transformación más general y preguntémonos ¿ Qué nos dice la invariancia del intervalo con respecto de $\Lambda^\mu_\nu$?
@@ -48,8 +48,8 @@ Pensamos ahora, en una transformación más general y preguntémonos ¿ Qué nos
   \tilde{\vec{x}} &  = \Theta \vec{x} \\
   ||\tilde{\vec{x}}||^2 & = ||\vec{x}||^2 \\
   \tilde{\vec{x}}^T\tilde{\vec{x}} & = \vec{x}^T\vec{x} \\
-  (\Theta\vec{x})^T(\Theta\vec{x}) & = \vec{x}^T\vec{x}
-  \vec{x}^T\Theta^T\Theta\vec{x}   & = \vec{x}^T\vec{x} \\
+  (\Theta\vec{x})^T(\Theta\vec{x}) & = \vec{x}^T\vec{x} \\
+  \vec{x}^T\Theta^T\Theta\vec{x}   & = \vec{x}^T\vec{x} 
 \end{align*}
 En lo cual, las matrices $\Theta$ se definen como ortogonales, o sea que, $\Theta^T\Theta= I$
 \begin{align*}
@@ -73,7 +73,7 @@ Por tanto
 Pero queremos que
 \begin{align*}
   \tilde{x}^\mu & = \Lambda_\alpha^\mu x^\alpha \rightarrow d\tilde{x}^\mu = \Lambda^\mu_\alpha dx^\alpha \\
-  \tilde{x}^\nu & = \Lambda_\beta^\nu x^\beta \rightarrow d\tilde{x}^\nu = \Lambda_\beta^\nu dx^\beta 
+  \tilde{x}^\nu & = \Lambda_\beta^\nu x^\beta \rightarrow d\tilde {x}^\nu   = \Lambda_\beta^\nu dx^\beta 
 \end{align*}
 Con lo cual, obtenemos que
 \begin{align*}
@@ -87,11 +87,11 @@ Por tanto, tenemos que
 tenemos que $\Lambda$ será una transformación de Lorenz si ocurre lo anterior
 \begin{align*}
  \Lambda_\alpha^\mu \eta_{\mu \nu} \Lambda_\beta^\nu & = \eta_{\alpha \beta} \\
-  \Lambda^T \eta \Lambda = \eta 
+  \Lambda^T \eta \Lambda & = \eta 
 \end{align*}
 versus 
 \begin{align*}
-  \Theta^T I \Theta  & = I \\
+  \Theta^T I \Theta = I
 \end{align*}
 En lo cual se usa la siguiente propiedad
 \begin{align*}
@@ -118,20 +118,20 @@ Ahora, aplicamos la transformación para la velocidad $\tilde{v}$ tal que
   & = \frac{c\left( 1-\frac{vV}{c^2} \right)mc^2}{\sqrt{c^2\left( 1-\frac{vV}{c^2} \right)^2 - (v-V)^2}} \\
   & = \frac{c(1-\frac{vV}{c^2})mc^2}{\sqrt{1-\frac{V^2}{c^2}+ \frac{v^2V^2}{c^2}-\frac{v^2}{c^2}}} \\
   & = \frac{mc^2}{\sqrt{1-\frac{V^2}{c^2} + \frac{v^2V^2}{c^2}} - \frac{v^2}{c^2}}  - \frac{mvV}{\sqrt{1-\frac{V^2}{c^2} + \frac{v^2V^2}{c^2} - \frac{v^2}{c^2}}}\\
-  & = \frac{\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}{\sqrt{1-\frac{V^2}{c^2}}} - \frac{V\frac{mv}}{\sqrt{1-\frac{V^2}{c^2}}}{\sqrt{1-\frac{V^2}{c^2}}}} \\
-  6 = \frac{E-\frac{V}{c}P}{\sqrt{1-\frac{1-\frac{V^2}{c^2}}}
+  & = \frac{\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}}{\sqrt{1-\frac{V^2}{c^2}}} - \frac{V\frac{mv}{\sqrt{1-\frac{V^2}{c^2}}}}{\sqrt{1-\frac{V^2}{c^2}}} \\
+  \frac{\tilde{E}}{c}& = \frac{\frac{E}{c}-\frac{V}{c}P}{\sqrt{1-\frac{V^2}{c^2}}}
 \end{align*}
 Versus
 \begin{align*}
-  c\tilde{t} & =\frac{ct-\frac{V}{c}x}{\sqrt{1-\frac{V^2}{c^2}}}
+  c\tilde{t} =\frac{ct-\frac{V}{c}x}{\sqrt{1-\frac{V^2}{c^2}}}
 \end{align*}
 Tarea, 
 \begin{align*}
-  \tilde{p}=\frac{m\tilde{v}}{\sqrt{1-\frac{\tilde{v}^2}}{c^2}} = \frac{p-\frac{V}{c}\left( \frac{E}{c} \right)}{\sqrt{1-\frac{V^2}{c^2}}}
+  \tilde{p}=\frac{m\tilde{v}}{\sqrt{1-\frac{\tilde{v}^2}{c^2}}} = \frac{p-\frac{V}{c}\left( \frac{E}{c} \right)}{\sqrt{1-\frac{V^2}{c^2}}}
 \end{align*}
 versus
 \begin{equation*}
-  \tilde{x}= \frac{x-\frac{V}{c}(c\tilde{t})}{\sqrt{1-\frac{V^2}{c^2}}
+  \tilde{x} = \frac{x-\frac{V}{c}(c\tilde{t})}{\sqrt{1-\frac{V^2}{c^2}}}
 \end{equation*}
 Definición: 4-momenta o cuadrivector de momentum , de define como 
 \begin{align}
@@ -143,4 +143,6 @@ y además
 \end{equation}
 El cuadrimoemento es un vector contravariante de Lorentz
 \subsection{Preguntas clase 6}
+Aquí las preguntas clase 6
+
 \end{document}

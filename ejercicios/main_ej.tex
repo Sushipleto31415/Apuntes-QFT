@@ -12,7 +12,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\textcolor[RGB]{127,127,127}{Introducción a QFT}}
+\fancyhead[LE,RO]{\textcolor[RGB]{127,127,127}{Ejercicios introducción a QFT}}
 \fancyfoot[LE,RO]{\thepage}
 \fancyfoot[LO,RE]{A. Díaz & F. Mella}
 
@@ -47,13 +47,27 @@
 
 \begin{document}
 
-\subfile{portada}
+\thispagestyle{empty}
+\begin{titlepage}
+\centering
+
+\vspace*{\fill}  % Empuja el contenido hacia el centro verticalmente
+
+{\Huge \textbf{Ejercicios de Introducción a las partículas elementales y Teoría Cuantica de Campos}}\\[2cm]
+{\Large Amaro A. Díaz Concha y Fernanda C. Mella Alvarez}\\[1cm]
+{\normalsize Departamento de Física\\
+Facultad de Ciencias Físicas y Matemáticas\\
+Universidad de Concepción}\\[2cm]
+
+\vspace*{\fill}  % Rellena el espacio restante
+
+\end{titlepage}
 
 \setcounter{page}{1}
 \pagenumbering{roman}
 
 
-\subfile{caps/intro}
+%\subfile{caps/intro}
 
 \tableofcontents
 \pagenumbering{arabic}
@@ -69,17 +83,24 @@
  
 
 
-\subfile{caps/cap1/clase1} %oyee ns si te tinca renombrar las secciones como del tema q se trata tipo...clase 1-> Invarianza de la acción/ecuaciones de Euler-Lagrange
+\subfile{subfiles/ejercicios1} %oyee ns si te tinca renombrar las secciones como del tema q se trata tipo...clase 1-> Invarianza de la acción/ecuaciones de Euler-Lagrange
 
-\subfile{caps/cap1/clase2} % Cantidades conservadas / Teorema de Noether
+\subfile{subfiles/ejercicios2}
 
-\subfile{caps/cap1/clase3}% Relatividad especial 
+\subfile{subfiles/ejercicios3}
 
-\subfile{caps/cap1/clase4}% y esta sin nombre (la seccion) pq es continuacion directa d la otra 
+\subfile{subfiles/ejercicios4}
 
-\subfile{caps/cap1/clase5}
+\subfile{subfiles/ejercicios5}
 
-\subfile{caps/cap1/clase6}
+\subfile{subfiles/ejercicios6}
+%\subfile{caps/cap1/clase3}% Relatividad especial 
+
+%\subfile{caps/cap1/clase4}% y esta sin nombre (la seccion) pq es continuacion directa d la otra 
+
+%\subfile{caps/cap1/clase5}
+
+%\subfile{caps/cap1/clase6}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                          CAPÍTULO 2

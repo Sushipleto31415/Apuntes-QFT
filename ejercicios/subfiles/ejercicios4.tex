@@ -1,0 +1,80 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Preguntas clase 4}
+
+\subsection*{Pregunta 1}
+Demuestre que la acción 
+\begin{equation}
+  S[x(t)]=-mc^2\int dt \sqrt{1-\frac{1}{c^2}\left( \frac{dx}{dt}\right)^2}
+\end{equation}
+reproduce la acción de la partícula libre no-relativista, módulo una constante aditiva. \\
+\\
+
+\textbf{Solución:}
+Para volver a la acción de la partícula libre no-relativista, se define a la velocidad como $v=\frac{dx}{dt}$ y además se considera a $\frac{v^2}{c^2}$, o sea, estamos condiserando a la velocidad de la luz como muy grande. Así, tomando la expansión el Taylor alrededor del origen, para $v$ obtenemos lo siguiente:
+\begin{align*} 
+  \sqrt{1-\frac{v^2}{c^2}} & \approx 1 - \frac{v^2}{2c^2} - \mathcal{O}\left( \frac{v^4}{c^4}
+  \right)
+\end{align*}
+Considerando que $\mathcal{O}\left( \frac{v^4}{c^4}\right)$ es muy pequeño, entonces 
+\begin{align*}
+  S[x(t)] & \approx -mc^2\int_{t_1}^{t_2} dt\left(1-\frac{v^2}{2c^2}  \right) \\
+  & \approx -mc^2\int_{t_1}^{t_2} dt + \frac{m}{2}\int_{t_1}^{t_2}dt\; v^2 \\
+  & \approx -mc^2(t_2-t_1) + \frac{m}{2}\int_{t_1}^{t_2}dt \; v^2
+\end{align*}
+Así se obtiene que, la acción para la partícula no-relativista, derivada de la acción $S[x(t)]$ se divide en dos contribuciones, la energía cinética clásica de la partícula y una constante aditiva, ahora, el segundo término de la acción obtenida
+\begin{equation}
+  \frac{m}{2}\int_{t_1}^{t_2}dt \; v^2 = \int_{t_1}^{t_2}dt\frac{m}{2}v^2
+\end{equation}
+Corresponde a la dicha acción de la partícula libre no relativista
+\begin{equation}
+  S[x(t)]=\int_{t_1}^{t_2}dt\frac{m}{2}v^2
+\end{equation}
+en lo cual su término de dentro, corresponde al Lagrangiano para la partícula libre no-relativista
+\begin{equation}
+  L_{no-rel} = \frac{m}{2}v^2
+\end{equation}
+\\
+%\subsubsection*{}
+\subsection{Pregunta 2}
+Muestre que la acción es invariante bajo boost \\
+\\
+\textbf{Solución:} 
+\\
+Hola
+\subsection{Pregunta 3}
+Muestre que la acción anterior es invariante bajo traslaciones temporales, y muestre que el teorema de Noether implica que tal invariancia es la responsable de la conservación de la energía relativa, dada por
+\begin{equation}
+  E=\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}  
+
+\textbf{Solución:}
+\\  
+
+\subsection{Pregunta 4}
+Muestre que la acción anterior es invariante bajo traslaciones espaciales, y muestre que el teorema de Noether implica que tal invariancia es la responsable de la conservación del momento lineal relativista, dado por
+\begin{equation}
+  p=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+\\
+\textbf{Solución:} 
+\\
+\subsection{Pregunta 5}
+A partir de las expresiones anteriores, muestre la relación de dispersión relativista
+\begin{equation}
+  E=\sqrt{p^2c^2+m^2c^4}
+\end{equation}
+\textbf{Solución:}
+\\
+\subsection{Pregunta 6}
+Imagine que un estudiante que ya pasó por mecánica clásica, le pregunta ¿qué siginfica la expresión $E=mc^2$ y de donde viene? ¿ Qué respondería ?  \\
+\\
+\textbf{Solución:}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
+\end{document}
