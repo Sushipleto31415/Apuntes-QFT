@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  2 APR 2025 14:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.3.27)  3 APR 2025 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -526,26 +526,7 @@ LaTeX Info: Redefining \% on input line 48.
 
 [2
 
-] (./main.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 2.
-
-
-Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
-(spanish)                faked small caps on input line 2.
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+] (./main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -555,12 +536,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (./caps/cap1/clase1.tex
 Cap\'{\i }tulo 1.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-<img/Captura de pantalla 2025-03-29 000744.png, id=26, 909.3975pt x 400.49625pt>
+<img/Captura de pantalla 2025-03-29 000744.png, id=25, 909.3975pt x 400.49625pt>
 File: img/Captura de pantalla 2025-03-29 000744.png Graphic file (type png)
 <use img/Captura de pantalla 2025-03-29 000744.png>
 Package pdftex.def Info: img/Captura de pantalla 2025-03-29 000744.png  used on input line 14.
@@ -681,26 +669,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--198
  []
 
 
-Overfull \hbox (9.60028pt too wide) in paragraph at lines 204--208
+Overfull \hbox (9.60028pt too wide) in paragraph at lines 204--211
 \OT1/cmr/m/n/10 Extienda el ^^Sulti-mo ca-so a al in-vari-an-cia ba-jo rota-ciones gen-erales, cuya ac-ci^^Son fini-ta est^^Sa da-da por $[] =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--208
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--211
 
  []
 
 
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 213--218
+Underfull \hbox (badness 10000) in paragraph at lines 244--249
 
  []
 
-./caps/cap1/clase2.tex:225: Extra }, or forgotten \right.
+./caps/cap1/clase2.tex:256: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -708,10 +701,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./caps/cap1/clase2.tex:225: Missing \right. inserted.
+./caps/cap1/clase2.tex:256: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -719,10 +712,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./caps/cap1/clase2.tex:225: Missing } inserted.
+./caps/cap1/clase2.tex:256: Missing } inserted.
 <inserted text> 
                 }
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -730,10 +723,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./caps/cap1/clase2.tex:225: Extra }, or forgotten \right.
+./caps/cap1/clase2.tex:256: Extra }, or forgotten \right.
 <template> }
             $}\ifmeasuring@ \savefieldlength@ \fi \set@field \hfil \endtempl...
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -741,10 +734,10 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./caps/cap1/clase2.tex:225: Missing \right. inserted.
+./caps/cap1/clase2.tex:256: Missing \right. inserted.
 <inserted text> 
                 \right .
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -752,10 +745,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./caps/cap1/clase2.tex:225: Missing } inserted.
+./caps/cap1/clase2.tex:256: Missing } inserted.
 <inserted text> 
                 }
-l.225 \end{align*}
+l.256 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -768,44 +761,26 @@ my insertion and my current dilemma will both disappear.
 [10]
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 297--303
+Underfull \hbox (badness 10000) in paragraph at lines 328--334
 
  []
-
-./caps/cap1/clase2.tex:329: Undefined control sequence.
-l.329   qE_i + q\epsilon_{ijk}\dor
-                                  {x}^jB^k = q\vec{E} + q(\vec{v}\times\vec{B})
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 
 
 [12]
-./caps/cap1/clase2.tex:353: Double superscript.
+./caps/cap1/clase2.tex:384: Double superscript.
 <argument> ..._{x^i}\phi + q\epsilon {\dot {x}^i}^
                                                   2\partial _{x^i}A_i + \eps...
-l.353 \end{align*}
+l.384 \end{align*}
                   
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-./caps/cap1/clase2.tex:353: Double superscript.
+./caps/cap1/clase2.tex:384: Double superscript.
 <argument> ..._{x^i}\phi + q\epsilon {\dot {x}^i}^
                                                   2\partial _{x^i}A_i + \eps...
-l.353 \end{align*}
+l.384 \end{align*}
                   
 I treat `x^1^2' essentially like `x^1{}^2'.
-
-./caps/cap1/clase2.tex:360: Undefined control sequence.
-l.360   B = \epsilon L = \epsilonv
-                                   \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 
 
@@ -821,6 +796,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--147
  []
 
 
+
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 148--151
 
  []
@@ -837,21 +814,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
 ) (./caps/cap1/clase4.tex
 
-[17]
-
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
-
- []
-
-
 
 [19]
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
@@ -862,6 +837,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--128
  []
 
 
+
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
@@ -872,8 +849,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--145
  []
 
 
-
-[20]
 Underfull \hbox (badness 10000) in paragraph at lines 149--152
 
  []
@@ -891,131 +866,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--157
 ) (./caps/cap1/clase5.tex
 
 [21]
-./caps/cap1/clase5.tex:53: Misplaced alignment tab character &.
-l.53   p &
-           \rightarrow -i\hbar \frac{\partial}{\partial x} \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-./caps/cap1/clase5.tex:54: Misplaced alignment tab character &.
-l.54   E &
-           \rightarrow i\hbar\frac{\partial}{\partial t}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./caps/cap1/clase5.tex:82: Undefined control sequence.
-<argument> ...= p^2c^2 + m^2c^4 \\ -\hbar \partia 
-                                                  ^2_t \Psi & = -c\hbar ^2\p...
-l.82 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:82: Undefined control sequence.
-<argument> ...bar ^2c^2}\\ \frac {1}{c^2}\paetial 
-                                                  _t^2\Psi - \partial ^2_x \...
-l.82 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:82: Undefined control sequence.
-<argument> ...= p^2c^2 + m^2c^4 \\ -\hbar \partia 
-                                                  ^2_t \Psi & = -c\hbar ^2\p...
-l.82 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:82: Undefined control sequence.
-<argument> ...bar ^2c^2}\\ \frac {1}{c^2}\paetial 
-                                                  _t^2\Psi - \partial ^2_x \...
-l.82 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:85: Undefined control sequence.
-<argument> ...{1}{c^2}\partial ^2_t\Psi - \partia 
-                                                  ^2_x\Psi + \frac {m^2c^2}{...
-l.85 ...^2_x\Psi + \frac{m^2c^2}{\hbar^2}\Psi = 0}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
-./caps/cap1/clase5.tex:93: Undefined control sequence.
-<argument> ...Psi \Psi ^* & = 0 \\ \Psi ^*\parial 
-                                                  ^2_t \Psi ^* - \Psi \parti...
-l.93 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:93: Double superscript.
-<argument> ...si \Psi ^* & = 0 \\ \Psi ^*\parial ^
-                                                  2_t \Psi ^* - \Psi \partia...
-l.93 \end{align*}
-                 
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-./caps/cap1/clase5.tex:93: Undefined control sequence.
-<argument> ...Psi \Psi ^* & = 0 \\ \Psi ^*\parial 
-                                                  ^2_t \Psi ^* - \Psi \parti...
-l.93 \end{align*}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./caps/cap1/clase5.tex:93: Double superscript.
-<argument> ...si \Psi ^* & = 0 \\ \Psi ^*\parial ^
-                                                  2_t \Psi ^* - \Psi \partia...
-l.93 \end{align*}
-                 
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-
-
-[22]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 99.
- (/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
+
+[23]
 ./caps/cap1/clase5.tex:124: Undefined control sequence.
-<argument> ... {\beta }\cdot \vec {\nabla } \PSsi 
+<argument> ...c {\beta }\cdot \vec {\nabla } \PSi 
                                                   = 0 \\ \vec {\beta }= \{ \...
 l.124 \end{align*}
                   
@@ -1026,7 +890,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./caps/cap1/clase5.tex:124: Undefined control sequence.
-<argument> ... {\beta }\cdot \vec {\nabla } \PSsi 
+<argument> ...c {\beta }\cdot \vec {\nabla } \PSi 
                                                   = 0 \\ \vec {\beta }= \{ \...
 l.124 \end{align*}
                   
@@ -1036,39 +900,52 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+) (./caps/cap1/clase6.tex
 
+[24]
 
-[23])
+[25])
+Runaway argument?
+ \tilde {E} & = \frac {mc^2}{\sqrt {1-\frac {1}{c^2}\left ( \frac {v-\ETC.
+./main.tex:82: File ended while scanning use of \align*.
+<inserted text> 
+                \par 
+l.82 \subfile{caps/cap1/clase6}
+                               
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
 
-[24] (./main.aux
-LaTeX Info: Redefining \. on input line 9.
-LaTeX Info: Redefining \% on input line 9.
+./main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./main.tex:83: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.83 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
 )
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
- ***********
+! Emergency stop.
+<*> main.tex
+            
+*** (job aborted, no legal \end found)
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 17198 strings out of 475171
- 327762 string characters out of 5767095
- 724847 words of memory out of 5000000
- 39855 multiletter control sequences out of 15000+600000
- 565290 words of font info for 60 fonts, out of 8000000 for 9000
+ 17195 strings out of 475171
+ 327805 string characters out of 5767095
+ 724854 words of memory out of 5000000
+ 39852 multiletter control sequences out of 15000+600000
+ 564980 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 84i,18n,93p,819b,426s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (27 pages, 338074 bytes).
-PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 84i,19n,93p,819b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

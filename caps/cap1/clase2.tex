@@ -205,6 +205,37 @@ Demuestre, explicando cada paso, que una transformación infinitesimal que deja 
 Extienda el último caso a al invariancia bajo rotaciones generales, cuya acción finita está dada por $\vec{r}_{\text{transformado}}=O\vec{r}$ con $O$ una matriz ortogonal de determinante $1$. \\
 \\
 \textbf{Solución:}
+Para resolver este problema usaremos el  teorema de Noether, el cual nos dice que una transformación infinitesimal deja la acción quasi-invariante, entones podemos construir una cantidad conservada $Q$ como veremos a continuación para los siguientes casos. \\
+\\
+\textbf{Traslación temporal:} Se nos pide encontrar la cantidad conservada ante la invariancia sobre traslaciones temporales de la siguiente acción, dada por
+\begin{equation*}
+  S[q(t)] = \int_{t_1}^{t_2} dt \left[ \frac{m}{2}\dot{q}^2 - U(q) \right]
+\end{equation*}
+tenemos que la traslación temporal infinitesimal está dada por $\delta q = \epsilon \dot{q}$ en lo cual $\epsilon$ es un término arbitrario y muy pequeño, ahora, para encontrar que la acción es invariante bajo dicha transforación es necesario variar la acción, esto será como sigue
+\begin{align*}
+  \delta S[q(t)]  & = S[q(t)+\delta q(t)] - S[q(t)] \\
+  & = \int_{t_1}^{t_2}dt \; L[q(t)+\delta q(t), \frac{d}{dt}(q(t)+\delta q(t))] - L[q(t),\dot{q}(t)]
+\end{align*}
+Para lo cual, luego de tomar una serie de Taylor en dos dimensiones, nótese en el enunciado, que en la acción dada no es dependiente explícitamente del tiempo, con lo cual el término extra dependiente del tiempo en la serie de Taylor multivariable se neglecta, así se llega a que la variación de la acción, cuando el Lagrangiano es independiente explícitamente del tiempo, está dada por
+\begin{equation}
+  \delta S[q(t)] = \int_{t_1}^{t_2} dt \left( \partial_q L \; \delta q + \partial_{\dot{q}L \;\delta \dot{q}}  \right)
+\end{equation}
+Con lo cual solo queda calcular los términos involucrados en la variación del Lagrangiano, tal que
+\begin{equation}
+  \delta S[q(t)] = \int_{t_1}^{t_2} dt \left[ -\partial_qU\; \epsilon\dot{q} + m\dot{q}\epsilon \right] = \int_{t_1}^{t_2} dt \frac{dB}{dt}
+\end{equation}
+Con lo cual es necesario expresar la variación del Lagrangiano como la derivada total de un cantidad, tal que 
+\begin{equation}
+  \frac{d}{dt}(-U(q)\epsilon + m q \epsilon) = \frac{dB}{dt}
+\end{equation}
+Con lo cual hemos encontrado la cantidad $B$ la cual es
+\begin{equation}
+ B = -U(q)\epsilon + mq\epsilon
+\end{equation}
+Así, por teorema de Noether, podemos construir una canidad conservada $Q$, cuya expresión es
+\begin{align*}
+  \partial_{\dot{q}}L \; \delta q - B = Q 
+\end{align*}
 \subsubsection{Pregunta 6}
 \textbf{Partícula conforme:}
 Calcule la cantidad conservada asociada a la transformación de simetría $\delta x(t)=\frac{\epsilon}{2}x(t)-\epsilon t\frac{dx(t)}{dt}$, para la acción de la partícula conforme
@@ -326,7 +357,7 @@ Ahora reemplazamos esto en las ecuaciones de Euler-Lagrange como sigue
 \end{align*}
 Con lo cual, esto puede ser escrito de la siguiente forma
 \begin{equation}
-  qE_i + q\epsilon_{ijk}\dor{x}^jB^k = q\vec{E} + q(\vec{v}\times\vec{B})
+  qE_i + q\epsilon_{ijk}\dot{x}^jB^k = q\vec{E} + q(\vec{v}\times\vec{B})
 \end{equation}
 Con lo cual hemos confirmado que el Lagrangiano para una partícula inmersa en un campo electromagnético, este llevará a las ecuaciones de movimiento que es la fuerza de Lorentz.\\
 Para la siguiente parte se asumirá que los potenciales $\phi$ y $A_i$ son independientes del tiempo. \\
@@ -357,7 +388,7 @@ Ahora bien, el Lagrangiano es independiente del tiempo podemos escribir lo sigui
 \end{equation*}
 Con lo cual, la cantidad B será
 \begin{equation*}
-  B = \epsilon L = \epsilonv \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi + qA_i \dot{x} \right)
+  B = \epsilon L = \epsilon \left( \frac{m}{2}\dot{x}^i\dot{x}^i - q\phi + qA_i \dot{x} \right)
 \end{equation*}
 y por tanto, mediante el teorema de Noether podemos encontrar una cantidad conservada Q la cual está dada por lo que sigue
 \begin{equation*}

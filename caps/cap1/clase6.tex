@@ -1,0 +1,146 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+\section{Sexta clase}
+Volvemos a relatividad especial
+
+\begin{align*}
+  \tilde{t} & =\frac{t-V/c^2 x}{\sqrt{1-V^2/c^2}} \\
+  \tilde{x} & =  \frac{x-Vt}{\sqrt{1-V^2/c^2}} \\
+  V & = c\tanh{\xi}
+\end{align*}
+Ahora, si definimos $V$ así
+\begin{align*}
+  1-\frac{V^2}{c^2}  & = 1- \tanh^2{\xi}
+  & = \frac{1}{\cosh^2{\xi}}
+\end{align*}
+Con lo cual recordemos las propiedades que cumplen las funciones trigonométricas hiperbólicas
+\begin{align}
+  \cosh^2{\xi} - \sinh^2{\xi}  & = 1 \\
+  1- \tanh^2{\xi} = \frac{1}{\cosh^2{\xi}}
+\end{align}
+Por lo tanto, podemos escribir nuestras transformaciones como lo siguiente 
+\begin{align*}
+  \tilde{t} & = \frac{t-\frac{\tanh{\xi}}{c}x}{\frac{1}{\cosh{\xi}}} \\
+  c\tilde{t} & = \cosh{\xi}ct - \sinh{\xi}x \\
+  \tilde{x}  & = \cosh{\xi}x - \sinh{\xi}ct \\
+  \tilde{z} & = z  \\
+  \tilde{y} & = 
+\end{align*}
+En lo cual, $\sinh{\xi}$ será la rapidity. \\
+Ahora, escribamos esto en notación tensorial de la siguiente forma
+\begin{equation}
+  x^\mu = \{ x^0,x^1,x^2,x^3 \} = \{xt,x,y,z\}
+\end{equation}
+Lo cual representa las coordenadas de un evento en el espacio tiempo plano (Minkowsky). \\
+(Escribió la transformación en matrices, revisar como escribir las matrices) \\
+Aplicamos las transformaciones en forma matricial
+\begin{equation}
+  \tilde{x}^\mu = \{\tilde{x}^0,\tilde{x}^1, \tilde{x}^2, \tilde{x}^3\} = \{c\tilde{t},\tilde{x},\tilde{y},\tilde{z}\} 
+\end{equation}
+Ahora, la matriz de transformación se representa como un tensor $\Lambda_\nu^\mu$ de transformacion para el tensor de posiciones $x^\mu$ tal que, la regla de transformación para la posición dentro del espacio tiempo plano de Minkowsky, es bajo la siguiente regla
+\begin{equation}
+  \tilde{x}^\mu=\Lambda^\mu_\nu x^\nu 
+\end{equation}
+en lo cual los índices $\nu$ están contraidos y por tanto, sumados. \\
+Pensamos ahora, en una transformación más general y preguntémonos ¿ Qué nos dice la invariancia del intervalo con respecto de $\Lambda^\mu_\nu$?
+\begin{align*}
+  \tilde{\vec{x}} &  = \Theta \vec{x} \\
+  ||\tilde{\vec{x}}||^2 & = ||\vec{x}||^2 \\
+  \tilde{\vec{x}}^T\tilde{\vec{x}} & = \vec{x}^T\vec{x} \\
+  (\Theta\vec{x})^T(\Theta\vec{x}) & = \vec{x}^T\vec{x}
+  \vec{x}^T\Theta^T\Theta\vec{x}   & = \vec{x}^T\vec{x} \\
+\end{align*}
+En lo cual, las matrices $\Theta$ se definen como ortogonales, o sea que, $\Theta^T\Theta= I$
+\begin{align*}
+  ds^2  & = c^2dt^2 - dx^2 - dy^2 - dz^2 \\
+  & = c^2d\tilde{t}^2 - d\tilde{x}^2 - d\tilde{x}^2 - d\tilde{z}^2
+\end{align*}
+Para lo cual
+\begin{align*}
+  ds^2 = \sum_{\mu=0}^3\sum_{\nu=0}^3\eta_{\mu \nu}dx^\mu dx^\nu
+\end{align*}
+Donde $\eta_{\mu \nu} = diag(1,-1,-1,-1)$ la cual corresponde a la métrica de Minkowsky, ahora, expandamos la suma de la métrica $ds^2$, primero sumamos la suma, valga la redundancia, en el índice $\nu$.
+\begin{align*}
+  ds^2  & = \sum_{\nu=0}^3 \left( \eta_{\mu 0}dx^\mu dx^0 + \eta_{\mu 1}dx^\mu dx^1 + \eta_{\mu 2}dx^\mu dx^2 + \eta_{\mu 3}dx^\mu dx^3 \right) \\
+  & = \eta_{00}(dx^0)^2 + \eta_{11}(dx^1)^2 + \eta_{22}(dx^2)^2 + \eta_{33}(dx^3)^2 \\
+  & = c^2dt^2-dx^2-dy^2-dz^2
+\end{align*}
+Por tanto
+\begin{equation*}
+  ds^2 = \eta_{\mu \nu }dx^\mu dx^\nu = \eta_{\mu \nu } d\tilde{x}^\mu d\tilde{x}^\nu 
+\end{equation*}
+Pero queremos que
+\begin{align*}
+  \tilde{x}^\mu & = \Lambda_\alpha^\mu x^\alpha \rightarrow d\tilde{x}^\mu = \Lambda^\mu_\alpha dx^\alpha \\
+  \tilde{x}^\nu & = \Lambda_\beta^\nu x^\beta \rightarrow d\tilde{x}^\nu = \Lambda_\beta^\nu dx^\beta 
+\end{align*}
+Con lo cual, obtenemos que
+\begin{align*}
+  \eta_{\cancel{\mu}_\alpha \cancel{\nu}_\alpha} dx^{\cancel{\mu}^\alpha} dx^{\cancel{\nu}^\beta}  & = \eta_{\mu \nu } \left( \Lambda_\alpha^\nu dx^\alpha \right)\left( \Lambda_\beta^\nu dx^\beta \right) \\
+  \left(\eta_{\mu \nu}\Lambda_\alpha^\nu \Lambda_\beta^\nu-\eta_{\alpha \beta}\right)dx^\alpha dx^\beta & = 0
+\end{align*}
+Por tanto, tenemos que
+\begin{equation}
+  \eta_{\mu \nu} \Lambda^\mu_\alpha \Lambda_\beta^\nu = \eta_{\alpha \beta}
+\end{equation}
+tenemos que $\Lambda$ será una transformación de Lorenz si ocurre lo anterior
+\begin{align*}
+ \Lambda_\alpha^\mu \eta_{\mu \nu} \Lambda_\beta^\nu & = \eta_{\alpha \beta} \\
+  \Lambda^T \eta \Lambda = \eta 
+\end{align*}
+versus 
+\begin{align*}
+  \Theta^T I \Theta  & = I \\
+\end{align*}
+En lo cual se usa la siguiente propiedad
+\begin{align*}
+  \xi^T C \xi = C 
+\end{align*}
+Siendo c una matriz antisimétrica con respecto a la diagonal y además diagonal nula. \\
+Definición: Diremos que un arreglo denotado por $A^\alpha$ es un vector contravariante de Lorentz si bajo una transoformación de Lorentz: 
+\begin{equation}
+  \tilde{A}^\alpha = \Lambda_\beta^\alpha A^\beta
+\end{equation}
+Las coordenadas $x^\mu$ definen un vector contravariante, ahora, un vector contravariante sería el 4-momenta. \\
+Ahora, se tiene un observador $\tilde{K}$ el cual se mueve a una velocidad constante $V$ con respecto a un observador $K$, ambos observadores son inerciales. \\
+¿ Dados $E$ y $P$, cómo encontramos $\tilde{E}$ y $\tilde{P}$ ? 
+\begin{equation*}
+  E= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}} \quad , \quad P=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation*}
+versus sus tildas
+\begin{equation*}
+  \tilde{E} = \frac{mc^2}{\sqrt{1-\frac{\tilde{v}^2}{c^2}}}\quad , \quad \tilde{P}= \frac{m\tilde{v}}{\sqrt{1-frac{\tilde{v}^2}{c^2}}}
+\end{equation*}
+Ahora, aplicamos la transformación para la velocidad $\tilde{v}$ tal que
+\begin{align*}
+  \tilde{E} & = \frac{mc^2}{\sqrt{1-\frac{1}{c^2}\left( \frac{v-V}{1-\frac{vV}{c^2}} \right)^2}}\\
+  & = \frac{c\left( 1-\frac{vV}{c^2} \right)mc^2}{\sqrt{c^2\left( 1-\frac{vV}{c^2} \right)^2 - (v-V)^2}} \\
+  & = \frac{c(1-\frac{vV}{c^2})mc^2}{\sqrt{1-\frac{V^2}{c^2}+ \frac{v^2V^2}{c^2}-\frac{v^2}{c^2}}} \\
+  & = \frac{mc^2}{\sqrt{1-\frac{V^2}{c^2} + \frac{v^2V^2}{c^2}} - \frac{v^2}{c^2}}  - \frac{mvV}{\sqrt{1-\frac{V^2}{c^2} + \frac{v^2V^2}{c^2} - \frac{v^2}{c^2}}}\\
+  & = \frac{\frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}{\sqrt{1-\frac{V^2}{c^2}}} - \frac{V\frac{mv}}{\sqrt{1-\frac{V^2}{c^2}}}{\sqrt{1-\frac{V^2}{c^2}}}} \\
+  6 = \frac{E-\frac{V}{c}P}{\sqrt{1-\frac{1-\frac{V^2}{c^2}}}
+\end{align*}
+Versus
+\begin{align*}
+  c\tilde{t} & =\frac{ct-\frac{V}{c}x}{\sqrt{1-\frac{V^2}{c^2}}}
+\end{align*}
+Tarea, 
+\begin{align*}
+  \tilde{p}=\frac{m\tilde{v}}{\sqrt{1-\frac{\tilde{v}^2}}{c^2}} = \frac{p-\frac{V}{c}\left( \frac{E}{c} \right)}{\sqrt{1-\frac{V^2}{c^2}}}
+\end{align*}
+versus
+\begin{equation*}
+  \tilde{x}= \frac{x-\frac{V}{c}(c\tilde{t})}{\sqrt{1-\frac{V^2}{c^2}}
+\end{equation*}
+Definición: 4-momenta o cuadrivector de momentum , de define como 
+\begin{align}
+  p^\mu = \left( \frac{E}{c},\vec{p} \right)\quad , \quad \tilde{p}^\mu = \left(\frac{\tilde{E}}{c}, \tilde{\vec{p}}\right)
+\end{align}
+y además
+\begin{equation}
+  \tilde{p}^\mu = \Lambda^\mu_\nu p^\nu
+\end{equation}
+El cuadrimoemento es un vector contravariante de Lorentz
+\subsection{Preguntas clase 6}
+\end{document}
