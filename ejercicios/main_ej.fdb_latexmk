@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743703267 "c:/Users/ferme/Desktop/Documentos/Universidad/Semestre 7, 2025}/QFT/apunte/Apuntes-QFT/ejercicios/main_ej.tex" "main_ej.pdf" "main_ej" 1743703269 0
+["pdflatex"] 1743703420 "c:/Users/ferme/Desktop/Documentos/Universidad/Semestre 7, 2025}/QFT/apunte/Apuntes-QFT/ejercicios/main_ej.tex" "main_ej.pdf" "main_ej" 1743703422 0
   "C:/Users/ferme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1743217042 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ferme/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1694791560 23178960 9fc80e0693d5126fda750dae3c54ba80 ""
   "C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -141,10 +141,10 @@
   "C:/Users/ferme/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1667242266 7147 be6981d9f5d866a5634048c4a11814a9 ""
   "C:/Users/ferme/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656240490 56148 51a9a8571c07b9921892ae11063ae853 ""
   "c:/Users/ferme/Desktop/Documentos/Universidad/Semestre" 1729995608 392 13b9bd945722087475141f47637d5e98 ""
-  "c:/Users/ferme/Desktop/Documentos/Universidad/Semestre 7, 2025}/QFT/apunte/Apuntes-QFT/ejercicios/main_ej.tex" 1743703263 3347 4e1a9b4e8fca9f8f6c660554e5bc6bad ""
-  "main_ej.aux" 1743703268 3063 7b4b12e29a12be228e594aaf65e61e11 "pdflatex"
-  "main_ej.tex" 1743703263 3347 4e1a9b4e8fca9f8f6c660554e5bc6bad ""
-  "main_ej.toc" 1743703268 1711 d909de82dae2ed8d8d2fbb9f31fe1d75 "pdflatex"
+  "c:/Users/ferme/Desktop/Documentos/Universidad/Semestre 7, 2025}/QFT/apunte/Apuntes-QFT/ejercicios/main_ej.tex" 1743703419 3355 ff4cf77b768bc45aa8656a4b4ef10ef6 ""
+  "main_ej.aux" 1743703422 3063 7b4b12e29a12be228e594aaf65e61e11 "pdflatex"
+  "main_ej.tex" 1743703419 3355 ff4cf77b768bc45aa8656a4b4ef10ef6 ""
+  "main_ej.toc" 1743703422 1711 d909de82dae2ed8d8d2fbb9f31fe1d75 "pdflatex"
   "subfiles/ejercicios1.tex" 1743703263 5694 dd948a19f7925c92b578fffb6b6edb5b ""
   "subfiles/ejercicios2.tex" 1743702884 16944 58a4e9121352107e8621dd9188744130 ""
   "subfiles/ejercicios3.tex" 1743702884 1056 d46ca7e76cb543438830040d27290bd8 ""
