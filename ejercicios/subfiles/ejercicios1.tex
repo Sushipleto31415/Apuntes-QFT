@@ -1,4 +1,4 @@
-\documentclass ../main_ej.tex]{subfiles}
+\documentclass[../main_ej.tex]{subfiles}
 
 \begin{document}
 
@@ -35,19 +35,19 @@ Para lo cual $q^i(t)\quad , i=1,\dots , N$ son las coordenadas generalizadas las
            & = \int_{t_1}^{t_2} L\left[ q^i(t) + \Phi^i(t) , \frac{d}{dt}\left( q^i(t)+\Phi^i(t)\right ),t \right] - \int_{t_1}^{t_2}dtL (q^i(t), \dot{q}^i,t) 
 \end{align*}
 Ahora, se tiene la siguiente dependencia en el Lagrangiano  $L\left[ q^i(t) + \Phi^i(t) , \frac{d}{dt}\left( q^i(t)+\Phi^i(t)\right),t \right]$ para lo cual se tomará una serie de Taylor con respecto al origen como sigue
-\begin{align*} \label{taylor-L}
-  L\left[q^i+\Phi^i, \frac{d}{dt}\left(q^i+ \Phi^i  \right) \right]= L + \partial_{q^i} L \; \Phi^i + \partial_{\dot{q}^i}L \;  \dot{\Phi} + \mathcal{O}({\Phi^i}^2,\dot{\Phi^i}^2 , \Phi^i, \dot{\Phi}^i)
-\end{align*}
+\begin{align} 
+  L\left[q^i+\Phi^i, \frac{d}{dt}\left(q^i+ \Phi^i  \right) \right]= L + \partial_{q^i} L \; \Phi^i + \partial_{\dot{q}^i}L \;  \dot{\Phi} + \mathcal{O}({\Phi^i}^2,\dot{\Phi^i}^2 , \Phi^i, \dot{\Phi}^i) \label{taylor-L} \\
+\end{align}
 Con lo cual, si introducimos \eqref{taylor-L} sin tomar en cuenta los términos de $ \mathcal{O}({\Phi^i}^2,\dot{\Phi^i}^2 , \Phi^i, \dot{Phi}^i)$ se tiene lo siguiente
 \begin{align*}
   \delta S  = \int_{t_1}^{t_2} dt \left(  L + \partial_{q^i} L \; \Phi^i + \partial_{\dot{q}^i}L \;  \dot{\Phi} \right) - \int_{t_1}^{t_2} L(q^i,\dot{q}^i,t)  
 \end{align*}
 Ahora, usando regla de Leibniz en el tercer término en la primera integral, se obtiene
-\begin{align*} \label{leibniz}
-  \frac{d}{dt}\left( \partial_{\dot{q}^i} L\; \Phi^i \right) & = \frac{d}{dt}\partial_{\dot{q}^i}\Phi^i + \partial_{\dot{q}^i}(L) \; \dot{\Phi}^i \\
-  \frac{d}{dt}(\partial_{\dot{q}^i}L\;\Phi^i)  -\frac{d}{dt}( \partial_{\dot{q}^i}L)\; \Phi^i = & \partial_{\dot{q}^i}\dot{\Phi}^i
-\end{align*}
-Con lo cual, introduciendo \eqref{leinbiz} en el desarollo, obtenemos lo que sigue
+\begin{align} 
+  \frac{d}{dt}\left( \partial_{\dot{q}^i} L\; \Phi^i \right) & = \frac{d}{dt}\partial_{\dot{q}^i}\Phi^i + \partial_{\dot{q}^i}(L) \; \dot{\Phi}^i \label{leibniz} \\
+  \frac{d}{dt}(\partial_{\dot{q}^i}L\;\Phi^i)  -\frac{d}{dt}( \partial_{\dot{q}^i}L)\; \Phi^i = & \partial_{\dot{q}^i}\dot{\Phi}^i \notag
+\end{align}
+Con lo cual, introduciendo \eqref{leibniz} en el desarollo, obtenemos lo que sigue
 \begin{align*}
   \delta S & = \int_{t_1}^{t_2} dt \left[  L + \partial_{q^i} L \; \Phi^i + \frac{d}{dt}(\partial_{\dot{q}^i}L \; \Phi^i)  -\frac{d}{dt} (\partial_{\dot{q}^i}L)\; \Phi^i\right] - \int_{t_1}^{t_2} L(q^i,\dot{q}^i,t)  \\
   & = \int_{t_1}^{t_2} dt \left[ L - L+ \partial_{\dot{q}^i} L \; \Phi^i - \frac{d}{dt}(\partial_{\dot{q}^i} L)\Phi^i\right]  + \int_{t_1}^{t_2}\frac{d}{dt}(\partial_{\dot{q}^i}L\; \Phi^i)

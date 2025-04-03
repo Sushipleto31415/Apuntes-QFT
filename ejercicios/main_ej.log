@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.15)  3 APR 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.9.15)  3 APR 2025 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -407,8 +407,10 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip65
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count301
+) (main_ej.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
 )
-No file main_ej.aux.
 \openout1 = `main_ej.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
@@ -425,7 +427,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
-(C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+ (C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count302
 \scratchdimen=\dimen274
@@ -503,12 +505,21 @@ LaTeX Info: Redefining \. on input line 48.
 LaTeX Info: Redefining \% on input line 48.
 [1
 
-{C:/Users/ferme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-No file main_ej.toc.
+{C:/Users/ferme/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main_ej.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `main_ej.toc'.
 
-[1
+ [1
 
 ] (subfiles/ejercicios1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--12
@@ -530,51 +541,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
-(C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
- (C:\Users\ferme\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
 
  []
 
-
-LaTeX Warning: Reference `taylor-L' on page 2 undefined on input line 41.
-
-subfiles/ejercicios1.tex:44: Misplaced alignment tab character &.
-\f@nch@erf ->A. Díaz &
-                        F. Mella\strut 
-l.44 \end{align*}
-                 
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[2]
-
-subfiles/ejercicios1.tex:49: Package amsmath Error: Multiple \label's: label 'taylor-L' will be lost.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \end{align*}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Reference `leinbiz' on page 3 undefined on input line 50.
-
-) (subfiles/ejercicios2.tex
+[2]) (subfiles/ejercicios2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
@@ -583,18 +555,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--9
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
-
-subfiles/ejercicios2.tex:13: Misplaced alignment tab character &.
-\f@nch@olf ->A. Díaz &
-                        F. Mella\strut 
-l.13 \subsection
-                {Pregunta 3}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 14--18
@@ -621,79 +581,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--36
 
  []
 
-subfiles/ejercicios2.tex:47: Misplaced alignment tab character &.
-\f@nch@erf ->A. Díaz &
-                        F. Mella\strut 
-l.47 \end{equation}
-                   
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 69--74
 
  []
 
-subfiles/ejercicios2.tex:98: Misplaced alignment tab character &.
-\f@nch@olf ->A. Díaz &
-                        F. Mella\strut 
-l.98 \end{equation*}
-                    
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[5]
-subfiles/ejercicios2.tex:133: Misplaced alignment tab character &.
-\f@nch@erf ->A. Díaz &
-                        F. Mella\strut 
-l.133 \begin{align*}
-                    
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[6]
+[5] [6]
 Underfull \hbox (badness 10000) in paragraph at lines 153--159
 
  []
 
-subfiles/ejercicios2.tex:190: Misplaced alignment tab character &.
-\f@nch@olf ->A. Díaz &
-                        F. Mella\strut 
-l.190 \begin{equation}
-                      
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[7]
-subfiles/ejercicios2.tex:246: Misplaced alignment tab character &.
-\f@nch@erf ->A. Díaz &
-                        F. Mella\strut 
-l.246 \end{align*}
-                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[8]) (subfiles/ejercicios3.tex
+[7] [8]) (subfiles/ejercicios3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
  []
@@ -712,18 +610,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
-
-subfiles/ejercicios3.tex:21: Misplaced alignment tab character &.
-\f@nch@olf ->A. Díaz &
-                        F. Mella\strut 
-l.21 
-     
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 [9]) (subfiles/ejercicios4.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--13
@@ -744,18 +630,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 Underfull \hbox (badness 10000) in paragraph at lines 41--46
 
  []
-
-subfiles/ejercicios4.tex:46: Misplaced alignment tab character &.
-\f@nch@erf ->A. Díaz &
-                        F. Mella\strut 
-l.46 \subsection
-                {Pregunta 3}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 52--54
@@ -782,37 +656,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--75
 
  []
 
-) (subfiles/ejercicios5.tex) (subfiles/ejercicios6.tex)
-c:/Users/ferme/Desktop/Documentos/Universidad/Semestre 7, 2025}/QFT/apunte/Apuntes-QFT/ejercicios/main_ej.tex:129: Misplaced alignment tab character &.
-\f@nch@olf ->A. Díaz &
-                        F. Mella\strut 
-l.129 \end{document}
-                    
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-[11] (main_ej.aux
+) (subfiles/ejercicios5.tex) (subfiles/ejercicios6.tex) [11] (main_ej.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
-)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 17044 strings out of 476331
- 332455 string characters out of 5787765
+ 17048 strings out of 476331
+ 332695 string characters out of 5787765
  1870660 words of memory out of 5000000
  37155 multiletter control sequences out of 15000+600000
  516110 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,926b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,89p,926b,381s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ferme/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on main_ej.pdf (12 pages, 197234 bytes).
+Output written on main_ej.pdf (12 pages, 197594 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
