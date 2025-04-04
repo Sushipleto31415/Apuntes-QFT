@@ -1,4 +1,4 @@
-PWD /home/amaro-diaz/Repositorios/Apuntes-QFT/ejercicios
+PWD /home/amaro-diaz/Repos/Apuntes-QFT/ejercicios
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT main_ej.tex
@@ -35,13 +35,12 @@ INPUT /usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
 INPUT /usr/share/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
 INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-es.ini
+INPUT /usr/share/texmf-dist/tex/generic/babel/errbabel.def
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel/nil.ldf
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty

@@ -45,8 +45,8 @@ Con lo cual se concluye que $\hat{E}\{\psi\} = \hbar \omega \psi$. Ahora para el
 \end{equation*}
 Comprobemoslo:
 \begin{align*}
-  \hat{p}\{\psi\} & = -i\hbar \partial_x \left( Ae^{-i\omegat+ikx} \right) \\
-  & = -\hbar \cdot \left( ik \right) \psi \\
+  \hat{p}\{\psi\} & = -i\hbar \partial_x \left( Ae^{-i\omega t+ikx} \right) \\
+  & = -i\hbar \cdot \left( ik \right) \psi \\
   & = \hbar \frac{2\pi}{\lambda} \\
   & = \frac{h}{\lambda}
 \end{align*}
@@ -61,16 +61,43 @@ Con lo cual, primero obtendremos el operador momenta al cuadrado, el cual será,
 \end{equation*}
 Con lo cual, por ahora, tendremos que la relación de dispersión puede ser escrita de la siguiente manera
 \begin{equation*}
-  E = \frac{\hbar}{2m}\nabla^2 + V(x)
+  E = \frac{-\hbar}{2m}\nabla^2 + V(x)
 \end{equation*}
 Ahora nos queda aplicar el operador Energía, el cual está dado por $\hat{E}=i\hbar\partial_t$ lo que en la relación de dipersión es tal que
 \begin{equation*}
-  i\hbar \partial_t = \frac{\hbar}{2m}\nabla^2 + V(x)
+  i\hbar \partial_t = -\frac{\hbar}{2m}\nabla^2 + V(x)
 \end{equation*}
 El cual es el operador de la ecuación de Schrödinger, ahora veamos como actúa sobre una función de onda $\Psi(\vec{x},t)$:
 \begin{equation}
-  \frac{\hbar}{2m}\nabla^2\Psi + V(x)\Psi = -i\hbar \partial_t\Psi 
+  -\frac{\hbar}{2m}\nabla^2\Psi + V(x)\Psi = i\hbar \partial_t\Psi 
 \end{equation}
 La cual es la archi-conocida ecuación de Schrödinger para una partícula cuántica bajo un potencial $V(x)$. \\
+Para la siguiente parte del ejercicio nos dan una ecuación de continuidad 
+\begin{equation*}
+  \partial_t\rho + \nabla \cdot \vec{j} = 0
+\end{equation*}
+En lo cual $\rho=\psi^*\psi$ corresponde a la densidad de probabilidad de la función de onda $\psi$, notese que $\psi^*$ corresponde al conjugado de la función de onda, ahora, para obtener una expresión para $\vec{j}$ tendremos que, primero, buscar una forma de relacionar la ecuación de Schrödinger, con lo cual, aprovechandonos que la densidad de probabilidad depende de ambas funciones de onda, usando regla de la cadena, la derivamos parcialmente en el tiempo $t$ como sigue 
+\begin{equation*}
+  \partial_t\rho = \psi\partial_l\psi^* + \psi^*\partial_l\psi  
+\end{equation*}
+Ahora, en esta expresión tenemos una derivada parcial de la función de onda y onda conjugada con respecto al tiempo, ahora, esto también lo podemos obtener a partir de la ecuación de Schrödinger, tal que
+\begin{align*}
+  \partial_t \psi & = \frac{i\hbar}{2m}\nabla^2 \psi -\frac{i}{\hbar}V(x)\psi \\ 
+  \partial_t \psi^* & = -\frac{i\hbar}{2m}\nabla^2 \psi^* +\frac{i}{\hbar}V(x)\psi^* 
+\end{align*}
+Ahora reemplazamos esto en la derivada partial de $\rho$.
+\begin{align*}
+  \partial_t\rho & = \psi^*\left(\frac{i\hbar}{2m}\nabla^2 \psi -\frac{i}{\hbar}V(x)\psi \right) + \psi \left(  -\frac{i\hbar}{2m}\nabla^2 \psi^* +\frac{i}{\hbar}V(x)\psi^* \right) \\
+  & = \frac{i\hbar}{2m} \left( \psi^* \nabla^2\psi -\psi \nabla^2\psi^* \right) \\
+  & = \frac{i\hbar}{2m}\nabla \cdot \left( \psi^*\nabla \psi - \psi \nabla \psi^* \right)
+\end{align*}
+Con lo cual, es posible expresar $\vec{j}$ como 
+\begin{equation*}
+  \nabla \cdot \vec{j} = \frac{i\hbar}{2m} \nabla \cdot \left( \psi^*\nabla \psi - \psi \nbal \psi^* \right)
+\end{equation*}
+Por tanto, la expresión para el vector $\vec{j}$ haciendo uso de la ecuación de continuidad y de Schrödinger es tal que:
+\begin{equation}
+  \vec{j} = \frac{i\hbar}{2m}\left( \psi^*\nabla \psi - \psi\nabla \psi^* \right)
+\end{equation}
 
 \end{document}

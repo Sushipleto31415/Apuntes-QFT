@@ -1,4 +1,4 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {nil}{}\relax 
 \contentsline {chapter}{\numberline {1}Parte primera}{2}{}%
 \contentsline {section}{\numberline {1.1}Preguntas clase 1}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Pregunta 1}{2}{}%
@@ -27,4 +27,4 @@
 \contentsline {subsection}{\numberline {1.4.5}Pregunta 6}{12}{}%
 \contentsline {section}{\numberline {1.5}Preguntas clase 5}{12}{}%
 \contentsline {subsection}{\numberline {1.5.1}Pregunta 1}{12}{}%
-\contentsline {section}{\numberline {1.6}Preguntas clase 6}{13}{}%
+\contentsline {section}{\numberline {1.6}Preguntas clase 6}{14}{}%
