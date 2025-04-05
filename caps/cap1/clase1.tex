@@ -15,16 +15,21 @@ En el estudio de partículas elementales, notamos que experimentalmente se obser
     \label{fig:graf_QFT}
 \end{figure}
 
+Pero ¿Qué es QFT? ENtenderemos la Teoría cuantica de campos como la cuantización de un campo clásico. De manera que incluyamos técnicas de mécanica cuántica (no relativista) al tomar los grados de libertad de un campo clásico y traducirlos tal que actue como operadores sobre un espacio de Hilbert. Por lo tanto en QFT serán operadores dependientes del espacio y el tiempo. 
 
 Es por esto que para poder estudiar QFT se deberán tener nociones tanto de mécanica clásica como cuántica. En este apunte, no se considerarán los efectos del campo gravitacional. Como las interacciones a estudiar ocurren en regiones pequeñas, el efecto gravitacional será considerado despreciable. 
 
 %quizas podríamos poner aca el decaimiento beta o otros ejemplos pero no sabia cuales poner pq no todos son d clasica 
 
-\section{Primera clase}
+\section{Mécanica Clásica}
+
+Desde la mécanica racional, es importante que nosotros tengamos claro conceptos como el significado de una acción $S$, el Lagrangiano $L$ y más adelante conceptos de simetría y otros. 
+
+En esta primera sección, se disutirá la derivación de las ecuaciones de Euler-Lagrange, su utilidad; además de simentrías en transformaciones con sus cantidades conservadas asociadas. 
 
 \subsection{Derivación de las Ecuaciones de Euler-Lagrange}
 
-Sea la acción $S[q(t)]$, donde $q(t)$ son las coordenadas generalizadas del sistema. 
+Sabemos de la mécanica lagrangiana que las ecuaciones de Euler-Lagrange nos servirán para derivar las ecuaciones de movimiento del sistema. Utilizando el principio de invarianza de Hamilton, estas ecuaciones se podrán derivar a partir de la acción $S[q(t)]$. Así, sea la acción $S[q(t)]$, donde $q(t)$ son las coordenadas generalizadas del sistema. 
 
 \begin{equation}
     S[q(t)] = \int dt L(q, \dot{q})
@@ -72,9 +77,21 @@ Finalmente, considerando a $f(t)$ arbitraria, en \eqref{var-accion2} el integran
     \frac{\partial L}{\partial q} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}} \right) = 0
 \end{equation}
 
+Que será la ecuación de Euler-Lagrange. Así, a partir de un Lagrangiano $L(q(t), \dot{q}(t),t)$ se podrán derivar las ecuaciones de movimiento del sistema. \\
 
+%Es importante destacar que las ecuaciones de Euler-Lagrange podrán traducirse para Teoría Clásica de Campos. Donde, en teoría de campos, trabajamos con una \textbf{densidad lagrangiana} $\mathcal{L}(\phi^\alpha, \partial_\mu \phi^\alpha, x^\mu)$, con $\phi^\alpha$ son los campos (dependientes del espacio-tiempo $x^\mu$) y $\partial_\mu \phi^\alpha = \frac{\partial \phi^\alpha}{\partial x^\mu}$ son sus derivadas. Así, considerando la acción: 
 
+%\begin{equation}
+%    S = \int d^4x \, \mathcal{L}(\phi^\alpha, \partial_\mu \phi^\alpha, x^\mu) \label{accion-campos}.
+%\end{equation}
 
+%Así, al igual que para las ecuaciones de Euler-Lagrange, al extremizar la acción $\delta S = 0$, se obtendrán las ecuaciones de campo que describirán la dinámica del sistema. 
+
+%\begin{equation}
+%    \frac{\partial \mathcal{L}}{\partial \phi^\alpha} - \partial_\mu \left( \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi^\alpha)} \right) = 0.
+%\end{equation}
+
+%Esto se revisará a mayor detalle en la sección (tanto) de Teoría Clásica de Campos. 
 
 
 \end{document}
