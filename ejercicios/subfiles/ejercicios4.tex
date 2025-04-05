@@ -38,11 +38,60 @@ en lo cual su término de dentro, corresponde al Lagrangiano para la partícula 
 \\
 %\subsubsection*{}
 \subsection{Pregunta 2}
-Muestre que la acción es invariante bajo boost \\
+Muestre que la acción de una particula relativista es invariante bajo boost. \\
 \\
 \textbf{Solución:} 
 \\
-Hola
+
+Considerando a la acción de la particula relativista \eqref{accion-rel} y a las transformaciones de un Boost a lo largo de x \eqref{Boost-t} y \eqref{Boost-x}. Vamos a construir una acción $\tilde{S}[\tilde{x}(\tilde{t})]$ y demostrar que finalmente $\tilde{S}[\tilde{x}(\tilde{t})] = S[x(t)]$. 
+
+\begin{equation}
+  S[x(t)] = -mc^2\int dt \sqrt{1 - \frac{1}{c^2}\left( \frac{dx}{dt} \right)^2} \label{accion-rel}
+\end{equation}
+
+\begin{equation}
+  \tilde{t} = \frac{t - \frac{v}{c^2}x}{\sqrt{1 - \frac{v^2}{c^2}}} \label{Boost-t}
+\end{equation}
+
+\begin{equation}
+  \tilde{x} = \frac{x - vt}{\sqrt{1 - \frac{v^2}{c^2}}} \label{Boost-x}
+\end{equation}
+
+Vamos a construir una acción $\tilde{S}[\tilde{x}(\tilde{t})]$ y demostrar que finalmente $\tilde{S}[\tilde{x}(\tilde{t})] = S[x(t)]$. \\
+
+Por lo tanto, a partir de \eqref{Boost-t} y \eqref{Boost-x}: 
+
+\begin{align}
+  d\tilde{t} &= \frac{\partial \tilde{t}}{\partial t} dt + \frac{\partial \tilde{t}}{\partial x}dx \notag \\
+  &= \frac{dt}{\sqrt{1 - \frac{v^2}{c^2}}} - \frac{\frac{v}{c^2}dx}{\sqrt{1 - \frac{v^{2}}{c^2}}} \label{dtilde}
+\end{align}\\
+
+\begin{align}
+  d\tilde{x} &= \frac{\partial \tilde{x}}{\partial t}dt + \frac{\partial \tilde{x}}{\partial x}dx \notag\\
+  &= -\frac{v dt}{\sqrt{1 - \frac{v^2}{c^2}}}dt + \frac{dx}{\sqrt{1- \frac{v^2}{c^2}}} \label{dequis} 
+\end{align}\\
+
+Dividiendo \eqref{dequis} sobre \eqref{dtilde}: 
+
+\begin{align}
+  \frac{d\tilde{x}}{d\tilde{t}} &= \frac{dx -vdt}{dt - \frac{v}{c^2}dx} \notag \\
+  &= \frac{\frac{dx}{dt}-v}{1 - \frac{v}{c^2}\frac{dx}{dt}} \label{Boost-vel}
+\end{align}
+
+Así, considerando nuestra acción  $\tilde{S}[\tilde{x}(\tilde{t})]$ y reemplazando \eqref{dtilde} y \eqref{Boost-vel}.
+
+\begin{align*}
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2 \int d\tilde{t} \sqrt{a - \frac{1}{c^2}\left(\frac{d\tilde{x}}{d\tilde{t}}\right)^2} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2 \int \left[ \frac{dt}{\sqrt{1 - \frac{v^2}{c^2}}} - \frac{\frac{v}{c^2}dx}{\sqrt{1- \frac{v^2}{c^2}}} \right] \cdot \sqrt{1 - \frac{1}{c^2}\left(\frac{ \frac{dx}{dt}- v}{1 - \frac{v}{c^2}\frac{dx}{dt}}\right)^2} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2 \int \frac{dt}{\sqrt{1 - \frac{v^2}{c^2}}} \cancel{\left( 1 - \frac{v}{c^2} \frac{dx}{dt}\right)} \cdot \frac{\sqrt{c^2 \left[ \left(1 -\frac{v}{c^2}\frac{dx}{dt}\right)^2 - \frac{1}{c^2}\left(\frac{dx}{dt}-v\right)^2 \right]}}{c \cancel{\left( 1 - \frac{v}{c^2}\frac{dx}{dt} \right)}} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2 \int \frac{dt}{\sqrt{1 - \frac{v^2}{c^2}}} \cdot \sqrt{1 - \cancel{\frac{2v}{c^2}\frac{dx}{dt}} + \frac{v^4}{c^4} \left(\frac{dx}{dt}\right) - \frac{1}{c^2}\left(\frac{dx}{dt}\right)^2 + \cancel{\frac{2v}{c^2}\frac{dx}{dt}} -\frac{v^2}{c^2}} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2 \int \frac{dt}{\cancel{\sqrt{1 - \frac{v^2}{c^2}}}} \cdot \sqrt{\cancel{\left( 1 - \frac{v^2}{c^2} \right)} \cdot \left( 1 - \frac{1}{c^2}\left( \frac{dx}{dt} \right)^2 \right)} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= -mc^2\int dt \sqrt{1 - \frac{1}{c^2}\left( \frac{dx}{dt} \right)^2} \\
+  \tilde{S}[\tilde{x}(\tilde{t})] &= S[x(t)]\\
+\end{align*}
+
+Así la acción será invariante bajo un boost a lo largo del eje $x$. Para demostrar esto para los tres ejes espaciales (en 3D), solo hay que seguir el analogo a este desarrollo para un boost a lo largo de $y$ y $z$.
+
 \subsection{Pregunta 3}
 Muestre que la acción anterior es invariante bajo traslaciones temporales, y muestre que el teorema de Noether implica que tal invariancia es la responsable de la conservación de la energía relativa, dada por
 \begin{equation}
@@ -72,6 +121,8 @@ Imagine que un estudiante que ya pasó por mecánica clásica, le pregunta ¿qu�
 \\
 \textbf{Solución:}
 \\
+
+Significaría la relación de dispersión de una partícula que no se esta moviendo o tiene un momentum $|p|=0$. O mejor traducido, la energía asociada a una partícula relativista que esta en reposo para algún observador inercial. Como un sistema de referencia lagrangiano pero eso es de fluidos. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 

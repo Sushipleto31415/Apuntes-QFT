@@ -1,4 +1,4 @@
-\babel@toc {nil}{}\relax 
+\babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Parte primera}{2}{}%
 \contentsline {section}{\numberline {1.1}Preguntas clase 1}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Pregunta 1}{2}{}%
@@ -21,10 +21,10 @@
 \contentsline {subsection}{\numberline {1.3.4}Pregunta 4}{10}{}%
 \contentsline {section}{\numberline {1.4}Preguntas clase 4}{10}{}%
 \contentsline {subsection}{\numberline {1.4.1}Pregunta 2}{11}{}%
-\contentsline {subsection}{\numberline {1.4.2}Pregunta 3}{11}{}%
-\contentsline {subsection}{\numberline {1.4.3}Pregunta 4}{11}{}%
-\contentsline {subsection}{\numberline {1.4.4}Pregunta 5}{12}{}%
-\contentsline {subsection}{\numberline {1.4.5}Pregunta 6}{12}{}%
-\contentsline {section}{\numberline {1.5}Preguntas clase 5}{12}{}%
-\contentsline {subsection}{\numberline {1.5.1}Pregunta 1}{12}{}%
-\contentsline {section}{\numberline {1.6}Preguntas clase 6}{14}{}%
+\contentsline {subsection}{\numberline {1.4.2}Pregunta 3}{12}{}%
+\contentsline {subsection}{\numberline {1.4.3}Pregunta 4}{13}{}%
+\contentsline {subsection}{\numberline {1.4.4}Pregunta 5}{13}{}%
+\contentsline {subsection}{\numberline {1.4.5}Pregunta 6}{13}{}%
+\contentsline {section}{\numberline {1.5}Preguntas clase 5}{13}{}%
+\contentsline {subsection}{\numberline {1.5.1}Pregunta 1}{13}{}%
+\contentsline {section}{\numberline {1.6}Preguntas clase 6}{15}{}%
