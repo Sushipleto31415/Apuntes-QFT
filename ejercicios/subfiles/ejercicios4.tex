@@ -109,6 +109,58 @@ Muestre que la acción anterior es invariante bajo traslaciones espaciales, y mu
 \\
 \textbf{Solución:} 
 \\
+
+Considerando una traslación espacial unidimensional a lo largo del eje $x$: 
+
+\begin{align}
+    \tilde{x} &= x + \epsilon \\
+    \tilde{y} &= y \\
+    \tilde{z} &= z \\
+    \tilde{t} &= t \\
+\end{align}
+
+Considerando los diferenciales de tiempo $dt =d\tilde{t}$ y espaciales:
+
+\begin{align}
+    d\tilde{x} &= \frac{\partial \tilde{x}}{\partial x}dx \\
+    &= dx
+\end{align}
+
+Deducimos que la velocidad: 
+
+\begin{equation}
+    \frac{d\tilde{x}}{d\tilde{t}} = \frac{dx}{dt}
+\end{equation}
+
+Así, veamos la variación de la acción: 
+
+\begin{align}
+    \delta S &= \tilde{S}[x(t) + \epsilon] - S[x(t)] \\
+    &= -mc^2 \int dt \sqrt{1 - \frac{1}{c^2}\left( \frac{d}{dt}(x(t)+\epsilon) \right)^2} + mc^2 \int dt \sqrt{1 - \frac{1}{c^2}\frac{dx}{dt}}  \\
+    &= -mc^2 \int dt \left[ mc^2 \int dt \sqrt{1 - \frac{1}{c^2}\frac{dx}{dt}} - mc^2 \int dt \sqrt{1 - \frac{1}{c^2}\frac{dx}{dt}} \right]\\
+    &= 0\\
+\end{align}
+
+Por lo tanto, para una acción bajo transformaciones espaciales es invariante $\tilde{S}[\tilde{x}(\tilde{t})] = S[x(t)]$ . Y su cantidad de contorno $B=0$. Por otro lado, si quisieramos obtener la cantidad conservada para este tipo de transformaciones deberemos aplicar: 
+
+\begin{equation}
+    \partial_{\dot{x}}L \delta q - B = C^{te} \label{custi0n}
+\end{equation}
+
+Si consideramos $\dot{x}= dx/dt$ y aplicamos \eqref{custi0n}: 
+
+\begin{align}
+    \partial_{\dot{x}}\left( -mc^2\sqrt{1 - \frac{\dot{x}}{c^2}} \right) &= cte\\
+    \frac{-mc^2}{\sqrt{1 - \frac{\dot{x}}{c^2}}} \cdot \frac{-2 \dot{x}}{2} &= cte \\
+    \frac{m\dot{x}}{\sqrt{1 - \frac{x^2}{c^2}}} &= cte
+\end{align}
+
+La cual será la definición del momentum lineal relativista, considerando $v = \dot{x}$: 
+
+\begin{equation}
+    P=\frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+
 \subsection{Pregunta 5}
 A partir de las expresiones anteriores, muestre la relación de dispersión relativista
 \begin{equation}
