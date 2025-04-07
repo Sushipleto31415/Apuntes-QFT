@@ -5,9 +5,24 @@
 
 %quizas aca introducir como en el estudio de las particulas elementales van a haber casos donde no se conserve la # de particulas, asi que se necesita estudiar en un marco mayor que nos permita ver más alla?? no se grande emily noether. 
 
-Aunque las ecuaciones de Euler-Lagrange describirán la dinámica de un sistema bajo un marco referencial. Necesitamos un marco conceptual que nos muestre como se transforma la dinámica del sistema y si es que algún tipo de simetría de este nos permita conservar ciertas cantidades. \\
+Aunque las ecuaciones de Euler-Lagrange describirán la dinámica de un sistema bajo un marco referencial. Solamente usar el marco de la mécanica racional quedará corto en el estudio de partículas elementales. Pues existirán interacciones o decaimientos, como el decaimiento beta [referenciar a cuando se hable de el más adelante], que no conservarán el número de partículas. Es por esto, que será importante preguntarnos: ¿Qué cantidades se conservan y cuando se conservarán?\\
 
-Supongamos que tienen una partícula en presencia de una energía potencial $U(x)$ a lo cual, la 2da ley de Newton nos dice lo siguiente: 
+Haciendose esta misma pregunta, la matématica Emily Noether postulo en el \textbf{Teorema de Noether}, que bajo una simetria de un Lagrangiano $L$ implicará la existencia de una corriente conservada $j^{\mu}(x)$. Tal que: 
+
+\begin{equation}
+    \partial_{\mu} j^{\mu} = 0 \label{corriente-conservada}
+\end{equation}
+
+Inicialmente, este teorema podremos asociarlo a una transformación infinitesimal que tendrá asociada una \textbf{cantidad conservada}. \\
+
+Así, supongamos que tenemos una partícula en presencia de una energía potencial $U(x)$. El lagrangiano del sistema:
+
+\begin{equation}
+    L = \frac{m\dot{x}^2}{2} - U(x)
+\end{equation}
+
+Nos llevará a las ecuaciones de movimiento del sistema: 
+
 $$ m \frac{d^2x(t)}{dt^2}=-\frac{\partial U(x)}{\partial x }$$
 A lo cual multiplicamos por $\frac{dX}{dt}$
 $$ m \frac{dX}{dt}\frac{d^2x(t)}{dt^2}=-\frac{dX}{dt}\frac{\partial U(x)}{\partial x }$$
@@ -19,7 +34,7 @@ La combinación
     \frac{m}{2}\left( \frac{dx}{dt}\right)^2+U(x)=E
 \end{equation}
 En lo cual $E$ corresponde a la energía del sistema. $E $ es una constante, con lo cual no depende del tiempo
-En general diremos que una cantidad $Q=a(x,\dot(x)$ es conservada si
+En general diremos que una cantidad $Q=a(x,\dot(x))$ es conservada si
 \begin{equation}
     \frac{d}{dt} Q\left( x(t), \frac{dx(t)}{dt}\right)=0
 \end{equation}
