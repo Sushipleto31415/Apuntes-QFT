@@ -12,9 +12,9 @@ Considere la ecuación de Schrödinger para una partícula en tres dimensiones, 
 \end{equation*}
 donde $\rho=\psi^*\psi$. Encuentre la expresión para $\vec{j}$. Escriba la forma integral de tal ecuación. \\
 Usando la relación de dispersión relativista, $E^2=p^2c^2 + m^2c^4$, repita el procedimiento anterior e interprete su resultado, Considerando la ecuación de Klein-Gordon, muestre que las ondas planas $  \psi=Ae^{-i\frac{E}{h}t + i\frac{E}{h}x}$ lleva a dos familias de ecuaciones, con energía $E$ tanto positiva como negativa. Dibuje tal espectro y discuta si tal espectro es  o no sensato para un sistema físico.\\
-Considee la ecuación de primer orden 
+Considere la ecuación de primer orden 
 \begin{align*}
-  \alpha \partial_t \psi \beta_1 \partial_{x^1}\psi + \beta_2 \partial_{x^2}\psi + \beta_3\partial_{x_3}\psi + m\psi  & = 0 \\
+  \alpha \partial_t \psi +\beta_1 \partial_{x^1}\psi + \beta_2 \partial_{x^2}\psi + \beta_3\partial_{x_3}\psi + m\psi  & = 0 \\
   \alpha \partial_t \psi + \beta_i \partial_i\psi + m\psi & = 0
 \end{align*}
 Actue sobre esta ecuación con el operador $(\alpha \partial_t+\beta_j\partial_j - m)$ y muestre que se recupera la ecuación de Klein-Gordon, siempre y cuando
@@ -99,5 +99,44 @@ Por tanto, la expresión para el vector $\vec{j}$ haciendo uso de la ecuación d
 \begin{equation}
   \vec{j} = \frac{i\hbar}{2m}\left( \psi^*\nabla \psi - \psi\nabla \psi^* \right)
 \end{equation}
+Ahora tenemos en cuenta la relación de dispersión relativista, 
+\begin{equation}
+  E^2=p^2c^2+m^2c^4
+\end{equation}
+Para lo cual, podemos escribir lo siguiente
+\begin{equation*}
+  \hat{E}^2 = -\hbar^2\partial^2_t \quad , \quad \hat{p}^2 = -\hbar^2\nabla^2
+\end{equation*}
+Ahora, reemplazamos esto en la relación de dispersión relativista para encontrar lo siguiente
+\begin{align*}
+  -\hbar^2\partial^2_t & = -\hbar^2c^2\nabla^2 + m^2c^4 \\
+  \frac{1}{c^2}\partial^2_t-\nabla^2 + \frac{m^2c^2}{\hbar^2} & = 0
+\end{align*}
+A este operador se le llama, operador de Klein-Gordon y su actuar sobre una función de onda da origen a la ecuación de Klein-Gordon, como sigue
+\begin{equation}
+  \left(\frac{1}{c^2}\partial^2_t-\nabla^2+\frac{m^2c^2}{\hbar^2}\right)\psi = 0
+\end{equation}
+o tabíen puede ser escrito en función del d`Alambertiano $\square$,
+\begin{equation}
+  \left(\square + \frac{m^2c^2}{\hbar^2}\right)\psi = 0
+\end{equation}
+Ahora consideramos una ecuación de ondas planas
+\begin{equation*}
+  \psi(\vec{x},t)=Ae^{-i\frac{E}{\hbar}t+i\frac{p}{\hbar}x}
+\end{equation*}
+Sobre la cual haremos actual el operador de Klein-Gordon, tal que
+\begin{align*}
+  \left(\frac{1}{c^2}\partial^2_t-\nabla^2+\frac{m^2c^2}{\hbar^2}\right)\psi  & = 0 \\
+  \frac{1}{c^2}\left(i\frac{E}{\hbar}\right)^2\psi - \left(i\frac{p}{\hbar}\right)^2\psi + \frac{m^2c^2}{\hbar^2} \psi &  =  \\
+  \frac{-E^2}{\hbar^2c^2} + \frac{p^2}{\hbar^2} + \frac{m^2c^2}{\hbar^2} & =  \\
+  -E^2 + p^2c^2 + m^2c^4 & = \\
+  E^2 & = p^2c^2 +  m^2c^4 \\
+  E & = \pm \sqrt{p^2c^2 + m^2c^4}
+\end{align*}
+Lo cual nos da lugar a dos familias de soluciones, las cuales son las siguientes
+\begin{itemize}
+  \item $\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para partículas
+  \item $\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para antipartículas 
+\end{itemize}
 
 \end{document}

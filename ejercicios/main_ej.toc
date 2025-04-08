@@ -23,8 +23,8 @@
 \contentsline {subsection}{\numberline {1.4.1}Pregunta 2}{11}{}%
 \contentsline {subsection}{\numberline {1.4.2}Pregunta 3}{12}{}%
 \contentsline {subsection}{\numberline {1.4.3}Pregunta 4}{13}{}%
-\contentsline {subsection}{\numberline {1.4.4}Pregunta 5}{13}{}%
-\contentsline {subsection}{\numberline {1.4.5}Pregunta 6}{13}{}%
-\contentsline {section}{\numberline {1.5}Preguntas clase 5}{13}{}%
-\contentsline {subsection}{\numberline {1.5.1}Pregunta 1}{13}{}%
-\contentsline {section}{\numberline {1.6}Preguntas clase 6}{15}{}%
+\contentsline {subsection}{\numberline {1.4.4}Pregunta 5}{14}{}%
+\contentsline {subsection}{\numberline {1.4.5}Pregunta 6}{14}{}%
+\contentsline {section}{\numberline {1.5}Preguntas clase 5}{14}{}%
+\contentsline {subsection}{\numberline {1.5.1}Pregunta 1}{14}{}%
+\contentsline {section}{\numberline {1.6}Preguntas clase 6}{17}{}%
