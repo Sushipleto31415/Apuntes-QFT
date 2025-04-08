@@ -2,5 +2,132 @@
 
 \begin{document}
 \section{Septima clase}
-Esta clase es más corta ya que el profe tuvo que salir
+La energía relativista está dada por lo siguiente
+\begin{equation}
+  E = \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+y a su vez el cuadrimomento 
+\begin{equation}
+  p= \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+lo cual, junto a transformaciones de Lorentz, dadas por
+\begin{align*}
+  \tilde{t} & = \frac{t-\frac{V}{c^2} x}{\sqrt{1-\frac{V^2}{c^2}}} \\
+  \tilde{x} & = \frac{x-Vt}{\sqrt{1-\frac{V^2}{c^2}}} \\
+  \tilde{v} & = \frac{v-V}{\sqrt{1-\frac{vV}{c^2}}}
+\end{align*}
+En lo cual, $\frac{E}{c}$ y $p$ transforman como los componentes de un cuadri-vector
+\begin{align*}
+  p^\mu & = (p^0,\vec{p}) \\
+  p^\mu & = \left( \frac{E}{c},\vec{p} \right) \\
+\end{align*}
+Con lo cual tenemos que, el cadrimomento transforma siguiendo la siguiente regla de transformación
+\begin{equation}
+  \tilde{p}^\mu=\Lambda_\nu^\mu p^\nu
+\end{equation}
+Además, siguiendo la convención de la métrica $(1,-1,-1,-1)$ tenemos lo siguiente
+\begin{align*}
+  \eta_{\mu \nu} p^\mu p^\nu  & = \eta_{00}p^0p^0 + \eta_{11}p^1p^1
+  & = 1\left( \frac{mc}{\sqrt{1-\frac{v^2}{c^2}}}  \right)^2 - \left( \frac{mc}{\sqrt{1-\frac{v^2}{c^2}}} \right) \\
+  & = \frac{m^2c^2-m^2v^2}{1-\frac{v^2}{c^2}}
+  & = m^2c^2
+\end{align*}
+De la misma forma:
+\begin{equation*}
+  \eta_{\mu\nu}\tilde{p}^\mu\tilde{p}^\nu = m^2c^2
+\end{equation*}
+Por lo tanto, como la constracción da como resultado un escalar, entonces se puede concluir que el cuadri-momento corresponde a un invariante de Lorentz, esto significa que todos los observadores inverciales observarán la misma cantidad a lo largo de la transformación entre ellos, siendo su valor el dicho $\eta_{\mu\nu}p^\mu p^\nu=m^2c^2$. \\
+En el caso de partículas sin masa, como lo fotones y gluones, esta relación sigue la siguiente regla
+\begin{equation*}
+  \eta_{\mu \nu}p^\mu p^\nu = 0
+\end{equation*}
+Inserte dibujo de Julio del efecto compton.\\
+\begin{equation*}
+  \lambda^' = \lambda + \lambda_c (1-\cos{\theta})
+\end{equation*}
+$\lambda_c$ es constante? \\
+Pero ahora, en qué dirección sale disparado el fotón?, no lo sabemos ya que $\theta$ es una variable aleatoria. En las variables aleatorias continuas no tiene sentido preguntarse cuál es la probabilidad en que la variable tome un valor en particular, sin embargo, si es correcto el preguntarse la probabilidad en un invtervalo. \\
+\begin{equation*}
+  \thete=\int p(\theta)d\theta
+\end{equation*}
+Ahora vamos a demostrar que la conservación de el cuadri-momentum lleva justo a compton. Al choque,vaya. \\
+Pensemos en este proceso como un choque.\\
+Entonces, inicialmente hay un electrón y un fotón y asumamos que el electrón está quieto:
+Digamos que el fotón incide en el eje z con cierta energía, pensemos en este proceso como uno en el cual se conserva el cuadri-monento. \\
+Notese que si tengo un sistema invariante ante transformaciones espaciales, entonces los cuadri-momentos pueden ser sumados. \\
+\begin{equation}
+  p^\mu_{TI} = p^\mu_{EI} + p^\mu_\gamma
+\end{equation}
+El del electrón es facil ya que
+\begin{equation*}
+  p^\mu_{EI} = \left( \frac{mc^2}{c} , \vec{0} \right)
+\end{equation*}
+Si tengo un fotón de color $\lambda$, y de frecuencia $\omega$, entonces
+\begin{equation*}
+  p\mu_\gamma = \left(\frac{E_\gamma}{c}, 0 , 0 , # \right)
+\end{equation*}
+Ahora necesito un número tal que se cumpla la relación para las partículas sin masa, como lo es el fotón, por lo tanto,
+\begin{equation*}
+  p^\mu_\gamma = \left(\frac{E_\gamma}{c},0,0,\frac{E_\gamma}{c}\right)
+\end{equation*}
+recuerden entonces que $E_\gamma=\hbar \omega$, ¿de dónde sale?, pues, de experinmentos. Entonces podemos escribir que, el cadri-momentum inicial es lo siguiente
+\begin{equation*}
+  p^\mu_{TI} = \left(  mc+\frac{E_\gamma}{c},0,0 \frac{E_\gamma}{c} \right)
+\end{equation*}
+En lo cual se han sumado los momenta. \\
+Al final, luego del choque, pasará lo siguiente.(inserte dibujo de Julio posterior al choque en el cual se observa la dirección aleatoria en la cual el fotón sale volando, ángulo de dispersión). \\
+EL fotón sadrá en una direción con ángulo $\alpha$ y el fotón saldrá en un ángulo $\theta$, el cual daremos como conocido, ahora la pregunta es, dado un $\theta$ conocido, cuál es el color del fotón?  \\
+\begin{equation}
+  p^\mu_{FT} = p^\mu_{EF} + p^\mu_{gamma ' }
+\end{equation}
+La velocidad de un electrón es una variable aleatoria como también lo es su energía, pero estas están relacionadas con el ángulo.
+\begin{equation*}
+  p_{\gamma '}^\mu = \left(\frac{E_{\gamma '}}{c}, 0,\frac{E_{\gamma '}}{c}\sin{\theta},\frac{E_{\gamma '}}{c}\cos{\theta}\right)
+\end{equation*}
+Lo cual se cumple ya que, cumpliendo con la relación, se tiene que 
+\begin{equation*}
+  \left(\frac{E_{\gamma '}}{c}\right)^2-|\vec{p}_\gamma|^2 = 0
+\end{equation*}
+Ahora para la energía final del electrón, tendremos que
+\begin{equation*}
+  p^\mu_{EF} = \left(\frac{E_{ef}}{c},\vec{p}_{ef}\right)
+\end{equation*}
+Ahora, usando la relación de dispersión tenemos que
+\begin{equation*}
+  p_^\mu_{ef} =  \frac{1}{c}\sqrt{m^2c^4+|\vec{p}_{ef}|^2c^2}, \vec{p}_{ef}
+\end{equation*}
+Con lo cual ahora nos queda sumar los momenta para obtener el momentum final
+\begin{equation*}
+  p^\mu_{TF} = \left(\frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^4 + |\vec{p}_{ef}|^2c^2} , (p)^x_{ef},(p)^y_{ef} + \frac{E_{\gamma '}}{c}\sin{\theta}, (p)^z_{ef}+\frac{E_{\gamma'}}{c}\right)
+\end{equation*}
+Este scattering es completamente elástico, lo cual nos indica que el electrón no tiene energía interna, ya que si tuviera energína interna estaría cuantizada y dicha energía debería ser considerada en el choque ya que parte de la energía del choque iría hacia la estructura interna del elctrón, lo que, por ahora se ha probado que no, aunque no sabemos.  \\
+\begin{align*}
+  p_{TI}^\mu  & = p^\mu_{TF} 
+\end{align*}
+Haremos esto índice por índice del cuadri-momento 
+\begin{align*}
+  p_{TI}^0  & = p_{TF}^0 \rightarrow mc + \frac{E_\gamma}{c} & = \frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^2 + |\vec{p_{ef}}|^2c^2} \\
+  p_{TI}^1 & = p_{TF}^1 \rightarrow 0  & = (p)^x_{ef} \\
+  p_{TI}^2 & = p_{TF}^2 \rightarrow 0 & = (p^y)_{eff} + \frac{E_{\gamma '}}{c}\sin{\theta} \\
+  p_{TI}^3 & = p_{TF}^3 \rightarrow (p^z)_{ef} + \frac{E_{\gamma '}}{c}\cos{\theta}
+\end{align*}
+Ahora, podemos notar inmediatamente que $(p^x)_{ef}=0$, con lo cual nos queda el siguiente sistema de ecuaciones.
+\begin{align*}
+  mc + \frac{E_{\gamma}}{c}  & = \frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^4 + c^2\left(\left(-\frac{E_{\gamma `}}{c}\sin{\theta}\right)^2 + \left( \frac{E_{\gamma}}{c} - \frac{E_\gamma}{c}\cos{\theta} \right)^2\right)} \\
+  mc^2 + E_\gamma & = E_{\gamma '} + \sqrt{m^2c^4 + c^2\left( \frac{E_{\gamma '}^2}{c^2}\sin{\theta}^2 + \frac{E_{\gamma}^2}{c} + \frac{E_{\gamma '}^2}{c^2}\cos{\theta}* ^2 - \frac{2E_{\gamma}E_{\gamma '}}{c^2}\cos{\theta}\right)} \\
+  mc^2 + E_\gamma & = E_{\gamma '} + \sqrt{m^2c^4 + E^2_{\gamma '} + E^2_\gamma - 2E_\gamma E_{\gamma `}\cos{\theta}}
+\end{align*}
+Al profe le aburrió el álgebra, con lo cual, la energía inicial del fotón es
+\begin{equation*}
+E_\gamma=\hbar\omega = \frac{\hbar c2\pi}{\lambda} = \frac{hc}{\lambda}  
+\end{equation*}
+y luego, la energía final estaría dada por 
+\begin{equation*}
+  E_{\gamma '} = \hbar \omega ' = \frac{\hbar c 2\pi}{\lambda '} = \frac{hc}{\lambda ' }
+\end{equation*}
+Con lo cual, de todo esto concluimos lo siguiente 
+\begin{equation}
+  \lambda ' = \lambda + \frac{h}{mc}(1-\cos{\theta})
+\end{equation}
+A lo cual, podemos llamar $\lambda_c=\frac{h}{mc}$, lo cual es llamada la longitud de compton del electrón. 
 \end{document}
