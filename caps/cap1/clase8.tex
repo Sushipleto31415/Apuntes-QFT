@@ -2,5 +2,187 @@
 
 \begin{document}
 \section{Clase 8}
-Clase 8 xd
+Sabemos como las transformaciones de Lorentz, considerando por simplicidad, un boost a lo largo del eje x, sabemos como estas transformaciones afectan las etiquetas de los eventos en el espacio-tiempo, de la forma como sigue
+\begin{equation}
+  \tilde{x}^\mu = \Lambda_\nu^\mu x^\nu
+\end{equation}
+Ahora usaremos que $\boxed{c=1}$, un boost a lo largo del eje x sería
+\begin{equation}
+  \Lambda = \begin{pmatrix}
+    \gamma & -\beta \gamma & 0 & 0 \\
+    -\beta \gamma & \gamma & 0 & 0 \\
+     0 & 0 & 0 & 0 \\
+     0 & 0 & 0 & 0 
+    \end{pmatrix}
+\end{equation}
+Lo cual se traduce con
+\begin{align*}
+  \gamma : = \left(1-\frac{V^2}{c^2}\right)^{-1/2} \\
+  \beta : =  \frac{V}{c} \\
+\end{align*}
+Lo cual, con $c=1$ queda como
+\begin{align*}
+  \tilde{t} & = \frac{t-Vx}{\sqrt{1-V^2}} \\
+  \tilde{x} & = \frac{x-Vt}{\sqrt{1-V^2}} \\
+  \tildey{y} & = y \\
+  \tilde{z} & = z
+\end{align*}
+La transformación del tipo
+\begin{equation*}
+  \tilde{x}^\mu = \Lambda_\nu^\mu x^\nu
+\end{equation*}
+que dejan invariante el intervalo
+\begin{equation*}
+  \eta_{\mu \nu} dx^\mu dx^\nu = \eta_{\mu \nu}d\tilde{x}^\mu d\tilde{x}^\nu
+\end{equation*}
+Son tales que cumplen con lo siguiente
+\begin{equation*}
+  \eta_{\mu \nu} = \Lambda_\mu^\alpha \Lambda^\beta_\nu \eta_{\alpha \beta}
+\end{equation*}
+¿Cuál es la forma más general que puede tomar $\Lambda_\nu^\mu$ tal que deje invariante el intervalo? \\
+Lambda puede tener 6 familias de transoformaciones diferentes, las cuales son
+\begin{itemize}
+  \item $\Lambda_\nu^\mu\rightarrow \Lambda_\mu_{\text{boost a lo largo del eje x}\nu}(v)$ 
+  \item $\Lambda_{\text{boost a lo largo del eje y}}(v)$
+  \item $\Lambda_{\text{boost a lo largo del eje z}}(v)$ 
+  \item $\Lambda_\mu^\nu \rightarrow$ Rotación en el plano (x,y) $(\theta)$
+  \item Rotación en el plano (y,z) $(\theta)$
+  \item Rotación en el plano (z,x) $(\theta)$
+\end{itemize}
+Ahora veremos una transformación que deja invariante el intervalo pero no pertenece a ninguna familia de transformaciones. \\
+\textbf{Inversión temporal:} Lo cual se define como
+\begin{equation}
+  \Lambda_\mu^\nu = \begin{pmatrix}
+    -1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 
+  \end{pmatrix}
+\end{equation}
+En lo cual
+\begin{equation*}
+  \tilde{t}= -t \quad , \tilde{x}=+x \quad ,\tilde{y}= y \quad , \tilde{y}=y \quad , \tilde{z}=z 
+\end{equation*}
+Lo cual nos deja al intevalo como
+\begin{equation*}
+  d\tilde{t}^2 -d\tilde{x}^2 - d\tilde{y}^2-d\tilde{z}^2 = dt^2-dx^2-dy^2-dz^2
+\end{equation*}
+\textbf{Transformaciones de paridad:}
+\begin{equation*}
+  \Lambda_\nu^\mu = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & -1 & 0 & 0 \\
+    0 & 0 & -1 & 0 \\
+    0 & 0 & 0 & -1
+  \end{pmatrix} 
+\end{equation*}
+En lo cual 
+\begin{equation*}
+  \tilde{t}= t \quad , \tilde{x}= -x \quad , \tilde{y}=-y \quad , \tilde{z}=-z
+\end{equation*}
+La interacción electromagnética es invariante bajo boosts y rotaciones de Lorentz, pero, por separado, son invariante bajo transformaciones de inversión temporal y transformación de paridad. \\
+La interacción débil no es invariante de paridad, pero sí lo es bajo boosts y rotaciones. \\
+Ejemplo: (insertar dibujo de Julio)
+Decaimiento de $^{60}Co$
+Como consecuencia que los neutrinos solo sean izquierdos, se le asocia cierta quiralidad a la interacción débil y que finalmente significa que la interacción débil rompe la paridad. (Solo con la interacción débil). \\
+\textbf{El campo más simple:} El campo relativista más simple posible. Se tienen dos observadores inerciales tales que la velocidad de $\tilde{K}$ con respecto a $K$ es $V$. Se tiene un punto p, tal que con respecto a $K$ y $\tilde{K}$ su posición será $\x^\mu$ y $\tilde{x}^\mu$ respectivamente . Ahora se tiene un campo $\phi(p)$, tal que el campo con respecto a cada observador inercial es tal que:
+\begin{itemize}
+  \item $\phi(p)=\phi(x^\mu)$
+  \item $\tilde{p} = \tilde{\phi}(\tilde{x}^\mu)$
+\end{itemize}
+Para lo cual, $\phi$ es un campo escalar (campo escalar de Lorentz) si:
+\begin{equation*}
+  \tilde{\phi}(\tilde{x}^\mu) = \phi(x)
+\end{equation*}
+Notese que el intervalo es un campo escalar, a su vez lo es el campo de Higgs. ¿ Es el potencial eléctrico $\Phi(x^\mu)$  un campo escalar de Lorentz? la respuesta es no, ya que son parte de un tensor jaja. (flashbacks de clásica 2). En particular, el campo escalar del potencial eléctrico, es escalar de rotaciones. \\
+\begin{align*}
+  \hat{\phi})(x^\mu) & = 1 \phi(x^\mu) \\
+  & = e^{\frac{1}{2}\omega^{\alpha \beta}J_{\alpha \beta}}\phi^{x^\mu} \\
+\end{align*}
+Con $J_{\alpha \beta}=0$
+Se tiene que, para la posición $\tilde{x}^\mu = \Lambda_\nu^\mu x^\nu$ la derivada con respecto al observador $K$ está dada por
+\begin{equation*}
+  \partial_\mu \phi = \left{\partial_t\phi,\partial_x\phi,\partial_y\phi,\partial_z\phi\right}
+\end{equation*}
+Y a su vez, la derivada con respecto al operador $\tilde{K}$ es
+\begin{equation*}
+  \partial_{\tilde{\mu}}\tilde{\phi} = \left{\partial_{\tilde{t}\tilde{\phi}}, \partial_{\tilde{x}}\tilde{\phi} , \partial_{\tilde{y}}\tilde{\phi} , \partial_{\tilde{y}}\tilde{\phi} , \partial_{\tilde{z}}\tilde{\phi}\right}
+\end{equation*}
+Ahora $\partial_\mu\phi$ vs $\partial_{\tilde{\mu}}\tilde{\phi}$, con $\tilde{t}=\tilde{t}(t,x)$, para ello hacemos regla de la cadena
+\begin{align*}
+  \partial_{\tilde{t}}\tilde{\phi}(\tilde{t},\tilde{x}) & = \partial_{\tilde{t}}t \partial_t\tilde{\phi}(\tilde{t}(t,x),\tilde{x})(t,x) + \partial_{\tilde{t}}x\partial_x\tilde{\phi}(\tilde{t}(t,x),\tilde{x}(t,x)) \\
+  & = \partial_{\tilde{t}}t \partial_t\phi + \partial_{\tilde{t}}x \partial_x\phi
+\end{align*}
+Ahora, con $\tilde{x}^\mu = \tilde{x}^\mu (x^\alpha)$
+\begin{align*}
+  \partial_{\tilde{\mu}}\tilde{\phi}(\tilde{x}) & = \partial_{\tilde{\mu}}x^\alpha \partial_\alpha \tilde{\phi}(\tilde{x}) \\
+  & = \partial_{\tilde{\mu}}\tilde{\phi}(\tilde{x}^\mu) &  =\partial_{\tilde{\mu}}x^\alpha \partial_\alpha \phi(x)
+\end{align*}
+Pero $\tilde{x}^\mu = \Lambda_\nu^\mu x^\nu$ y multiplicamos por $\left(\Lambda^{-1}\right)^\gamma_\mu$, lo cual es
+\begin{align*}
+  \left(\Lambda^{-1}\right)^\gamma_\mu \tilde{x}^\mu & =  \Lambda_\nu^\mu x^\nu \\
+  & = \delta_\nu^\gamma x^\nu \\
+  & = x^\gamma
+\end{align*}
+Por lo tanto $x^\gamma= \left(\Lambda^{-1}\right)^\gamma_\mu \tilde{x}^\mu$ con lo cual, ahora si podemos encontrar como transforma el cuadri-gradiente
+\begin{align*}
+  \partial_{\tilde{\xi}}x^\gamma & = \left(\Lambda^{-1}\right)^\gamma_\mu \partial_{\tilde{\xi}}\tilde{x}^\mu \\
+  \left( \Lambda^{-1} \right)^\gamma_\mu \delta_\xi^\mu \\
+\end{align*}
+Por lo tanto 
+\begin{equation}
+  \partial_{\tilde{xi}}x^\gamma = \left(\Lambda^{-1}\right)^\gamma_\xi 
+\end{equation}
+Ahora si, $\tilde{x}^\mu = \Lambda_\nu^\mu x^\nu$, entonces,
+\begin{equation*}
+  \partial_{\tilde{\mu}}\tilde{\phi} = \left(\Lambda^{-1}\right)^\alpha_\nu \partial_\alpha \phi
+\end{equation*}
+El cuadri-gradiente de un escalar de Lorentz es un conjunto de cuatro números qué transforman entre ellos de manera lineal homogénea, pero no definen un cuadri-vector contravariante. \\
+\textbf{Cuadri-vector contravariante:} 
+\begin{equation}
+  \tilde{A}^\alpha = \Lambda^\alpha_\beta A^\beta 
+\end{equation}
+\textbf{Cuadri-vector covariante:}
+\begin{equation}
+\tilde{B}_\alpha = \left(\Alpha^{-1}\right)^\beta_\alpha B_\beta
+\end{equation}
+Ahora hablemos de
+\textbf{Grupo:}
+\begin{align*}
+  G=\left\{a,b,\dots\right\} \\
+  \star : G \times G \rightarrow G \\
+\end{align*}
+El cual cumplirá con las siguientes propiedades 
+\begin{itemize}
+  \item $g_1 \star (g_2 \star g_3) = (g_1\star g_2)\star g_3$ 
+  \item Existe una identidad $e$ perteneciente a G tal que $e\star g_i = g_i \star e = g_i \forall g_i \in G$
+  \item $\forall g \in G$ existe un $g^{-1}\in G$ tal que $g\star g^{-1} = g^{-1}\star g = e$ 
+\end{itemize}
+Tomemos por ejemplo el grupo $G=U(1)$
+Multiplicación $g(\xi)= e^{i\xi}$ números $\xi \in [0,2\pi)$ \\
+El otro grupo será el grupo SO(2), con $0\leq\theta\leq 2\pi$ el cual es el grupo de rotaciones y corresponde a una multiplicación matricial
+\begin{equation} g(\theta)=
+  \begin{pmatrix}
+    \cos{\theta} & \sin{\theta} \\
+    -\sin{\theta} & \cos{\theta}
+  \end{pmatrix}
+\end{equation}
+Grupos ortogonales: los cuales se denotan por $G=O(N)$ las cuales son matrices ortogonales de $N\times N$ tal que: 
+\begin{equation}
+  O^TO=I
+\end{equation}
+\begin{align*}
+  g_1\in O(N) \quad y \quad g_2\in O(N) \
+  g_3 = g_1g_2 \in O(N) \\
+  g_3 = g_1g_2 \in O(N) \\
+  g^T_3 g_3 &  = (g_1g_2)^T (g_1g_2)  \\
+  & = g_2^Tg_1^Tg_1g_2 \\
+  & = g_2^TIg_2 \\
+  & = I
+\end{align*}
+Tarea, mostrar si $g\in O(N) $ tal que $g^{-1}\in O(N)$ 
+Será que la 2 esfera será un grupo manifold? no, pero sera que una 3 esfera será un grupo? si \\
+Grupos unitarios: \\
+Se define el grupo
+ver videos de curvas elípticas
 \end{document}
