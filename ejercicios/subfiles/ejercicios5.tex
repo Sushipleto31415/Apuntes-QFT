@@ -17,10 +17,10 @@ Considere la ecuación de primer orden
   \alpha \partial_t \psi +\beta_1 \partial_{x^1}\psi + \beta_2 \partial_{x^2}\psi + \beta_3\partial_{x_3}\psi + m\psi  & = 0 \\
   \alpha \partial_t \psi + \beta_i \partial_i\psi + m\psi & = 0
 \end{align*}
-Actue sobre esta ecuación con el operador $(\alpha \partial_t+\beta_j\partial_j - m)$ y muestre que se recupera la ecuación de Klein-Gordon, siempre y cuando
+Actue sobre esta ecuación con el operador $(\alpha \partial_t+\beta_j\partial_j + m)$ y muestre que se recupera la ecuación de Klein-Gordon, siempre y cuando
 \begin{align*}
   \alpha^2  & = 1 \\
-  \alpha \beta_i + \beta_j \alpha & = 0 \\
+  \alpha \beta_i + \beta_i \alpha & = 0 \\
   \beta_i\beta_j = -\delta_{ij}
 \end{align*}
 ¿ Es posible realizar estas últimas ecuaciones asumiendo que los cuatro objetos $\alpha$ y $\beta_i$ son números? \\
@@ -87,7 +87,7 @@ Ahora, en esta expresión tenemos una derivada parcial de la función de onda y 
 \end{align*}
 Ahora reemplazamos esto en la derivada partial de $\rho$.
 \begin{align*}
-  \partial_t\rho & = \psi^*\left(\frac{i\hbar}{2m}\nabla^2 \psi -\frac{i}{\hbar}V(x)\psi \right) + \psi \left(  -\frac{i\hbar}{2m}\nabla^2 \psi^* +\frac{i}{\hbar}V(x)\psi^* \right) \\
+\partial_t\rho & = \psi^*\left(\frac{i\hbar}{2m}\nabla^2 \psi -\frac{i}{\hbar}V(x)\psi \right) + \psi \left(  -\frac{i\hbar}{2m}\nabla^2 \psi^* +\frac{i}{\hbar}V(x)\psi^* \right) \\
   & = \frac{i\hbar}{2m} \left( \psi^* \nabla^2\psi -\psi \nabla^2\psi^* \right) \\
   & = \frac{i\hbar}{2m}\nabla \cdot \left( \psi^*\nabla \psi - \psi \nabla \psi^* \right)
 \end{align*}
@@ -135,8 +135,26 @@ Sobre la cual haremos actual el operador de Klein-Gordon, tal que
 \end{align*}
 Lo cual nos da lugar a dos familias de soluciones, las cuales son las siguientes
 \begin{itemize}
-  \item $\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para partículas
-  \item $\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para antipartículas 
+  \item $E=\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para partículas
+  \item $E=-\sqrt{p^2c^2+m^2c^4}$ la cual es la relación de dispersión para antipartículas 
 \end{itemize}
-
+Ahora nos dan la siguiente ecuación de primer orden
+\begin{equation}
+  a\partial_t\psi + \beta_i\partial_i\psi + m \psi = 0
+\end{equation}
+Sobre el cual nos piden hacer actuar el operador $(\alpha \partial_t - \beta_j \partial_j + m)$, así lo hacemos actuar como sigue
+\begin{align*}
+  \left(\alpha\partial_t + \beta_j\partial_j  - m\right)\left( \alpha \partial_t\psi + \beta_i \partial_i \psi + m\psi  \right) & = 0 \\
+  \alpha^2 \partial^2_t\psi + \alpha \beta_i \partial_t\partial_i \psi +m \alpha \partial_t \psi +  \beta_j\alpha \partial_j \partial_t \psi + \beta_j \beta_i \partial_j\partial_i \psi + m\beta_j\partial_j \psi - m\alpha \partial_t\psi - m\beta_i \partial_i \psi - m^2\psi & = 0 
+\end{align*}
+Ahora que se expandió la acción del operador sobre la ecuación, usaremos las condiciones impuestas, con las cuales la ecuación debiera reducirse a Klein-Gordon, de primeras impondremos que , $\alpha^2=1$, $\beta_i\beta_j=-\delta_{ij}$ y $\alpha \beta_i + \beta_i \alpha$ 
+\begin{align*}
+  \alpha^2\partial^2_t \psi +\alpha \beta_i\partial_t \partial_i \psi + \cancel{\alpha m \partial_t \psi} + \beta_j\alpha \partial_j \partial_t \psi - \delta_{ij} \partial_j \partial_i\psi + m\beta_j \partial_j \psi +\cancel{-m\alpha \partial_t \psi} - m\beta_i\partial_i \psi - m^2 \psi & = 0 \\
+  \alpha^2\partial^2_t \psi + \left( \alpha \beta_i + \beta_i \alpha  \right)\partial_i \partial_t \psi - \partial^2_i\psi - m^2\psi &  =   \\
+  \partial^2_t \psi - \partial^2_i - m^2\psi & = 
+\end{align*}
+Ahora, notamos que la ecuación, tras la acción del operador dado, se reduce a la ecuación de Klein-Gordon, la cual está dada por:
+\begin{equation}
+  \boxed{\left(\partial_t^2 - \nabla^2 + m^2\right)\psi = 0}
+\end{equation}
 \end{document}
