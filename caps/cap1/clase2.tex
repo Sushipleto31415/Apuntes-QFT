@@ -7,15 +7,8 @@
 
 Aunque las ecuaciones de Euler-Lagrange describirán la dinámica de un sistema bajo un marco referencial. Solamente usar el marco de la mécanica racional quedará corto en el estudio de partículas elementales. Pues existirán interacciones o decaimientos, como el decaimiento beta [referenciar a cuando se hable de el más adelante], que no conservarán el número de partículas. Es por esto, que será importante preguntarnos: ¿Qué cantidades se conservan y cuando se conservarán?\\
 
-Haciendose esta misma pregunta, la matématica Emily Noether postulo en el \textbf{Teorema de Noether}, que bajo una simetria de un Lagrangiano $L$ implicará la existencia de una corriente conservada $j^{\mu}(x)$. Tal que: 
 
-\begin{equation}
-    \partial_{\mu} j^{\mu} = 0 \label{corriente-conservada}
-\end{equation}
-
-Inicialmente, este teorema podremos asociarlo a una transformación infinitesimal que tendrá asociada una \textbf{cantidad conservada}. \\
-
-Así, supongamos que tenemos una partícula en presencia de una energía potencial $U(x)$. El lagrangiano del sistema:
+Estudiemos estas preguntas suponiendo que tenemos una partícula en presencia de una energía potencial $U(x)$. El lagrangiano del sistema:
 
 \begin{equation}
     L = \frac{m\dot{x}^2}{2} - U(x)
@@ -33,16 +26,27 @@ La combinación
 \begin{equation}
     \frac{m}{2}\left( \frac{dx}{dt}\right)^2+U(x)=E
 \end{equation}
-En lo cual $E$ corresponde a la energía del sistema. $E $ es una constante, con lo cual no depende del tiempo
+En lo cual $E$ corresponde a la energía del sistema. $E $ es una constante independiente del tiempo. 
 En general diremos que una cantidad $Q=a(x,\dot(x))$ es conservada si
 \begin{equation}
     \frac{d}{dt} Q\left( x(t), \frac{dx(t)}{dt}\right)=0
 \end{equation}
+
 En el contexto de la mecánica cláscia en el que estamos interesados en encontrar $x(t)$, las cantidades conservadas con extremadamente útiles. Las cantidades conservadas tambíen se llaman integrales de movimiento.  Si un sistema tiene un número suficientemente alto de integrales de movimiento, entonces podemos encontrar las historias de los grados de libertad sin integrar . \\
 \begin{equation}
     q_i=q_i(t) \quad i=1,\dots ,N
 \end{equation}
-Teorema de Noether: Si el funcional de la acción es quasi-invariante bajo una transformacion infinisetimal, entonces existirá una cantidad conservada asociada a la transformación.  \\
+
+El \textbf{Teorema de Noether}, nos dice que bajo una simetria de un Lagrangiano $L$ implicará la existencia de una corriente conservada $j^{\mu}(x)$. Tal que: 
+
+\begin{equation}
+    \partial_{\mu} j^{\mu} = 0 \label{corriente-conservada}
+\end{equation}
+
+Inicialmente, este teorema podremos asociarlo a una transformación infinitesimal que diremos que es una simetría si el funcional de la acción es invariante / cuasi-invariante. Así, esta transformación tendrá asociada una \textbf{cantidad conservada}. \\
+
+%Teorema de Noether: Si el funcional de la acción es quasi-invariante bajo una transformacion infinisetimal, entonces existirá una cantidad conservada asociada a la transformación.  \\
+
 Ejemplos de transformaciones infinitesimales, la transformación infinitesimal tendrá una forma bien precisa, dado lo siguiente. \\
 \textbf{Transformación: traslación temporal}. Sea una coordenada $q(t)$ que depende del tiempo, a la cual haremos una tralación al futoro en $a$ seg. $q(t-a)$, notemos que $a $ puede ser cualquier número, digamos que $a$ es infinitesimal, con lo cual lo llamaremos $\epsilon$, ahora, tomando la serie de Taylor a $q(t-\epsilon$ tenemos lo siguiente:
 \begin{equation}
