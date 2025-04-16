@@ -1,0 +1,165 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+\section{novena clase}
+\begin{equation*}
+  g=\{g_1,g_2,\dots\}
+\end{equation*}
+grupo infinito numerable, el cual cumple con las siguiente propiedades
+\begin{align*}
+  & \cdot : g\times g \rightarrow g \\
+  &  (g_1\cdot g_2) \cdot g_3 = g_1 \cdot (g_2\cdot g_3) \\
+  &\exists e\in g / e\cdot g = g\cdot e\quad ,\forall g \\
+  &\forall g\in g \quad, \exists g^{-1}\in g /g\cdot g^{-1} = g^{-1}\cdot g = e
+\end{align*}
+los grupos también pueden ser continos, como por ejemplo $z^\dagger z = 1$ al cual se le llama el grupo $u(1)=g$, que se define por $z=e^{i\alpha}$ con $\alpha \in \mathfrak{r}$, con la multiplicación de números complejos. \\
+otro ejemplo sería el grupo $o(n)=g$ tal que, el grupo de define con matrices de $n\times n$
+\begin{equation*}
+  g\in o / o^to=i
+\end{equation*}
+grupo el cual se define sobre la multiplicación matricial
+\begin{equation*}
+  \tilde{\theta}_{2n\times 2n} = \begin{pmatrix}
+    \theta_{n\times n} & \theta_{n\times n} \\
+    \theta_{n\times n } & \theta_{n\times n}
+  \end{pmatrix}
+\end{equation*}
+los grupos están definidos por como se hablan sus elementos, lo cual se escribe mediante una tabla de multiplicación
+
+\begin{table}
+\begin{tabular}{c|c|c|c}
+  $\cdot$ & $g_1$ & $g_2$ & $g_3$ \\ \hline 
+  $g_1$ & & & \\ \hline
+  $g_2$ & & & \\ \hline
+  $g_3$ & & & \\ 
+\end{tabular}
+\end{table}
+representación trivial unidimensional
+\begin{equation*}
+  g_1=1 , \quad g_2=1 , \quad g_3=1 ,\quad \dots
+\end{equation*}
+es infiel, representación trivial 2d
+\begin{equation*}
+  g_1 = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} , \quad g_2 \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+\end{equation*}
+\textbf{representación de un grupo:}
+\begin{equation*}
+  \text{matriz de algún tamaño} m(g_i) \leftarrow g_i \in g 
+\end{equation*}
+tal que
+\begin{equation*}
+  m(g_1)m(g_2) = m (g_1\cdot g_2)
+\end{equation*}
+\textbf{representación proyectiva de un grupo:}
+\begin{align*}
+  \text{matriz de} n\times n m(g_i) \leftarrow g_i \in g \\
+  m(g_i)m(g_j) = \omega(g_1, g_j) m (g_i\cdot g_j) 
+\end{align*}
+en lo cual, $\omega(g_i,g_j)$ corresponde a una fase, número complejo de módulo $1$. \\
+\begin{align*}
+  m(g_i) \leftarrow g\in g  \\
+  m(g_i) ) = \begin{pmatrix} m(g_i) & 0 \\ 0 & 1 \end{pmatrix} 
+\end{align*}
+con $m(g_i)$ una matriz no nueva. ahora
+\begin{align*}
+  \text{matrices de} n\times n \; m(g_i) \longleftarrow g_i \in g \\
+  \tilde{m}(g_i)  = a\;m(g_i)\; a \\
+  \text{con ca cualquier matriz invertible de }n\times n \\
+  \tilde{m}(g_i) \tilde{m}(g_j) & = (a \; m(g_i) \; a^{-1}) (a \; m(g_j) \; a^{-1}) \\
+  & = a \; m(g_i) m(g_j)\; a^{-1} \\
+  & = a\; m(g_i \cdot g_j) \; a^{-1} \\
+  & = \tilde{m} (g_i \cdot g_j) 
+\end{align*}
+cuando esto pasa decimos que las matrices $m(g_i)$ forman una representación que es conjugada a la representación formada por las matrices $\tilde{m}(g_i)$ y en consecuencia las identificamos como
+\begin{equation*}
+  m(g_i) ~ \tilde{m}(g_i)
+\end{equation*}
+volvamos que $o(3)$ 
+\begin{align*}
+  o^t o = i \\
+  det(o^to) = 1 \rightarrow det(o)^1 = 1 \\
+  \det(o) = \pm 1
+\end{align*}
+este subconjunto de matrices tabién forman un grupo, al cual se le denota como so(3). \\
+ahora, el grupo u(2)
+\begin{align*}
+  u^\dagger u = i \\
+  det(u^\dagger u)  = 1 \\
+  det(u^\dagger) det(u) = 1 \\
+  det(u)^* det(u) = 1 \\
+  |det(u)|^2 = 1 \rightarrow det(u) = e^{i\beta} \quad , \beta\in\mathfrak{r}
+\end{align*}
+si fijamos $\det{u}=1 \quad (\beta=0)$ todas las matrices unitarias también forman un subconjunto de u(2), el cual es llamado su(2). \\
+más acerca de su(2).\\
+su(2) es una tres esfera , pero, qué significa esto? \\
+tres esfera $(s^3)$ \\
+\begin{align*}
+  s^3 = \{(x,y,z,w)\in \mathfrak{r}^4 / x^2 + y^2+ z^2 + w^2 = 1\}
+\end{align*}
+es un mapeo 1 a 1 entre elementos de su(2) y puntos arriba de la tres esfera. \\
+la matriz unitaria de $2\times 2$ más general puede esribirse en términos  de 4 números reales tal que $x^2 + y^2 + z^2 + w^2 = 1$, donde 
+\begin{equation*}
+  g(x,y,z,w) = \begin{pmatrix} x+y & z+iw \\ -z+iw & x-iy \end{pmatrix}
+\end{equation*}
+en lo cual
+  \begin{align*}
+    det(g) & = x^2 + y^2 - (-z+iw)(z+iw) \\
+    & = x^2 + y^2 + z^2 + w^2 \\
+    & = 1
+  \end{align*}
+  ahora, veamos cuánto es $g \cdot g^\dagger$, 
+\begin{align*}
+    g \cdot g^\dagger & = \begin{pmatrix} x-iy & -z-iw \\ z-iw & x+iw \end{pmatrix} \begin{pmatrix} x+iy & z+iw \\ -z + iw & x-iy\end{pmatrix} \\
+      & = \begin{pmatrix} x^2 + y^2 + z^2 + w^2 & (x-iy)(z+iw) + (-z-iw)(x-iy) \\
+        (z-iw)(x+iy) + (x+iy)(-z+iw) & z^2 + w^2 + x^2 + y^2 
+        \end{pmatrix} \\
+          & = I
+\end{align*}
+una forma de parametrizar la $s^3$ es:
+\begin{align*}
+  x^2 + y^2  & = \sin^2{\theta} \\
+  z^2 + w^2 & = \cos^2{\theta} \\
+  x & = \cos{\phi}\sin{\theta} \\
+  y & = \sin{\phi}\sin{\theta} \\
+  z & = \cos{\psi}\cos{\theta} \\
+  w & = \sin{\psi}\cos{\theta}
+\end{align*}
+\begin{itemize}
+\item $s^3$ es un grupo manifold 
+\item es el grupo manifold de su(2) 
+\item los grupos que son supfericies, se llaman grupos de lie
+\end{itemize}
+        \textbf{todo esto no es posible hacerlo con la 2-esfera}\\
+ejemplo de grupo contínuo que tiene dos partes "desconectadas \;"
+\begin{align*}
+  \mathfrak{c} = \{(x,y)\in\mathfrak{r}^2/ y^2 = x^3 + bx^2 + cx + d\\
+\end{align*}
+        todos los elementos de su(2) pueden escribirse de la siguiente manera
+\begin{equation*}
+  g = e^{i\lambda_a t_a} = e^{i\lambda_1 t_1 + i \lambda_2 t_2 + i \lambda_3 t_3}
+\end{equation*}
+        donde los $t_a$ son 3 matrices de $2\times 2$ hermíticas y de traza nula  y los $\lambda_a = \{\lambda_1 , \lambda_2 , \lambda_3\}$  son 3 parámatros reales. para calcular el determinante de la exponencial de una matriz es
+\begin{align*}
+  det(g) & = det(e^{i\lambda_a t_a}) \\
+  & = e^{tr(i\lambda_a t_a)} \\
+  & = e^{i\lambda_a tr(t_a)} \\
+  & = 1
+\end{align*}
+        \begin{align*}
+          g^\dagger \cdot g & = \left( e^{i\lambda_a t_a} \right)^\dagger \left( e^{i\lambda_b t_b} \right) \\
+          & = e^{-\lambda_a t_a^+} e^{i\lambda_b t_b} \\
+          & = e^{-i\lambda_a t_a^+ + i\lambda_{{\cancel{b}}^a} t_{\cancel{b}^a} } \\
+          & = e^{-i\lambda_a (t_a^+-t_a^+)} \\
+          & = 1
+        \end{align*}
+la regla de multiplicación de grupo implica que los generadores satisfacen lo siguiente
+        \begin{equation*}
+          [t_a,t_b] = f_{abc} t_c 
+        \end{equation*}
+para su(2) es posible elegir una base tal que
+        \begin{align*}
+          [t_1,t_2] = it_3 \quad , \quad [t_2,t_3] = it_1 \\
+          [t_3,t_1] = it_2
+        \end{align*}
+        las matrices $t_a$ definen la base de un espacio vectorial, que junto a la operaci´on de conmutación definen un álgebra, tal álgebra es llamado álgebra de lie. 
+\end{document}
