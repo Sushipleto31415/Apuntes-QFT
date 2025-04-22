@@ -1,0 +1,171 @@
+\documentclasss ../main.tex]{subfiles}
+
+\begin{document}
+\section{Décima clase}
+Los grupos de Lie son superficies quee pueden tener componentes desconectados. El elemento identidad corresponderá a un punto en alguna de las piezas. Tal pieza define un subgrupo del grupo completo. En los grupos los elementos conectados a al identidad pueden ser escritos de la forma: \\
+Me puedo imaginar que la primera superfice tiene curvas coordenadas, lo cual en una superfice bidimensionar tiene dos familias de curvas coordenadas, entonces a cada punto le doy dos números. Para lo cual podemos dividir el espacio en parámetros $\alpha$ lo cual podrá describir un punto en la superficie y por tanto, un punto en el espacio. Como lo puede ser, por ejemplo, el punto
+\begin{equation*}
+  g = g(\alpha_A)
+\end{equation*}
+Pensando en grupo clásicos, los $g$ serán matrices de algún tamaño, tal que el elemento $g$ puede ser escrito de la siguiente manera
+\begin{align*}
+  g(\alpha_A)  & = e^{i(\lambda_1T_1+\lambda_2T_2 +\dos \alpha_nT_n)} \\
+  & = e^{i\lambda_AT_A}
+\end{align*}
+Notemos que, esta forma exponencial solo es válida para lo elementos de la superficie del grupo conectada a la identidad. \\
+Para lo cual
+\begin{itemize}
+  \item $\Lambda_A$, números reales, (los alpha que llamó el profe)
+  \item $T_A$ matrices generadoras del álgrebra 
+\end{itemize}
+Yo puedo tomar un elemento del grupo y multiplicarlo con otro, lo cual por la propiedad de clausura, debe dar otro elemento del grupo
+\begin{align*}
+  g(\lambda_A) g(\beta_B) = g(\gamma_C= \gamma_C(\lambda_A,\beta_B))
+\end{align*}
+Lo cual será según la tabla de multiplicación del grupo de Lie, lo cual, a diferencia de los grupos discretos, corresponde a un conjunto de funciones $\gamma$ y el como se relacionan con los parámetros reales $\alpha_A$ y $\beta_B$, a las cuales les llamaremos constantes de estructura. 
+\begin{equation*}
+  [T_A,T_B] = f_{ABC}T_C
+\end{equation*}
+Lo cual se denote como, álgebra de LIe asociada al grupo de Lie. \\
+¿ Qué forma toma $[T_A,T_B] = f_{ABC}T_C$ para el grupo de Lorentz? \\
+Dada una representación del álgebra, es decir un conjunto de $N$ matrices $T_A$ con $A=1,\dots,N$ tal que $[T_A,T_B]=f_{ABC}T_C$, podremos encontrar una representación del grupo, exponiendo tales matrices. Si los $\lambda_A$ so infinitesimales, entonces expando a primer orden la exponencial
+\begin{equation}
+  g(\lambda_A) = I + i\lambda_AT_A + O{\lambda^2}
+\end{equation}
+Para hacer teoría de campos, nos basta saber la estructura del álgebra del grupo de Lorentz. \\
+Vamos al grupo de Lorentz entonces. \\
+Los grupos en física actúan sobre objetos físicos. Voy a definir un objeto físicos transformado, como la acción del elemento del grupo, actuando sobre el objeto físico no transformado
+\begin{equation*}
+  \tilde{\Phi}^I = g^I_{\; J}(\lambda_A)\Phi^I
+\end{equation*}
+en donde los índices $I$ y $J$ van desde 1 hasta la dimensión de la representación, por ejemplo en caso que sean matrices de $2\times 2$ entonces toma dos valores, y así. \\
+En caso que los parámetros $\lambda_A$ estén conectados en el espacio que tenga la identidad, entonces. Una transformación infinitesimal actuará:
+\begin{align*}
+  \tilde{\Phi}^I & = \left( I + i\lambda_A T_A \right)^I_{\; K}\Phi^J \\
+  & = I^I_{\; J} \Phi^I + i\lambda_A \left(T_A\right)^I_{\; J}\Phi^I \\
+  & = \Phi^I + i\lambda_A \left(T_A\right)^I_{\;J}\Phi^J 
+\end{align*}
+Lo cual, si restamos el transformado con el elemento original, tenemos
+\begin{equation*}
+  \delta \Phi^I : = \tilde{\Phi}^i - \Phi^I = i\lambda_A\left(T_A\right)^I_{\; J}\Phi^I 
+\end{equation*}
+Con lo cual, la manera en la cual todo lo elemetos cercanos a la identidad actúan sobre el resto del grupo
+\begin{equation}
+  \boxed{  \delta \Phi^I  = i\lambda_A\left(T_A\right)^I_{\; J}\Phi^J}
+\end{equation}
+El grupo SU(2) ya lo definios, 
+\begin{equation*}
+  U\in SU(2) ,\text{if}\; U^\dagger U = I \; \& det(U) = 1  
+\end{equation*}
+Lo cual,
+\begin{align*}
+  [T_A,T_B] = i\epsilon_{ABC}T_C \\
+  [T_1,T_2] =iT_3 \\
+  [T_2,T_3] = iT_1 \\
+  [T_2,T_3] = iT_1 \\
+  [T_3,T_1] = iT_2
+\end{align*}
+Ahora tenemos las representación.\\
+\textbf{Representación trivial: } La cual se usar para representar a los objetos sin rotación
+\begin{equation*}
+  (T_1)= 0,\quad (T_2)= 0,\quad (T_3)=0
+\end{equation*}
+\textbf{Representación de spin 1/2:} Representación fundamental de $su$(2)
+\begin{align*}
+  T_1 & = 1/2\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \\
+  T_2 & = 1/2\begin{pmatrix}0 & -i \\ i & 0 \end{pmatrix} \\
+  T_3 & = 1/2\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+\end{align*}
+\textbf{Representación de spin 1}
+\begin{align*}
+  T_1 & = 1/\sqrt{2}\begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix} \\
+  T_2 & = 1/\sqrt{2}\begin{pmatrix} 0 & -i & 0 \\ i & 0 & i \\ 0 & i & 0 \end{pmatrix} \\
+  T_3 & = 1/\sqrt{2}\begin{pmatrix} 1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1 \end{pmatrix}
+\end{align*}
+Lo cual
+\begin{align*}
+  T_1T_2 - T_2 T_2 &  = 1/2 \left[ \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix} \begin{pmatrix} 0 & -i & 0 \\ i & 0 & -i \\ 0 & i & 0 \end{pmatrix}  - \begin{pmatrix}  0 & -i & 0 \\ i & 0 & -i \\ 0 & i & 0 \end{pmatrix}\begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0 \end{pmatrix} \right] \\
+& = 1/2\left[\begin{pmatrix} i & 0 -i \\ 0 & 0 & 0 \\ i & 0 & -i \end{pmatrix} - \begin{pmatrix} -i & 0 & -i \\ 0 & 0 & 0 \\ i & 0 & i \end{pmatrix}\right] \\
+  & = 1/2 \begin{pmatrix} 2i & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -2i \end{pmatrix} \\
+    & iT_3
+\end{align*}
+Lie algebra in particle physcics A. Georgi. \\
+Ahora, otra representación de matrices de $3\times 3$
+\begin{align*}
+  T_1 & = \begin{pmatrix} T_1^{\text{spin 1/2}} & 0 \\ 0 & 0 \end{pmatrix} \\
+    T_2 & = \begin{pmatrix} T_2^{\text{spin 1/2}} & 0 \\ 0 & 0 \end{pmatrix} \\
+      T_3 & = \begin{pmatrix} T_3^{\text{spin 1/2}} & 0 \\ 0 & 0 \end{pmatrix} 
+\end{align*}
+Las irreps de $su$(2) están clasificadas y están etiquetadas por un semi entero, $s=0,\frac{1}{2}, 1 , \frac{3}{2},\dots$ y son matrices de $(2s+1)\times (2s+1)$. Para cada valor de $s$ hay una única irrep. \\
+\textbf{Representación conjugada:}
+\begin{align*}
+  (T_AT_B - T_BT_A)^* & = (i\epsilon_{ABC}T_C)^* \\
+  T_A^*T_B^*-T_B^*T_A^* & = -i\epsilon_{ABC}T_C^* \\
+  (-T_A^*)(-T_B^*) - (T_B^*)(T_A^*) & = \epsilon_{ABC}(-T_C^*)
+\end{align*}
+Por tanto, las matrices 
+\begin{equation*}
+  \tilde{T_A} = -T_A^*
+\end{equation*}
+Y por tanto
+\begin{equation*}
+  \left[\tilde{T_A},\tilde{T_B} = i\epsilon_{ABC}\tilde{T_C}\right]
+\end{equation*}
+La representación de spin 1/2 se le llama \textbf{2}, la cual está relacionada con la representación conjugada, de forma que ambas son equivalentes, la cual está dada por\\
+\textbf{Representación conjugada (antifundamental)}
+\begin{align*}
+  \tilde{T_1} & = 1/2\begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} \\
+  \tilde{T_2} & = 1/2\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}\\
+    \tilde{T_3} & = 1/2 \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}
+\end{align*}
+Representación la cual se denota por $\bar{textbf{2}}$. Ahora, si bien las representaciones son equivalentes via conjugación, estas no describen la misma física.
+\begin{equation*}
+  \bar{\textbf{2}} \equiv \textbf{2}
+\end{equation*}
+TAREA, encontrar la siguiente matriz $A$. 
+\begin{align*}
+  \tilde{T_1} & = A^{-1}T_1A \\
+  \tilde{T_2} & = A^{-1}T_2A \\
+  \tilde{T_3} & = A^{-1}T_3A
+\end{align*}
+Volvamos al grupo de Lorentz. 
+\begin{align*}
+  \tilde{X}^\mu  = \Lambda_{\;\nu}^\mu X^\nu \\
+  \eta_{\mu \nu}\Lambda_{\; \alpha}^\mu \Lambda_{\; \beta}^\nu = \eta_{\alpha \beta}
+\end{align*}
+Para transformaciones de Lorentz infinitesimales 
+\begin{equation*}
+  \Lambda_{\;\beta}^\alpha = \delta_{\; \beta}^\alpha + \omega_{\; \beta}^{\alpha}
+\end{equation*}
+Con lo cual, tenemos lo siguiente
+\begin{align*}
+  \eta_{\mu \nu} \left(\delta_{\; \alpha}^\nu + \omega_{\; \alpha}^\mu\right)\left( \delta_{\;\beta}^\nu + \omega_{\;\beta}^\nu \right) & = \eta_{\alpha \beta} \\
+  \eta_{\mu \nu} \delta_{\; \alpha}^\mu \delta_{\; \beta}^\nu + \eta_{\mu \nu} \omega^\mu_{\; \alpha} \delta_{\; \beta}^\alpha + \eta_{\mu \nu}\delta{\;\alpha}^\mu \omega^\nu_{\; \beta} + O(\omega^2) & = \eta_{\alpha \beta} \\
+  \eta_{\mu \beta}\omega_{\; \alpha}^\mu + \eta{\alpha \nu}\omega^\nu_{\; \beta} & = 0
+  \text{Definición} \quad \omega_{\beta \alpha} + \omega_{\alpha \beta} = 0 \\
+  \boxed{\omega_{\alpha \beta} = -\omega_{\beta \alpha}}
+\end{align*}
+Con lo cual
+\begin{align*}
+  \tilde{X}^\mu &  =\left(\delta_{\; \nu}^\mu + \omega^\mu_{\; \nu}\right)X^\nu \\
+   & = \delta_{\; \nu}^\mu X^\nu + \omega^\mu_{\; \nu} X^\nu \\
+   & = X^\mu + \omega^\mu_{\; \nu}X^\nu \\
+\end{align*}
+Y asi se obtiene que
+\begin{equation*}
+  \delta X^\mu := \tilde{X}^\mu - X^\mu = \omega^\mu_{\;\nu}X^\nu
+\end{equation*}
+Desarollamos esta definición
+\begin{align*}
+  \delta X^\mu & = \omega_{\; \nu}^\mu X^\nu \\
+  & = i\frac{1}{2}\omega_{\alpha \beta}\left(T^{\alpha \beta}\right)^\mu_{\; \nu}X^\nu \\
+  \left(T^{\alpha \beta}\right)^\mu_{\; \nu} = #\left(\delta_{\; \nu}^\mu - \delta^\beta_{\; \nu}\eta^{\alpha \mu}\right) \\
+  & = i\frac{#}{2}\omega_{\alpha\beta} \left(\delta_{\nu}^{\alpha}\eta^{\beta \nu} - \delta_{\nu}^\beta\eta^{\alpha \nu}\right)X^\nu \\
+  & = #\omega^\mu_\nu X^\nu = \omega^\mu_\nu X^\nu , \quad #=-i
+  & = \frac{i}{2}\omega_{\alpha \beta} \left(T^{\alpha \beta}\right)^{\mu}_{\; \nu}X^\nu 
+\end{align*}
+Donde 
+\begin{equation*}
+  \left(T^{\alpha\beta}\right)^\nu_{\; \nu} = i \left(\delta^\alpha_\nu \eta^{\beta \mu} - \delta^\beta_{\; \nu}\eta^{\alpha \nu}\right)
+\end{equation*}
+\end{document}
