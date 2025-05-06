@@ -1,6 +1,80 @@
 \documentclass ../main.tex]{subfiles}
 \begin{document}
 \section{Doceaba clase}
-Hola
+Se estudió acerca del grupo de Lorentz y representaciones matriciales, matrices las cuales puden ser de infinito por infinito en el caso de operadores diferenciales y que además esto nos da una tabla de composición. \\
+Entonces, las transformaciones de Lorentz están representadas por una matriz $\Lambda$ en la cual hay 3 boosts y 3 rotaciones, sabemos como actúan sobre $x^\mu$ y $\p^\mu$
+\begin{align*}
+  \tilde{x}^\mu & = \Lambda^\mu_\nu x^\nu \\
+  \tilde{p}^\mu & =  \Lambda^\mu_\nu p^\nu
+\end{align*}
+Con
+\begin{equation*}
+  \eta_{\mu \nu}\Lamba^\mu_\alpha \Lambda_\beta^\nu = \eta_{\alpha \beta}
+\end{equation*}
+Esto me asegura que bajo la transformacion de Lorentz se preserve el intervalo. Desde el punto de vista matricial se puede escribir lo siguiente
+\begin{align*}
+  \Lambda^T \eta \Lambda & = \eta, \quad /det() \\
+  det(\Lambda^T\eta \Lambda) & = \det(\eta) \\
+  det(\Lambda^T)\cancel{\eta}det(\Lambda) & = \cancel{det(\eta)} \\
+  \det(\Lambda)^2 & = 1 \\
+  \det(\Lambda) & = \pm 1
+\end{align*}
+Las matrices que satisfacen $\Lambda^T \eta \Lambda = \eta$ forman un grupo (el grupo de Lorentz). 
+\begin{align*}
+  SO(1,3) \subset O(1,3) \\
+  SO(1,3) = \{\Lambda \in O(1,3)/ det(\Lambda)=1\}
+\end{align*}
+El grupo SO(1,3) recibe el nombre del grupo de Lorentz propio. Nosotros sabemos que las matrices deben satisfacer lo siguiente
+\begin{equation*}
+  \Lambda^\alpha_\mu \Lambda^\beta_\nu \eta_{\alpha \beta} = \eta_{\nu \mu}
+\end{equation*}
+Lo cual con, $\mu=t$ y $\nu=t$
+\begin{align*}
+  \Lambda^\alpha_t\Lambda^\beta_t \eta_{\alpha \beta} & = +1 \\
+  \Lambda^t_t \Lambda^t_t \eta_{tt} + \Lambda^x_t \Lambda^x_t \eta_{xx} + \Lambda_y_t\Lambda^y_t \eta_{yy} + \Lambda^z_t\Lambda^z_t \eta_{zz} & = \\
+  \left( \Lambda^t_t \right)^2 - \left( \Lambda^x_t \right)^2 - \left( \Lambda^y_t \right)^2 - \left( \Lambda_t^z \right)^2 & = \\
+  \left( \Lambda_t^t \right)^2 - \left( \Lambda^i_t \right)^2 & = \\
+  \left( \Lambda_t^t \right)^t & = 1 + \left( \Lambda_i_t \right)^2
+\end{align*}
+Con lo cual se concluye que
+\begin{equation}
+  |\Lambda_t^t| \geq 1
+ \end{equation}
+ Esto nos da una segunda serparación del grupo de Lorentz que con $|\Lambda_t^t|\geq 1$ se llaman \textbf{ortocronas} y las que cumplen que $|\Lambda_t^t|\leq -1$ se llaman \textbf{no ortocronas}. Ahora si yo me quedo en los propios ortocronos, eso se denota por $SO^\uparrow(1,3)$. \\
+ Ejemplos de transformaciones de Lorentz en distintos sectoresd del grupo de Lorentz, una transformación de Lorentz que vive en el sector ortocrono imporopio, denotado por $L_-^\uparrow$
+ \begin{equation*}
+   \Lambda = \begin{pmatrix}
+     1 & 0 & 0 & 0 \\
+     0 & -1 & 0 & 0 \\
+     0 & 0 & 1 & 0 \\
+     0 & 0 & 0 & 1
+   \end{pmatrix}
+ \end{equation*}
+ o en forma más explícita
+ \begin{align*}
+   \tilde{t} & = t \\
+   \tilde{x} & = -x \\
+   \tilde{{y}} & = y \\
+   \tilde{z} & = z
+ \end{align*}
+ Por relaciones de paridad, el determinante de esta matriz es -1 y $\Lambda_t^t = 1$ pero en el sector impropio ya que el determinante será -1 y esto representa una reflexión con respecto al plano y-z, o sea, para un punto $x$, su medición con respecto al observador inercial $\tilde{K}$ será de $-x$. \\
+ Otra transformación 
+ \begin{equation*}
+   \Lambda = \begin{pmatrix}
+     -1 & 0 & 0 & 0 \\
+     0 & 1 & 0 & 0 \\
+     0 & 0 & 1 & 0 \\
+     0 & 0 & 0 & 1 
+   \end{pmatrix}
+ \end{equation*}
+ Transformación la cual pertenece al sector impropio no-ortocrono, y recibe el nombre de inversión tempora. \\
+\textbf{Los principio de la relatividad especial llevan la invariancia del intevalo, pero el intervalo resulta ser invariante bajo rotaciones, boosts, traslaciones espacio-temporales y además, paridad e invesión temporal.} \\
+Las primeras 3 son simetrías de las teorías relativistas o de la naturaleza\footnote{ Se pensaba que las leyes de la física eran invariantes ante paridad pero a mediados de los 50 se descubrió que la fuerza de interacción débil no es especular ante paridad.}. 
+Algo que se puede demostrar es que las teorías relativistas son invariantes bajo CPT\footnote{CPT:= Conjugación de carga, Paridad, Time reversal}, ello quiere decir que si tengo una teoría relativista, incluso la interacción débil y estudio su imagen especular, estudio con el operador inversión temporal y cambio todas las partículas por anti-partículas, el proceso ocurre de la misma manera, esto corresponde a un teorema.\\
+\textbf{Ejemplo de violación de paridad:} Supongamos que tenemos un átomo de cobalto 60 ($^{60}Co$), que tiene 27 protones y 33 neutrones, algo que sucede en la naturaleza es que tomamos este átomo que tiene cierto spin, este átomo decae ya que los neutrones decaen y emiten un neutrón, un electrón y un antineutrino electrónico y el átomo que me queda tendrá un protón más con lo cual será un átomo de Níquel 60 ($^{60}Ni$) y este tiene 28 protones y 32 neutrones. El punto clave es el siguiente, los electrones preferentemente salen alineados con el spin, tienen una dirección preferencial de decaimiento\footnote{Resultado experimental obtenido por Chien-Shiung Wu (Inserte nombre en carácteres Chinos), física China nacionalizada estadounidense, en 1956 en colaboración con el Grupo de baja Temperatura del Instituto Nacional de Estándares. }. Se pone un espejo, tal que la imagen especular del átomo será que, para un movimiento horario, en la imagen especular se mueve en sentido antihorario, con lo cual el spin en la imagen especular será hacia abajo, en cambio, una dirección paralela al espejo será en la misma dirección, con lo cual en la imagen especular, lo electrones salen opuestos al spin, a diferencia de en la original, lo cual nos indica que el proceso y su imagen ocurren de forman distintas y la mecánica que lleva a este experimento, es la interacción débil. Así, el proceso de decaimiento
+\begin{equation}
+  ^{60}Co \longrightarrow ^{60}Ni
+ \end{equation}
+No ocurre de la misma forma que su imagen especular.
 \end{document}
 
