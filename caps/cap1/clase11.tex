@@ -1,0 +1,261 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+\section{Onceaba clase}
+Estudiamos el decaimiento beta pero no hablamos de la vida media del neutrón, a lo cual, el 66$\%$ decaerán dentro de 11 minutos  eso define la vida media de una partícula, pero aún no tenemos la física para gatillar dicho proceso pero, ese proceso, pero si sabemos que ese proceso debe conservar la energía y momento relativista y pudimos, usando la conservación de dichas cantidades encontrar que hay una restricción de las partículas involucradas, si me olvido de la existencia del neutrino, no conserva la masa, pero bueno, Pauli postuló la existencia de una partícula extra que no estaba dentro de la reacción y la existencia de la partícula extra da un rango de energías posibles para el electrón. \\
+Ahora haremos un pequeño desvío, supogan que se tiene un conjunto de objetos
+\begin{equation}
+  G = \{a,b,c,\dots\}
+\end{equation}
+Para lo cual se tiene una ley de composición interna como sigue
+\begin{equation}
+  \star : G\times G \longrightarrow G
+\end{equation}
+Entonces me puedo armar una tabla de multiplicación en donde
+\begin{equation*}
+\begin{array}{c|cccc}
+  \star & e & a & b & c \\
+  \hline
+  e & \\
+  a & \\
+  b & \\
+  c & \\
+\end{array}
+\end{equation*}
+En lo cual, si dentro de la tabla de multiplicación aparecen solo elementos del grupo, entonces diremos que G, con la regla de multiplicación $\star$ define un grupo si se satisfacen las siguientes propiedades
+\begin{itemize}
+  \item $e\in G /\;e\star a=a$
+  \item $\forall a \in G , \;\exists a^{-1}\in G / \; a\star a^{-1}=e$ 
+  \item $(a\star b)\star c = a \star (b\star c) $ 
+\end{itemize}
+Cuando yo escribo una tabla de multiplicación yo asumo que el grupo está compuesto por una cantidad numerable, sin embargo, existen grupos para los cuales no es el caso, dichos grupos reciben el nombre de \textbf{grupos continuos}. Los cuales son grupos en donde los elementos están etiquetados por elementos que viven en el continuo $a(\alpha_1,\alpha_2,\dots)$, en este caso, $\alpha_n$ vive en un continuo. \\
+\textbf{Ejemplo:}
+\begin{equation*}
+  a = 
+  \begin{pmatrix}
+    \cos{\alpha_1} & -\sin{\alpha_1} & 0 \\
+    \sin{\alpha_1} & \cos{\alpha_1} & 0 \\
+    0 & 0 & 1
+  \end{pmatrix}
+  = a(\alpha_1)
+\end{equation*}
+Para lo cual $\alpha_1$ vive en el continuo de $\alpha_1\in[0,2\pi)$, ahora
+\begin{equation*}
+  b(\alpha_2) =
+  \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & \cos{\alpha_2} & -\sin{\alpha_2} \\
+    0 & \sin{\alpha_2} & \cos{\alpha_2}
+  \end{pmatrix}
+\end{equation*}
+Los cuales también son infinitos y 
+\begin{equation*}
+  c(\alpha_3) =
+  \begin{pmatrix}
+    \cos{\alpha_3} & 0 & -\sin{\alpha_3} \\
+    0 & 1 & 0 \\
+    -\sin{\alpha_3} & 0 & \cos{\alpha_3} 
+  \end{pmatrix}
+\end{equation*}
+Entonces, el punto que se quiere hacer es el siguiente, con el siguiente conjunto de matrices
+\begin{equation*}
+   \{a(\alpha_1),b(\alpha_2), c(\alpha_3)\}
+\end{equation*}
+Las cuales corresponden a matrices infinitas, pero qué tan grande es este infinito, bueno, tantos como puntos hay en el intervalo $(0,2\pi)^3$ ya que cada de estos elementos van de $(0,2\pi)$, este conjunto define un grupo bajo la multplicación matricial (grupo continuo). Para lo cual no se puede escribir una tabla de multplicación, tendría que ser un gradiente pero encima es tridimensional, con lo cual está dificil, sin embargo, definimos un elemento $g$ tal que
+\begin{equation*}
+  g(\alpha_1,\alpha_2,\alpha_3) g(\beta_1,\beta_2,\beta_3) = g(\gamma_1,\gamma_2,\gamma_3)
+\end{equation*}
+Lo cual, además debemos escribir como
+\begin{equation*}
+  g(\vec{\alpha})g(\vec{\beta}) = g(\vec{\gamma}(\vec{\alpha},\vec{\beta}))
+\end{equation*}
+El cómo estos parámetros $\gamma$ se obtienen a través de $\alpha$ y $\beta$ es donde está contenida la tabla de multiplicación.
+\textbf{Teorema:}
+Las matrices ortogonales de $M\times M $ forman un grupo. 
+\begin{equation*}
+  G = \{O_{M\times M}/O*TO=I\}
+\end{equation*}
+\textbf{Demostración:}
+ \begin{itemize}
+   \item $I\in G$ so porque $I^TI=I$
+   \item $O\in G \Rightarrow O^TO = I$ si la matriz $O$ satisface esto, entonces ${O^{-1}}^T O^{-1}=I\Rightarrow O^{-1}\in G$ 
+   \item Asociatividad se hereda de la asociatividad de la multiplicación matricial
+ \end{itemize}
+Anteriormente nos dimos cuenta que las transformaciones de Lorentz están dadas todas las matrices que satisfacen la siguiente propiedad
+\begin{equation}
+  \Lambda^T\eta \Lambda = \eta
+\end{equation}
+O sea, las matrices que definen una transformación de Lorentz preservan el espacio de Minkowsky.\\
+Un ejemplo parecido es
+\begin{equation}
+  A^T_{2n\times 2n} J A = J
+\end{equation}
+Lo cual define al grupo simpléctico cuando las matrices $J$ son de la siguiente forma
+\begin{equation}
+  J = \begin{pmatrix}
+    0 & M_{n \times n} \\
+    -M_{n \times n } & 0
+  \end{pmatrix}
+\end{equation}
+Las matrices simplécticas aparecen en mecánica clásica cuando uno estudia las transformaciones canónicas en la formulación Hamiltoniana. Nuestro foco en este curso estará claramente en el grupo de Lorentz. \\
+\textbf{Grupo de Lorentz:} \\
+La composición de dos transformaciones de Lorentz son una transformación de Lorentz también, recordemos que dentro de las transoformaciones de Lorentz están los Boosts, las rotaciones y las transformaciones entre dos observadores relativos. \\
+Una parte de estas transformaciones de Lorentz están definidas en el compacto (cerrado y acotado) $(0,2\pi)$, las cuales son las rotaciones y que las rotaciones entre ellas forman un subgrupo compacto. \
+Luego, como se mencionó, dentro del grupo de Lorentz también están los boosts, pero los boosts están caracterizados por una rapidez $v$ que puede ser $-c<v<c$ lo cual como intervalo de los reales, es acotado, pero no cerrado ya que los bordes del intervalo no están incluidos, con lo cual los boosts definen el sector no compacto del grupo de Lorentz. \\
+Recordemos que un boost a lo largo del eje x puede ser escrito con funciones hiperbólicas como,
+\begin{align*}
+  t' & = \cosh \xi t - \sinh \xi x \\
+  x' & = \sinh \xi t + \sinh \xi x \\
+\end{align*}
+\begin{equation*}
+  \boxed{ \tanh \xi = \frac{v}{c}}
+\end{equation*}
+Notemos que las funciones hiperbólicas son perdiódicas, pero esta periocidicada corresponde a una periodicidad compleja, con lo cual no tienen en el eje real. Entonces el hecho que no sean periódicas implica que no puedo hacer el mismo tratamiento que para las rotaciones con seno y coseno. \\
+Por lo tanto, \textbf{ el  grupo de Lorentz es no compacto}. \\
+Una forma de visualizar esto sería de la siguiente forma, imaginar 3 circunferencias, que definen el sector compacto del grupo de Lorentz, y además imaginar 3 rectas que van desde $-c$ hasta $c$ la elección de un punto en cada circunferencia y uno por cada recta, nos da un elemento del grupo de Lorentz, esto nos visualiza el cómo el grupo de Lorentz tiene una parte no compacta que corresponde a los boosts, los cuales pueden estar dados en cualquier dirección. Entocnes por ejemplo, esta elección de puntos definen un elemento del grupo de Lorentz, no necesariamente único, ya que una misma elección pueden dar a un mismo punto del grupo de Lorentz \footnote{Las traslaciones unidas al grupo de Lorentz dan origen al grupo de Poincaré, como una extensión del grupo de Lorentz O(1,3)}.
+\textbf{Grupo:}
+Pensemos en el grupo más simple Z(2) el cual tiene una tabla de multplicación como sigue
+\begin{equation*}
+\begin{array}{c|cc}
+  \star & a & b \\
+  \hline
+  a & a & b \\
+  b & b & a \\
+\end{array}
+\end{equation*}
+Podemos encontrar, a través de distintos objetos, dicha tabla de multiplicación, pensemos primero con matrices de distinto tamaño. Distintas elecciones las cuales, bajo producto matricial me definen la tabla de multplicación del grupo definen las \textbf{representaciones del grupo}. El grupo de SU(2) por ejemplo tiene una sola representacion de dimensión 2. Hay una representación la cual es la más aburrida pero útil, la cual corresponde a al representacion trivial.
+\begin{itemize}
+  \item $a\rightarrow I_{M\times M}$
+  \item $b\rightarrow I_{M\times M}$
+\end{itemize}
+Cuando el mapeo o representacion no es uno a uno, entonces no es inyectiva, o no fiel. \\
+\textbf{Representacion trivial}
+\begin{equation*}
+\begin{array}{c|cc}
+  \star & I_{M\times M} & I_{M\times M}  \\
+  \hline
+  I_{M\times M} & \\
+  I_{M\times M} & \\
+\end{array}
+\end{equation*}
+Para lo cual podemos comprobar que se satisface la tabla de multplicación del grupo, pero obviamente esta representacion, si bien existe, es súper fome. Lo importante a recalcar es que bajo la representacion se debe satisfacer la tabla de multiplicación. \\
+Bien, entonces vamos a definir la noción de campo: \\
+\subsection{Campo}
+A algún punto del espacio se le asocia un campo eléctrico y un campo magnético y además, otro observador inercial también le asocia un campo eléctrico y magnético a cada punto del espacio pero desde su punto de vista. Notemos que, bajo transformaciones de Lorentz el campo eléctrico y magnético se mezclan. La dinámica de la evolución temporal de los campos están dadas por las ecuaciones de Maxwell, escribámoslas en el vacío\footnote{$D_j$ corresponde a la derivada covariante definida por $D_jA^k=\partial_jA^k - \Gamma_{jk}^lA_l$  con $\Gamma_{jk}^l$ los símbolos de Christoffel}. 
+\begin{align*}
+  D_i E^i & = 0 \\
+  D_i B^i & = 0 \\
+  \frac{\epsilon^{ijk}}{\sqrt{g}}D_jE_k & = -\partial_t B^i \\
+  \frac{\epsilon^{ijk}}{\sqrt{g}}D_jB_k & = \mu_0J^i + \mu_0\varepsilon_0 \partial_t E^i
+\end{align*}
+Hay una forma trivial para resolver la 2da y 3ra ecuación, $\exists \phi, \vec{A}$ tal que, los campos eléctrico y magnético en función de los potenciales son
+\begin{align*}
+  B^i & = \frac{\epsilon^{ijk}}{\sqrt{g}}D_jA_k \\
+  E^i & = -g^{ij}\partial_j\phi - \partial_t A^i
+\end{align*}
+Respecto de $\phi$ y de $\vec{A}$, la ley de Gauss magnética y la ley de Faraday son identidades (ya están resueltas), y las otras dos ecuaciones, la ley de Gauss y ley de Ampère-Maxwell son ecuaciones, ùltimas las cuales me permitirán encontrar $\phi$ y $\vec{A}$ para resolver las otras dos identidades. \\
+Ahora, sean dos observadores inerciales $K$ y $\tilde{K}$ para los cuales, cada uno puede observar un potencial eléctrico y magnético en un mismo punto del espacio respecto a cada uno de ellos, $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$ con respecto al observador $K$ y $\tilde{\phi}(\tilde{t},\tilde{\vec{x}})$ y $\tilde{\vec{A}}(\tilde{t},\tilde{\vec{x}})$ con respecto al observador inercial $\tilde{K}$. Ahora, cómo puedo transformar a los potenciales desde un observador inercial al otro?, ya sabemos como transforman las etiquetas, sea $t$ o $x$, la respuesta la da lo siguiente. 
+\begin{equation}
+  A^\mu = \{A^0,A^1,A^2,A^3\} = \{\phi,\vec{A}\}
+\end{equation}
+El cual corresponde a un cuadri-vector y se le llama cuadri-potencial electromagnético, el cual transforma como
+\begin{equation}
+  \tilde{{A}}^\mu(\tilde{x}) = \Lambda_\nu^\mu A^\nu(x) 
+\end{equation}
+El cuadri-potencial transforma en la representación vecorial del grupo de Lorentz. Notemos que el cuadri-potencial tiene dos etiquetas, el $\mu$ que es el que da sus componentes y $x$ que es una componente espacio tiempo, y la transformación de Lorentz transforma sobre los dos índices. Supongamos que queremos ver el cómo transforma el cuadri-potencial pero con la misma etiqueta de espacio tiempo a cada lado, para ello
+\begin{align*}
+  \tilde{{A}}^\mu(\tilde{x}) & = \Lambda^\mu_\nu A^\nu (\Lambda^{-1}\tilde{x}) \quad \text{cambiamos de letra} \\
+  \tilde{{A}}^\mu(x) = \Lambda^\mu_\nu A^\nu (\Lambda^{-1}x) 
+\end{align*}
+\textbf{Definición:} El conjunto de campos $\Phi_A(x)$ transformará en un representación del grupo de Lorentz sí y sólo si el conjunto de campos que mide un observador $K$ que mide con la etiqueta $\Lambda^{-1}x$ se relacionan con otro con etiqueta $x$ se la siguiente forma
+\begin{equation}
+  \tilde{\Phi}_A(x) = \left[ D(\Lambda) \right]_{AB} \Phi_B (\Lambda^{-1}x)
+\end{equation}
+En lo cual la matriz $D$ corresponde a una representación del grupo de Lorentz tal que
+\begin{equation}
+  D(\Lambda_1)D(\Lambda_2) = D(\Lambda_1,\Lambda_2)
+\end{equation}
+Ello nos asegura que la tabla de multiplicación si se realice con las matrices $D$. Defino un objeto que transforma bajo una representación. Esto corresponde a una abstracción de lo que se estaba haciendo arriba, entonces ahora, como existe una representación trivial hacemos lo siguiente. \\
+\textbf{Definición de campo escalar:} Se define como un único número que bajo transformaciones de Lorentz transforma así
+\begin{equation} \label{eq:transformación campo escalar}
+  \tilde{\phi}(x)=\phi(\Lambda^{-1}x)
+\end{equation}
+El campo escalar aparece cuando los índices $B$ tienen un solo valor y las matrices $D$ les asocio la matriz identidad, o sea, la representacion trivial. Y ello es lo mismo a 
+\begin{equation}
+  \tilde{\phi}(\tilde{x}) = \phi(x)
+\end{equation}
+Debido a los argumentos expuestos arriba. Primero se estudiará la teoría cuántica de campos escalares para no convolucionar de una las complicaciones que suponen los campos vectoriales. \\
+Antes de estudiar la teoría cuántica de este campo escalar, primero se tendrá que estudiar la teoría clásica de dicho campo escalar para posteriormente cuantizarlo. \\
+Notemos que en \eqref{eq:transformación campo escalar} $\Lambda$ es una tranformación de Lorentz arbitraria, en particular, finita. Algo que será útil dado del teorema de Noether es que, la invariancia de la acción bajo una transformación tiene asociada una cantidad conservada a la dinámica. La acción que se construirá para el campo escalar será invariante bajo transformaciones de Lorentz, si la dinámica del campo escalar es invariante bajo transformaciones de Lorentz esto significa que si se realiza un experimento con este campo escalar va a concluir cierto conjunto de ecuaciones para la dinámica de este campo, ecuaciones las cuales serán las mismas para cualquier observador inercial. \\
+¿Cómo transforma el campo escalar bajo una transformación de Lorentz infinitesimal?
+\begin{equation*}
+  \tilde{{A}} = \Lambda_\nu^\mu x^\nu 
+\end{equation*}
+Tal que, la transformación infinitesimal diferirá de la transformación identidad por muy poco
+\begin{equation*}
+  \Lambda_\nu^\mu = \delta_\nu^\mu + \omega_\nu^\mu + \cancel{O(\omega^2)}
+\end{equation*}
+En donde $\omega_\nu^\mu$ es una matriz con entradas pequeñas, ahora el profesor nos invita a repetir el siguiente cálculo con las 6 transformaciones de Lorentz independientes
+\begin{equation*}
+  \Lambda = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & \cos{\theta} & -\sin{\theta} & 0 \\
+    0 & \sin{\theta} & \cos{\theta} & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+\end{equation*}
+Lo cual es una rotación del plano x-y, de forma explícita sería
+\begin{align*}
+  \tilde{t} & = t \\
+  \tilde{x} & = \cos{\theta} x - \sin{\theta}y \\
+  \tilde{{y}} & = \sin{\theta} x + \cos{\theta}y \\
+  \tilde{z} & = z 
+\end{align*}
+Asumimos que el ángulo $\theta$ es pequeño, con lo cual, aproximando hasta los términos de $\theta^2$ el coseno y el seno son
+\begin{align*}
+  \cos{\theta} & = 1 \\
+  \sin{\theta} & = \theta
+\end{align*}
+Con lo cual, la transformación de Lorentz queda tal que
+\begin{equation*}
+  \Lambda = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix} + 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & -\theta & 0\\
+    0 & \theta & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}
+\end{equation*}
+Cuando uno tiene una matriz $A$ que difiere de la identidad por una matriz pequeña $\xi$ entonces la inversa está dada tal que
+\begin{align*}
+  A & = I + \xi \\
+  A^{-1} & = I - \xi 
+\end{align*}
+Por lo tanto el campo escalar bajo una transformación infinitesimal será
+\begin{align*}
+  \tilde{\phi}(x)  & = \phi(\Lambda^{-1}x) = \phi((I-\omega)x) \\
+  & = \phi(x-\omega x) \\
+  & = \phi(x) - (\omega x)^\mu \partial_\mu \phi
+\end{align*}
+Recordar que
+\begin{equation}
+  f(\vec{x}+\vec{h}) = f(\vec{x}) + \vec{h}\cdot \nabla f
+\end{equation}
+Así, la transformación infinitesimal del campo escalar
+\begin{align*}
+  \delta \phi & = \tilde{\phi}(x) - \phi(x) \\
+  & = \omega^\mu_\nu x^\nu \partial_\nu \phi
+\end{align*}
+Así
+\begin{equation}
+  \boxed{  \delta \phi = -\omega^\mu_\nu x^\nu \partial_\mu \phi }
+\end{equation}
+La cual es la transformación infinitesimal de Lorentz, lo cual será de utilidad para encontrar cantidades conservadas bajo transformaciones de Lorentz.
+
+\end{document} 
+
