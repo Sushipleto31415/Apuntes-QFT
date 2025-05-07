@@ -70,11 +70,77 @@ Con lo cual se concluye que
  Transformación la cual pertenece al sector impropio no-ortocrono, y recibe el nombre de inversión tempora. \\
 \textbf{Los principio de la relatividad especial llevan la invariancia del intevalo, pero el intervalo resulta ser invariante bajo rotaciones, boosts, traslaciones espacio-temporales y además, paridad e invesión temporal.} \\
 Las primeras 3 son simetrías de las teorías relativistas o de la naturaleza\footnote{ Se pensaba que las leyes de la física eran invariantes ante paridad pero a mediados de los 50 se descubrió que la fuerza de interacción débil no es especular ante paridad.}. 
-Algo que se puede demostrar es que las teorías relativistas son invariantes bajo CPT\footnote{CPT:= Conjugación de carga, Paridad, Time reversal}, ello quiere decir que si tengo una teoría relativista, incluso la interacción débil y estudio su imagen especular, estudio con el operador inversión temporal y cambio todas las partículas por anti-partículas, el proceso ocurre de la misma manera, esto corresponde a un teorema.\\
+Algo que se puede demostrar es que las teorías relativistas son invariantes bajo $\mathcal{CPT}$\footnote{$\mathcal{CPT}$:= Conjugación de carga, Paridad, Time reversal}, ello quiere decir que si tengo una teoría relativista, incluso la interacción débil y estudio su imagen especular, estudio con el operador inversión temporal y cambio todas las partículas por anti-partículas, el proceso ocurre de la misma manera, esto corresponde a un teorema.\\
 \textbf{Ejemplo de violación de paridad:} Supongamos que tenemos un átomo de cobalto 60 ($^{60}Co$), que tiene 27 protones y 33 neutrones, algo que sucede en la naturaleza es que tomamos este átomo que tiene cierto spin, este átomo decae ya que los neutrones decaen y emiten un neutrón, un electrón y un antineutrino electrónico y el átomo que me queda tendrá un protón más con lo cual será un átomo de Níquel 60 ($^{60}Ni$) y este tiene 28 protones y 32 neutrones. El punto clave es el siguiente, los electrones preferentemente salen alineados con el spin, tienen una dirección preferencial de decaimiento\footnote{Resultado experimental obtenido por Chien-Shiung Wu (Inserte nombre en carácteres Chinos), física China nacionalizada estadounidense, en 1956 en colaboración con el Grupo de baja Temperatura del Instituto Nacional de Estándares. }. Se pone un espejo, tal que la imagen especular del átomo será que, para un movimiento horario, en la imagen especular se mueve en sentido antihorario, con lo cual el spin en la imagen especular será hacia abajo, en cambio, una dirección paralela al espejo será en la misma dirección, con lo cual en la imagen especular, lo electrones salen opuestos al spin, a diferencia de en la original, lo cual nos indica que el proceso y su imagen ocurren de forman distintas y la mecánica que lleva a este experimento, es la interacción débil. Así, el proceso de decaimiento
 \begin{equation}
   ^{60}Co \longrightarrow ^{60}Ni
  \end{equation}
 No ocurre de la misma forma que su imagen especular.
+\begin{equation}
+  n\longrightarrow p+e^-+\bar{\nu}_\theta
+ \end{equation}
+ Ahora, en los fenómenos del campo electromagnético esto no pasa, y en fenómenos de la fuera nuclear fuerte tampoco pasa\footnote{Esto está explicado en el libro Griffiths Introduction Elementary Particle Physics.}. \\
+ Volvamos al campo escalar, la tarea será escribir una ecuación dinámica tal que sea invariante bajo transformaciones de Lorentz, recordemos que tenemos un observador $K$ que le asigna a un punto coordenadas $x^\mu$ y un observador $\tilde{K}$ le asigna coordenadas $\tilde{x}^\mu$ al mismo punto, a este punto del espacio se le asigna un número, tal que para ambos observadores el número sea el mismo, o sea
+\begin{equation}
+  \tilde{\phi}(\tilde{x}) = \phi(x)
+ \end{equation}
+ Que no es tautológico, considera la representación trivial del grupo de Lorentz, y recordar además que
+ \begin{equation*}
+   \tilde{\phi}(x) = \phi(\Lambda^{-1}x)
+ \end{equation*}
+Lo cual será equivalente, ahora se pregunta ¿cómo cambia el campo escalar bajo una transformación de Lorentz infinitesimal? Ahora viene la pregunta de ¿Porque se quiere realizar eso? ya que se quiere encontrar la cantidad conservada.
+\begin{equation*}
+  \Lambda = I \omega
+\end{equation*}
+y además 
+\begin{equation*}
+  \Lambda^{-1} = I - \omega
+\end{equation*}
+Esto quiere decir que
+\begin{align*}
+  \Lambda_\nu^\mu & = \delta_\nu^\mu + \omega^\mu_\nu \\
+  \left( \Lambda^{-1} \right)^\mu_\nu & = \delta_\nu^\mu - \omega^\mu_\nu
+\end{align*}
+Por lo tanto
+\begin{align*}
+  \tilde{\phi}(x) & = \phi((\delta_\nu^\mu-\omega^\mu_\nu)x^\nu) \\
+  & = \phi(x^\mu - \omega^\mu_\nu x^\nu) \\
+  & = \phi(x^\mu) - \omega^\mu_\nu x^\nu \partial_\mu\phi + \cancel{O(\omega^2)}
+\end{align*}
+Ahora definimos la variación bajo una transformación de Lorentz
+\begin{equation}
+  \delta_L \phi = -\omega^\mu_\nu x^\nu \partial_\mu \phi
+ \end{equation}
+ Además tenemos que
+ \begin{equation*}
+   \Lambda_\alpha^\mu \Lambda_\beta^\nu \eta_{\mu \nu} = \eta_{\alpha \beta}
+ \end{equation*}
+ Ahora si aplicamos la transformación infinitesimal entonces
+ \begin{equation*}
+   \left( \delta_\alpha^\mu + \omega^\mu_\alpha \right) \left( \delta^\nu_\beta + \omega^\nu_\beta \right)\eta_{\mu \nu} = \eta_{\alpha \beta} 
+ \end{equation*}
+ Si esto lo expando tengo que
+ \begin{align*}
+   \eta_{\alpha \nu }^\omega^\nu_\beta + \eta_{\mu \beta}\omega^\mu_\alpha = 0
+ \end{align*}
+ \textbf{Definición:}
+ \begin{equation}
+   \boxed{ \eta_{\alpha \nu}\omega^\nu_\beta := \omega_{\alpha \beta}}
+  \end{equation}
+Por tanto
+\begin{align*}
+  \omega_{\alpha \beta} + \omega_{\beta \alpha}&  = 0 \\
+  \omega_{\alpha \beta} & = -\omega_{\beta \alpha}
+\end{align*}
+Lo que dice que el tensor $\omega_{\alpha \beta}$ es antisimétrico bajo intercambio de índices, y además tiene 6 elementos independientes. Lo que finalmente corresponde a los 3 boosts y a las 3 rotaciones. Ahora bien, se puede definir también el tensor $\omega$ con los índices arriba como
+\begin{equation}
+  \omega^{\alpha \beta} = \eta^{\alpha \mu} \eta^{\beta \nu}\omega_{\mu \nu}
+ \end{equation}
+ Lo que nos permite escribir la transformación infinitesimal como
+ \begin{align*}
+   \delta_L \phi & = -\omega^\mu_\nu x^\nu \partial_\mu \phi \\
+   & = -\omega^{\mu \nu} x_\nu \partial_\mu \phi
+ \end{align*}
+ Tener cuidado con definir coordenadas con el índice abajo en espacio-tiempo curvos ya que esto no existe ( no se puede ).
 \end{document}
 
