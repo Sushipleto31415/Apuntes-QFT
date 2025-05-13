@@ -141,11 +141,77 @@ Lo que dice que el tensor $\omega_{\alpha \beta}$ es antisimétrico bajo interca
    \delta_L \phi & = -\omega^\mu_\nu x^\nu \partial_\mu \phi \\
    & = -\omega^{\mu \nu} x_\nu \partial_\mu \phi
  \end{align*}
-<<<<<<< HEAD
  Tener cuidado con definir coordenadas con el índice abajo en espacio-tiempo curvos ya que esto no existe\footnote{$x_\nu = \eta_{\nu \alpha}x^\alpha$ Esto nunca lo haga en espacio tiempo curvo (forbidden) } ( no se puede ).
-=======
  Tener cuidado con definir coordenadas con el índice abajo en espacio-tiempo curvos ya que esto no existe ( no se puede ).
-
->>>>>>> refs/remotes/origin/main
+Ahora, se mostró que $\omega_{\mu \nu}$ era antisimétrico y ahora se mostrará que sucede con el tensor $\omega^{\mu\nu}$ esta vez con los índices arriba.
+\begin{align*}
+  &=-\left[ \frac{1}{2}  \left( \omega^{\mu \nu}-\omega^{\nu \mu} + \frac{1}{2}\left( \omega^{\mu \nu} + \omega^{\nu \mu} \right) \right)\right] \left[ \frac{1}{2}\left( x_\nu \partial_\mu - x_\mu\partial_\nu \right)\phi  + \frac{1}{2}\left( x_\nu\partial_\mu + x_\mu \partial_\nu \right)\phi \right] 
+\end{align*}
+En donde se ha efectuado una suma por cero, o sea, la expresión enterior es exáctamente igual a esta
+\begin{align*}
+  &= \frac{1}{4}  \left( -\omega^{\mu \nu}+\omega^{\nu \mu}\right)\left( x_\nu \partial_\mu - x_\mu\partial_\nu \right)\phi
+\end{align*}
+Esto ya que, el término opuesto antisimétrico (segundo término) en ìndices contraìdos con un tensor simétrico tiene traza cero y además el primer término corresponde a factores antisimétricos en resta, con lo cual quedan sumados. Finalmente, se tiene que la transformación infinitesimal de lorentz sobre un campo escalar es.
+\begin{equation*}
+  \delta_L \phi = \frac{1}{2}\omega^{\mu \nu} L_{\mu \nu}\phi
+\end{equation*}
+Donde $L_{\mu \nu} = x_\mu\partial_\nu - x_\nu \partial_\mu$ y estos operadores diferenciales $L_{\mu \nu}$ son generadores del grupo de Lorentz. Como ejercicio se pide calcular el siguiente conmutador actuando sobre un campo escalar $\phi$.
+\begin{equation}
+  \left[ L_{\mu \mu}, L_{\alpha \beta} \right] \phi = L_{\mu \nu} \left( L_{\alpha \beta}\phi\right) - L_{\alpha \beta} \left( L_{\mu \nu}\phi \right)
+\end{equation}
+Lo que debería resultar algo como lo siguiente
+\begin{equation}
+  \left[ L_{\mu \mu}, L_{\alpha \beta} \right] \phi = (\eta L - \eta L + \eta L - \eta L  ) \phi
+\end{equation}
+Lo cual con los índices y sin actuar sobre $\phi$ definen el álgebra de Lorentz. \\
+El campo escalar transforma bajo una transformación finita de la siguiente manera
+\begin{equation*}
+  \tilde{\phi}(x) = \phi(\Lambda^{-1}x)
+\end{equation*}
+Y la transformación infinitesimal de un campo escalar bajo una transoformación de Lorentz está dada por
+\begin{equation*}
+  \delta_L\phi = -\omega^{\mu \nu} x^\nu \partial_\mu \phi
+\end{equation*}
+pero, también puede ser escrita de la siguiente manera
+\begin{equation*}
+  \delta_L\phi = \frac{1}{2} \omega^{\mu \nu} L_{\mu \nu}\phi
+\end{equation*}
+Las cuales son dos versiones distintas de una transformación infinitesimal de Lorentz actuando sobre un campo escalar $\phi$. La elección del tensor $\omega^{\mu \nu}$ me dirá si estoy haciendo una rotación o un boost. ¿Ahora cómo será la acción del campo escalar $\phi$?
+\begin{align*}
+  \delta I & = I \left[ \phi + \delta_L \phi \right] - I[\phi] \\
+  & = \int dt \frac{dB}{dt}
+\end{align*}
+Si logramos encontrar que la acción es quasi-inviariante bajo transformación es de Lorentz, entonces encontraremos la cantidad conservada. \\
+Además debemos implementar la invariancia bajo traslaciones espaciacio-temporales $x^\mu \rightarrow \tile{x}=x^\mu - a^\mu$. Necesitaremos que la acción del campo escalar sea también cuasi-invariante bajo traslaciones espacio-temporales.
+Si se tiene un observador $K$ y $\tilde{K}$ a una distancia $a^\mu$ los cuales asignan una etiqueta $x^\mu$ y $\tilde{x}^\mu$ respectivamente, entonces  
+\begin{equation*}
+  x^\mu = \tilde{x}^\mu + a^\mu
+\end{equation*}
+¿Como actúa esta transformación espacio-temporal sobre un campo escalar? \\
+Las traslaciones también forman un grupo, el cual corresponde a un grupo abeliano y las únicas representaciones irreducibles de un grupo abeliano son funcionales. Bajo una traslación espacio-temporal $\tilde{\phi}(\tilde{x})=\phi(x)$\footnote{Para $A^\mu$ en Lorentz $\tilde{{A}}^\mu = \Lambda_\nu^\mu A^\nu(\Lambda^{-1}x)$ y para traslaciones espacio-temporales $\tilde{{A}}^\mu (x) = A^\mu(x+a)$} o sea, tenemos la misma ley de transformación para Lorentz y para traslaciones espacio-temporales. \\
+Un campo escalar bajo traslaciones espacio-temporales $\tilde{x}^\mu =x^\mu - a^\mu$ transforma como
+\begin{align*}
+  \tilde{\phi}(\tilde{x}) & = \phi (x) \\
+  & = \phi (\tilde{x}+a) \\
+  \tilde{\phi}(X) & = \phi(x+a)
+\end{align*}
+En donde solo se cambió la letra, ahora ¿Cómo es esto de forma infinitesimal?, recordemos que
+\begin{equation*}
+  f(\vec{x}+\vec{h}) = f(\vec{x}) + \vec{h}\cdot \vec{h}\cdot \nabla f
+\end{equation*}
+Por lo tanto, queda como
+\begin{equation}
+  \tilde{\phi} (x) = \phi(x) + a^\mu \partial_\mu \phi + \cancel{O(a^2)}
+\end{equation}
+Y finalmente
+\begin{equation}
+  \delta_T \phi = \tilde{\phi}(x)-\phi(x) = a^\mu\partial_\mu \phi
+\end{equation}
+En resument
+\begin{itemize}
+  \item Transformación infinitesimal bajo Lorentz $\delta_L\phi = -\omega^\mu_\nu x^\nu \partial_\mu \phi$
+  \item Transformación infinitesimal espacio-temporal $\delta_T \phi = a^\mu \partial_\mu$
+\end{itemize}
+  Se busca escribir una acción para el campo escapar que sea quasi-invariante bajo $\delta_L\phi$ (equivalencia de los observadores inerciales) , bajo $\delta_T\phi$ (homogeneidad del espacio-tiempo) , lineal y de 2do orden (cuantizar la teoría).
 \end{document}
   
