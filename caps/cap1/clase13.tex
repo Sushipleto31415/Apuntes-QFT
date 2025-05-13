@@ -1,6 +1,199 @@
 \documentclass ../main.tex]{subfiles}
 \begin{document}
 \section{Decimotercera clase}
-Wena
+A cada punto del espacio-tiempo se le asigna un número real, y esa asignación dependerá de como de elige el sistema de referencia
+\begin{equation*}
+  \tilde{\phi}(\tilde{x}) = \phi(x)
+\end{equation*}
+Lo que corresponde a un campo escalar de Lorentz. Comprobamos también que bajo traslaciones espacio-tiemporales  también
+\begin{align*}
+  \tilde{\phi}(\tilde{x}) & = \phi(x) \\
+  \tilde{x}^\mu & = x^\mu - a^\mu
+\end{align*}
+Con lo cual se encontraron las transformaciones infinitesimales:
+\begin{align*}
+  \delta_L \phi & = -\omega^\mu_\nu x^\nu \partial_\mu \\
+  \delta_T \phi & = a^\mu \partial_\mu
+\end{align*}
+Supongamos un universo de 2+1 dimensiones, tal que el campo escalar $\phi(t,x,y)$ tendrá una asignación para cada coordenada x e y, y además dependiendo del tiempo este punto se podrá estar moviendo lo cual significa que tendrá una energía y momento lineal o angular al moverse. Todo ello se le asociará al campo. \\ 
+En el caso del campo electromagnético, tiene energía, la cual está dada por
+\begin{equation}
+  \text{Energía}\sim \int d^3 x \left( |\vec{E}|^2 + |\vec{B}|^2 \right)
+\end{equation}
+Para lo cual, al integrando se le llama densidad de energía $ |\vec{E}|^2 + |\vec{B}|^2 $. \\
+Además, el campo electromagnético tiene momento lineal y angular, último el cual se calculará más adelante, el momento linal total está dado por
+\begin{equation}
+  \text{Momento lineal}\sim \int d^3 x \vec{E}\times \vec{B}
+\end{equation}
+En este caso, al integrando del momento lineal total se le llama vector de Poynting $\vec{E}\times \vec{B}$. Lo que se necesita es tener expresiones parecidas a estas pero para el campo escalar. Recordemos que la energía es la cantidad conservada bajo traslaciones temporales y ya tenemos como condicion que la acción sea quasi-invariante bajo traslaciones espacio-temporales con lo cual podré calcular una cantidad conservada con respecto a traslaciones temporales y ello será la energía del campo escalar. \\
+Cuando encontremos $I[\phi]$, invariante bajo transformaciones espacio temporales $\delta_T\phi$ y bajo Lorentz $\delta_L\phi$, podremos calcular via teorema de Noether la energía, el momento lineal y el momento angular del campo escalar. Téngase la siguiente acción
+\begin{align*}
+  I[\phi] & = \int dt \int d^3x \left( \frac{1}{2}\left( \partial_t \phi \right)^2 -  \frac{1}{2}\left( \partial_x \phi \right)^2 - \frac{1}{2}\left( \partial_y \phi \right)^2 - \frac{1}{2}\left( \partial_z \phi \right)^2 - \frac{m^2}{2}\phi^2\right)
+\end{align*}
+Como $L=\int d^3 x \mathfrak{L}$ entoces a $\mathfrak{L}$ se le llama la densidad Lagrangeana, posteriormente, abusando de la notación, se le llama simplemente Lagrangeano a $\mathfrak{L}$. En el caso propuesto arriba, la densidad Lagrangeana corresponde a
+\begin{equation*}
+  \mathfrak{L} = \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2}\phi^2
+\end{equation*}
+Útil es la siguiente nemotecnia
+\begin{equation}
+  \mathfrak{L} = \left( \partial_t\phi \right)^2 - |\nabla \phi|^2 - \frac{m^2}{2}\phi^2
+\end{equation}
+Pero, ¿Porqué esta acción?, se demostrará que la siguiente acción cumple con las siguientes propiedades
+\begin{itemize}
+  \item $\delta_TI=0$.
+  \item $\delta_L I = 0$.
+  \item Ecuación dinámica es de 2do orden y lineales\footnote{Las teoría más interesantes presentan una no-linealidad, sin embargo esta se estudia como una perturbación sobre la linealidad}.
+  \item Dado este sistema, seremos capaces de encontrar el espectro del Hamiltoniano cuántico. 
+\end{itemize}
+Es decir, el sistema tendrá un  Hamiltoniano y podremos encontrar los autovalores de dicho Lagrangeano.
+\begin{equation}
+  \hat{H}\ket{\psi} = E\ket{\psi}
+\end{equation}
+Ahora tenemos el siguiente cálculo
+\begin{align*}
+  \partial_\mu \phi \partial^\mu \phi & = \eta^{\mu \nu} \partial_\mu  \phi \partial^\nu \phi \\
+  & = \eta^{tt}\left( \partial_t \phi \right)^2 + \eta^{xx}\left( \partial_x \phi \right)^2 + \eta^{yy}\left( \partial_y\phi \right)^2 + \eta^{zz}\left( \partial_z \phi \right)^2
+\end{align*}
+Antes de calcular las ecuaciones de campo, demostraremos que esta acción cumple con los principios de la Relatividad Especial, o sea, es invariante bajo traslaciones espacio-temporales, entonces. \\
+\textbf{Teorema:} La acción
+\begin{equation}
+  I[\phi] = \int_{t_1}^{t_2} dt \int d^3 x \left( \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2}\phi^2 \right)
+\end{equation}
+Es quasi-invariante bajo traslaciones espacio-temporales
+\begin{equation}
+  \delta_T \phi = a^\mu \partial_\mu \phi
+\end{equation}
+\textbf{Demostración:} Calculamos como varía la acción bajo una traslación espacio temporal
+\begin{align*}
+  \delta_T I  & = I [\phi + \delta_T\phi] - I[\phi] \\
+  & = \int d^4x \left( \frac{1}{2}\partial_\mu \left( \phi + \delta_T \phi \right) \partial^\mu \left( \phi + \delta_T \phi \right)-\frac{m^2}{2}\left( \phi + \delta_T \phi \right)^2\right) - \int d^4 x \left( \frac{1}{2}\partial_\mu \phi \partial^\mu - \frac{m^2}{2}\phi^2  \right) \\
+  & = \int d^4x \left( \frac{1}{2}\partial_\mu \left( \phi + a^\alpha \partial_\alpha \phi \right) \partial^\mu \left( \phi + a^\beta \partial_\beta \phi \right) - \frac{m^2}{2}\left( \phi + a^\rho \partial_\rho \phi \right)^2 \right)-  \int d^4 x \left( \frac{1}{2}\partial_\mu \phi \partial^\mu - \frac{m^2}{2}\phi^2  \right) \\
+\end{align*}
+Recordemos que $a$ es una cantidad infinitesimal y constante, con lo cual puede salir de las derivadas y además todos los términos de $O(a^2)$ son descartados
+\begin{align*}
+  \delta_T I & = \int d^4x\left[ \frac{1}{2}\partial_\mu \phi \partial^\mu \phi + \frac{1}{2}\partial_\mu \left( a^\alpha \partial_\alpha \phi \right) \partial^\mu \phi + \frac{1}{2}\partial_\mu\phi \partial^\mu \left( a^\beta \partial_\beta \phi \right) - \frac{m^2}{2}\left( \phi^2 + 2\phi a^\rho \partial_\rho \phi \right) - \frac{1}{2}\partial_\mu \phi \partial^\mu \phi + \frac{m^2}{2}\phi^2 \right] \\
+  & = \int d^4x \left[ a^\alpha \partial_\mu \partial_\alpha \phi \partial^\mu \phi - m^2\phi a^\alpha \partial_\alpha \phi \right]
+\end{align*}
+En donde se ha usado que $A_\mu B^\mu = A^\mu B_\mu$ esto gracias que la métrica es simétrica. Ahora necesitamos escribir esta cantidad en función de una derivada total, esto lo haremos de la siguiente forma
+\begin{itemize}
+  \item $\partial_\mu \partial_\alpha \phi \partial^\mu \phi = \partial_\alpha \partial_\mu \phi \partial^\mu \phi = \partial_\alpha \left( \frac{1}{2}\partial_\mu \phi \partial^\mu \phi \right)$
+  \item $\phi \partial_\alpha \phi = \frac{1}{2}\frac{\partial \phi^2}{\partial x^\alpha}$ 
+\end{itemize}
+Usando esto, se obtiene
+\begin{align*}
+  \delta_T I & = \int d^4x \partial_\alpha \left[ a^\alpha \left( \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2}\phi^2 \right) \right]
+\end{align*}
+Donde se ha encontrado que la acción es quasi-invariante,
+\begin{align*}
+  \delta_T I & = \int_{t_1}^{t_2}\int d^3x \partial_\alpha A^\alpha \\
+  & = \int_{t_1}^{t_2}\int d^3x \partial_t A^t + \partial_x A^x + \partial_y A^y + \partial_z A^z
+\end{align*}
+Pero se escribe como $\nabla \cdot \vec{A}$, con $\vec{A}$ con el índice arriba
+\begin{align*}
+  \delta_T I & = \int_{t_1}^{t_2}\frac{d}{dt}\int d^3 x A^t + \int_{t_1}^{t_2}\int_{\partial V} d\vec{S} \cdot \vec{A}
+\end{align*}
+Para un volumen $V$ de todo el espacio tiempo, como una bola de radio infinito, con lo cual su superficie frontera $\partial V$ será una superficie esférica de radio infinito, o sea una 2-esfera de radio infinito ($S^2_\infty$). Ahora, el término de intregral superficial, o término de borde, se anula si  $\phi\to 0$  cuando $|\vec{x}|\to\infty$. Con lo cual,
+\begin{align*}
+  \delta_T I & = \int_{t_1}^{t_2}dt\frac{d}{dt}B^t
+\end{align*}
+Ahora, es necesario que se realice lo mismo pero asociado a una transformación de Lorentz, lo que dará el mismo resultado, con otro $B$ claramente. Ahora, cuando la acción es quasi-invariante puedo decir que la acción es compatible con los principios de la Relatividad Especial. \\
+Como se vió del repaso de mecánica clásica, cuando una acción es dejada quasi-invariante por una transformación infinitesimal dada, durante la evolución temporal del sistema existirá una cantidad conservada, esto, en este caso, nos llevará a 4 cantidades conservadas, una será la energía y las otras corresponderán a los momenta lineales. \\
+Ahora quiero calcular las cantidades conservadas en esta situación, los ingredientes que se necestian son que, primero, la cantidad conservada del teorema de Noether es
+\begin{equation*}
+  Q=\frac{\partial L}{\partial \dot{q}}\delta q - B
+\end{equation*}
+Esto en mecánica clásica, ahora es necesario trasladar esta definición a campos. Y para ello es necesario encontrar las ecuaciones de Euler-Lagrange para campos. Para ello para un $\delta \phi$ arbitrario que sera cero en los extremos y además $\delta \phi \to 0$ cuando $|\vec{x}|\to\infty$. 
+\begin{align*}
+  \delta I & = I[\phi + \delta \phi] - I[\phi] = 0 \\
+  & = \int d^4x \left( \partial_\mu \phi \partial^\mu \delta \phi - m^2\phi \delta \phi \right) \\
+  & = \int d^4x \left[ \partial_\mu \left( \partial^\mu \phi \delta \phi \right) - \left( \partial_\mu \partial^\mu \phi + m^2 \phi \right) \delta \phi\right] \\
+\end{align*}
+Ahora se impone que $\delta I \stackrel{!}{=}0$ entonces
+\begin{align*}
+  0 & = \int d^4 x \left(\partial_\mu \partial^\mu \phi + m^2 \phi \right)
+\end{align*}
+Como la integral está en un volumen arbitrario entonces necesariamente el integrando debe ser cero y se llega a la siguiente ecuación
+\begin{equation}
+  \partial_\mu \partial^\mu \phi + m^2\phi = 0
+\end{equation}
+La cual corresponde a la ecuación de Klein-Gordon, también en forma vectorial
+\begin{equation}
+  \partial_t^2\phi - \nabla^2\phi + m^2\phi = 0
+\end{equation}
+La cual es la ecuación dinámica para un campo escalar clásico $\phi$, aún nada cuántico. Ahora se puede hacer la siguiente pregunta, ¿ Cómo varía la acción bajo una traslación espacio-temporal ON-SHELL\footnote{ON-SHELL significa que es cuando las ecuaciones de campo son satisfechas}?, esto será
+\begin{align*}
+  \delta_T I & = \int d^4 x \partial_\mu\left(  \partial^\mu \phi \delta_T\phi\right)
+\end{align*}
+Pero ya se sabe que bajo una traslación espacio-temporaL se encontro que la acción cambia como
+\begin{equation*}
+  \delta_T I = \int d^4x \partial_\mu C^\mu
+\end{equation*}
+Por tanto estos dos términos deben ser iguales, y así se concluye que
+\begin{equation*}
+  \partial_\mu \left( \partial^\mu \phi \delta_T\phi - C^\mu \right) = 0
+\end{equation*}
+Y a la cantidad de la izquierda le llamaeros $j^\mu$
+\begin{align*}
+  j^\mu & = \partial^\mu \phi a^\alpha \partial_\alpha \phi - a^\mu \left( \frac{1}{2}\partial_\nu \phi \partial^\nu \phi - \frac{m^2}{2}\phi^2 \right) \\
+  & = a^\alpha \left[ \partial^\mu \phi \partial_\alpha \phi - \frac{\delta_\alpha^\mu}{2}\left( \partial_\nu \phi \partial^\nu \phi - m^2\phi^2 \right) \right]
+\end{align*}
+A esta cantidad $T^\mu_\alpha $se le llama tensor de energía-monento, ahora, $j^\mu$ debe cumplir que
+\begin{align*}
+  \partial_\mu j^\mu & = 0 \\
+  \partial_tj^t + \nabla \cdot \vec{j} & = 0
+\end{align*}
+La cual corresponde a una ecuación de continuidad, y si la integro en el espacio se tiene que
+\begin{align*}
+  \frac{d}{dt}\int_V d^3xj^t + \int_V d^3x\nabla \cdot \vec{j} & = 0 \\
+  \frac{d}{dt}\int_V d^3x j^t + \int_{\partial V}d\vec{S}\cdot \vec{j} & = \\
+\end{align*}
+Ahora si, $\int_{\partial V}d\vec{S}\cdot \vec{j}=0$ entonces, la carga ($j^t$) se conserva 
+\begin{equation*}
+  \frac{dQ}{dt} = 0
+\end{equation*}
+Estoy es muy similar al caso electromagnético. \\
+Volviendo al campo escalar
+\begin{equation*}
+  \delta_T I = \int dt\frac{dB}{dt}
+\end{equation*}
+Implican la existencia de 4 corrientes conservadas que dan origen a 4 cantidades conservadas. las cuales serán las componentes cero de las 4 corrientes, compiladas en el tensor energía momento $T_\alpha^\mu$
+\begin{itemize}
+  \item $\mu$:= Es el índice de corriente
+  \item $\alpha$:= Es cuál transformación estamos haciendo 
+\end{itemize}
+Ahora, la cantidad se calcula como 
+\begin{align*}
+  Q_{(\alpha)}  = \int d^3x T^t_\alpha
+\end{align*}
+$Q_{(\alpha)}$ son cuatro cantidades conservadas asociadas a elegir $a^\alpha = (1,0,0,0)$ o $a^\alpha=(0,1,0,0)$, la energía
+\begin{align*}
+  E & = \int d^3xT^t_t \\
+  & = \int d^3 x \partial^t\phi \partial_t\phi - \frac{\delta_t^t}{2}\left( \partial_\alpha \phi \partial^\alpha \phi - \frac{m^2}{2}\phi^2 \right)
+\end{align*}
+recordando que
+\begin{itemize}
+  \item $\partial^t\phi \partial_t\phi = \dot{\phi}^2$ 
+  \item $\partial_\alpha \phi \partial^\alpha \phi = \dot{\phi}^2 - |\nabla\phi|^2$
+\end{itemize}
+se tiene que, también con $\delta_t^t=1$
+\begin{align}
+  \boxed{  E  = \int d^3x \left( \frac{\dot{\phi}^2}{2} + \frac{|\nabla\phi|^2}{2} + \frac{m^2}{2}\phi^2 \right)}
+\end{align}
+La cual corresponde a la energía del campo escalar y emergío como cantidad asociada a traslaciones temporales para un campo escalar $\phi$. Si $m^2$ es positivo, entonces la energía será mayor o igual a cero $E\geq 0$ y es cero $E=0$ si solo sí el campo es cero $\phi=0$. \\
+La configuración de menor energía se llama el vacío de la teoría. En este caso el vacío de la teoría es único y corresponde a $\phi=0$. Ahora si se me ocurre actuar con una transformación infinitesimal de Lorentz sobre el vacío de la teoría
+\begin{align*}
+  \delta_L \phi_{Vac} & = -\omega^\mu_\nu x^\nu \partial_\mu \phi_{Vac} = 0 \\\
+  \delta_T \phi_{Vac} & = a^\mu\partial_\mu \phi = 0
+\end{align*}
+La configuración de vacío respeta las simetrías de la teoría. \\
+Ahora, si para la carga conservada se eligen los índices $\alpha$ espaciales, se tiene que esto dará como resultado a los momenta lineal del campo 
+\begin{align*}
+  P^i = \int d^3x T^{ti}
+\end{align*}
+en donde $t$ es el índice de cantidad conservada e $i$ es el índice que nos dice que estamos haciendo traslaciones espaciales.
+\begin{equation*}
+  P^i = \int d^3x \dot{\phi}\partial^i\phi = -\int d^3 \dot{\phi}\nabla \phi
+\end{equation*}
+Puesto que estas son las 3 cantidades conservadas asociadas a traslaciones espaciales identificamos estas cantidades con el momento lineal del campo. 
 \end{document}
 
