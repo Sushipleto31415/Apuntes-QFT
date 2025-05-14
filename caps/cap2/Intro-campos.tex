@@ -1,0 +1,123 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+\chapter{Teoría Clásica de Campos}
+
+\section{Noción de Campo}
+A algún punto del espacio se le asocia un campo eléctrico y un campo magnético y además, otro observador inercial también le asocia un campo eléctrico y magnético a cada punto del espacio pero desde su punto de vista. Notemos que, bajo transformaciones de Lorentz el campo eléctrico y magnético se mezclan. La dinámica de la evolución temporal de los campos están dadas por las ecuaciones de Maxwell, escribámoslas en el vacío\footnote{$D_j$ corresponde a la derivada covariante definida por $D_jA^k=\partial_jA^k - \Gamma_{jk}^lA_l$  con $\Gamma_{jk}^l$ los símbolos de Christoffel}. 
+\begin{align*}
+  D_i E^i & = 0 \\
+  D_i B^i & = 0 \\
+  \frac{\epsilon^{ijk}}{\sqrt{g}}D_jE_k & = -\partial_t B^i \\
+  \frac{\epsilon^{ijk}}{\sqrt{g}}D_jB_k & = \mu_0\varepsilon_0 \partial_t E^i
+\end{align*}
+Hay una forma trivial para resolver la 2da y 3ra ecuación, $\exists \phi, \vec{A}$ tal que, los campos eléctrico y magnético en función de los potenciales son
+\begin{align*}
+  B^i & = \frac{\epsilon^{ijk}}{\sqrt{g}}D_jA_k \\
+  E^i & = -g^{ij}\partial_j\phi - \partial_t A^i
+\end{align*}
+Respecto de $\phi$ y de $\vec{A}$, la ley de Gauss magnética y la ley de Faraday son identidades (ya están resueltas), y las otras dos ecuaciones, la ley de Gauss y ley de Ampère-Maxwell son ecuaciones, ùltimas las cuales me permitirán encontrar $\phi$ y $\vec{A}$ para resolver las otras dos identidades. \\
+Ahora, sean dos observadores inerciales $K$ y $\tilde{K}$ para los cuales, cada uno puede observar un potencial eléctrico y magnético en un mismo punto del espacio respecto a cada uno de ellos, $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$ con respecto al observador $K$ y $\tilde{\phi}(\tilde{t},\tilde{\vec{x}})$ y $\tilde{\vec{A}}(\tilde{t},\tilde{\vec{x}})$ con respecto al observador inercial $\tilde{K}$. Ahora, cómo puedo transformar a los potenciales desde un observador inercial al otro?, ya sabemos como transforman las etiquetas, sea $t$ o $x$, la respuesta la da lo siguiente. 
+\begin{equation}
+  A^\mu = \{A^0,A^1,A^2,A^3\} = \{\phi,\vec{A}\}
+\end{equation}
+El cual corresponde a un cuadri-vector y se le llama cuadri-potencial electromagnético, el cual transforma como
+\begin{equation}
+  \tilde{{A}}^\mu(\tilde{x}) = \Lambda_\nu^\mu A^\nu(x) 
+\end{equation}
+El cuadri-potencial transforma en la representación vecorial del grupo de Lorentz. Notemos que el cuadri-potencial tiene dos etiquetas, el $\mu$ que es el que da sus componentes y $x$ que es una componente espacio tiempo, y la transformación de Lorentz transforma sobre los dos índices. Supongamos que queremos ver el cómo transforma el cuadri-potencial pero con la misma etiqueta de espacio tiempo a cada lado, para ello
+\begin{align*}
+  \tilde{{A}}^\mu(\tilde{x}) & = \Lambda^\mu_\nu A^\nu (\Lambda^{-1}\tilde{x}) \quad \text{cambiamos de letra} \\
+  \tilde{{A}}^\mu(x) = \Lambda^\mu_\nu A^\nu (\Lambda^{-1}x) 
+\end{align*}
+\textbf{Definición:} El conjunto de campos $\Phi_A(x)$ transformará en un representación del grupo de Lorentz sí y sólo si el conjunto de campos que mide un observador $K$ que mide con la etiqueta $\Lambda^{-1}x$ se relacionan con otro con etiqueta $x$ se la siguiente forma
+\begin{equation}
+  \tilde{\Phi}_A(x) = \left[ D(\Lambda) \right]_{AB} \Phi_B (\Lambda^{-1}x)
+\end{equation}
+En lo cual la matriz $D$ corresponde a una representación del grupo de Lorentz tal que
+\begin{equation}
+  D(\Lambda_1)D(\Lambda_2) = D(\Lambda_1,\Lambda_2)
+\end{equation}
+Ello nos asegura que la tabla de multiplicación si se realice con las matrices $D$. Defino un objeto que transforma bajo una representación. Esto corresponde a una abstracción de lo que se estaba haciendo arriba, entonces ahora, como existe una representación trivial hacemos lo siguiente. \\
+\textbf{Definición de campo escalar:} Se define como un único número que bajo transformaciones de Lorentz transforma así
+\begin{equation} \label{eq:transformación campo escalar}
+  \tilde{\phi}(x)=\phi(\Lambda^{-1}x)
+\end{equation}
+El campo escalar aparece cuando los índices $B$ tienen un solo valor y las matrices $D$ les asocio la matriz identidad, o sea, la representacion trivial. Y ello es lo mismo a 
+\begin{equation}
+  \tilde{\phi}(\tilde{x}) = \phi(x)
+\end{equation}
+Debido a los argumentos expuestos arriba. Primero se estudiará la teoría cuántica de campos escalares para no convolucionar de una las complicaciones que suponen los campos vectoriales. \\
+Antes de estudiar la teoría cuántica de este campo escalar, primero se tendrá que estudiar la teoría clásica de dicho campo escalar para posteriormente cuantizarlo. \\
+Notemos que en \eqref{eq:transformación campo escalar} $\Lambda$ es una tranformación de Lorentz arbitraria, en particular, finita. Algo que será útil dado del teorema de Noether es que, la invariancia de la acción bajo una transformación tiene asociada una cantidad conservada a la dinámica. La acción que se construirá para el campo escalar será invariante bajo transformaciones de Lorentz, si la dinámica del campo escalar es invariante bajo transformaciones de Lorentz esto significa que si se realiza un experimento con este campo escalar va a concluir cierto conjunto de ecuaciones para la dinámica de este campo, ecuaciones las cuales serán las mismas para cualquier observador inercial. \\
+¿Cómo transforma el campo escalar bajo una transformación de Lorentz infinitesimal?
+\begin{equation*}
+  \tilde{{A}} = \Lambda_\nu^\mu x^\nu 
+\end{equation*}
+Tal que, la transformación infinitesimal diferirá de la transformación identidad por muy poco
+\begin{equation*}
+  \Lambda_\nu^\mu = \delta_\nu^\mu + \omega_\nu^\mu + \cancel{O(\omega^2)}
+\end{equation*}
+En donde $\omega_\nu^\mu$ es una matriz con entradas pequeñas, ahora el profesor nos invita a repetir el siguiente cálculo con las 6 transformaciones de Lorentz independientes
+\begin{equation*}
+  \Lambda = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & \cos{\theta} & -\sin{\theta} & 0 \\
+    0 & \sin{\theta} & \cos{\theta} & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+\end{equation*}
+Lo cual es una rotación del plano x-y, de forma explícita sería
+\begin{align*}
+  \tilde{t} & = t \\
+  \tilde{x} & = \cos{\theta} x - \sin{\theta}y \\
+  \tilde{{y}} & = \sin{\theta} x + \cos{\theta}y \\
+  \tilde{z} & = z 
+\end{align*}
+Asumimos que el ángulo $\theta$ es pequeño, con lo cual, aproximando hasta los términos de $\theta^2$ el coseno y el seno son
+\begin{align*}
+  \cos{\theta} & = 1 \\
+  \sin{\theta} & = \theta
+\end{align*}
+Con lo cual, la transformación de Lorentz queda tal que
+\begin{equation*}
+  \Lambda = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix} + 
+  \begin{pmatrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & -\theta & 0\\
+    0 & \theta & 0 & 0 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix}
+\end{equation*}
+Cuando uno tiene una matriz $A$ que difiere de la identidad por una matriz pequeña $\xi$ entonces la inversa está dada tal que
+\begin{align*}
+  A & = I + \xi \\
+  A^{-1} & = I - \xi 
+\end{align*}
+Por lo tanto el campo escalar bajo una transformación infinitesimal será
+\begin{align*}
+  \tilde{\phi}(x)  & = \phi(\Lambda^{-1}x) = \phi((I-\omega)x) \\
+  & = \phi(x-\omega x) \\
+  & = \phi(x) - (\omega x)^\mu \partial_\mu \phi
+\end{align*}
+Recordar que
+\begin{equation}
+  f(\vec{x}+\vec{h}) = f(\vec{x}) + \vec{h}\cdot \nabla f
+\end{equation}
+Así, la transformación infinitesimal del campo escalar
+\begin{align*}
+  \delta \phi & = \tilde{\phi}(x) - \phi(x) \\
+  & = \omega^\mu_\nu x^\nu \partial_\nu \phi
+\end{align*}
+Así
+\begin{equation}
+  \boxed{  \delta \phi = -\omega^\mu_\nu x^\nu \partial_\mu \phi }
+\end{equation}
+La cual es la transformación infinitesimal de Lorentz, lo cual será de utilidad para encontrar cantidades conservadas bajo transformaciones de Lorentz.
+
+\end{document}
