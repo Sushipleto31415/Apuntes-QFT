@@ -1,5 +1,20 @@
 \documentclass ../main.tex]{subfiles}
 \begin{document}
 \section{Decimocuarta clase}
-Hola1
+Se estudiaron las propiedades de la Relatividad Especial lo que nos llevó a estudiar la estructura del grupo de Lorentz, con ello se está en posición de estudiar Teoría Clásica de Campos y es importante tener en mente hacia dónde se va con ello, el primer punto en Teoría Clásica de Campos es el cuantizar el campo electromagnético. Pero ¿Qué significa el cuantizar el campo electromagnético? ¿Cómo interactúan los fotones con la materia? Antes de ello, es importante el cuantizar un capo algo más simple que el campo electromagnético, que corresponde al campo escalar. \\
+Para ello, se piensa en un observador $K$ y un observador $\tilde{K}$ los cuales le dan etiquetas al espacio tiempo de $x^\mu=(x,\vec{x})$ y $\tilde{x}^\mu = (\tilde{t},\tilde{\vec{x}})$ respectivamente cuya transformación entre sí es conocida y corresponde a las transformaciones de Lorentz, ahora, los observadores también pueden observar un campo eléctrico y magnético, cuya etiquetas en nombre de los observadores serán $\vec{E},\vec{B}$ y $\tilde{\vec{E},\tilde{\vec{B}}}$ respectivamente, pero, ¿Cómo encontramos la regla de transformación entre los campos eléctrico y magnético según cada observador? \\
+\textbf{Según K:}
+\begin{align*}
+  \nabla \cdot \vec{E} & = 0 \\
+  \nabla \times \vec{E} & = -\partial_t \vec{B} \\
+  \nabla \cdot \vec{B} & = 0 \\
+  \nabla \times \vec{B} & = \partial_t \vec{E}
+\end{align*}
+\textbf{Según $\tilde{K}$}
+\begin{align*}
+  \tilde{\nabla}\cdot \tilde{\vec{E}} & = 0 \\
+  \tilde{\nabla} \times \tilde{\vec{E}} & = -\partial_{\tilde{t}}\tilde{\vec{B}} \\
+  \tilde{\nabla} \cdot \tilde{\vec{B}} & = 0 \\
+  \tilde{\nabla} \times \tilde{\vec{B}} & = -\partial_{\tilde{t}}\tilde{\vec{B}}
+\end{align*}
 \end{document}
