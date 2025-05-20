@@ -1,0 +1,75 @@
+\documentclass ../main.tex]{subfiles}
+\begin{document}
+\section{Decimosexta clase}
+Existen también simetrías que solo actúan sobre los campos y que también permiten construir catidades conervadas, estas son llamadas simetrías internas. \\
+\textbf{Veamos un ejemplo:} Shift simetry, de un campo escalar sin masa
+\begin{equation}
+  I = \int d^4 x \frac{1}{2}\partial_\mu \phi \partial^\mu \phi 
+\end{equation}
+La cual está dada por
+\begin{equation}
+  \phi(x) \rightarrow \tilde{\phi(x)} = \phi(x)+c, \quad \delta \phi = \tilde{\phi}(x)-\phi(x) = c
+\end{equation}
+Con lo cual, la variación de la acción está dada por
+\begin{align*}
+  \delta I & = I [\phi + \delta \phi]- I [\phi] \\
+  & = \frac{1}{2}\int d^4 \left[ \partial_\mu\partial^\mu \phi + \partial_\mu\partial^\mu c - \partial_\mu\partial^\mu \phi \right]
+  & = 0 
+\end{align*}
+¿ Cuál es la cantidad conservada asociada a esta transformación?, se calcula via teorema de Noether
+\begin{align*}
+  j^\mu = \frac{\partial \mathfrak{L}}{\partial (\partial_\mu \phi)} \delta \phi - B^\mu 
+\end{align*}
+En este caso  $B^\mu = 0$, por tanto
+\begin{align*}
+  j^\mu = c\partial^\mu \phi \\
+  Q= \int^3 dx j^t = \int d^3x \dot{\phi} \\
+\end{align*}
+\textbf{Modelo O(2)}
+\begin{align*}
+  I[\phi_1,\phi_2] = \int d^4x \frac{1}{2}\partial_\mu \phi_1 \partial^\mu \phi_1 - \frac{m_1^2}{2}\phi^2_1 +  \frac{1}{2}\partial_\mu \phi_2 \partial^\mu \phi_2 - \frac{m_2^2}{2}\phi^2_2 
+\end{align*}
+Si calculamos las ecuaciones de Euler-Lagrange, estos campos no se ven entre ellos
+\begin{align*}
+  \partial^2_t \phi_1 - \nabla^2 \phi_1 - m_1^2\phi_1 & = 0 \\
+  \partial_t^2 \phi_2 - \nabla^2 \phi_2 - m_2^2 \phi_2 & = 0
+\end{align*}
+En el Lagrangeano no hay términos de interacción (cruzados), con lo cual las ecuaciones de movimiento están desacopladas, pero pasa algo interesante, si las masas son iguales, la acción es invariante bajo la siguiente transoformación interna finita:
+\begin{align*}
+  \phi_1(x)\rightarrow \tilde{\phi_1}(x) = \cos{\alpha}\phi_1 - \sin{\alpha} \phi_2(x) \\
+  \phi_2(x) \rightarrow \tilde{\phi_2}(x) = \sin{\alpha}\phi_1(x) + \cos{\alpha}\phi_2(x)
+\end{align*}
+Calculamos la acción
+\begin{align*}
+  I[\tilde{\phi_2},\tilde{\phi_1}] = \int d^4 x \frac{1}{2}\partial_\mu \left( \cos{\alpha}\phi_1 - \sin{\alpha}\phi_2 \right) \partial^\mu \left( \cos{\alpha} \phi_1 - \sin{\alpha}\phi_2 \right) + \frac{1}{2}\partial_\mu \left( \sin{\alpha}\phi_1 + \cos{\alpha}\phi_2 \right) \partial^\mu \left( \sin{\alpha}\phi_1  + \cos{\alpha} \phi_2\right) - \frac{1}{2}m^2 \left( \left( \cos{\alpha}\phi_1 - \sin{\alpha}\phi_2 \right)+\left( \sin{\alpha}\phi_1 + \cos{\alpha}\phi_2 \right) \right)
+\end{align*}
+Ahora definimos
+\begin{align*}
+  \vec{\phi} = (\phi_1,\phi_2) = \phi_A , \text{con} A=1,2 \\
+  \phi_1^2 + \phi_2^2 = |\vec{\phi}|^2 
+\end{align*}
+Lo cual, en la acción
+\begin{align*}
+  I[\tilde{\phi_1},\tilde{\phi_2}] = I[\phi_1,\phi_2]
+\end{align*}
+Esta simetría da indicios o es la simetría menos que rota protones y neutrones que se llama la simetría de iso-spin, que da origen a que el protón y neutron tengan casi la misma masa. \\
+$\alpha$ en este caso será finito, pero ¿ Qué pasa si alpha es infinitesimal?
+\begin{align*}
+  \tilde{\phi_1 }  = \phi_1 - \epsilon \phi_2 \Rightarrow \delta\phi_1 = -\epsilon \phi_2 \\
+  \tilde{\phi_2} = \epsilon\phi_1 + \phi_2 \Rightarrow \delta\phi_2 = \epsilon \phi_1
+\end{align*}
+Ahora, la variación de la acción bajo esta transformación infinitesimal
+\begin{align*}
+  \delta I & = [\phi_1 + \delta\phi_1,\phi_2 + \delta\phi_2] - I [\phi_1,\phi_2] \\
+  & = \int d^4 x \left[ \partial_\mu \phi_1 \partial^\mu \delta\phi_1 - m^2 \phi_1 \delta\phi_1 + \partial_\mu \phi_2 \partial^\mu \delta\phi_2 - m^2\phi_2 \delta\phi_2 \right] \\
+  & = 0
+\end{align*}
+Por lo tanto $B^\mu=0$ la acción es invariante. Por lo tanto ,la corriente conservada será
+\begin{align*}
+  j^\mu & = \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi_1)}\delta\phi_1 + \frac{\partial \mathfrak{L}}{\partial (\partial_\mu \phi_2)} \delta \phi_2 \\
+  & = \partial^\mu \text{No alcance, me distraje}
+\end{align*}
+\begin{align}
+\end{align}
+\end{document}
+
