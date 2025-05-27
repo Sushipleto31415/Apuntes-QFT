@@ -1,0 +1,40 @@
+\documentclass ../main.tex]{subfiles}
+
+\begin{document}
+\section{Decimoseptima clase}
+Cuando cuantizemos, el campo escalar es un campo de spin cero. \\
+El campo escalar transforma en la representación trivial del grupo de Poincaré \\
+Bajo Lorentz: Como el observador K le asigna un punto a el espacio tiempo llamado $\phi(x)$, el campo escalar, y el como un observador $\tilde{K}$  le asigna al mismo punto la etiqueta $\tilde{\phi}(\tilde{x})$ a lo cual yo puedo escribir
+\begin{align*}
+  \tilde{\phi}(\tilde{x}) = \phi(x),\quad \tilde{x}^\mu = \Lambda_\nu^\mu x^\nu \\
+  \tilde{\phi}(\tilde{x}) = \phi(\Lambda^\mu_\nu \tilde{x}) \\
+  \tilde{\phi}(x) = \phi(\Lambda^{-1}x) \\
+  \tilde{\phi}(x) = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu} \phi(\Lambda^{-1}x)\right) , \quad \text{con} \left( J_{\mu \nu} \right)_{1\times 1} = 0 \\
+  [J_{\mu \nu},J_{\alpha \beta}] = \eta J - \eta J 
+\end{align*}
+Matrices las cuales corresponden a la representación trivial.  \\
+La transformfación infinitesimal sólo contiene la acción del operador de momento angular orbital:
+\begin{align*}
+  \tilde{\phi}(x) & = 1 \phi(\Lambda^{-1}x) = \phi((\delta_\nu^\mu - \omega^\mu_\nu)x^\nu)
+  & = \phi(x^\mu - \omega^\mu_\nu x^\nu) \\ 
+  & = \phi(x^\mu) - \omega^\mu_\nu x^\nu \partial_\mu \phi 
+\end{align*}
+Ahora podemos escribir la variación
+\begin{align*}
+  \delta_L \phi(x) = \tilde{\phi}(x) -\phi(x) & =-\omega^\mu_\nu x^\nu \partial_\mu \phi \\
+  & = +\frac{1}{2}\omega^{\mu \nu}L_{\mu \mu}\phi
+\end{align*}
+Con $L_{\mu \nu} = x_\mu \partial_\nu - x_\nu \partial_\mu$ el cual es el operador de momento angular orbital. \\
+\textbf{Demostración:} \\
+\begin{align*}
+  \frac{1}{2}\omega^{\mu \nu} L_{\mu \nu} \phi & = -\frac{1}{2}\omega^{\mu \nu} x_\mu \partial_\nu \phi - \frac{1}{2}\omega^{\mu \nu}x_\nu \partial_\mu \phi \\
+  & = -\omega^\mu_\nu x^\nu \partial_\mu \phi
+\end{align*}
+Ahora, el conmutador de $L_{\mu \nu}$
+\begin{align*}
+  \left[ L_{\rho \sigma},L_{\tau \nu} \right]\phi & = \left[ x_\rho \partial_\sigma - x_\sigma \partial_\rho , x_\tau \partial_\nu - x_\nu \partial_\tau \right]\phi
+  & = \left( x_\rho \partial_\sigma - x_\sigma\partial_\rho \right)\left( x_\tau \partial_\nu - x_\sigma \partial_\rho \right)\rho \\
+  & = \eta_{\sigma \tau }L_{\rho \nu}\phi - \eta_{\rho \tau}L_{\sigma \nu}\phi + \eta_{\rho \nu}L 
+\end{align*}
+No alcanzo a escribir, imposible
+\end{section}
