@@ -1,21 +1,21 @@
-\documentclass ../main.tex]{subfiles}
-
+\documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Decimoseptima clase}
 Cuando cuantizemos, el campo escalar es un campo de spin cero. \\
 El campo escalar transforma en la representación trivial del grupo de Poincaré \\
 Bajo Lorentz: Como el observador K le asigna un punto a el espacio tiempo llamado $\phi(x)$, el campo escalar, y el como un observador $\tilde{K}$  le asigna al mismo punto la etiqueta $\tilde{\phi}(\tilde{x})$ a lo cual yo puedo escribir
 \begin{align*}
-  \tilde{\phi}(\tilde{x}) = \phi(x),\quad \tilde{x}^\mu = \Lambda_\nu^\mu x^\nu \\
-  \tilde{\phi}(\tilde{x}) = \phi(\Lambda^\mu_\nu \tilde{x}) \\
-  \tilde{\phi}(x) = \phi(\Lambda^{-1}x) \\
-  \tilde{\phi}(x) = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu} \phi(\Lambda^{-1}x)\right) , \quad \text{con} \left( J_{\mu \nu} \right)_{1\times 1} = 0 \\
-  [J_{\mu \nu},J_{\alpha \beta}] = \eta J - \eta J 
+  \tilde{\phi}(\tilde{x})& = \phi(x),\quad \tilde{x}^\mu = \Lambda_\nu^\mu x^\nu \\
+  \tilde{\phi}(\tilde{x})& = \phi(\Lambda^\mu_\nu \tilde{x}) \\
+  \tilde{\phi}(x)& = \phi(\Lambda^{-1}x) \\
+  \tilde{\phi}(x)& = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu}} \phi(\Lambda^{-1}x)\right) , \quad \text{con} \left( J_{\mu \nu} \right)_{1\times 1} = 0 \\
+  \left[J_{\mu \nu},J_{\alpha \beta}\right] &  = \eta J - \eta J 
 \end{align*}
+Y este conmutador es un generador del Álgebra de Lorentz. \\
 Matrices las cuales corresponden a la representación trivial.  \\
-La transformfación infinitesimal sólo contiene la acción del operador de momento angular orbital:
+La transformfación infinitesimal ($\Lambda^\mu_\nu = \delta^\mu_\nu + \omega^\mu_\nu$ las cuales corresponden a 6 matrices de 1x1 ) sólo contiene la acción del operador de momento angular orbital:
 \begin{align*}
-  \tilde{\phi}(x) & = 1 \phi(\Lambda^{-1}x) = \phi((\delta_\nu^\mu - \omega^\mu_\nu)x^\nu)
+  \tilde{\phi}(x) & = 1 \phi(\Lambda^{-1}x) = \phi((\delta_\nu^\mu - \omega^\mu_\nu)x^\nu) \\
   & = \phi(x^\mu - \omega^\mu_\nu x^\nu) \\ 
   & = \phi(x^\mu) - \omega^\mu_\nu x^\nu \partial_\mu \phi 
 \end{align*}
@@ -24,17 +24,53 @@ Ahora podemos escribir la variación
   \delta_L \phi(x) = \tilde{\phi}(x) -\phi(x) & =-\omega^\mu_\nu x^\nu \partial_\mu \phi \\
   & = +\frac{1}{2}\omega^{\mu \nu}L_{\mu \mu}\phi
 \end{align*}
-Con $L_{\mu \nu} = x_\mu \partial_\nu - x_\nu \partial_\mu$ el cual es el operador de momento angular orbital. \\
+Con $L_{\mu \nu} = x_\mu \partial_\nu - x_\nu \partial_\mu$ el cual es el operador de momento angular orbital.  Ahora veremos que dichas expresiones son en verdad iguales.\\
 \textbf{Demostración:} \\
 \begin{align*}
   \frac{1}{2}\omega^{\mu \nu} L_{\mu \nu} \phi & = -\frac{1}{2}\omega^{\mu \nu} x_\mu \partial_\nu \phi - \frac{1}{2}\omega^{\mu \nu}x_\nu \partial_\mu \phi \\
   & = -\omega^\mu_\nu x^\nu \partial_\mu \phi
 \end{align*}
+Esto mediante el intercambio de índices en el primer término recordando que el tensor $\omega^{\mu}_\mu$ es antisimétrico.
 Ahora, el conmutador de $L_{\mu \nu}$
 \begin{align*}
-  \left[ L_{\rho \sigma},L_{\tau \nu} \right]\phi & = \left[ x_\rho \partial_\sigma - x_\sigma \partial_\rho , x_\tau \partial_\nu - x_\nu \partial_\tau \right]\phi
-  & = \left( x_\rho \partial_\sigma - x_\sigma\partial_\rho \right)\left( x_\tau \partial_\nu - x_\sigma \partial_\rho \right)\rho \\
-  & = \eta_{\sigma \tau }L_{\rho \nu}\phi - \eta_{\rho \tau}L_{\sigma \nu}\phi + \eta_{\rho \nu}L 
+  \left[ L_{\rho \sigma},L_{\tau \nu} \right]\phi & = \left[ x_\rho \partial_\sigma - x_\sigma \partial_\rho , x_\tau \partial_\nu - x_\nu \partial_\tau \right]\phi \\
+  & = \left( x_\rho \partial_\sigma - x_\sigma\partial_\rho \right)\left( x_\tau \partial_\nu - x_\nu \partial_\tau \right)\phi \\
+  & = \eta_{\sigma \tau }L_{\rho \nu}\phi - \eta_{\rho \tau}L_{\sigma \nu}\phi + \eta_{\rho \nu}L_{\sigma \tau}\phi - \eta_{\sigma \nu}L_{\rho \tau}\phi
 \end{align*}
-No alcanzo a escribir, imposible
-\end{section}
+Con lo cual, el conmutador de los operadores momento orbital es
+\begin{equation}
+  \left[ L_{\rho \sigma}, L_{\tau \nu} \right] = \eta_{\sigma \tau} L_{\rho \nu} - \eta_{\rho \tau}L_{\sigma \nu} + \eta_{\rho \nu} L_{\sigma \tau} - \eta_{\sigma \nu}L_{\rho \tau}
+\end{equation}
+Ahora, por los índices, $[L_{01},L_{12}]$ sería el conmutador del generador de boosts a lo largo del eje x $L_{01}$ con el generador de rotaciones en el plano (x,y) $L_{12}$, se procede a calcular el conmutador
+\begin{equation*}
+  \left[ L_{01},L_{12} \right] = \eta_{11}L_{02} = L_{02}
+\end{equation*}
+Lo que nos da un boost a lo largo del eje y, notemos que, en la transformación finita $e^{\frac{1}{2}\omega^{01}L_{01}}$, en donde $\omega^{01}$ es un boost a lo largo del eje x
+\begin{align*}
+  \left[ \Lambda^\mu_\nu \right] & = \begin{pmatrix} \cosh \xi & \sinh \xi & 0 & 0 \\
+    \sinh \xi & \cosh \xi & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}\quad, \text{Infinitesimalmente} \\
+  & = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+  + \begin{pmatrix}
+    0 & \xi & 0 & 0 \\
+    \xi & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+  \end{pmatrix}, \quad \omega^0_1 = - \omega^{01} \\
+  & = \delta^\mu_\nu + \omega_\nu^\mu
+\end{align*}
+Un operador diferencial es una matriz de infinito por infinito. Se da el ejemplo de cálculo numérico o discreto en el cual existen operadores de matrices infinitas que al multiplicar, generan o actúan como la derivada de la función o los datos discretos.\\
+Los campos escalares son usados para describir el campo de Higgs (fundamental). \\
+Los piones $(\pi^0,\pi^+)$ también se describen con campos escalares (no fundamentales). \\
+\textbf{Spinores de Dirac:} Los spinores de dirac son un arreglo de 4 números completos que "Sienten" una transformación de Lorentz de la siguiente forma:
+\begin{equation}
+  \tilde{\Psi}_a(x) = \left( e^{\frac{1}{2}\omega^{\mu\nu}S_{\mu \nu}} \right)_{ab}\Psi_b \left( \Lambda^{-1}x \right)
+\end{equation}
+\end{document}

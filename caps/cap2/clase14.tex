@@ -1,8 +1,11 @@
-\documentclass ../main.tex]{subfiles}
+\documentclass[../main.tex]{subfiles}
 \begin{document}
 \section{Decimocuarta clase}
-Se estudiaron las propiedades de la Relatividad Especial lo que nos llevó a estudiar la estructura del grupo de Lorentz, con ello se está en posición de estudiar Teoría Clásica de Campos y es importante tener en mente hacia dónde se va con ello, el primer punto en Teoría Clásica de Campos es el cuantizar el campo electromagnético. Pero ¿Qué significa el cuantizar el campo electromagnético? ¿Cómo interactúan los fotones con la materia? Antes de ello, es importante el cuantizar un capo algo más simple que el campo electromagnético, que corresponde al campo escalar. \\
-Para ello, se piensa en un observador $K$ y un observador $\tilde{K}$ los cuales le dan etiquetas al espacio tiempo de $x^\mu=(x,\vec{x})$ y $\tilde{x}^\mu = (\tilde{t},\tilde{\vec{x}})$ respectivamente cuya transformación entre sí es conocida y corresponde a las transformaciones de Lorentz, ahora, los observadores también pueden observar un campo eléctrico y magnético, cuya etiquetas en nombre de los observadores serán $\vec{E},\vec{B}$ y $\tilde{\vec{E}},\tilde{\vec{B}}$ respectivamente, pero, ¿Cómo encontramos la regla de transformación entre los campos eléctrico y magnético según cada observador? \\
+
+Se estudiaron las propiedades de la Relatividad Especial lo que nos llevó a estudiar la estructura del grupo de Lorentz. Con ello se está en posición de estudiar Teoría Clásica de Campos y es importante tener en mente hacia dónde se va con ello. El primer punto en Teoría Clásica de Campos es el cuantizar el campo electromagnético. Pero ¿Qué significa el cuantizar el campo electromagnético? ¿Cómo interactúan los fotones con la materia? Antes de ello, es importante el cuantizar un campo algo más simple que el campo electromagnético, que corresponde al campo escalar. \\
+
+Para ello, se piensa en un observador $K$ y un observador $\tilde{K}$ los cuales le dan etiquetas al espacio tiempo de $x^\mu=(t,\vec{x})$ y $\tilde{x}^\mu = (\tilde{t},\tilde{\vec{x}})$ respectivamente, cuya transformación entre sí es conocida y corresponde a las transformaciones de Lorentz. Ahora, los observadores también pueden observar un campo eléctrico y magnético, cuyas etiquetas serán $\vec{E},\vec{B}$ y $\tilde{\vec{E}},\tilde{\vec{B}}$ respectivamente. Pero, ¿cómo encontramos la regla de transformación entre los campos eléctrico y magnético según cada observador? \\
+
 \textbf{Según K:}
 \begin{align*}
   \nabla \cdot \vec{E} & = 0 \\
@@ -10,23 +13,26 @@ Para ello, se piensa en un observador $K$ y un observador $\tilde{K}$ los cuales
   \nabla \cdot \vec{B} & = 0 \\
   \nabla \times \vec{B} & = \partial_t \vec{E}
 \end{align*}
-\textbf{Según $\tilde{K}$}
+
+\textbf{Según $\tilde{K}$:}
 \begin{align*}
   \tilde{\nabla}\cdot \tilde{\vec{E}} & = 0 \\
   \tilde{\nabla} \times \tilde{\vec{E}} & = -\partial_{\tilde{t}}\tilde{\vec{B}} \\
   \tilde{\nabla} \cdot \tilde{\vec{B}} & = 0 \\
-  \tilde{\nabla} \times \tilde{\vec{B}} & = -\partial_{\tilde{t}}\tilde{\vec{B}}
+  \tilde{\nabla} \times \tilde{\vec{B}} & = \partial_{\tilde{t}}\tilde{\vec{E}}  % Fixed last equation
 \end{align*}
-Las ecuaciones de maxwell vienen de un principio de acción, el cual es
+
+Las ecuaciones de Maxwell vienen de un principio de acción:
 \begin{equation}
-  I_{Maxwell} = k\int dt L = k \int dt \int d^3 x \mathfrak{L} 
+  I_{\text{Maxwell}} = k\int dt L = k \int dt \int d^3 x  \mathfrak{L} 
 \end{equation}
-en donde la densidad Lagrangeana es
+donde la densidad lagrangiana es
 \begin{equation}
-  \mathfrak = |\vec{E}|^2 - |\vec{B}|^2
+  \mathfrak{L} = |\vec{E}|^2 - |\vec{B}|^2  % Fixed missing argument
 \end{equation}
-¿ Cuál es la acción invariante de Lorentz y de traslaciones espacio-temporales para un campo escalar? \\
-Un campo escalar de Lorentz es una asignación de un número a cada punto del espacio-tiempo de forma que
+
+¿Cuál es la acción invariante de Lorentz y de traslaciones espacio-temporales para un campo escalar? \\
+Un campo escalar de Lorentz es una asignación de un número a cada punto del espacio-tiempo de forma que:
 \begin{equation*}
   \tilde{\phi} (\tilde{x}) = \phi(x)
 \end{equation*}
@@ -34,149 +40,92 @@ El observador $K$:
 \begin{equation*}
   \phi(x^\mu) = \phi(t,\vec{x}) = \phi_{\vec{x}}(t)
 \end{equation*}
-una función que depende del tiempo a cada punto del espacio, lo que nos lleva a pensar los grados de libertad que puede poseer dicha cantidadad, lo que viene con que el campo escalar tiene tantos grados de libertad como punto hay en el espacio, o sea, infinitos. \\
-La teoría clásica de campos de un conjunto infinito de grados de libertad. ¿ Cuánto vale el Lagrangeno que los lleva a las ecuaciones de Klein Gordon?. 
+una función que depende del tiempo a cada punto del espacio, lo que nos lleva a pensar en los grados de libertad que puede poseer dicha cantidad. El campo escalar tiene tantos grados de libertad como puntos hay en el espacio, o sea, infinitos. \\
+
+La teoría clásica de campos describe un conjunto infinito de grados de libertad. ¿Cuánto vale el lagrangiano que lleva a las ecuaciones de Klein-Gordon?
 \begin{equation}
-  I_{KG} [\phi(t,\vec{x})] = \int_{t_1}^_{t_2} dt \int_{-\infty}^{\infty} d^3 x \mathfrak{L}_{KG}
+  I_{\text{KG}}[\phi(t,\vec{x})] = \int_{t_1}^{t_2} dt \int_{-\infty}^{\infty} d^3 x  \mathfrak{L}_{\text{KG}}  % Fixed syntax
 \end{equation}
-Si bien no lo es, cuando se refiere al Lagrangeano en teoría de campos, en verdad se está refiriendo la densidad Lagrangeana. Ahora, si tomo una variación infinitesimal en la acción de Klein Gordon
+
+Si bien no lo es, cuando se refiere al lagrangiano en teoría de campos, en verdad se está refiriendo a la densidad lagrangiana. Ahora, si tomo una variación infinitesimal en la acción de Klein-Gordon:
 \begin{equation*}
-  I[\phi+\delta \phi] - I[\phi] : = \delta I \stackrel{!}{=} 0 
+  I[\phi+\delta \phi] - I[\phi] := \delta I \stackrel{!}{=} 0 
 \end{equation*}
-Se busca que de esa condición de obtenga la ecuación de Klein Gordon, $c=\hbar=1$
+Se busca que de esa condición se obtenga la ecuación de Klein-Gordon ($c=\hbar=1$):
 \begin{equation}
   \partial_\mu\partial^\mu \phi = 0
 \end{equation}
-Klein Gordon sin masa, bajo la signatura (+,-,-,-). Amarramos las puntas del campo escalar, tal que
+(Klein-Gordon sin masa, con signatura (+,-,-,-)). Fijamos condiciones de borde:
 \begin{align*}
-  \delta \phi (t_2,x) & = 0 \\
-  \delta \phi (t_1,x) & = 0
+  \delta \phi (t_2,\vec{x}) & = 0 \\
+  \delta \phi (t_1,\vec{x}) & = 0
 \end{align*}
-Lo cual representa la variación de camino desde un punto al otro, o sea variar infinitesimalmente la curva que lleva desde un punto en $t_1$ a $t_2$, igual que en mecánica clásica. El Lagreangeano de Klein Gordon es
+El lagrangiano de Klein-Gordon es:
 \begin{equation}
-  \mathfrak{L} = \frac{1}{2}\left( \partial_t \phi\right)^2 - \frac{1}{2}\left( \partial_x\phi \right)^2
+  \mathfrak{L} = \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2}(\nabla \phi)^2  % Generalized to 3D
 \end{equation}
-Con lo cual , la acción de Klein Gordon será
+La acción:
 \begin{equation}
-  I = \int_{t_1}^{t_2}dt \int_{-\infty}^{\infty} d^3x \left[   \frac{1}{2}\left( \partial_t\phi \right)^2 - \frac{1}{2}\left( \partial_x \phi\right)^2
-\right]
+  I = \int_{t_1}^{t_2}dt \int d^3x \left[ \frac{1}{2}(\partial_t\phi)^2 - \frac{1}{2}(\nabla\phi)^2 \right]
 \end{equation}
-Y ahora, variamos la acción tal que,
+Variamos la acción:
 \begin{align*}
   \delta I & = I[\phi+\delta\phi] - I[\phi] \\
-  & = \int dt \int d^3 x \left[ \left( \dot{\phi} + \delta \dot{\phi} \right)^2 - \left( \phi'+\delta \phi ' \right)^2 \right] - \frac{1}{2}\int dt \int dx \left( \dot{\phi}^2 - \phi^2' \right) \\
-  & = \frac{1}{2}\int dt \int dx \left[ \dot{\phi}^2 + 2\dot{\phi}\delta \dot{\phi} - \phi^2' - 2\phi' \delta \phi' - \dot{\phi}^2 + \phi^2' \right] \\
-  & = \int dt \int dx \left[ \partial_t \phi \partial_t \; \delta \phi - \partial_x \phi \partial_x \; \delta \phi \right] \\
-  & = \int dt \int dx \left[ \partial_t \left( \partial_t \phi \; \delta \phi \right) - \partial^2_t \phi \; \delta \phi - \partial_x \left( \partial_x \phi \; \delta \phi \right) + \partial_x^2 \phi \; \delta \phi\right] \\
-  & = \int_{t_1}^{t_2} dt \frac{d}{dt}\left( \int_{-\infty}^\infty dx \partial_t \phi\; \delta \phi  \right) - \int_{-\infty}^\infty dx \frac{d}{dx} \left( \int_{t_1}^{t_2} \partial_x\phi\; \delta \phi \right) - \int_{t_1}^{t_2} dt \int_{-\infty}^\infty dx \left( \partial_t^2 \phi - \partial_x^2 \phi \right)\delta \phi 
+  & = \int dt \int d^3 x \left[ \frac{1}{2}(\partial_t\phi + \partial_t\delta\phi)^2 - \frac{1}{2}|\nabla\phi + \nabla\delta\phi|^2 \right] - \frac{1}{2}\int dt \int d^3x \left( (\partial_t\phi)^2 - |\nabla\phi|^2 \right) \\
+  & = \int dt \int d^3x \left[ \partial_t \phi  \partial_t \delta \phi - \nabla\phi \cdot \nabla \delta \phi \right] + \mathcal{O}(\delta\phi^2) \\
+  & = \int dt \int d^3x \left[ \partial_t (\partial_t \phi  \delta \phi) - (\partial_t^2 \phi) \delta \phi - \nabla \cdot (\nabla\phi  \delta \phi) + (\nabla^2 \phi) \delta \phi \right] \\
+  & = \left[ \int d^3x  \partial_t \phi  \delta \phi \right]_{t_1}^{t_2} - \int_{t_1}^{t_2} dt \int d^3x  (\partial_t^2 \phi - \nabla^2 \phi) \delta \phi 
 \end{align*}
-Calculamos los términos por separado, se empieza por el primer término
+El primer término se anula por condiciones de borde temporales. Considerando condiciones de borde espaciales $\delta\phi \to 0$ cuando $|\vec{x}| \to \infty$:
 \begin{align*}
-  T_1 = \int_{-\infty}^\infty \partial_t \phi(t,x) \; \delta\ \phi(t,x) \big|_{t_1}^{t_2} = 0
+  \delta I = - \int_{t_1}^{t_2} dt \int d^3x  (\partial_t^2 \phi - \nabla^2 \phi) \delta \phi = 0 
 \end{align*}
-Esto ya que las puntas están amarradas
-\begin{align*}
-  T_2 = \int_{t_1}^{t_2} \partial_x \phi(t,x) \; \delta \phi(t,x) \big|_{x=-\infty}^{x=\infty} 
-\end{align*}
-Pero, suponermos que $\delta\phi(t,x\to \infty)=0 $ y además $\delta\phi(t,x\to\infty)=0 \quad \forall t$. Esto no se ve en mecánica clásica, son condiciones de borde para el espacio de funciones en el cual viven los campos $\phi$. Entonces, bajo estas condiciones
-\begin{align*}
-  T_2 = \int_{t_1}^{t_2} \partial_x \phi(t,x) \; \delta \phi(t,x) \big|_{x=-\infty}^{x=\infty} = 0 
-\end{align*}
-Así, la variación de la acción
-\begin{align*}
-  \delta I = 0 \Rightarrow - \int_{t_1}^{t_2} \int_{-\infty}^{\infty} dx \left( \partial^2_t \phi - \partial_x^2 \phi \right)\delta \phi = 0 
-\end{align*}
- Si $\delta\phi(t,x)$ es arbitrario, la ecuación se satisface sí solo si, el integrandes cero, con lo cual, esto lleva a la siguiente ecuación
- \begin{equation*}
-   \partial^2_t \phi - \partial^2_x \phi = 0
- \end{equation*}
- La cual es la ecuación de Klein Gordon, por tanto hemos encontrado el Lagrangeano que lleva a la ecuación de Klein Gordon, que es el Lagrangeano del campo escalar libre sin masa. Queda da tearea variar la acción de Klein Gordon pero con masa. 
- \begin{equation}
-   \mathfrak{L} = \frac{1}{2}\dot{\phi}^2 - \frac{1}{2}\phi^2' -\frac{m}{2}\phi^2
- \end{equation}
- ¿ Qué ganamos al haber encontrado un principio de acción para el campo escalar? Esto nos permite asociar al campo nociones de
- \begin{itemize}
+Como $\delta\phi$ es arbitrario:
+\begin{equation*}
+  \partial_t^2 \phi - \nabla^2 \phi = 0
+\end{equation*}
+Queda de tarea variar la acción de Klein-Gordon con masa:
+\begin{equation}
+  \mathfrak{L} = \frac{1}{2}(\partial_t\phi)^2 - \frac{1}{2}(\nabla\phi)^2 -\frac{m^2}{2}\phi^2  % Fixed mass term
+\end{equation}
+
+¿Qué ganamos al haber encontrado un principio de acción? Podemos asociar nociones de:
+\begin{itemize}
   \item Energía
-   \item Momento lineal
-   \item Momento Angular 
- \end{itemize}
- Todo ello via teorema de Noether, ¿ Cómo es el teorema de Noether en teoría de campos?, recordando lo que sucede en mecánica clásica, en teoría de campos debiera suceder algo como lo siguiente
- \begin{align*}
-   Q = \int dx \left(\frac{\partial\mathfrak{L}}{\partial \dot{\phi}(t,x)}\;\delta \phi(t,x) - b\right)
- \end{align*}
- En donde
- \begin{equation*}
-   B = \int dx b
- \end{equation*}
- \textbf{Teorema de Noether para campo escalar:}
- Se tiene la acción:
- \begin{align*}
-   I & = \int dt \int dx \mathfrak{L}(\dot{\phi},\phi,\phi') \\
-   & = \int d^2x \mathfrak{L}(\partial_\mu \phi,\phi)
- \end{align*}
- Supongamos que para que exista una variación infinitesimal del campo, $\delta \phi$ asociada a una transformación específica, tal que
- \begin{align*}
-   \delta I = I [\phi + \delta \phi ] - I [\phi] = \int d^2 x \partial_\mu B^\mu  \\
-   \partial_\mu B^\mu = \partial_tB^ + \partial_xB^x
- \end{align*}
- Diremos que cuando esto pase, la acción será quasi-invariante. Por otro lado, la acción también puede escribirse como
- \begin{align*}
-   I [\phi + \delta \phi] - I [\phi] & = \int d^2x \left[ \mathfrak{L}(\phi + \delta \phi, \partial_\mu \phi + \partial_\mu\delta \phi) - \mathfrak{L}(\phi,\partial_\mu \phi) \right] \\
-   & = \int d^2 x \left[ \mathfrak{L}(\phi,\partial_\mu \phi) + \frac{\partial \mathfrak{L}}{\partial \phi} \delta \phi + \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)}  \partial_\mu(\delta \phi) + O(\delta\phi^2) - \mathfrak{L}(\phi,\partial_\mu\phi)\right] \\
-   & = \int d^2 x \left[ \frac{\partial\mathfrak{L}}{\partial \phi} \delta \phi + \frac{\partial \mathfrak{L}}{\partial(\partial_\mu\phi)}\partial_\mu\delta \phi\right]
- \end{align*}
- recordemos que
- \begin{equation*}
-   \mathfrak{L}(\phi + \delta \phi, \partial_\mu \phi + \partial_\mu \delta\phi) = \mathfrak{L}(\phi + \delta \phi , \partial_t\phi + \partial_t, \partial_x \phi+ \partial_x \delta\phi) 
- \end{equation*}
- Ahora se toma la serie de Taylor en varias variables
- \begin{equation*}
-   f(x+\epsilon_1 , y + \epsilon_2 , z + \epsilon_3  ) = f(x,y,z) + \partial_x f \epsilon_1 + \partial_yf\epsilon_2 + \partial_z \epsilon_3 + \cancel{O(\epsilon_i^2)}
- \end{equation*}
- Lo aplicamos a la función densidad Lagrangeana
- \begin{equation*}
-   \mathfrak{L}(\phi + \delta \phi, \partial_\mu \phi + \partial_\mu \delta\phi) =  \mathfrak{L}(\phi,\partial_t\phi,\partial_x) + \frac{\partial \mathfrak{L}}{\partial \phi} \delta \phi + \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)}\partial_\mu \; \delta \phi  
- \end{equation*}
- Así, la variación de la acción queda tal que
- \begin{align*}
-   \delta I & = \int d^2x \left[ \frac{\partial\mathfrak{L}}{\partial \phi}\delta \phi + \frac{\partial \mathfrak{L}}{\partial (\partial_\mu \phi)}\partial \; \delta \phi \right] \\
-   & = \int d^2 x \left[ \frac{\partial \mathfrak{L}}{\partial \phi}\delta\phi + \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial (\partial_\mu \phi)} \delta\phi\right) - \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial(\partial_\mu\phi)} \right) \delta \phi \right] \\
-   & = \int d^2x \left[ \frac{\partial \mathfrak{L}}{\partial\phi} -\partial_\mu \frac{\partial \mathfrak{L}}{\partial(\partial_\mu\phi)}\right] \delta \phi + \int d^2 x \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)} \delta\phi\right)
- \end{align*}
-Ahora, usando la ecuación de Klein Gordon, tenemos el término On-Shell
-\begin{equation*}
-  \delta I = \int d^2x \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial(\partial_\mu\phi)}\delta\phi \right)
-\end{equation*}
-Pero nosotros habíamos asumido que $\delta\phi$ es tal que 
-\begin{equation*}
-  \delta I = \int d^2x \partial_\mu B^\mu
-\end{equation*}
-Por lo tanto
+  \item Momento lineal
+  \item Momento angular 
+\end{itemize}
+vía teorema de Noether. \\
+
+\textbf{Teorema de Noether para campo escalar:}
+La acción:
+\begin{align*}
+  I & = \int dt \int d^3x  \mathfrak{L}(\partial_t \phi, \nabla \phi, \phi) \\
+  & = \int d^4x  \mathfrak{L}(\partial_\mu \phi, \phi)
+\end{align*}
+Supongamos que existe una variación infinitesimal $\delta \phi$ tal que:
+\begin{align*}
+  \delta I = \int d^4x  \partial_\mu B^\mu \\
+  \partial_\mu B^\mu = \partial_t B^t + \nabla \cdot \vec{B}
+\end{align*}
+La variación de la acción es:
+\begin{align*}
+  \delta I & = \int d^4x \left[ \frac{\partial\mathfrak{L}}{\partial \phi}\delta \phi + \frac{\partial \mathfrak{L}}{\partial (\partial_\mu \phi)} \partial_\mu (\delta \phi) \right] \\
+  & = \int d^4x \left[ \left( \frac{\partial \mathfrak{L}}{\partial\phi} - \partial_\mu \frac{\partial \mathfrak{L}}{\partial(\partial_\mu\phi)} \right) \delta \phi + \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)} \delta\phi \right) \right]
+\end{align*}
+Usando las ecuaciones de movimiento y la quasi-invariancia:
 \begin{equation}
   \partial_\mu \left( \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)}\delta\phi - B^\mu \right) = 0
 \end{equation}
-El cual coresponde al \textbf{Teorema de Noether en teoría de campos} y da lugar a una corriente conservada la cual cumple con una ecuación de continuidad de la forma
+Esto da una corriente conservada:
 \begin{equation}
-  \partial_\mu j^\mu = 0
+  j^\mu = \frac{\partial \mathfrak{L}}{\partial(\partial_\mu \phi)}\delta\phi - B^\mu, \quad \partial_\mu j^\mu = 0
 \end{equation}
-en donde $j^\mu$ corresponde a la corriente conservada, ahora si se separa en componentes espaciales y temporales se tiene tal que
-\begin{equation}
-  \partial_t j^t + \partial_x j^x = 0
-\end{equation}
-e integramos en el espacio 
+Integrando en el espacio:
 \begin{align*}
-  \int_{-\infty}^\infty dx \left( \partial_tj^t + \partial_x j^x \right) &  = 0 \\
-  \frac{d}{dt} \left( \int_{-\infty}^\infty dx j^t \right) + int_{-\infty}^{\infty}dx \partial_x j^x & = 0 \\
-  \frac{dQ}{dt} + j^x \big|_{-\infty}^{\infty} & = 0
+  \int d^3x  \partial_t j^t + \int d^3x  \nabla \cdot \vec{j} & = 0 \\
+  \frac{dQ}{dt} + \oint_{\partial V} d\vec{S} \cdot \vec{j} & = 0
 \end{align*}
-Si $j^x= 0$ en el infinito $x\to \infty$ y $x\to -\infty$ entonces $Q$ es constante en el tiempo.  Ahora, si esto se hubiera hecho en un espacio de 3 dimensiones espaciales, la ecuación de continuidad es la siguiente
-\begin{equation}
-  \partial_t j^t + \nabla \cdot \vec{j} = 0
-\end{equation}
-Lo cual integrado en el espacio es tal que
-\begin{align*}
-  \int_V dV \partial_tj^t + \int_V dV \nabla \cdot \vec{j} & = 0 \\
-  \frac{dQ}{dt} + \int_{\partial S} d\vec{S} \cdot \vec{j} & = 
-\end{align*}
-  Se integró en un volumen $V$ el cual tiene un borde $\partial V$ y con un vector normal $\hat{n}$ tal que, la carga $Q$ está relacionada con la cantidad de flujo de $\vec{j}$ que fluye a través de la frontera del volumen a integrar. 
+donde $Q = \int d^3x  j^t$. Si el flujo en el infinito es cero, $Q$ se conserva.
+
 \end{document}
