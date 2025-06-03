@@ -1,0 +1,151 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Decimonovena clase}
+Se habló acerca de spinores de Dirac, los cuales relacionan un campo medido por dos obvseradores tal que
+\begin{equation*}
+  \tilde{\Psi}_a(x) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)\Psi(\Lambda^{-1}x)
+\end{equation*}
+En donde
+\begin{equation*}
+  S_{\mu \nu} = \frac{1}{4}\left[\gamma_{\mu} , \gamma_\nu  \right]
+\end{equation*}
+En donde el conmutador da $\left[ \gamma_\mu , \gamma_\nu \right] = 2\eta_{\mu \nu}I_4$
+\textbf{En la base chiral o base de Weyl:}
+Con $\omega_{ij} = -\epsilon_{ijk}\varphi^k$
+\begin{equation*}
+  \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right_{Rot})  = \begin{pmatrix}
+    e^{\frac{i}{2}\vec{\varphi}\cdot \vec{\sigma}} & O_{2\times 2} \\ O_{2\times 2} & e^{\frac{i}{2}\vec{\varphi}\cdot \vec{\sigma}}
+  \end{pmatrix}
+\end{equation*}
+Cuando elijo $\omega$ tal que esta transformación de Lorentz implementa un boost , con
+\begin{equation*}
+  \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right_{Boost}) = \begin{pmatrix}
+    e^{\frac{1}{2}\vec{\chi}\cdot \vec{\sigma}} & O_{2\times 2} \\ O_{2\times 2} & e^{-\frac{1}{2}\vec{\chi}\cdot\vec{\sigma}}
+  \end{pmatrix}
+\end{equation*}
+En donde $\omega_{0i}=-\chi_i$. \\
+Cuando se realiza una rotación en el plano (x,y) en $2\pi$ se tiene lo siguiente
+\begin{equation*}
+  \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{Rot (x,y) 2\pi} = -\begin{pmatrix}
+    1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 1
+  \end{pmatrix}
+\end{equation*}
+Es algo como, el spinor, cuando cambiamos de observador, devuelve menos el spinor
+\begin{equation*}
+  \tilde{\Psi}_a(\tilde{x}) = -\Psi_a(x) \Psi_a(x)
+\end{equation*}
+Lo que es algo como una cinta de Moebius, la cual solo tiene una única superficie. \\
+Podemos pensar los coeficientes de la exponencial como los coeficientes de un grupo actuando sobre el spinor, tal que $\omega^{\mu \nu}S_{\mu \nu}$ son lo componentes del espacio vectorial con su base respectiva. \\
+En general, los spinores $\Psi_a(x)$ son números complejos. Los $\Psi(x)$ son variales de Grassman complejas. Para convencernos de esto, cuantizaremos la teoría de Dirac y luego tomaremos el límite clásico.  \\
+Un spinor de Dirac está compuesto por dos spinores de dos componentes que no se mezclan entre ellos bajo una transformación de Lorentz.
+\begin{equation*}
+  \Psi_a(x) = \begin{pmatrix}
+    u(x) \\ v(x)
+  \end{pmatrix}
+\end{equation*}
+Y veremos que los $\Psi_a(x)$ transforman en la representación $\left( 1/2,0 \right)\oplus\left( 0,1/2 \right)$  del álgebra de Lorentz. En donde $u(x)$ es llamado spinor izquierdo y $v(x)$ es llamado spinor derecho. \\
+Las rotaciones están implementadas por matrices unitarias. 
+\begin{equation}
+  \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)^\dagger_{Rot} \left( e^{+\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{Rot} = I
+ \end{equation}
+ Hagamos el cálculo
+ \begin{align*}
+   \begin{pmatrix}
+     e^{\frac{-i}{2}\vec{\varphi}\cdot\vec{\sigma}^\dagget} & 0 \\ 0 & e^{\frac{-i}{2}\vec{\varphi}\cdot\vec{\sigma}}
+   \end{pmatrix}
+   \begin{pmatrix}
+     e^{\frac{i}{2}\vec{\varphi}\cdot \vec{\sigma}} & 0 \\  0 & e^{\frac{i}{2}\vec{\varphi}\vec{\sigma}} 
+   \end{pmatrix} 
+   & = 
+   \begin{pmatrix}
+       e^{-\frac{i}{2}\vec{\varphi}\cdot \vec{\sigma}} & 0 \\  0 & e^{\frac{-i}{2}\vec{\varphi}\cdot{\vec{\sigma}}} 
+     \end{pmatrix} 
+     \begin{pmatrix}
+       e^{\frac{i}{2}\vec{\varphi}\cdot\vec{\sigma}} & 0 \\ 0 &  e^{\frac{i}{2}\vec{\varphi}\cdot \vec{\sigma}}
+     \end{pmatrix} \\
+  & = \begin{pmatrix}
+    I_2 & 0_2 \\ 0_2 & I_2
+  \end{pmatrix} \\
+   & = I_4
+ \end{align*}
+Las matrices que implementan lo boosts no son unitarias. \\
+¿Tensión con la mecánica cuántica? \\
+Pues la unitaridad es fundamental en mecánica cuántica para que no se pierda la movilidad. \\
+No hay tensión pues veremos que la representación del grupo de Lorentz que actúa sobre $\mathfrak{H}(\varphi)$ el espacio de Hilbert del sistema cuántico  spinor de Dircac, espacio de infinita dimensión. \\
+Los grupos no compactos no tienen representaciones unitarias finito dimensionales. 
+\begin{equation}
+  g(\varphi_1,\varphi_2,\varphi_3,\chi_1,\chi_2,\chi_3)
+ \end{equation}
+ En donde $\varphi$ son las rotaciones en donde cada $\varphi$ vive entre $0\leq \varphi <2\pi$ y $\chi$  es la rapidity, con $-\infty < \chi_1 <\infty $ la cual cumple con la relación $v_x=c\tanh \chi_1$, con $-c<v_x<c$ Notemos que esta velocidad corresponde a la velocidad relativa entre dos observadores incerciales, con lo cual no hay observadores que viajan a la velocidad de la luz. \\
+El grupo de las rotaciones es $SO(3)$, tal que $SO(3)S^3/Z_2$. Ahora el álgebra 
+\begin{align*}
+  so(3)~ su(2) \rightarrow SU(2) = S^3
+\end{align*}
+Lo cual sí correpsonde a una 3-esfera. $U\in SU(2)$ tal que
+\begin{align*}
+  U = \begin{pmatrix}
+    a+ib & c+id \\ -c+id & a-ib
+  \end{pmatrix}
+\end{align*}
+Con,
+\begin{equation*}
+  a^2+b^2+c^2+d^2 = 1
+\end{equation*}
+y las matrices $U$ son unitarias, con lo cual $UU^\dagger=1$. Sea $O_{ij}\in SO(3)$, tal que 
+\begin{equation*}
+  O_{ij} = \frac{1}{2}tr \left( A^\dagger \sigma_i A \sigma_j \right)
+\end{equation*}
+En donde $A\in SU(2)$. Notemos que si en $U$ yo tomo cada número con su negativo, aparezco en el punto opuesto de la 3-esfera, punto el cual es llamado la antípoda. \\
+¿ Cómo evoluciona el campo de Dirac en el tiempo?\\
+Con ello la pregunta se refiere a ¿ Cuál es el principio de acción cuasi-invariante bajo: 
+\begin{itemize}
+  \item Rotaciones (Isotropía del espacio)
+  \item Boosts (Equivalencia de los observadores inerciales)
+  \item Traslaciones espaciotemporales (Homogeneidad del espacio-tiempo)
+\end{itemize}
+Para el campo de Dirac? \\
+Bajo Lorentz: 
+\begin{equation*}
+  \tilde{\Psi}_a(x) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab} \Psi_b(\Lambda^{-1}x) 
+\end{equation*}
+Bajo una traslación espacio-temporal $x^\mu\rightarrow \tilde{x}^\mu = x^\mu - a^\mu$
+\begin{equation*}
+  \tilde{\Psi}_a(\tilde{x}) \Psi_b(x) \rightarrow \tilde{\Psi}_a(x) = \Psi_a(x+a)
+\end{equation*}
+Notemos que esto es 4 veces la transformación bajo traslación para un campo escalar en la representación trivial del grupo de Lorentz.  \\
+El grupo de Poincaré = Lorentz y Traslaciones espacio-temporales. LLámele los generadores $P_{\mu \nu}$ y $P_\mu$ respectivamente, tal que
+ \begin{align*}
+   \left[ J , J \right] & = \eta J - \eta J + \eta J - \eta J \\
+   \left[ J , P \right] & = \eta P - \eta P \\
+   \left[ P_\mu , P_\nu \right] & = 0
+ \end{align*} 
+ \textbf{Campo escalar}: Bajo Lorentz $x^\mu \rightarrow \tilde{x}^\mu = \Lambda^\mu_\nu x^\nu$
+ \begin{equation*}
+   \tilde{\phi}(\tilde{x}) = e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu}}\phi(x) ,\; \text{Con}\; J_{\mu \nu} = O_{1\times 1} \Rightarrow \tilde{\phi}(\tilde{x}) = \phi(x) \Rightarrow \tilde{\phi}(x) = \phi(\Lambda^{-1})
+ \end{equation*}
+ Traslaciones $x^\mu \rightarrow \tilde{x}^\mu = x^\mu + a^\mu$
+ \begin{equation*}
+   \tilde{\phi}(\tilde{x}) = e^{\frac{1}{2}\varepsilon^\mu P_\mu} \phi(x), \; \text{Con}\; P_\mu = 0 \Rightarrow \tilde{\phi}(\tilde{x}) = \phi(x) \Rightarrow \tilde{\phi}(x) = \phi(x-a)
+ \end{equation*}
+ \textbf{Campo de Dirac}: Bajo Lorenz $x^\mu \rightarrow \tilde{x}^\mu = \Lambda^\mu_\mu x^\nu$
+ \begin{equation*}
+   \tilde{\Psi}_a(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab} \Psi_b(x)
+ \end{equation*}
+ Traslaciones $\x^\mu \rightarrow \tilde{x}^\mu = x^\mu + a^\mu$
+ \begin{equation*}
+   \tilde{\Psi}_a(\tilde{x}) = \left( e^{\frac{1}{2}\varepsilon^\mu P_\mu} \right)_{ab} \Psi_b(x)
+ \end{equation*}
+\textbf{Campo vectorial}: $A^\mu(x) = \left( \phi,\vec{A} \right)$. Bajo Lorentz $x^\mu \rightarrow \tilde{x}^\mu = \Lambda^\mu_\mu x^\nu$
+\begin{equation*}
+  \tilde{{A}}^\mu (\tilde{x}) = \Lambda^\mu_\nu A^\nu(x) = \left( e^{\frac{1}{2}\omega^{\alpha \beta}J_{\alpha \beta}} \right)^\mu_{\; \nu} A^\nu(x)
+\end{equation*}
+Con,
+\begin{equation*}
+   \left( J_{\alpha \beta} \right)^\mu_{\; \nu} = \eta_{\alpha \nu} \delta^\mu_\beta - \eta_{\mu \beta}\delta^\mu_\alpha
+\end{equation*}
+Traslaciones $x^\mu \rightarrow \tilde{x}^\mu = x^\mu + a^\mu$
+\begin{equation*}
+  \tilde{{A}}^\mu(\tilde{x}) = \left( e^{\frac{1}{2}\varepsilon^\alpha P_\alpha} \right)^\mu_{\;\nu} A^\nu(x) \Rightarrow \tilde{{A}}^\mu(\tilde{x}) = A^\mu(x)
+\end{equation*}
+\end{document}
+
