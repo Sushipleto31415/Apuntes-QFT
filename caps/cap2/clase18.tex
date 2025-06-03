@@ -2,5 +2,173 @@
 
 \begin{document}
 \section{Decimooctaba clase}
-Hola Javi
-\end{document}
+\textbf{Campo de Dirac:}
+\begin{equation*}
+  \tilde{x}^\mu = \Lambda^\mu_\nu x^\nu
+\end{equation*}
+\begin{equation*}
+  \Lambda_\nu^\mu = \delta^\mu_\nu + \omega^\mu_\nu + O(\omega^2)
+\end{equation*}
+$\Psi$ es un espinor de dirac si cumple con la siguiente condición
+\begin{equation}
+  \tilde{\Psi}_a(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab}\Psi_b(x)
+ \end{equation}
+ En lo cual $a$ son las filas y $b$ las columnas . Los 6 generadores S's son matrices de $4\times 4$, tal que:
+ \begin{equation}
+   \left( S_{\mu\nu} \right)_{ab} = \frac{1}{4} \left[ \gamma_\mu , \gamma_\nu \right]_{ab}  = \frac{1}{4} \left( \left( \gamma_\mu \right)_{ac} \left( \gamma_\nu \right)_{cb} - \left( \gamma_\nu \right)-{ac} \left( \gamma_\mu \right)_{cb} \right)
+  \end{equation}
+  y las matrices de Dirac satisfacen el álgebra de Clifford:
+  \begin{align*}
+    \{ \gamma_\mu , \gamma_\nu  \} & = 2\eta_{\mu \nu}1_\mu
+    \left( \gamma_\mu \right)_{ac} \left( \gamma_\nu \right)_{cb} + \left( \gamma_\nu \right)_{ac} \left( \gamma_\mu \right)_{cb} & = 2\eta_{\mu \nu} \delta_{ab}
+  \end{align*}
+  ¿Cuántos conjuntos de 4 matrices $\gamma_\mu$ existen? \\
+  En dimensión 3+1, módulo conjugación existe solo un conjunto de matrices de Dirac.
+  \begin{equation*}
+    \gamma_\mu = A \Gamma_\mu A^{-1}
+  \end{equation*}
+  Nos referimos a distintos conjuntos de matries de Dirac como distintas bases y no distintas representaciones. \\
+  \textbf{Base Chiral  base de Weyl:}
+  \begin{align*}
+    \gamma^\mu & = \left( \gamma^0, \gamma^1 , \gamma^2 , \gamma^3 \right) = \left( \gamma^0, \gamma^i \right) \\
+    \gamma^o & = \begin{pmatrix}
+      O_{2\times 2} & 1_{2\times 2} \\
+      1_{2 \times 2} & O_{2\times 2}
+    \end{pmatrix} \quad, \gamma^i = \begin{pmatrix}
+      O_{2\times 2} & \sigma^i \\
+      -\sigma^i & O_{2\times 2}
+    \end{pmatrix} \\
+    \left[ S^{\mu\nu} , S^{\rho \sigma} \right] & = \eta^{\nu \rho} S^{\mu \sigma} - \eta^{\rho \mu} S^{\nu \sigma} + \eta^{\nu \sigma}S^{\rho \mu} - \eta^{\sigma \mu} S^{\rho \nu}
+  \end{align*}
+  En donde $\sigma$ son las matrices de Pauli,
+  \begin{align*}
+    \sigma^1 & = \begin{pmatrix}
+      0 & 1 \\ 1 & 0
+    \end{pmatrix}
+    \\
+    \sigma^2 = \begin{pmatrix}
+      0 & -i \\ i & 0
+    \end{pmatrix}
+    \\
+    \sigma^3 & = \begin{pmatrix}
+      1 & 0 \\ 0 & -1
+    \end{pmatrix}
+  \end{align*}
+  Ahora, el campo
+  \begin{equation*}
+    \tilde{{A}}_\mu(\tilde{x}) = \Lambda^\mu_\mu A_\nu(x)
+  \end{equation*}
+  Dará origen, en su cuantización al fotón
+  \begin{equation*}
+    \tilde{{A}}_\mu (x) = \Lambda_\mu^\nu A_\nu(\Lambda^{-1}x)
+  \end{equation*}
+  Y en cambio, el campo de Dirac, dará origen a los electrones, neutrinos etc( buscar bien )
+  \begin{equation*}
+    \tilde{\Psi}_a(x) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab} \Psi_b (\Lambda^{-1}x)
+  \end{equation*}
+  En cambio, el campo escalar transforma en la representación trivial del grupo de Lorentz. \\
+  \textbf{Definición general:} \\
+  Diremos que un campo $\Phi_A(x)$ transforma en una representación dada del grupo de Lorentz si bajo la transformación de Lorentz $\tilde{x}^\mu(x) = \Lambda^{\mu}_\nu x^\nu $ 
+  \begin{equation}
+    \tilde{\Phi}_A(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu}} \right)_{AB}\Phi_B(x)
+   \end{equation}
+   si se cumple que
+   \begin{equation}
+     \left[ J_{\mu \nu}, J_{\alpha \beta} \right] = \eta J   \eta J + \eta J - \eta J 
+    \end{equation}
+    Entonces, si el campo se relaciona mediante transformación con la forma vista (la exponencial), es entonces un campo relativista. \\
+    Recordar escribir con los índices. Ninguna partícula del modelo estándar se escapa de una representación de este tipo, ya que todas las partículas que hemos observado vienen de la cuantización de un campo que transforma en una representación del grupo de Lorentz. Libro de RG (Hawking Anellies). \\
+    Campo escalar
+    \begin{equation*}
+      \tilde{\phi}(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu}} \right){1 \times 1}\phi(x)
+    \end{equation*}
+    Los 6 $J_{\mu \nu}=0$, la cual corresponde a la representación trivial. \\
+    N campos escalares
+    \begin{equation*}
+      \tilde{\phi}_i (\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}J_{\mu \nu}} \right)_{ij} \phi_i(x), \quad i=1,\dots N
+    \end{equation*}
+    En donde $J{\mu \nu}^{N\times N} = O_{N\times N}$. \\
+    \textbf{Campo Spinorial de Dirac:}
+ \begin{equation*}
+   \tilde{\Psi}_a(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu }S_{\mu \nu}} \right)_{ab} \Psi_b(x)
+ \end{equation*} 
+ Para lo cual hay 6 $S_{\mu \nu}$ de $4\times 4$, con $S_{\mu \nu} = \frac{1}{4} \left[ \gamma_\mu , \gamma_\nu \right]$ y $\{\gamma_\mu , \gamma_\nu\} = 2\eta_{\mu \nu }1_\mu$. Los $S_{\mu\nu}$ forman la representación 
+ \begin{equation}
+   \left( \frac{1}{2} , 0  \right) \oplus \left( 0,\frac{1}{2} \right)
+  \end{equation}
+  \textbf{Campo electromagnético:} $ \left( \frac{1}{2}, \frac{1}{2} \right) $
+  \begin{equation*}
+    \tilde{{A}}^\mu (\tilde{x}) = \Lambda^\mu_\nu A^\nu(x) = \left( e^{\frac{1}{2}\omega^{\alpha \beta}J_{\alpha \beta}} \right)^\mu_\nu A^\nu(x)
+  \end{equation*}
+  Consideremos que $\Lambda$ es un generador que difiere de la identidad por infinitésimo
+ \begin{equation*}
+   \Lambda^\mu_\nu = \delta_\nu^\mu + \omega^\mu_\nu  = \delta^\mu_\nu + \omega^{\alpha \beta} \left( J_{\alpha \beta} \right)^\mu_\nu
+ \end{equation*} 
+ Por lo tanto, 
+ \begin{align*}
+   \omega^\mu_\nu & = \frac{1}{2}\omega^{\alpha \beta} \left( J_{\alpha \beta} \right)^\mu_\nu = \frac{1}{2}\omega^{\alpha \beta} \left( \eta_{\beta \nu} \delta^\nu_\alpha - \eta_{\alpha \nu}\delta^{\mu}_\beta  \right) \\
+   & = \frac{1}{2}\omega^\mu_\nu + \frac{1}{2}\omega^{\beta \alpha} \eta_{\alpha \nu} \delta^\mu_\beta
+ \end{align*}
+ Calculemos estas matrices
+ \begin{align*}
+   \left( J_{01} \right)^\mu_\nu & = \begin{pmatrix}
+     \left( J_{01} \right)^0_0 & \left(J_{01} \right)^0_1 & \left( J_{01} \right)^0_2 & \left( J_{01} \right)^0_3 \\
+     \left( J_{01} \right)^1_0 & \left( J_{01} \right)^1_1 & \left( J_{01} \right)^1_2 & \left( J_{01} \right)^1_3 \\
+     \dots \\
+     \dots
+   \end{pmatrix} \\
+   & = \eta_{0\nu}\delta^\mu_1 - \eta_{\1\nu}\delta^\mu_0 \\
+   & = \begin{pmatrix}
+     0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0
+   \end{pmatrix}
+ \end{align*}
+\textbf{Rotaciones:}
+\begin{equation}
+  S_{Rot}  = \begin{pmatrix}
+    e^{i\vec{\varphi}\cdot \frac{\vec{\sigma}}{2}} & O_{2\times 2} \\ 
+    O_{2\times 2} & e^{i\vec{\varphi}\cdot \frac{\vec{\sigma}}{2}}
+  \end{pmatrix}
+ \end{equation}
+ Tal que la transformación infinitesimal
+ \begin{equation}
+   \omega_{ij} = -\epsilon_{ijk} \varphi^k\left\{ \begin{aligned}
+     \omega_{12} & = -\varphi^3 \\
+     \omega_{23} & = -\varphi^1 \\
+     \omega_{31} & = -\varphi^2
+   \end{aligned} \right.
+  \end{equation}
+  \textbf{Boosts:}
+  \begin{equation}
+    S_{Boost} = \begin{pmatrix}
+      e^{\vec{x}\cdot \frac{\vec{\sigma}}{2}} & O_{2\times 2} \\
+      O_{2\times 2} & e^{-\vec{x}\cdot \frac{\vec{\sigma}}{2}}
+    \end{pmatrix}
+   \end{equation}
+A lo cual, la transformación infinitesimal $\omega$ será
+\begin{equation}
+  \omega_{0i} = -\chi_i \left\{ \begin{aligned}  \omega_{01} & = -\chi_1 \\
+  \omega_{02} & = -\chi_2 \\
+  \omgega_{03} & = -\chi_3
+  \end{aligned} \right. 
+ \end{equation}
+\begin{equation*}
+  \begin{pmatrix}
+    \tilde{\Psi}_1(\tilde{x}) \\
+     \tilde{\Psi}_2(\tilde{x}) \\
+ \tilde{\Psi}_3(\tilde{x}) \\
+ \tilde{\Psi}_4(\tilde{x})
+  \end{pmatrix} = \begin{pmatrix}
+    e^{i\vec{\varphi}\cdot \frac{\vec{\sigma}}{2}} & O \\
+    0 & e^{i\vec{\varphi}\cdo \frac{\vec{\sigma}}{2}}
+  \end{pmatrix} \begin{pmatrix}
+    \Psi_1(x) \\
+    \Psi_2(x) \\
+    \Psi_3(x) \\
+    \Psi_4(x)
+  \end{pmatrix}
+\end{equation*}
+Por lo tanto, las matrices
+\begin{equation}
+  \left( e^{i\vec{\varphi}\cdot \frac{\vec{\sigma}}{2}}_{Rot}  e^{\vec{\chi}\cdot \frac{\vec{\sigma}}{2}}_{Boosts}\right)_{(1/2,0)} | \left( e^{i\vec{\varphi}\cdot\frac{\vec{\sigma}}{2}}_{Rot} , e^{-\vec{\chi}\cdot \frac{\vec{\sigma}}{2}}_{Boosts} \right)_{(0,1/2)}
+ \end{equation}
+\end{documeunt}
