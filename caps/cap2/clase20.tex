@@ -1,0 +1,178 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Duodecima Clase}
+Este es un curso de teoría de campos relativista, con lo cual queremos definir una acción invariante ante el grupo de Poincaré. Con lo cual, la acción del campo escalar está dada por
+\begin{equation}
+  I[\phi] = \int d^4x \left( \frac{1}{4} \partial_\mu \phi \partial^\mu \pyi - \frac{m^2}{2}\phi^2 \right)
+ \end{equation}
+ Tal que
+ \begin{align}
+   \delta_{Tras} \phi & = -a^\mu \partial_\mu \phi \\
+   \delta_{Rot}  \phi & = -\omega^\mu_{\; \nu} x^\nu \partial_\mu \phi
+ \end{align}
+ Ahora, para un campo escalar complejo, la acción está dada por
+ \begin{equation}
+   I[\varphi , \varphi*] = \int d^4x \left( \partial_\mu \varphi \partial^\mu \varphi* - m^2 \varphi \varphi* \right)
+  \end{equation}
+  Tal que
+  \begin{align}
+    \delta_{Tras} \varphi  & = -a^\mu\partial_\mu \varphi \\
+    \delta_{Tras} \varphi* & = -a^\mu \partial_\mu \varphi* \\
+    \delta_{Lorentz} \varphi & = -\omega^\mu_{\; \nu} x^\nu \partial_\mu \varphi \\
+    \delta_{Lorentz} \varphi* & = -\omega^\mu_{\; \nu} x^\nu \partial_\mu \varphi*
+    \delta_{U(1)} \varphi & = i\alpha \varphi \stackel{\text{infinitesimal}}{\leftarrow} \varphi(x)\rightarrow \tilde{\varphi}(x) = e^{i\alpha} \varphi(x) \\
+    \delta_{U(1)} \varphi* & = -i\alpha \varphi* \quad \varphi* (x) \rightarrow \tilde{\varphi}*(x) = e^{-i\alpha}\varphi(x)
+  \end{align}
+Transformacion interna. \\
+\textbf{Teorema de Coleman-Mandula (Ver paper para revisar los postulados)} $\Rightarrow$ Las simetrías internas conmutan con las simetrías del espacio-tiempo. \\
+\textbf{Campo de Dirac:} 
+\begin{equation*}
+  \tilde{\Psi}_a (\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab} \Psi_b(x)
+\end{equation*}
+En lo cual, los objetos $S_{\mu \nu}$ cumplen con lo siguiente
+\begin{align*}
+  S_{\mu \nu} = \frac{1}{4} \left[ \gamma_\mu , \gamma_\nu \right] , \quad \{\gamma_\mu , \gamma_\nu\} = 2\eta_{\mu \nu} I_{n\times n } \\
+  \tilde{x}^\mu = \Lambda^\mu_{\; \nu} x^\nu = \left( \delta^\mu_{\; \nu} + \omega^\mu_{\; \nu} + O(\omega^2)x^\nu \right) \\
+  \tilde{\Psi}_a(\tilde{x}) = \left( e^{\frac{1}{2}\omega^{\mu \nu} S_{\mu \nu}} \right)_{ab}\Psi_b(\Lambda^{-1}\tilde{x})
+\end{align*}
+Lo cual podemos escribir también como
+\begin{align*}
+  \tilde{\Psi}_a(x)  &= \left( e^{\frac{1}{2}\omega^{\mu \nu}S_{\mu \nu}} \right)_{ab} \Psi_b(\Lambda^{-1}x) \\
+  \tilde{\Psi}_a(x) & = \left( \delta_{ab} + \frac{1}{2}\omega^{\mu \nu} \left( S_{\mu \nu} \right)_{ab} \right) \left( \Psi_b(x) - \omega^\alpha_{\; \beta} x^\beta \partial_\alpha  \Psi_b \right) \\
+  & = \Psi_a(x) + \frac{1}{2} \omega^{\mu \nu} \left( S_{\mu \nu} \right)_{ab} \Psi_b(x) - \omega^\alpha_\beta x^\beta \partial_\alpha \Psi_a(x) + O(\omega^2) \\
+  & = \Psi_a(x) + \frac{1}{2}\omega^{\mu \nu} \left( S_{\mu \nu} \right)_{ab} \Psi_b(x) + \frac{1}{2} \omega^{\alpha \beta} L_{\alpha \beta} \Psi_a(x)
+\end{align*}
+Con lo cual, la transoformación de Lorentz infinitesimal actuando sobre el campo spinorial es
+\begin{equation}
+  \delta_{Lorentz} \Psi_a(x) = \frac{1}{2}\omega^{\alpha \beta} \left[ \left( S_{\alpha\beta} \right)_{a b }  + \delta_{ab} L_{\alpha \beta} \right]\Psi_b(x)
+ \end{equation}
+ Lo cual representa la transoformación de Lorentz actuando sobre un campo con spín no trivial, donde $L_{\alpha \beta}  = x_\alpha \partial_\beta - x_\beta \partial_\alpha$. 
+ Recordemos que por teoría de grupos
+ \begin{equation}
+   (R_a \otimes I_b + I_a \otimes R_b ) \vec{v}
+  \end{equation}
+  La traslación espacio-temporal $x^\mu \rightarrow \tilde{x}^\mu= x^\mu + \epsilon^\mu$ actúa sobre el campo de Dirac de la siguiente forma
+  \begin{equation}
+    \tilde{\Psi}_a(\tilde{x}) = \Psi_a(x) = \left( e^{\epsilon^\mu P_\mu} \right)_{ab} \Psi_b(x)
+   \end{equation}
+  Con $\left( P_\mu \right)_{ab} = 0$ entonces $=\delta_{ab}\Psi_b(x) = \Psi_a$ . Ahora
+  \begin{align*}
+    \tilde{\Psi}_a(\tilde{x})  &=\Psi_a\left(\tilde{x}^\mu - \epsilon^\mu \right) \\
+    & = \Psi_a(x^\mu - \epsilon^\mu ) = \Psi_a(x) - \epsilon^\mu \frac{\Psi_a}{\partial x^\mu} + O(\epsilon^2) \\
+    \Rightarrow 6 \delta_{Trans} \Psi_a(x) = \tilde{\Psi}_a(x) - \Psi_a(x) = -\epsilon^\mu \parial_\mu \Psi_a(x)
+  \end{align*}
+  \textbf{Conjugado de Dirac:}
+  Es una acción sobre el campo spinorial tal que
+  \begin{equation*}
+    \Psi \rightarrow \square \rightarrow \bar{\Psi}
+  \end{equation*}
+Y se define el conjugado de Dirac del campo spinorial $\Psi$ como
+\begin{equation}
+  \bar{\Psi} := \Psi^\dagger \gamma^0
+ \end{equation}
+ En la base quiral o base de Weil:
+ \begin{equation}
+   \gamma^0 = \begin{pmatrix}
+     O_2 & I_2 \\ I_2 & O_2
+   \end{pmatrix} = \begin{pmatrix}
+     0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0
+   \end{pmatrix}
+  \end{equation}
+  Pero, qúe es $\Psi^\dagger$ ?, pensemos a $\Psi$ como una matriz columna, tal que
+  \begin{align*}
+    \Psi = \begin{pmatrix}
+      \Psi_1(x) \\
+      \Psi_2(x) \\
+      \Psi_3(x) \\
+      \Psi_4(x)
+    \end{pmatrix}
+  \end{align*}
+  Ahora, el dagado será el traspuesto complejo conjugado
+ \begin{align*}
+   \Psi^\dagger \gamma^0 & = \left( \Psi_1*(x) , \Psi_2*(x) , \Psi_3*(x) , \Psi_4*(x) \right) \begin{pmatrix}
+     0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0
+   \end{pmatrix} \\
+  & = \left( \Psi_3*(x) , \Psi_4*(x) , \Psi_1*(x) , \Psi_2*(x)\right) \\
+   \bar{\Psi}_1(x) ? \Psi_3*(x) , \quad \bar{\Psi}_2(x) = \Psi_4* \\
+   \bar{\Psi}_3(x) = \Psi_1*(x) , \quad \bar{\Psi}_4(x) = \Psi_2*(x)
+ \end{align*} 
+ Pero porqué definimos todo esto?, recordemos que para un campo escalar complejo que el término de masa está dado por $\varphi*(x) \varphi(x)$ este es un número real e invariante de Lorentz, pero si quisiéramos hacer lo mismo pero para campos spinoriales, el hacer $\Psi^\dagger(x)\Psi(x)$ no es invariante de Lorentz, pero sí lo será $\bar{\Psi}(x)\Psi(x)$, el cuál si será invariante de Lorentz y por ende será nuestro término de masa. \\
+ \\
+ textbf{La acción invariante de Poincaré para el campo de Dirac es la siguiente}
+ \begin{equation}
+   \boxed{ I[\Psi, \bar{\Psi}] = \int d^4 x \bar{\Psi}(x) \left( i\gamma^\mu \frac{\partial}{\partial x^\mu} - m \right)\Psi(x) }
+  \end{equation}
+  Ecuaciones de Euler-Lagrange
+  \begin{equation}
+    \delta_{\bar{\Psi}} I = 0 = I[\Psi, \bar{\Psi} + \delta \bar{\Psi}] - I[\Psi,\bar{\Psi}] = \int d^4x \left( \bar{\Psi} + \delta \bar{\Psi} \right) \left( i \cancel{\Partial} - m \right)  - \int d^4 x\bar{\Psi} \left( i\cancel{\partial} - m \right)\Psi 
+   \end{equation}
+   Ahora, luego de realizar la distributividad, tenemos que
+\begin{equation*}
+  \delta_{\bar{\Psi}} = \int d^4 x \delta \bar{\Psi} \left( i\cancel{\partial} - m \right)\Psi \Rightarrow  \left( i \gamma^\mu \partial_\mu - m I_4  \right) \Psi = 0
+\end{equation*} 
+Con lo cual, hemos llegado a la ecuación de Dirac
+\begin{equation}
+  \boxed{ (i\gamma^\mu \partial_\mu - m I_4 ) \Psi = 0 }
+ \end{equation}
+ \textbf{Claim:} $\bar{\Psi}(x) \Psi(x)$ es un escalar de Lorentz. \\
+ \textbf{Transformación finita:} $\Psi(x) \rightarrow \tilde{\Psi}_a(x) = D[\Lambda]_{ab} \Psi_b(\Lambda^{-1}x)$
+ Con
+ \begin{align*}
+   D [\Lambda]_{ab} & = \left( e^{\frac{1}{2}\omega^{\mu \nu}L_{\mu \nu}} \right)_{ab} \\
+   \rightarrow \tilde{\Psi}(x) & = D[\Lambda] \Psi(\Lambda^{-1}x)
+ \end{align*}
+ Dado esto, ¿ Cómo transforma bajo transformaciones de Lorentz el conjugado de Dirac de un spinor?
+ \begin{equation*}
+   \Psi^\dagger (x)\gamma^0 = : \bar{\Psi}(x) \rightarrow \tilde{\bar{\Psi}} (x)
+ \end{equation*}
+ Pero queremos escribi el $\tilde{\bar{\Psi}}$ en términos de $\bar{\Psi}$, tal que
+ \begin{align*}
+   \tilde{\bar{\Psi}} & = \tilde{\Psi}(x)^\dagger \gamma^0 = \left( D[\Lambda] \Psi(\Lambda^{-1}x) \right)^\dagger \gamma^0 \\
+    & = \Psi^\dagger (\Lambd^{-1}x)\gamma^0 \gamma^0 D^\dagger[\Lambda^{-1}x] \gamma^0, \quad \left( \gamma^0 \right)^2 = 1 \\
+    & = \bar{\Psi}(\Lambda^{-1}x) \gamma^0 D^\dagger[\Lambda] \gamma^0, \quad \bar{\Psi}(\Lambda^{-1}x) = \Psi^\dagger(\Lambda^{-1}x)\gamma^0
+ \end{align*}
+ Con lo cual
+ \begin{equation}
+   \tilde{\bar{\Psi}}(x) = \bar{\Psi}(\Lambda^{-1}x) \gamma^0 D^\dagger[\Lambda]\gamma^0 
+  \end{equation}
+  Por lo tanto,
+  \begin{align*}
+    \tilde{\bar{\Psi}} \tilde{\Psi} & = \left( \bar{\Psi}(\Lambda^{-1}x)\gamma^0 D^\dagger [\Lambda] \gamma^0  \right) \left( D[\Lambda] \Psi(\Lambda^{-1}x) \right) \\
+    &  = \bar{\Psi}(\Lambda^{-1}x) \left( \gamma^0 D^\dagger [\Lambda] \gamma^0 D[\Lambda] \right) \Psi(\Lambda^{-1})
+  \end{align*}
+  Pero, $\gamma^0 D^\dagger[\Lambda] \gamma^0 D[\Lambda] = I_4$ 
+  \begin{equation*}
+    = \bar{\Psi}(\Lambda^{-1}x) \Psi(\Lambda^{-1}x)
+  \end{equation*}
+  Como un escalar
+  \begin{equation*}
+    \tilde{F}(x) = F (\Lamnda^{-1}x)
+  \end{equation*}
+  Necesitamos mostrar que
+\begin{equation}
+  \gamma^0 D^\dagger[\Lambda] \gamma^0 D[\Lambda] = I_4
+ \end{equation}    
+Calculamos,
+\begin{align*}
+  D^\dagger[\Lambda] \gamma^0 D[\Lambda] = \left( e^{\frac{1}{2}\omega \cdot S} \right)^\dagger \gamma^0 \left( e^{\frac{1}{2}\omega \cdot S} \right) \\
+  & = e^{\frac{1}{2}\omega \cdot S^\dagger} \gamma^0 e^{\frac{1}{2}\omega \cdot S} \\
+  & = \left( I + \frac{1}{2}\omega \cdot S^\dagger \right) \gamma^0 \left( I + \frac{1}{2}\omega \cdot S \right) \\
+  & = \left( I + \frac{1}{2}\omega^{\alpha \beta} S_{\alpha \beta}^\dagger \right) \gamma^0 \left( I + \frac{1}{2}\omega^{\mu \nu} S_{\mu \nu} \right) \\
+  & = \gamma^0 + \frac{1}{2}\omega^{\alpha \beta} S^\dagger_{\alpha \beta} \gamma^0 + \gamma^0 \frac{1}{2}\omega^{\mu \nu}S_{\mu \nu} + O(\omega^2) 
+\end{align*}
+Así, como \textbf{TAREA}
+\begin{align*}
+  \gamma^\dagger_\mu \gamma^0 = \gamma^0 \gamma_\mu 
+\end{align*}
+Entonces, calculamos
+\begin{align*}
+  S^\dagger_{\alpha \beta} \gamma^0  & = \frac{1}{4} \left[ \gamma_{\alpha}, \gamma_{\beta} \right]^\dagger \gamma^0 \\
+  & = \frac{1}{4} \left( \gamma_\beta^\dagger \gamma_\alpha^\dagger - \gamma^\dagger_\alpha \gamma^\dagger_\beta \right)\gamma^0 \\
+  & = \gamma^0 \frac{1}{4} \left( \gamma_\beta \gamma_\alpha - \gamma_\alpha \gamma_\beta \right) \\
+  & = \gamma^0 \frac{1}{4} \left[ \gamma_\beta , \gamma_\alpha \right] \\
+  & = - \gamma^0 \frac{1}{4} \left[ \gamma_\alpha , \gamma_\beta \right] \\
+  & = - \gamma^0 S_{\alpha \beta}
+\end{align*}
+Con lo cual, hemos demotrado que el término cuadrático, de masa, es un invariante de Lorentz.
+\end{document} 

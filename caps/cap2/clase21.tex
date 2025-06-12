@@ -1,0 +1,159 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Duodecimo primera clase}
+Se mostró que la siguiente combinación para un espinor de Dirac transforma como un escalar de Lorentz.
+\begin{equation*}
+  \tilde{\Phi}(x)=\bar{\Psi}(x)\Psi(x) = \bar{\Psi}(\Lambda^{-1}x)\Psi(\Lambda^{-1})
+\end{equation*}
+En donde el conjugado de Dirac por un espinor está definido por lo siguiente
+\begin{align*}
+  \bar{Psi}(x)\Psi(x) & = \Psi^\dagger \gamma^0 \Psi(x) \\
+  & = \left( \Psi_1* , \Psi_2* , \Psi_3* , \Psi_4* \right) \begin{pmatrix}
+    0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0
+  \end{pmatrix} \begin{pmatrix}
+    \Psi_1(x) \\
+    \Psi_2(x) \\
+    \Psi_3(x) \\
+    \Psi_4(x)
+  \end{pmatrix}
+\end{align*}
+Por lo tanto, con la siguiente transformación
+\begin{equation*}
+  \Lammbda = I + \omega
+\end{equation*}
+en su versión infinitesimal
+\begin{equation*}
+  \delta \Phi(x) = -\omega^\mu_{\; \nu} x^\nu \partial_\mu \Phi(x)
+\end{equation*}
+Tal que, la variación de la acción bajo dicha transformación infinitesimal está dada por lo siguiente
+\begin{align*}
+  I[\Psi, \bar{\Psi}] & = \int d^4x \dots -m\bar{\Psi}\Psi \\\
+  & = \int d^4x \dots - m\Phi(x) \\
+  \delta_{Lorentz}I & = \int d^4x \dots - m\delta_{\Lorentz}\Phi(x) \\
+  & = \int d^4x \dots + m\omega^\mu_{\; \nu} x^\nu \partial_\mu \Phi(x) \\
+  & = \int d^4x \dots - \partial_\mu \left(m \omega^\mu_{\; \nu} \Phi \right) - m \omega^\mu_{\;\nu} \partial_\mu x^\nu \Phi
+\end{align*}
+Con lo cual al haber términos de borde hemos encontrado que la acción es Quasi-invariante bajo transformaciones de Lorentz. 
+\begin{equation*}
+  I[\Psi,\bar{\Psi}] = \int d^4x \bar{\Psi}\left( i\gamma^\mu \partial_\mu - m \right)\Psi
+\end{equation*}
+Que dará origen a la ecuación de Dirac.\\ 
+\textbf{Afirmación:} $\bar{\Psi}\gamma^\mu \Psi$ transforma como un vector de Lorentz, es decir, bajo $\tilde{x}^\mu = \Lambda^\mu_{\; \nu}x^\nu$.
+\begin{equation*}
+  \bar{\Psi}(x) \gamma^\mu \Psi(x) = \Lambda^\mu_{\;\nu} \bar{\Psi}(\Lambda^{-1}x)\gamma^\nu \Psi(\Lambda^{-1}x)
+\end{equation*}
+recuerdo de cómo transforma bajo Lorentz el cuadri-potencial electormagnético
+\begin{equation*}
+  \tilde{{A}}^\mu(\tilde{x}) = \Lambda^\mu_{\;\nu} A^\mu(x) \Rightarrow \tilde{{A}}^\mu(x) \Lambda^\mu_{\;\nu}A^\nu(\Lambda^{-1}x)
+\end{equation*}
+\textbf{Demostración:}
+Sabemos que, bajo una transformación de Lorentz:
+\begin{equation*}
+  \tilde{\Psi}(x) = e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} \Psi(\Lambda^{-1}x) = D[\Lambda] \Psi(\Lambda^{-1}x)
+\end{equation*}
+para esto se debe cumplir lo siguiente
+\begin{align*}
+  S_{\alpha \beta} = \frac{1}{4}[\gamma_\alpha, \gamma_\beta],\quad \text{Donde}\quad \{\gamma_\alpha , \gamma_\beta\} = 2\eta_{\alpha \beta}1_4
+\end{align*}
+Desarollamos la expresión
+\begin{align*}
+  \bar{\Psi}(x) = \tilde{\Psi}^\dagger \gamma^0 = & \left( D[\Lambda] \Psi(\Lambda^{-1})\right^\dagger \gamma^0 \\
+  & = \Psi(\Lambda^{-1}x)^\dagger D^\dagger[\Lambda x] \gamma^0 \\
+  & = \Psi^\dagger(\Lambda^{-1}x) \gamma^0 \gamma^0 D^\dagger[\Lambda]\gamma^0 \\
+  \tilde{\bar{\Psi}}& = \bar{\Psi}(\Lambda^{-1}x)\gamma^0 D^\dagger[\Lambda]\gamma^0
+\end{align*}
+Ahora como $\{\gamma^0 , \gamma^0\} = 2\eta^{00}1_4$ entonces
+\begin{align*}
+  \left( \gamma^0 \right)^2 + \left( \gamma^0 \right)^2 = 2 \; 1_4 \Rightarrow l(\gamma^0)^2 = 1_4 \\
+  \gamma^0 D^\dagger[\Lambda] \gamma^0 = \gamma^0 \left( e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} \right)^\dagger \gamma^0 \\
+  & = \gamma^0 e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha\beta}^\dagger} \gamma^0, \quad S_{\alpha\beta} = \frac{1}{4}[\gamma_\alpha , \gamma_\beta] \\
+  & = \gamma^0 \left( I + \frac{1}{2}\omega^{\alpha\beta} \frac{1}{4} [\gamma_\alpha , \gamma_\beta]^\dagger + O(\omega^2) \right)\gamma^0 \\
+  & = I + \frac{1}{8} \omega^{\alpha \beta}\gamma^0  \left( \gamma_\alpha \gamma_\beta - \gamma_\beta \gamma_\alpha \right)^\dagger \gamma^0 \\
+  & = I + \frac{1}{8} \omega^{\alpha\beta} \gamma^0 \left( \gamma_\beta^\dagger \gamma_\alpha^\dagger - \gamma_\alpha^\dagger \gamma_\beta^\dagger \right)\gamma^0 \\
+\end{align*}
+Término 1: $\gamma^0 \gamma^\dagger_\beta \gamma_\alpha^\dagger = \gamma^0 \damma^0 \gamma_\beta \gamma_\alpha = \gamma_\alpha \gamma_\beta$, en donde se ha usado que $\gamma^0 \gamma_\alpha = \gamma^\dagger_\alpha \gamma^0$. \\
+Término 2: 
+\begin{align*}
+  \gamma^0 \gamma^\dagger_\alpha \gamma^\dager_\beta \gamma^0  = \gamma^0 \gamma^0 \gamma_\alpha \gamma_\beta = \gamma_\alpha \gamma_\beta
+\end{align*}
+Con lo cual
+\begin{align*}
+  \gamma^0 D[\alpha]^\dagger \gamma^0 & = I + \frac{1}{8}\omega^{\alpha \beta} \left( \gamma_\beta \gamma_\alpha - \gamma_\alpha \gamma_\beta \right) + O(\omega^2) \\
+  & = I - \frac{1}{2} \omega^{\alpha \beta} \frac{1}{4} \left( \gamma_\alpha \gamma_\beta - \gamma_\beta \gamma_\alpha \right)  \\\
+  & = I - \frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta} \\
+  & = e^{\frac{-1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} \\
+  & = D[\Lambda^{-1}] \\
+  & = D[\Lambda]^{-1}
+\end{align*}
+Así se tiene que
+\begin{align}
+  \tilde{\Psi}(x) &= D[\Lambda] \Psi(\Lambda^{-1}) \\
+  \tilde{\bar{\Psi}} (x) &  = \bar{\Psi}(\Lambda^{-1}x)D[\Lambda^{-1}]
+\end{align}
+y luego
+\begin{align*}
+  \bar{\Psi}(x)\gamma^\mu \Psi = \tilde{\bar{\Psi}} (x)\gamma^\mu \tilde{\Psi}(x) & = \left( \bar{\Psi}(\Lambda^{-1}x) D[\Lambda]^{-1} \right) \gamma^\mu \left( D[\Lambda]\Psi(\Lambda^{-1}x) \right) \\
+  & = \bar{\Psi}(\Lambda^{-1}x) \left( D[\Lambda]^{-1} \gamma^\mu D[\Lambda] \right) \gamma(\Lambda^{-1}x)
+\end{align*}
+En donde el término entre paréntesis debe ser tal que $ \left( D[\Lambda]^{-1}\gamma^\mu D[\Lambda] \right)  = \Lambda^\mu_{\;\nu}\gamma^\nu$. Así, \\
+\textbf{Afirmación:} 
+\begin{equation*}
+  D[\Lambda]^{-1} \gamma^\mu D[\Lambda] = \Lambda^\mu_{\; \nu} \gamma^\nu 
+\end{equation*}
+\textbf{Demostración:} 
+\begin{align*}
+  D[\Lambda]^{-1} \gamma^\mu D[\Lambda ] & = e^{\frac{-1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} \gamma^\mu e^{\frac{1}{2}\omega^{\tau \sigma}S_{\tau \simga}} , \quad \text{ A 1er orden } \\
+  & = \left( I - \frac{1}{2}\omega^{\alpha \beta} S_{\alpha \beta} \right) \gamma^\mu \left( I + \frac{1}{2}\omega^{\tau \sigma} S_{\tau \sigma} \right) \\ 
+  & = \gamma^\mu - \frac{1}{2}\omega^{\alpah \beta} S_{\alpha \beta} \gamma^\mu + \frac{1}{2}\omega^{\cancel{\tau}^\alpha \cancel{\sigma}^\beta} \gamma^\mu S_{\cancel{\tau}^\alpha\cancel{\sigma}^\beta} + O(\omega^2) \\
+  & = \gamma^\mu + \frac{1}{2}\omega^{\alpha \beta} \left( \gamma^\mu S_{\alpha \beta} - S_{\alpha \beta} \gamma^\mu \right) \\
+  & = \gamma^\mu + \frac{1}{2}\omega^{\alpha \beta} [\gamma^\mu , S_{\alpha \beta}]
+\end{align*}
+Ahora calculamos el segundo término
+\begin{align*}
+  \frac{\omega^{\alpha \beta}}{2} [\gamma^\mu , S_{\alpha \beta}] & = \frac{\omega^{\alpha \beta}}{8} [\gamma^\mu , \gamma_\alpha \gamma_\beta - \gamma_\beta \gamma_\alpha], \quad \text{con} \gamma^\mu \gamma_\alpha + \gamma_\alpha \gamma^\mu = 2S^\mu_{\alpha} \\
+  & = \frac{\omega^{\alpha \beta}}{4} [\gamma^\mu , \gamma_\alpha \gamma_\beta] \\
+  & = \frac{\omega^{\alpha \beta}}{4} \left[ \gamma^\mu , \frac{1}{2}\left( \gamma_\alpha \gamma_\beta - \gamma_\beta \gamma_\alpha + \frac{1}{2} \cancel{\left(  \gamma_\alpha\gamma_\beta - \gamma_\beta \gamma_\alpha \right) } \right) \right] \\
+  & = \frac{\omega^{\alpha \beta}}{4} \left( \gamma^\mu  \gamma_\alpha \gamma_\beta - \gamma_\alpha \gamma_\beta \gamma^\mu \right), \quad \gamma^\mu \gamma_\alpha  + \gamma_\alpha \gamma^\mu = 2 \delta^\mu_\alpha \\ 
+  & = \frac{\omega^{\alpha \beta}}{4} \left( \left( 2\delta^\mu_\alpha \gamma_\alpha \gamma^\mu \right) \gamma_\beta - \gamma_\alpha \gamma_\beta \gamma^\mu \right) \\
+  & = \frac{\omega^{\alpha \beta}}{4} \left( 2\delta^\mu_\alpha \gamma_\beta - \gamma_\alpha \gamma^\mu \gamma_\beta - \gamma_\alpha \gamma_\beta \gamma^\mu \right) \\
+  & = \frac{\omega^{\alpha \beta}}{4} \left( 2\delta^\mu_\alpha \gamma_\beta - \gamma_\alpha \left( 2\delta^\mu_\beta - \cancel{\gamma_\beta \gamma^\mu} \right) - \cancel{\gamma_\alpha \gamma_\beta \gamma^\mu} \right) \\
+  & = \frac{\omega^{\alpha\beta}}{2} \left( \delta^\mu_\alpha \gamma_\beta - \gamma_\alpha \delta^\mu_\beta\right) \\
+  & = \frac{\omega^{\alpha \beta}}{2} \left( \delta^\mu_\alpha \eta_{\beta \sigma} - \eta_{\alpha\sigma} \delta^\mu_{\beta} \right)\gamma^\sigma \\
+  & = \frac{\omega^{\alpha\beta}}{2} \left( J_{\alpha \beta} \right)^\mu_{\; \sigma} \gamma^\sigma
+\end{align*}
+Generadores de Lorentz en la representación vectorial
+\begin{equation*}
+  \left( J_{\alpha \beta} \right)^\mu_{\; \sigma} = \delta^\mu_\alpha \eta_{\beta \sigma} - \eta_{\alpha \sigma} \delta^\mu_\beta 
+\end{equation*}
+Así,
+\begin{equation*}
+  D[\Lambda]^{-1}\gamma^\mu D^[\Lambda] = \left( \delta^\mu_{\sigma} + \frac{1}{2}\omega^{\alpha\beta} \left( J_{\alpha \beta} \right)^\mu_{\; \sigma} + O(\omega^2) \right)\gamma^\sigma
+\end{equation*}
+Y por tanto
+\begin{equation}
+  \boxed{ D[\Lambda]^{1} \gamma^\mu D[\Lambda] = \Lambda^\mu_{\; \nu} \gamma^\sigma }
+ \end{equation}
+ \textbf{Tarea:} Demostrar que $\bar{\Psi}(x)i\gamma^\mu \partial_\mu \Psi(x)$ es un escalar de Lorentz.
+ \begin{equation}
+   I[\Psi,\bar{\Psi}] = \int d^4x \bar{\Psi} \left( i\gamma^\mu \partial_\mu - m  \right)\Psi = \int d^4x \mathfrak{L}(x)
+  \end{equation}
+  Hemos argumentado que $\mathfrak{L}(x)$ es un escalar de Lorentz 
+  \begin{equation*}
+    \tilde{\mathfrak{L}}(x) = \mathfrak{L}(\Lambda^{-1}x) \Rightarrow \delta{Lorentz} \mathfrak{L} = -\omega^\alpha_{\;\beta} x^\beta \partial_\alpha \mathfrak{L}
+  \end{equation*}
+  \begin{align*}
+    \delta_{Lorentz} I  = \int d^4 x \delta_{\Lorentz} \mathfrak{L}(x) \\
+    & = \int d^4 x \omega^\alpha_{\; \beta} x^\beta \partial_\alpha \mathfrak{L} \\
+    & = \int d^4x \partial_\alpha \left( -\omega^\alpha_{\; \beta} x^\eta \mathfrak{L} \right) + \omega^\alpha \cancel{\partial_\alpha x^\beta \mathfrak{L}}^0 
+    & = \int d^4 x \partial_\alpha B^\alpha , \quad \text{donde} B^\alpha = -\omega^\alpha_{\; \beta}x^\beta \mathfrak{L}
+  \end{align*}
+  La acción de Dirac es quasi-invairante bajo transformaciones de Lorentz y entonces via teorema de Noether habrá 6 corrientes conservadas.
+  \begin{align*}
+    j^\mu  = \frac{\partial \mathfrak{L}}{\partial \partial_\mu campo} \delta campo - B^\mu \\
+    \partial_\mu j^\mu = 0
+ \frac{d}{dt}\int d^3 j^0 + \int d^3x \nabla \cdot j^i = 0 
+  \end{align*}
+
+\end{document}
+
