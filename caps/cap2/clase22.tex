@@ -2,5 +2,197 @@
 
 \begin{document}
 \section{Vigesima segunda clase}
-Hola
+Sabemos que
+\begin{align*}
+  \Psi(x) \rightarrow \tilde{\Psi}(x) = D[\Lambda] \Psi(\Lambda^{-1}) \\
+  \Psi^\dagger (x) \gamma^0 = : \bar{\Psi}(x) \rightarrow \tilde{\bar{\Psi}}(x) = \bar{\Psi}(\Lambda^{-1}x) D^{-1}[\Lambda] \\
+  D[\Lambda] = e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta}}
+\end{align*}
+de lo cual se concluyó que
+\begin{align*}
+  \bar{\Psi}(x)\Psi(x) , \quad \text{es un escalar de Lorentz} \\
+  \bar{\Psi}(x) \gamma^\mu \Psi(x), \quad \text{es un vector de Lorentz}
+\end{align*}
+El primero corresponde al término de masa y el segundo es una corriente vectorial. \\
+Con estos ingredientes demostramos que la acción de Dirac es quasi-invariante bajo Lorentz:
+\begin{equation*}
+  I[\Psi,\bar{\Psi}]= \int d^4x \bar{\Psi}(x) \left(i\gamma^\mu \partial_\mu - m \right)\Psi(x)
+\end{equation*}
+Todo los observadores inerciales estarán de acuerdo en cuál es la ecuación dinámica para un spinor de Dirac.
+\begin{equation*}
+  \delta_{\bar{\Psi}} I = 0 \Rightarrow \left( i\gamma^\mu \partial_\mu - m  \right)\Psi(x) = 0, \quad \text{Ecuación de Dirac}
+\end{equation*}
+Ahora, la ecuación para la variación con $\Psi$
+\begin{align*}
+  \delta_{\Psi} I & = I[\Psi+ \delta \Psi , \bar{\Psi}] - I [\Psi,\bar{\Psi}] \\
+  & = \int d^4x \left( \bar{\Psi} i\gamma^\mu \partial_\mu \delta \Psi - m \bar{\Psi} \delta \Psi \right) \\
+  & = \int d^4x \left( \partial_\mu \left( \bar{\Psi} i \gama^\mu \delta\Psi \right) - \partial_\mu \bar{\Psi} i \gamma^\mu \delta \Psi - m \bar{\Psi} \delta \Psi\right) \\
+  & = \cancel{B.T.} - \int d^4x \left( i \partial_\mu \bar{\Psi} \gamma^\mu + m \bar{\Psi} \right)\delta \Psi  = 0 \\
+\end{align*}
+Con lo cual, hemos obtenido
+\begin{equation}
+  i\partial_\mu \bar{\Psi} \gamma^\mu + m\bar{\Psi} = 0  
+ \end{equation}
+\textbf{Afirmación:} La ecuación obtenida al calcular es el conjudado de Dirac de la ecuación de Dirac. \\
+\textbf{Demostración:}  \\
+Recuerdo: 
+\begin{equation*}
+  I[\varphi, \varphi*] = \int d^4 x \left( \partial_\mu \varphi \partial^\mu \varphi* - m^2\varphi \varphi* \right)
+\end{equation*}
+En donde $\varphi$ es un campo escalar complejo, el cual cumple lo siguiente
+\begin{align*}
+  \delta_\varphi I & = 0 \Rightarrow \square \varphi* + m^2 \varphi* = 0 \\
+  \delta_{\varphi*} I & 0 \Rightarrow \square \varphi + m^2 \varphi = 0
+\end{align*}
+Comencemos ocn la ecuación de Dirac, tal que
+\begin{align*}
+  i \gamma^\mu \partial_\mu \Psi - m \Psi & = 0, \quad /()^\dagger \\
+  -i\partial_\mu \Psi^\dagger \gamma^{\mu \dagger} - m \Psi^\dagger & = 0 \\
+  i \partial_\mu \left( \Psi^\dagger \gamma^{\mu \dagger} \gamma^0 \right) + m\Psi^\dagger \gamma^0 & = 0, \quad \text{pero}\; \gamma^{\mu \dagger} \gamma^0 = \gamma^0 \gamma^\mu \\
+  i\partial_\mu \left( \Psi^\dagger \gamma^0 \right)\gamma^\mu + m\Psi^\dagger \gamma^0 & = 0 \\
+  i \partial_\mu \bar{\Psi}\gamma^\mu + m\bar{\Psi} = 0
+\end{align*}
+En donde hemos obtenido la misma ecuación que antes, con lo cual bajo un espacio de Hilbert, podemos definir
+\begin{align*}
+  \hat{H} \ket{\vec{k}} & = \sqrt{\vec{k}^2 + m^2} \ket{\vec{k}} \\
+  \hat{\vec{p}}\ket{\vec{h}} & = \vec{k} \ket{\vec{h}}
+\end{align*}
+Notemos que el que haya un vector dentro de un ket es puramente notación para la ecuación de onda. \\
+Ahora bien, el término de masa que se encuentra en la ecuación de Dirac corresponde a la masa de los quantos que mide el campo en particular, masa la cual puede ser medida por ejemplo con el efecto de Compton. \\
+\begin{align}
+  i\gamma^\mu \partial_\mu  - m \Psi = 0 \\
+  \lambda_F   = \lambda_I + \frac{h}{mc} \left( 1-\cos{\theta} \right)
+\end{align}
+Entonces, cuando veamos una acción sin términos cuadrados, podemos concluir que el quanta del campo no tendrá masa, como por ejemplo la acción de Maxwell.
+\begin{align*}
+  I_{Max} [A_\mu] & = \int d^4x - \frac{1}{4}F_{\mu \nu}F^{\mu \nu} + e \bar{\Psi}\gamma^\mu A_\mu \Psi \\
+  & = \frac{-1}{4}\ind d^4 x \left( \partial_\mu A_\nu - \partial_\nu A_\mu \right) \left( \partial^\mu A^\nu - \partial^\nu A^\mu \right) 
+ \end{align*}
+ Entonces el segundo término será un término de interacción de los campos, pero no de masa, y que finalmente,
+ \begin{align*}
+   \partial_\mu F^{\mu \nu} & = j^\nu \rightarrow \nabla \cdot \vec{E} = \rho \\
+   & = e\bar{\Psi}\gamma^\nu \Psi \rightarrow \nabla \times \vec{B} = \partial_t\vec{E} + \vec{J}
+ \end{align*}
+ \textbf{Afirmación:} Cada componente del spinor de Dirac satisface la ecuación de Klein-Gordon.
+ \begin{align*}
+   \left( i\gamma^\mu \partial_\mmu - m \right)\Psi = i\gamma^0 \partial_t\Psi +i\gamma^1 \partial_x\Psi + i\gamma^2\Psi_y + i\gamma^3\partial_z \Psi - m \Psi & = 0\\
+   i \begin{pmatrix}
+     0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0
+   \end{pmatrix}
+   \begin{pmatrix}
+     \partial_t \Psi_1 \\ \partial_x \Psi_2 \\ \partial_y \Psi_3 \\ \partial_z \Psi_4
+   \end{pmatrix} + \dots - m \begin{pmatrix}
+     \Psi_1 \\ \Psi_2 \\ \Psi_3 \\ \Psi_4
+   \end{pmatrix} = \begin{pmatrix}
+     0 \\ 0 \\ 0 \\ 0
+   \end{pmatrix}
+ \end{align*}
+ Lo cual son cuatro ecuaciones difereciales lineales acopladas
+ \begin{align*}
+   i\partial_t \Psi_3 + \dots - m \Psi_1 & = 0 \\
+   i\partial_t \Psi_4 + \dots - m \Psi_2 & = 0 \\
+  i\partial_t\Psi_1 + \dots - m \Psi_3 & = 0 \\
+   i\partial_t \Psi_2 + \dots -m \Psi_4 & = 0
+ \end{align*}
+ \textbf{Demostración:}
+ \begin{align*}
+   i\gamma^\mu \partial_\mu \Psi - m \Psi & = 0 ,\quad /\left( i\gamma^\mu \partial_\mu + m \right) \\
+   \left( i\gamma^\mu \partial_\mu + m \right)\left( i\gamma^\mu \partial_\mu \Psi - m \Psi \right) & = 0 \\
+   \gamma^\nu \gamma^\mu \partial_\mu \partial_\mu \Psi + m^2\Psi & = 0 \\
+   \left( \frac{1}{2}\left( \gamma^\nu \gamma^\mu + \gamma^\mu \gamma^\nu  \right) + \frac{1}{2} \left( \gamma^\nu \gamma^\mu - \gamma^\mu \gamma^\nu \right) \right)\partial_\nu \partial_\mu \Psi + m^2 \Psi & = 0 \\
+   \frac{1}{2} 2 \eta^{\mu \nu} \partial_\nu \partial_\mu \Psi + m^2 \Psi & = 0 \\
+   \square \Psi + m^2 \Psi & = 0
+ \end{align*}
+ A lo cual tendremos que, los $\Psi$ que sean soluciones a la ecuación de Dirac serán soluciones de la ecuación de Klein-Gordon, pero no viceversa. \\
+ \textbf{Spinores quiarales:} $\{\gamma^\mu , \gamma^nu\} = 2\eta^{\mu \nu} 1_4$. \\
+ En la base quiral:
+ \begin{equation*}
+   \gamma^0 = \begin{pmatrix}
+     0 & I \\ I & 0
+   \end{pmatrix}, \quad \gamma^i = \begin{pmatrix}
+     0 & \sigma^i \\ -\sigma^i & 0
+   \end{pmatrix}
+ \end{equation*}
+ En la base de Majorana:
+ \begin{align*}
+   \gamma^0_{\Maj} & = \begin{pmatrix}
+     0 & \sigma^2 \\ \sigma^2 & 0 
+   \end{pmatrix}
+   ,\quad \gamma^1_{Maj} = \begin{pmatrix}
+     i\sigma^3 & 0 \\ 0 & i\sigma^3
+   \end{pmatrix} \\
+   \gamma^2_{Maj} & = \begin{pmatrix}
+     0 & -\sigma^2 \\ \sigma^2 & 0
+   \end{pmatrix}, \quad \gamma^3_{Maj} = \begin{pmatrix}
+     -i\sigma^1 & 0 \\ 0 & -i\sigma^1
+   \end{pmatrix}
+ \end{align*}
+En donde $\sigma $ son las matrices de Pauli
+\begin{align*}
+  \sigma^1 & = \begin{pmatrix}
+    0 & 1 \\ 1 & 0 
+  \end{pmatrix}
+  \\
+  \sigma^2 & = \begin{pmatrix}
+    0 & -i \\ i & 0
+  \end{pmatrix} \\
+  \sigma^3 & = \begin{pmatrix}
+    1 & 0 \\ 0 & -1
+  \end{pmatrix}
+\end{align*} 
+Pero existe una matriz $A_{4\times 4}$ invertible que
+\begin{equation*}
+  \gamma^\mu_{Maj} = A \gamma^\mu_{Quiral} A^{-1}
+\end{equation*}
+En la base quiral: $S_{\alpha \beta} = \frac{1}{4}[\gamma_\alpha , \gamma_\beta]$ dan origen al a transformación de Lorentz de la forma 
+\begin{align*}
+  e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} = D[\Lambda_{ROT}] = \begin{pmatrix}
+    e^{i\vec{\varphi}\cdot \vec{\sigma}/2} & 0 \\ 0 & e^{i\vec{\varphi}\cdot \vec{\sigma}/2}
+  \end{pmatrix}\\
+  D[\Lambda_{Boost}] = \begin{pmatrix}
+    e^{\vec{\chi}\cdot\vec{\sigma}/2} & 0 \\ 0 & e^{-\vec{\chi}\cdot /2}
+  \end{pmatrix}
+\end{align*}
+En donde $\vec{\chi}$ sabe acerca de la rapidez y dirección del boost, tal que
+\begin{equation*}
+  \tilde{\Psi}(x) = D[\Lambda_{Boost}] \Psi(\Lambda^{-1})
+\end{equation*}
+Existen campos de dos componentes que sienten las transformaciones de Lorentz, tales campos se llaman spinores de Weyl. \\
+En la base quiral:
+\begin{align*}
+  \begin{pmatrix}
+    \Psi_1 \\ \Psi_2 \\ \Psi_3 \\ \Psi_4
+  \end{pmatrix} = \begin{pmatrix}
+    u_+ \\ u_-
+  \end{pmatrix}
+\end{align*}
+En donde $u_+$ es el spinor de Weyl izquierdo y $u_-$ es el spinor de Weyl derecho. \\
+¿Cómo transforma bajo boosts y bajo rotacione un spinor de Weyl izquierdo?
+\begin{align*}
+  \text{Rot:} \quad u_+(x) \rightarrow \tilde{u}_+(x) & = e^{\vec{\varphi}\cdot \vec{\sigma}/2} u_+(\Lamnda^{-1}x) \\
+  \text{Boosts:} \quad u_+(x) \rightarrow \tilde{u}_+(x) & = e^{\vec{\chi}\cdot / 2} u_+(\Lambda^{-1}x)
+\end{align*}
+Pero como sería para Weyl derecho? \\
+$u_+(x)$ transforma en la representación $(1/2,0)$? , y lo mismo para $u_-$? \\
+¿Cómo transforma la acción de Dirac en términos de spinores izquierdos y derechos?
+\begin{equation*}
+  \mathfrak{L}  = \bar{\Psi} \left( i\gamma^\mu \partial_\mu - m \right)\Psi = iu^\dagger_- \sigma^\mu \partial_\mu u_+ + iu^\dagger_- i+ i u^\dagger_+ \bar{\sigma}^\mu \partial_\mu u_+ - m \left( u^+_+ u_- + u^\dagger_- u_+  \right) = 0
+\end{equation*}
+En donde $\sigma^0=1$ y el resto son las matrices de Pauli. \\
+Si $m=0$, las ecuaciónes de Euler-Lagrange para $u_-$ y $u_+$ son
+\begin{align*}
+  i\sigma^\mu \partial_\mu u_- & = 0 \\
+  i\sigma^\mu \partial_\mu u_+ & = 0
+\end{align*}
+Las cuales son llamadas las ecuaciones de Weyl. \\
+Estas ecuaciones definen de manera consistente la evolución temporal de Fermiones quirales
+\begin{align*}
+  \Psi & = \begin{pmatrix}
+    u_+(x) \\ 0 \\ 0
+  \end{pmatrix} \\
+  \Psi & = \begin{pmatrix}
+    0 \\ 0 \\ u_-(x) 
+  \end{pmatrix}
+\end{align*}
+Ahora, la física no puede depender de la base, con lo cual es necesario además definir todo esto para una base genérica.
 \end{document}

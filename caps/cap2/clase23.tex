@@ -1,0 +1,275 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigésima tercera clase}
+En la base quiral tenemos que
+\begin{align*}
+  \gamama^0 & = \begin{pmatrix}
+    0 & I \\ I & 0 
+  \end{pmatrix}
+  , \quad \gamma^i = \begin{pmatrix}
+    0 & \sigma^i \\ -\sigma^i & 0
+  \end{pmatrix}
+  \\
+  S_{\alpha \beta} &  =\frac{1}{4} \left[ \gamma_\alpha , \gamma_\beta \right] \\
+  D[\Lambda] & = e^{\frac{1}{2}\omega^{\alpha\beta}S_{\alpha \beta}} \\
+  D[\Lambda] & = \begin{pmatrix}
+    \# & 0 \\ 0 & \#
+  \end{pmatrix}
+\end{align*}
+Tal que, los spinores transforman como
+\begin{align*}
+  \Psi(x) \rightarrow \tilde{\Psi}(x) & = D[\Lambda] \Psi(\Lambda^{-1}), \quad \text{o sea} \\
+  & \begin{pmatrix}
+    \# & 0 \\ 0 & \#
+  \end{pmatrix}
+  \begin{pmatrix}
+    \Psi_1 \\ \Psi_2 \\ \Psi_3 \\ \Psi_4
+  \end{pmatrix}
+\end{align*}
+\textbf{Símbolo de Weyl:}
+\begin{align*}
+  \Psi= \begin{pmatrix}
+    u_+ \\ u_-
+  \end{pmatrix}
+  ,\quad u_+ \;\text{y} \; u_-\; \text{son spinores de 2 componentes}
+\end{align*}
+Así, la densidad Lagrangeana de Dirac está dada por
+\begin{align*}
+  \mathfrak{L} & = \bar{\Psi} \left( i\gamma^\mu \partial_\mu - m \right)\Psi, \quad \bar{\Psi}:= \Psi^\dagger \gamma^0 \\
+  & = iu^\dagger_- \sigma^\mu \partial_\mu u_+ iu^\dagger_+\bar{\sigma}^\mu \partial_\mu u_+ - m \left( u^\dagger_+ u_- + u_-^\dagger u_+ \right) \\
+  & \rightarrow \; I=I \left[ u_-, u^\dagger_-, u_+ , u^\dagger_+ \right]  
+\end{align*}
+En donde tenemos que pensar esto como el campo escalar complejo
+\begin{align*}
+  \mathfrak{L} & = \partial_\mu \varphi \partial^\mu \varphi* - m^2 \varphi \varphi* \\
+  & I[Re[\varphi],Im[\varhpi]] , \quad I[\varphi,\varphi*]
+\end{align*}
+Volviendo a la densidad Lagrangeana de Dirac, debemos recordar lo siguiente
+\begin{align*}
+  \Psi^\dagger \Psi & = u^\dagger_+ u_+ + u^\dagger_- u_- = \left( u_+^\dagger , u^\dagger_- \right) \begin{pmatrix}
+    u_+ \\ u_-
+  \end{pmatrix} \\
+  \bar{\Psi}\Psi & = \left( u_+^\dagger , u_-^\dagger \right) \begin{pmatrix}
+     & I \\ I & 0 
+  \end{pmatrix}
+  \begin{pmatrix}
+    u_+ \\ u_-
+  \end{pmatrix}
+\end{align*}
+La invariancia de Lorentz requiere que la presencia de un término de masa necesariamente contenga tanto $u_+$ como $u_-$.\\
+El término de masa invariante de Lorentz no es complatible con fijar $u_+=0$ o $u_-=0$. \\
+Un spinor de Dirac es llamado spinor quiral si en la base de Weyl toma la forma:
+\begin{align*}
+  \Psi = \begin{pmatrix}
+    u_+ \\ 0 \\ 0 
+  \end{pmatrix}
+  \quad \text{o}, \quad \Psi= \begin{pmatrix}
+    0 \\ 0 \\ u_-
+  \end{pmatrix} \\
+  \text{Si} \; m=0 \rightarrow & \delta_{u_+} I = 0 \Leftrightarrow \delta_{u^\dagger_+} = 0 \\
+  & \delta_{u_-} I = 0 \Leftrightarrow \delta_{u_-^\dagger} I = 0
+\end{align*}
+Recordar que en este contexto las matrices de Pauli no tienen 4 componentes, si no que su primer componente es la matriz 1,
+\begin{align*}
+  \sigma_{2\times 2}^\mu & = \left( 1, \sigma^i \right) \\
+  \bar{\sigma}_{2\times 2}^\mu & = \left( 1,-\sigma^\mu \right)
+\end{align*}
+Lo que finalmente nos lleva a las ecuaciones de Weyl, las cuales están dadas por
+\begin{align*}
+  i\bar{\sigma}^mu \partial_\mu u_+ & = 0 \\
+  i\sigma^\mu \partial_\mu u_- & = 0
+\end{align*}
+El spinor de Dirac transfoma en la representación:
+\begin{align*}
+  \left( 1/2 , 0 \right) \oplus \left( 0,1/2 \right)
+\end{align*}
+del grupo de Lorentz
+\begin{itemize}
+  \item $u_+$ transforma en la $(1/2,0)$, $e^{\frac{\vec{\chi}\cdot \vec{\sigma}}{2}}$ 
+  \item $u_-$ transforma en la $(0,1/2)$ , $e^{\frac{-\vec{\chi}\cdot \vec{\sigma}}{2}}$
+\end{itemize}
+\begin{align*}
+  \gamma^\mu & = A \gamma^\mu_{Weyl} A^{-1} \\
+  \rightarrow S^{Weyl}_{\alpha \beta} & = \frac{1}{4}[\gamma^{Weyl}_\alpha,\gamma^{Weyl}_\beta], \quad S_{\alpha \beta} = \frac{1}{4} A S^{\Weyl}_{\alpha \beta}A^{-1} \\
+  D[\Lambda] & = e^{\frac{1}{2}S^{\alpha \beta}S_{\alpha \beta}} \\
+  & = A e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha\beta}^{Weyl}} A^{-1} =A D[\Lambda]  A^{-1}
+\end{align*}
+¿Cómo caracterizamos un spinor quiral en una base genérica?, para ello definimos la siguiente matriz
+\begin{align*}
+  \gamma^5 := -i\gamma^0\gamma^1\gamma^2\gamma^3 \\
+  \left( \gamma^5 \right)^2 = 1, \\
+\end{align*}
+\textbf{Demostración:} recordemos que satisfacen el álgebra de Clifford, $\gamma^\mu \gamma^\nu = - \gamma^\nu \gamma^\mu + 2\eta^{\mu \nu}1_4$ tal que, en la signatura $(+,-,-,-)$
+ \begin{align*}
+   \left( \gamma^5 \right)^2 & = -\gamma^0 \gamma^1 \gamma^2\gamma^3\gamma^2\gamma^1\gamma^3 \\
+   & = \gamma^1 \gamma^2\gamma^3\gamma^3\gamma^1\gamma^2\gamma^3 \\
+   & = - \gamma^2\gamma^3\gamma^2\gamma^3 \\
+   & = - \gamma^3 \gamma^3 \\
+   & = +1
+ \end{align*} 
+ y además
+ \begin{align*}
+   \{\gamma^5,\gamma^\mu\} = 0 \\
+   \{\gamma^5,\gamma^0\} & = \gamma^5\gamma^0 + \gamma^0 \gamma^5 \\
+   & = -i \left( \gamma^0 \gamma^1 \gamma^2 \gamma^3 \gamma^0 + \gamma^0 \gamma^0 \gamma^1 \gamma^2 \gamma^3 \right) \\
+  & = -i \left( -\gamma^1 \gamma^2 \gamma^3 + \gamma^1 \gamma^2 \gamma^3 \right) \\
+   & = 0
+ \end{align*}
+ \textbf{Tarea:} hacer lo mismo anti-conmutador, pero con $\gamma^1$. \\
+ \textbf{Tarea:} En la base quiral
+ \begin{align*}
+   \gamma^5 \begin{pmatrix}
+     0 \\ 0 \\ u_-
+   \end{pmatrix} = 
+   \begin{pmatrix}
+     0 \\ 0 \\ u_-
+   \end{pmatrix}
+   , \quad \gamma^5 = 
+   \begin{pmatrix}
+     I & 0 \\ 0 & -I
+   \end{pmatrix}, \\
+   \gamma^5 \begin{pmatrix}
+     u_+ \\ 0 \\ 0
+   \end{pmatrix} ) =+1
+   \begin{pmatrix}
+     u_+ \\ 0 \\ 0
+   \end{pmatrix}
+ \end{align*}
+ \begin{itemize}
+  \item Los spinores quirales son auto-spinores de $\gamma^5$ 
+   \item Los spinores de Dirac izquierdos tienen autovalor +1
+   \item Los spinores de Dirac derechos tienen autovalo -1
+ \end{itemize}
+ Proyectore $P_+$ y $P_-$
+ \begin{align*}
+   P_+ & 0 \frac{1}{2}\begin{pmatrix}
+     I + \gamma^5
+   \end{pmatrix} =_{In\; Weyl} \begin{pmatrix}
+     I_2 & 0 \\ 0 & 0
+   \end{pmatrix} \\
+   P_- & = \frac{1}{2}\left( I-\gamma^5 \right) =_{In\; Weyl} \begin{pmatrix}
+    0 & 0 \\ 0 & 0
+   \end{pmatrix}
+ \end{align*}
+ \textbf{Demostrar:} que
+ \begin{align*}
+   P_+ P_- & = 0 \\
+   P^2_+ = P_+ , \quad P^2_- = P_-
+ \end{align*}
+ en una base arbitraria.
+ \textbf{En la base quiral:}
+ \begin{align*}
+   \begin{pmatrix}
+    \Psi_1 \\ \Psi_2 \\ 0 \\ 0 
+   \end{pmatrix} = P_+ \begin{pmatrix}
+     \Psi_1 \\ \Psi_2 \\ \Psi_3 \\ \Psi_4
+   \end{pmatrix}
+   \\
+   \begin{pmatrix}
+     0 \\ 0 \\ \Psi_3 \\ \Psi_4
+   \end{pmatrix} = P_- 
+   \begin{pmatrix}
+     \Psi_1 \\ \Psi_2 \\ \Psi_3 \\ \Psi_4
+   \end{pmatrix}
+ \end{align*}
+ \textbf{En una base genérica:}
+ \begin{align*}
+   \Psi_{\pm} = P_{\pm} \Psi
+ \end{align*}
+ En donde $\Psi_{\pm}$ son spinores quirales en una base genérica. \\
+ \textbf{Base de Majorana:}
+\begin{align*}
+  \gamma^0 = \begin{pmatrix}
+    0 \\ \sigma^2 \\ \sigma^2 & 0
+  \end{pmatrix}, \quad \gamma^1 = \begin{pmatrix}
+    i\sigma^3 & 0 \\ 0 & i\sigma^3
+  \end{pmatrix}
+  \\
+  \gamma^2 = \begin{pmatrix}
+    0 & -\sigma^2 \\ \sigma^2 & 0
+  \end{pmatrix}, \quad 
+  \gamma^3 = \begin{pmatrix}
+    -i \sigma^1 & 0 \\ 0 & -i\sigma^1
+  \end{pmatrix}
+  \\ 
+  \simga^1 = \begin{pmatrix}
+    0 & 1 \\ 1 & 0
+  \end{pmatrix}, \quad \sigma^2 = \begin{pmatrix}
+    0 & -i \\ i & 0 
+  \end{pmatrix}
+  , \quad \sigma^3 = 
+  \begin{pmatrix}
+    1 & 0 \\ 0 & -1
+  \end{pmatrix}
+\end{align*} 
+En donde $\gamma^\mu$ cumple con el Álgebra de Clifford
+\begin{align*}
+  \{\gamma^\mu , \gamma^\nu\} = 2\eta^{\mu \nu}1_4, \quad \gamma^\mu_{Maj} = A \gamma^mu_{Weyl}A^{-1} \\
+  \left( \gamma^\mu_{Maj} \right)* = - \gamma^\mu_{Maj} \Rightarrow S^{Maj}_{\mu \nu} = \frac{1}{4} \left[ \gamma^{Maj}_\mu , \gamma^{Maj}_{\nu} \right], \quad \text{Son reales} \\
+  \left( S^{Maj}_{\mu\nu} \right)* = \frac{1}{4} \left( \left( \gamma^{Maj}_{\mu} \right)* \left( \gamma_\nu^{Maj} \right)* - \left( \gamma^{Maj}_\nu \right)* \left( \gamma^{Maj}_\mu \right)*\right) = S^{Maj}_{\mu \nu}
+\end{align*}
+En la base de Majorana $S_{\alpha \beta}$ son reales, por tanto
+\begin{align*}
+  D[\Lambda] & = e^{\frac{1}{2}\omega^{\alpha \beta}S_{\alpha \beta}} \\
+  & \rightarrow \text{Son reales}
+\end{align*}
+En general un spinor de Dirac tiene componentes complejos, pero en la base de Majorana se puede pedir de forma invariante de Lorentz que el spinor sea real
+\begin{equation}
+  \Psi*(x) = \Psi(x)
+ \end{equation}
+Los spinores que satisfacen esta condición de realidad son llamados spinores de Majorana \footnote{Tambíen es posible pedir que un spinor sea spinor de Majorana-Weyl, sin embargo, en dimensión 4, es imposible}. \\
+\textbf{Matriz de conjugación de Carga:} La matriz de conjugación de carga será una operación que al aplicar a un spinor nos devuelve otro spinor tal que
+\begin{align*}
+  \Psi \longrightarrow \text{Conj. de cagra} \longrightarrow \Psi^{(c)} \\
+\Psi^{(c)}(x) = C\Psi*(x), \;\text{Con C}:=\text{Matriz de conjugación de carga}, \\
+  \text{tal que} \rightarrow C^\dagger C = I \quad \text{y}, \\
+  C^\dagger \gamma^\mu C = - \left( \gamma^\mu \right)*
+\end{align*}
+Ahora, la matriz de conjugación de carga en las bases de Majorana y Weyl es
+\begin{align*}
+  C_{Maj} & = I \\
+  C_{Weyl} & = i \gamma^2 = \begin{pmatrix}
+    0 & i\sigma^2 \\ -i\sigma^2 & 0
+  \end{pmatrix}
+\end{align*}
+En la base de Majorana un spinor de Majorana satisface que, en una base genérica, un spinor de Majorana será igual a su conjugado de carga.
+\begin{equation}
+  \Psi^{(c)} = C \Psi*(x) = \Psi(x)
+ \end{equation}
+Lo que se llama, condición de realidad en una base genérica. \\
+¿ Cómo luce un spinor de Majorana en la base de Weyl?
+\begin{align*}
+  \begin{pmatrix}
+    u_+(x) \\ u_-(x)
+  \end{pmatrix} = \Psi(x) = C\Psi*(x) = \begin{pmatrix}
+    0 & i\sigma^2 \\ -i\sigma^2 & 0
+  \end{pmatrix} 
+  \begin{pmatrix}
+    u*_+(x) \\ u_-*(x)
+  \end{pmatrix} = 
+  \begin{pmatrix}
+    i\sigma^2 u*_(x) \\ -i\sigma^2 u*_+(x)
+  \end{pmatrix}
+\end{align*}
+Con lo cual tenemos la siguiente condición
+\begin{align*}
+  u_+(x) & = i\sigma^2u_-*(x) \\
+  u_-(x) & = -i\sigma^2 u_+*(x)
+  \Psi(x) = \begin{pmatrix}
+    u_+(x) \\ -i\sigma^2 u*_+(x)
+  \end{pmatrix}
+\end{align*}
+En donde $\Psi(x)$ es un spinor de Majorana en la base de Weyl. \\
+En dimensión 4 (3+1) no existen lo spinores de Majorana-Weyl. \\
+Si $\Psi(x)$ satisface la ecuación de Dirac, entonces $\Psi^{(c)}$ tambíen satisface la ecuación de Dirac. \\
+La ecuación de Dirac en presencia en presencia de un campo $A_\mu=(\phi,\vec{A})$ electromagnético es:
+\begin{align}
+  \left( i\gamma^\nu \left( \partial_\mu - ieA_\mu \right) - m \right)\Psi(x) & = 0 \\
+  \left( i\gamma^\mu \partial_\mu - m +e\gamma^\mu A_\mu \right)\Psi(x) & =
+\end{align}
+Entonces, la antipartícula, carga opuesta, tambíen satisface la ecuación de conjuado de carga de Dirac, o sea,
+\begin{equation}
+  \left( i\gamma^\mu \partial_\mu - m -e\gamma^\mu A_\mu   \right)\Psi^{(c)}(x) = 0
+ \end{equation}
+\end{document}
