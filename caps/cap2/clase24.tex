@@ -1,0 +1,151 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigesima cuarta clase}
+Existen las siguientes partículas fundamentales en la naturaleza
+\begin{itemize}
+  \item Boson de Higgs
+  \item Dentro de los Leptones tenemos: Neutrinos $\nu_e,\nu_\mu,\nu_\zeta$
+  \item Electrón (e), muón ($\mu$), tauón ($\zeta$)
+  \item Quarks: up, down, strange, charged, bottom, tor
+  \item Dentro de los Gluones (Que existen 8, grupo $\mathfrak{SU}(3)$ y median la interacción fuerte ); $W^+ , W^-, Z^0$(Median la interacción débil), Fotones ($\gamma$ median la interacción electrogmagnética ), Gravitones
+\end{itemize}
+¿Ahora, qué pasa con partículas como el protón o neutrón?
+\begin{itemize}
+  \item Protón: up, up, down
+  \item Neutrón: down, down, up
+  \item Piones ($\pi^0,\pi^+,\pi^-$): quark, anti-quark
+\end{itemize}
+Luego, todo el primer listado será multiplicado por 2, ya que cada partícula fundamental cuenta con su respectiva anti-partícula. \\
+Dentro de esta lista existe la siguiente clasificacion
+\begin{itemize}
+  \item(qqq) Hadrones (p,n,$\dots$)
+  \item (qq) Mesones ($\pi^0,\pi^+,\pi^+,\pi^-,\rho,\dots$)
+\end{itemize}
+Es imporante notar que si quisiéramos detectar partículas como por ejemplo, el electrón, necesitaríamos un acelerador de partículas que pueda alcanzar los $1[MeV]$, lo cual es muy caro. \\
+La próxima clase mostraremos los que es el Lagrangiano del modelo estándar. Que algunos comparan como muy feo con las ecuaciones de Einstein por ejemplo, pero esto está hecho con muy mala pata, porque si descomponemos las ecuaciones de campo de Einstein estas también son feas, veamos.
+\begin{align}
+ G_{\mu \nu} =  0\\
+ G_{\mu \nu} = R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R \\
+ R_{\mu\nu} = g^{\alpha \beta}R_{\mu \alpha \nu \beta} \\
+  R^{\alpha}_{\beta \ganna \delta}  =\partial_\gamma \Gamma^\alpha_{\delta\beta}  +\Gamma^\alpha_{\gamma \sigma} \Gamma^\sigma_{\beta \delta} - \Gamma^\alpha_{\delta \sigma}\Gamma^\sigma_{\gamma \beta} \\
+  \Gamma^\alpha_{\alpha \beta} = \frac{1}{2}g^{\alpha \sigma} \left[ \partial_\delta g_{\beta \sigma} + \partial_{\beta} g_{\delta \sigma} - \partial_{\alpha}g_{\delta \beta} \right]
+\end{align}
+\subsection{Formulación covariante del Electromagnetismo}
+Recordemos que las ecuaciones de maxwell Pueden ser escritas como
+\begin{align}
+  \nabla \cdot E & = 0 \\
+  \nabla \times B & = +\partial_t E \\
+  \nabla \cdot B & = 0 \\
+  \nabla \times E = -\partial_t B
+\end{align}
+Las cuales son las ecuaciones de Maxwell en el vacío sin carga, lo que implica que, bajo un potencial vectorial
+\begin{align*}
+  \vec{B} = \nabla \times \vec{A}(t,\vec{x}) \\
+  \nabla \cdot (\nabla \times \vec{A}) = 0, \; \text{Si}\; \vec{A}\in C^2
+\end{align*}
+Ahora, en la Ley de Faraday
+\begin{align*}
+  \nabla \times E & = -\partial_t \nabla \times A \\
+  \nabla \times ( \vec{E} +\partial_t \vec{A} ) & = 0, \quad \text{Notemos que el paréntesis es el potencial escalar} \\
+  \vec{E} + \partial_t \vec{A} = -\nabla \phi(t,\vec{x}) \\
+  \vec{E} = -\nabla \phi - \partial_t\vec{A}
+\end{align*}
+Las ecuaciones 1 y 2 nos dicen cuánto vale $\phi(t,\vec{x})$ y $\vec{A}(t,\vec{x})$ 
+\begin{align*}
+  (1)\Rightarrow \; \nabla \cdot (-\nabla\phi - \partial_t\ve{A}) & = 0 \\
+  -\nabla^2\phi - \partial_t\nabla \cdot \vec{A} & = 0 \\
+  \nabla^2\phi + \partial_t\nabla \cdot \vec{A} & = 0
+\end{align*}
+\begin{align*}
+  (2) \Rightarrow \nabla \times (\nabla \times A) & = \partial_t (-\nabla \phi - \partial_t \vec{A}) \\
+  \nabla (\nabla \cdot \vec{A}) - \nabla^2\vec{A} & = -\partial_t\nabla\phi - \partial^2_t \vec{A}
+\end{align*}
+Las mismas ecuaciones pueden obtenerse introduciendo un cuadri-vector (en la sigmatura $-+++$)
+\begin{equation}
+  A_\mu(t,\vec{x}) = (A_0(t,\vec{x}),\vec{A}(t,\vec{x})) = (-\phi(t,\vec{x}),\vec{A}(t,\vec{x}))
+ \end{equation}
+ Lo que corresponde al cuadri-potencial electromagnético, y bajo un boost de Lorentz, transforma se la siguiente forma
+ \begin{equation}
+   \tilde{A}_\mu (\tilde{x}) = \Lambda^\mu_\nu A_\nu(x)
+  \end{equation}
+  Pero ¿Cuál es la motivación para obtene una formulación con otras letras del Electromagnetismo?, sabemos que, en el lenguaje del Cálculo multivariable los operadores dan cuenta de una invariancia ante rotaciones y que si se quisiera, podemos expresar las ecuaciones  de Maxwell por componentes, donde aún exista dicha invariancia ante rotaciones, pero no está de forma clara, está escondida, lo mismo pasa cuando queremos encontrar una invariancia ante boosts de Lorentz,la forma de cálculo multivariable no deja claro si es invariante ante boosts de Lorentz, con lo cual es necesario expresarlo en función de cuadr-vectores.\\
+  Definimos el tensor de Faraday:
+  \begin{equation}
+    F_{\mu\nu} :=\partial\mu A_\nu - \partial_\nu A_\mu
+   \end{equation}
+   Para lo cual, la componente $t,x$, por ejemplo
+\begin{align*}
+  F_{tx} & = \partial_tA_x - \partial_xA_t \\
+  & = \partial_tA_x + \partial_x\phi = -E_x \\
+\end{align*}
+Ahora la componente $xy$ 
+\begin{align*}
+  F_{xy} = \partial_xA_y - \partial_yA_x = B_z 
+\end{align*}
+Componente $zx$
+\begin{align*}
+  F_{zx} & = \partial_zA_x - \partial_xA_x = B_y
+\end{align*}
+El tensor de Faraday completo se ve como
+\begin{equation}
+  F_{\mu \nu} = \begin{pmatrix}
+    0 & -E_x & -E_y & -E_z \\ E_x & 0 & B_z & -B_y  \\ E_y & -B_z & 0 & B_x \\ E_z & B_y & -B_x & 0
+  \end{pmatrix}
+ \end{equation}
+Notemos que este arrelo matricial corresponde a cuando el tensor de Faraday tiene los índices abajo $F_{\mu \nu}$, y cuando tenga los índices arriba $F^{\mu \nu}$o mezclados $F^\mu_{\; \nu}$
+\begin{equation}
+  F^\mu_{\;\nu} := \eta^{\mu \alpha} F_{\alpha \nu} = \begin{pmatrix}
+    0 & E_x & E_y & E_z \\ -E_x & & 0 B_z & -B_y \\ -E_y & -B_z & 0 & B_x \\ -E_z & B_y & -B_x & 0
+  \end{pmatrix}
+ \end{equation}
+ A lo cual, la ley de Gauss Magnética y la Ley de Ampère-Maxwell son equivalentes a:
+ \begin{equation}
+   \partial_\mu F^{\mu}_{\; \nu} = 0
+  \end{equation}
+  Nos podemos convencer de esto mediante, si hacemos $\nu=t$
+  \begin{align*}
+    0 = \partial_\mu F^\mu_{\; t} & = \partial_t F^t_{\; t} + \partial_x F^x_{\; t} + \partial_y F^y_{\; t} + \partial_z F^z_{\;t} \\
+    & = \partial_x E_x + \partial_y E_y + \partial_z E_z = 0 = \nabla \cdot E
+  \end{align*}
+  En donde se ha recuperado la Ley de Gauss en el vacío sin cargas, luego, podemos seguir con $\nu=x$
+  \begin{align*}
+    0 = \partial_\mu F^\nu_{\; x} &  = \partial_y F^t_{\; x} + \partial_x F^x_{\; x} + \partial_y F^y_{\; x} + \partial_z F^z_{\; x} \\
+    & = \partial_t E_x - \partial_y B_z + \partial_z B_y \\
+    \partial_t\vec{E} & = \nabla \times \vec{B}
+  \end{align*}
+  Lo que nos regresa la Ley de Ampère-Maxwell. \\
+  Ahora, en electroestática y dinámica se trabaja con los potenciales electroestáticos y potencial vectorial, los cuale tienen cierta ambigüedad en su definición, ya que, estos no son únicos, si no que pueden ser transformados a convenciencia del usuario para su aplicación, esto se debe a lo siguiente
+  \subsection{Invariancia de Gauge}
+\begin{align*}
+  F_{\mu \nu} & = \partial_\mu A_\nu - \partial_\nu A_\mu \\
+  & = \partial_\mu \left( A_\nu + \partial_\nu \xi \right) - \partial_\nu \left(A_\nu + \partial_\mu \xi \right) \\
+  & = \partial_\n A_\nu - \partial_\nu A_\mu + \partial_\mu\partial_\nu \xi - \partial_\nu\partial_\mu \xi  \\
+  & = \partial_\nu A_\nu - \partial_\nu A_\mu \\
+  F_{\mu \nu}
+\end{align*} 
+Los cuadripotenciales $A_\mu(x^\mu)$ y $A_\mu(x^\nu) + \partial_\mu \xi$  llevan al mismo tensor de Faraday y por tanto, llevan a los mismos campos eléctricos y magnéticos. \\
+Establecemos una relación de equivalencia entre cuadri-potenciales que difieren por una tranformación de Gauge
+\begin{equation}
+  A_\mu(x^\mu) \sim \tilde{\tilde{{A}}}_\mu = A_\mu + \partial_\mu \xi
+ \end{equation}
+Podemos definir además las clases de equivalencia, que corresponde a las órbitas de Gauge, y moverse por dichas órbitas de Gauge implican un cambio en la transformación, o sea, cambiamos el representante de la clase de equivalencia. \\
+Supongamos que
+\begin{equation*}
+  \xi = e^{-\alpha (t^2-x^2)}
+\end{equation*}
+Para lo cual,
+\begin{align*}
+  \partial_t \xi & = e^{-\alpha (t^2-x^2)} \left( -2\alpha t \right) \\
+  \partial_x \xi & = e^{-\alpha(t^2-x^2)}(2\alpha x)
+\end{align*}
+Lo que nos dará
+\begin{equation}
+  \tilde{\tilde{{A}}}_\mu A^{Coulomb}_\mu + \left( -2\alpha + e^{-\alpha(t^2-x^2)}, 2\alpha x e^{-\alpha(t^2-x^2)} , 0 , 0 \right)
+ \end{equation}
+ Con lo cual
+ \begin{align}
+   \tilde{\tilde{{A}}}_t & = -\frac{q}{t} - 2\alpha t e^{-\alpha(t^2-x^2)} \\
+   \tilde{\tilde{{A}}}_x & = 2\alpha x e^{-\alpha (t^2-x^2)}
+ \end{align}
+\end{document}
