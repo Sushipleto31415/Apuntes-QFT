@@ -1,0 +1,140 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigésimo quinta clase}
+Nos convencimos que de las ecuaciones de Maxwell podemos obtener una forma covariante de la Ley de Gauss de la forma
+\begin{equation*}
+  \partial_\mu F^{\mu \nu} = 0 
+\end{equation*}
+En lo cual, el tensor de Faraday viene de Fábrica con los indices abajo, lo que tiene fuertes implicancias físicas, se sugiere indagar en esto para poder tener mejor noción de su construcción. \\
+Ahora, necesitamos encontrar un principio de acción para el campo $A_\mu$, o sea, para el cuadri-potencial electromagnético.
+\begin{equation*}
+  I[A_\mu] = \int dt \int d^3x \mathfrak{L} = \int dt L
+\end{equation*}
+Algo muy imporante de notar es el cómo transforma el tensor de Faraday cuando se aplica una transformación entre observadores inerciales, el tensor de Faraday transforma de la siguiente forma
+\begin{equation}
+  \tilde{F}_{\mu\nu}= \Lambda^\alpha_\mu \Lambda^\beta_\nu F_{\alpha \beta}
+ \end{equation}
+ También es importante notar el cómo transforman las ecuaciones de Maxwell ante una transformación de Lorentz en su forma diferencial o vectorial. Pero ambos observadores inerciales ven la misma ecuación dinámica 
+ \begin{equation*}
+   \frac{\tilde{F}^{\mu \nu}}{\partial \tilde{x}^\mu} = 0
+ \end{equation*}
+ ya que, recordemos que el campo fundamental no es $F_{\mu \nu}$ sino $A_\mu$ la cual transforma como
+ \begin{equation*}
+   \tilde{A}_\mu(\tilde{x}) = \Lambda^\alpha_\mu A_\alpha(x) 
+ \end{equation*}
+ y que el principio de acción sea invariante bajo dicha transformación además de devolver la ecuación dinámica buscada. Proponemos una densidad Lagrangeana de la siguiente forma
+ \begin{equation*}
+   \mathfrak{L} = c_1 F^{\mu \nu}F_{\mu \nu} + \epsilon^{\mu \nu \lambda \rho} F_{\mu \nu} F_{\alpha \rho}
+ \end{equation*} 
+ Y podemos hacer el ejercicio de escribir dicha densidad Lagrangeana en términos de los campos eléctrico y magnético de forma explícita, lo que sería de la forma
+\begin{equation*}
+  \mathfrak{L} = c_1 \left( |\vec{E}|^2 - |\vec{B}|^2 \right) + c_2 \left( \vec{E}\cdot \vec{B} \right)
+\end{equation*} 
+Cuando calculamos las ecuaciones de movimiento nos daremos cuenta que el segundo término ($E\cdot B$), no contribuye, ya que, es un término de borde.
+\subsection{Principio de acción de Maxwell}
+A lo cual podemos convencernos que el siguiente principio de acción es el buscado
+\begin{equation}
+  I[A_\mu ] = \int d^4x \left( -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} \right)
+ \end{equation}
+ Variamos la acción tal que, asumiendo  que la transformación infinitesimal tiene las puntas amarradas $\delta A_\mu(t_1 \wedge t_2,\vec{x}) = 0$ y además $\delta A_\mu \stackrel{\longrightarrow}{|\vec{x}|\to \infty} 0 $ 
+ \begin{align*}
+   \delta I = 0  &= I[A_\mu + \delta A_\mu] - I[A_\mu] \\
+   & =  \int d^4x \left( -\frac{1}{4}\left[ \partial_\mu \left( A_\nu + \delta A_\nu \right) -\partial_\nu \left( A_\mu + \delta A_\mu  \right) \right] \left[ \partial^\mu \left( A^\nu + \delta A^\nu  \right)  - \partial^\nu \left( A^\mu + \delta A^\mu \right)\right] \right) - I \\
+   & = \int d^4x - F^{\mu \nu} \partial_\mu \delta A_\nu \\
+   & = \int d^4x \partial_\mu \left( -F^{\mu \nu} \delta A_\nu \right) + \partial_\mu \left( F^{\mu \nu} \right)\delta A_\nu \\
+   & = B.T \; + \int d^4x \partial_\mu F^{\mu\nu} \delta A_\nu = 0 \; \Rightarrow \; \partial_\nu F^{\mu \nu} = 0
+ \end{align*}
+El \textbf{Principio de acción de Maxwell}
+\begin{equation}
+  I[A_\mu]  = \int d^4x \left( -\frac{1}{4}F_{\mu \nu} F^{\mu \nu} \right)
+ \end{equation}
+ Es invariante bajo: \\
+ \textbf{Transformaciones de Lorentz:} Rotaciones, Boost, $\tilde{x}^\mu = \Lambda^\mu_\alpha x^\alpha$.
+ \begin{equation*}
+   \tilde{{A}}_\mu(\tilde{x}) = \Lambda^\alpha_\nu A_\alpha(x) 
+ \end{equation*}
+ Cuya carga conservada es del tipo
+ \begin{equation*}
+   Q = \int d^3x j^t, \quad j^\mu = \frac{\partial \mathfrak{L}}{\partial \partial_\mu A_\nu}\delta A_\nu - B^\mu
+ \end{equation*}
+\textbf{Transformaciones de Poincaré}, Traslaciones temporales y espaciales, $\tilde{x}^\mu = x^\mu + a^\mu$. 
+\begin{align*}
+  \tilde{\phi}(\tilde{x}) & = \phi(x) \\
+  \tilde{\psi}(\tilde{x}) & = \psi(x) \\
+  \tilde{{A}}_\mu(\tilde{x}) & = A_\mu(x)
+\end{align*}
+A lo cual, calculamos la traslación espacio temporal
+\begin{align*}
+  \tilde{{A}}_\mu(x) & = A_\mu(x-a)  \\
+  & = A_\mu(x) - a^\alpha \partial_\alpha A_\mu \\
+  &\Rightarrow \delta A_\mu = -\epsilon^\alpha \partial_\alpha A_\mu 
+\end{align*}
+y de ello encontramos que la corriente conservada será el tensor densidad energía momento (bajo traslaciones espacio-temporales).
+\begin{equation}
+  j^\mu = -\epsilon^\nu T_{\;\nu}^\mu
+ \end{equation}
+ en donde el tensor densidad de energía momento es el siguiente, que es análogo a la energía clásica.
+ \begin{equation}
+   T_{\mu \nu} = F_{\mu \alpha} F_\nu^{\;\alpha} - \frac{1}{4}\eta_{\mu \nu} F_{\alpha \beta} F^{\alpha \beta}
+  \end{equation}
+  El cual cumple con que tiene divergencia nula, ya que es una corriente conservada
+  \begin{equation}
+    \partial_\mu T^\mu_{\;\nu} = 0
+   \end{equation}
+Y el tensor energía momento, al estar compuesto por tensores de Faraday, transforma como
+\begin{equation}
+  \tilde{T}_{\mu \nu}(\tilde{x}) = \Lambda^\alpha_{\;\nu} A^\beta_{\;\nu}T_{\alpha \beta}(x)
+ \end{equation}
+ \subsection{Hacia teorías de Gauge no-abelianas}
+ Las cuales describen los Gluones, $w^{\pm}, z^0$. \\
+Supongamos que tenemos un grupo $g(x)$, como por ejemplo el grupo $SU(N)$, el cual está caracterizado por su tabla de multiplicación o de Cayley. El grupo actúa sobre un fermión como
+\begin{equation}
+  \tilde{\psi}(x) = g(x)\psi(x)
+ \end{equation}
+ Que no es nada más que un grupo actuando sobre una matriz columna, pero la transformación no actúa sobre los  $x^\mu$ sino que actúa directamente sobre los campos, lo que corresponde a una transformación interna, los campos se mezclan entre sí. \\
+ Ahora veamos como transforman las derivadas parciales de $\psi$
+ \begin{align*}
+   \frac{\partial \tilde{\psi}(x)}{\partial x^\mu} & = \partial_\mu \left( g(x)\psi(x) \right) \\
+   & = g(x) \partial_\mu \psi(x) + \partial_\mu g(x) \psi(x)
+ \end{align*}
+ Pero esto no es una transformación homogénea, con lo cual es necesario definir una derivada que me permita que la transformación es homogénea\footnote{Similar a esto es cuando se define la derivada coraviante para un espacio curvo usando los símbolos de Christoffel $\Gamma^l_{\mu \nu}$}.\\
+ Así, definimos la siguiente derivada covariante
+ \begin{align*}
+   D_\mu \psi(x)&  : = \partial_\mu \psi(x) + A_\mu(x)\psi(x) \\
+   \tilde{D_\mu\psi(x)}&  : = \partial_\mu\tilde{\psi}(x) + \tilde{{A}}_\mu (x)\tilde{\psi}(x) \\
+   \tilde{D_\mu\psi(x)} = g(x)D_\mu\psi(x)
+ \end{align*}
+ Con lo cual podemos desarrollar lo siguiente
+ \begin{align*}
+   \partial_\mu \tilde{\psi} + \tilde{{A}}_\mu \tilde{\psi} & = g\partial_\mu \psi + gA_\mu \psi \\
+   \partial_\mu g \psi + g \partial_\mu \psi + \tilde{{A}}_\mu g\psi & = g\partial_\mu \psi + gA_\mu \psi \\
+   \tilde{{A}}_\mu g & = gA_{\mu} - \partial_\mu g \\
+   \tilde{{A}}_\mu g g^{-1} & = gA_\mu g^{-1} - \partial_\mu gg^{-1}
+\end{align*}
+\subsubsection{Fórmula de Manuel Cartán}
+La ley de transfomación de la conexión de Gauge (campo de Gauge) es:
+\begin{equation}
+  \tilde{{A}}_\mu(x) = gA_\mu(x) g^{-1} - \partial_\mu g g^{-1}
+\end{equation}
+\begin{align*}
+  \partial_\mu g g^{-1} & = \partial_\mu \left( exp(\lambda_a(x)T_a) \right)\; exp(-\lambda_a(x)T_a) \\
+  & = exp (\lambda_a(x)T_a) \partial_\mu (\lambda_b(x))T_b exp(-\lambda_c(x)T_c)
+\end{align*}
+La expresión
+\begin{equation}
+  \tilde{{A}}_\mu(x) = gA_\mu(x)g^{-1} - \partial_\mu gg^{-1}
+ \end{equation}
+ En donde $A_\mu(x)$ es una combinación lineal de generadores
+ \begin{equation}
+   A_\mu(x) = A^a_\mu(x)T_a 
+  \end{equation}
+  En donde  $A_\mu(x)$  esto puede ser el grupo $SU(3)$ el cual cuenta con 8 generadores y da cuenta de los 8 gluones. \\
+  Si el grupo es abeliano $U(1)$ hay un solo $A_\mu(x)$ y puede ser escrito como $g=g^{i\xi(x)}$
+  \begin{align*}
+    \tilde{{A}}_\mu(x) & = A_\mu - \partial_\mu (e^{i\xi}) e^{i\xi} \\
+    & = A_\mu - i\partial_\mu \xi \\
+    & = A_\mu + \partial_\mu \alpha,\quad \alpha=-i\xi \\
+    & = \tilde{{A}}_\mu (x) 
+  \end{align*}
+\end{document} 
