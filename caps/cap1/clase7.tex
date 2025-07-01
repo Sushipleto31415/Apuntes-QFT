@@ -16,7 +16,7 @@ lo cual, junto a transformaciones de Lorentz, dadas por
   \tilde{x} & = \frac{x-Vt}{\sqrt{1-\frac{V^2}{c^2}}} \\
   \tilde{v} & = \frac{v-V}{\sqrt{1-\frac{vV}{c^2}}}
 \end{align*}
-En lo cual, $\frac{E}{c}$ y $p$ transforman como los componentes de un cuadri-vector
+En donde, $\frac{E}{c}$ y $p$ transforman como los componentes de un cuadri-vector
 \begin{align*}
   p^\mu & = (p^0,\vec{p}) \\
   p^\mu & = \left( \frac{E}{c},\vec{p} \right) \\
@@ -27,12 +27,12 @@ Con lo cual tenemos que, el cadrimomento transforma siguiendo la siguiente regla
 \end{equation}
 Además, siguiendo la convención de la métrica $(1,-1,-1,-1)$ tenemos lo siguiente
 \begin{align*}
-  \eta_{\mu \nu} p^\mu p^\nu  & = \eta_{00}p^0p^0 + \eta_{11}p^1p^1
-  & = 1\left( \frac{mc}{\sqrt{1-\frac{v^2}{c^2}}}  \right)^2 - \left( \frac{mc}{\sqrt{1-\frac{v^2}{c^2}}} \right) \\
-  & = \frac{m^2c^2-m^2v^2}{1-\frac{v^2}{c^2}}
+  \eta_{\mu \nu} p^\mu p^\nu  & = \eta_{00}p^0p^0 + \eta_{11}p^1p^1 \\
+  & = (+1)\left( \frac{mc}{\sqrt{1-\frac{v^2}{c^2}}}  \right)^2 + (-1)\left( \frac{mv}{\sqrt{1-\frac{v^2}{c^2}}} \right)^2 \\
+  & = \frac{m^2c^2-m^2v^2}{1-\frac{v^2}{c^2}} \\
   & = m^2c^2
 \end{align*}
-De la misma forma:
+De la misma forma, 
 \begin{equation*}
   \eta_{\mu\nu}\tilde{p}^\mu\tilde{p}^\nu = m^2c^2
 \end{equation*}
@@ -41,24 +41,21 @@ En el caso de partículas sin masa, como lo fotones y gluones, esta relación si
 \begin{equation*}
   \eta_{\mu \nu}p^\mu p^\nu = 0
 \end{equation*}
-Inserte dibujo de Julio del efecto compton.\\
+\subsection{Efecto Compton}
+\textbf{Inserte dibujo de Julio del efecto compton}.\\
 \begin{equation*}
-<<<<<<< HEAD
   \lambda ' = \lambda + \lambda_c (1-\cos{\theta})
-=======
   \lambda' = \lambda + \lambda_c (1-\cos \theta)
->>>>>>> refs/remotes/origin/main
 \end{equation*}
-$\lambda_c$ es constante? \\
-Pero ahora, en qué dirección sale disparado el fotón?, no lo sabemos ya que $\theta$ es una variable aleatoria. En las variables aleatorias continuas no tiene sentido preguntarse cuál es la probabilidad en que la variable tome un valor en particular, sin embargo, si es correcto el preguntarse la probabilidad en un invtervalo. \\
+Pero ahora ¿en qué dirección sale disparado el fotón?, no lo sabemos ya que $\theta$ es una variable aleatoria. En las variables aleatorias continuas no tiene sentido preguntarse cuál es la probabilidad en que la variable tome un valor en particular, sin embargo, si es correcto el preguntarse la probabilidad en un invtervalo. \\
 \begin{equation*}
   \theta=\int p(\theta)d\theta
 \end{equation*}
-Ahora vamos a demostrar que la conservación de el cuadri-momentum lleva justo a compton. Al choque,vaya. \\
-Pensemos en este proceso como un choque.\\
-Entonces, inicialmente hay un electrón y un fotón y asumamos que el electrón está quieto:
-Digamos que el fotón incide en el eje z con cierta energía, pensemos en este proceso como uno en el cual se conserva el cuadri-monento. \\
-Notese que si tengo un sistema invariante ante transformaciones espaciales, entonces los cuadri-momentos pueden ser sumados. \\
+Ahora vamos a demostrar que la conservación de el cuadri-momentum lleva justo al efecto Compton.\\
+Pensemos en este proceso como un choque de partículas.\\
+Inicialmente hay un electrón, un fotón y se asume que el electrón está en reposo. \\
+Digamos que el fotón incide en el eje z con cierta energía, pensemos en este proceso como uno en el cual se conserva el cuadri-monento\footnote{
+Notese que si se tiene un sistema invariante ante transformaciones espaciales, entonces los cuadri-momentos pueden ser sumados.}. \\
 \begin{equation}
   p^\mu_{TI} = p^\mu_{EI} + p^\mu_\gamma
 \end{equation}
@@ -68,19 +65,19 @@ El del electrón es facil ya que
 \end{equation*}
 Si tengo un fotón de color $\lambda$, y de frecuencia $\omega$, entonces
 \begin{equation*}
-  p\mu_\gamma = \left(\frac{E_\gamma}{c}, 0 , 0 , \# \right)
+  p^\mu_\gamma = \left(\frac{E_\gamma}{c}, 0 , 0 , \# \right)
 \end{equation*}
 Ahora necesito un número tal que se cumpla la relación para las partículas sin masa, como lo es el fotón, por lo tanto,
 \begin{equation*}
   p^\mu_\gamma = \left(\frac{E_\gamma}{c},0,0,\frac{E_\gamma}{c}\right)
 \end{equation*}
-recuerden entonces que $E_\gamma=\hbar \omega$, ¿de dónde sale?, pues, de experinmentos. Entonces podemos escribir que, el cadri-momentum inicial es lo siguiente
+Recordando que la energía de un fotón es $E_\gamma=\hbar \omega$, pero ¿de dónde sale esto?, pues, de experinmentos. Entonces, podemos escribir que, el cuadri-momentum inicial como sigue,
 \begin{equation*}
   p^\mu_{TI} = \left(  mc+\frac{E_\gamma}{c},0,0 \frac{E_\gamma}{c} \right)
 \end{equation*}
-En lo cual se han sumado los momenta. \\
+En donde se han sumado los momenta. \\
 Al final, luego del choque, pasará lo siguiente.(inserte dibujo de Julio posterior al choque en el cual se observa la dirección aleatoria en la cual el fotón sale volando, ángulo de dispersión). \\
-EL fotón sadrá en una direción con ángulo $\alpha$ y el fotón saldrá en un ángulo $\theta$, el cual daremos como conocido, ahora la pregunta es, dado un $\theta$ conocido, cuál es el color del fotón?  \\
+El fotón sadrá en una direción con ángulo $\alpha$ y el fotón saldrá en un ángulo $\theta$, el cual daremos como conocido, ahora la pregunta es, dado un $\theta$ conocido, cuál es el color del fotón?  \\
 \begin{equation}
   p^\mu_{FT} = p^\mu_{EF} + p^\mu_{gamma ' }
 \end{equation}

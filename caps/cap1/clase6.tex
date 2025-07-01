@@ -2,47 +2,60 @@
 
 \begin{document}
 \section{Sexta clase}
-Volvemos a relatividad especial
+Volvemos a relatividad especial, en donde definiremos las transformaciones de Lorentz a través de funciones hiperbólicas.
 
 \begin{align*}
   \tilde{t} & =\frac{t-V/c^2 x}{\sqrt{1-V^2/c^2}} \\
-  \tilde{x} & =  \frac{x-Vt}{\sqrt{1-V^2/c^2}} \\
-  V & = c\tanh{\xi}
+  \tilde{x} & =  \frac{x-Vt}{\sqrt{1-V^2/c^2}}
 \end{align*}
-Ahora, si definimos $V$ así
+Ahora, si definimos $V$ de la siguiente forma
+\begin{equation}
+   V & = c\tanh{\xi}
+\end{equation}
+Tal que este cumple con la siguiente relación
 \begin{align*}
-  1-\frac{V^2}{c^2}  & = 1- \tanh^2{\xi}
+  1-\frac{V^2}{c^2}  & = 1- \tanh^2{\xi} \\
   & = \frac{1}{\cosh^2{\xi}}
 \end{align*}
-Con lo cual recordemos las propiedades que cumplen las funciones trigonométricas hiperbólicas
+Con lo cual, recordando las propiedades que cumplen las funciones hiperbólicas
 \begin{align}
   \cosh^2{\xi} - \sinh^2{\xi}  & = 1 \\
   1- \tanh^2{\xi} = \frac{1}{\cosh^2{\xi}}
 \end{align}
-Por lo tanto, podemos escribir nuestras transformaciones como lo siguiente 
+Tal que, podemos escribir las transformaciones de Lorentz como 
 \begin{align*}
-  \tilde{t} & = \frac{t-\frac{\tanh{\xi}}{c}x}{\frac{1}{\cosh{\xi}}} \\
   c\tilde{t} & = \cosh{\xi}ct - \sinh{\xi}x \\
   \tilde{x}  & = \cosh{\xi}x - \sinh{\xi}ct \\
   \tilde{z} & = z  \\
-  \tilde{y} & = y
+  \tilde{{y}} & = y
 \end{align*}
 En lo cual, $\sinh{\xi}$ será la rapidity. \\
 Ahora, escribamos esto en notación tensorial de la siguiente forma
 \begin{equation}
-  x^\mu = \{ x^0,x^1,x^2,x^3 \} = \{xt,x,y,z\}
+  x^\mu = \{ x^0,x^1,x^2,x^3 \} = \{ct,x,y,z\}
 \end{equation}
 Lo cual representa las coordenadas de un evento en el espacio tiempo plano (Minkowsky). \\
-(Escribió la transformación en matrices, revisar como escribir las matrices) \\
 Aplicamos las transformaciones en forma matricial
 \begin{equation}
   \tilde{x}^\mu = \{\tilde{x}^0,\tilde{x}^1, \tilde{x}^2, \tilde{x}^3\} = \{c\tilde{t},\tilde{x},\tilde{y},\tilde{z}\} 
 \end{equation}
-Ahora, la matriz de transformación se representa como un tensor $\Lambda_\nu^\mu$ de transformacion para el tensor de posiciones $x^\mu$ tal que, la regla de transformación para la posición dentro del espacio tiempo plano de Minkowsky, es bajo la siguiente regla
+Tal que,
+\begin{equation}
+  \begin{pmatrix}
+    c\tilde{t} \\ \tilde{x} \\ \tilde{{y}} \\ \tilde{z} 
+  \end{pmatrix}
+   = \begin{pmatrix}
+     \cosh{\xi} & - \sinh{\xi} & 0 & 0 \\ -\sinh{\xi} & \cosh{\xi} & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 
+   \end{pmatrix}
+   \begin{pmatrix}
+     ct \\ x \\ y \\ z
+   \end{pmatrix}
+\end{equation}
+La matriz se representa como un tensor de rango 2 $\Lambda_\nu^\mu$ de transformacion para el tensor de posiciones $x^\mu$ tal que, la regla de transformación para la posición dentro del espacio tiempo plano de Minkowsky es la contracción de este $\Lambda^\mu_{\; \nu}$ con la posición, 
 \begin{equation}
   \tilde{x}^\mu=\Lambda^\mu_\nu x^\nu
 \end{equation}
-en lo cual los índices $\nu$ están contraidos y por tanto, sumados. \\
+en donde los índices $\nu$ estarán contraidos y por tanto, sumados. \\
 Pensamos ahora, en una transformación más general y preguntémonos ¿ Qué nos dice la invariancia del intervalo con respecto de $\Lambda^\mu_\nu$?
 \begin{align*}
   \tilde{\vec{x}} &  = \Theta \vec{x} \\
@@ -51,7 +64,7 @@ Pensamos ahora, en una transformación más general y preguntémonos ¿ Qué nos
   (\Theta\vec{x})^T(\Theta\vec{x}) & = \vec{x}^T\vec{x} \\
   \vec{x}^T\Theta^T\Theta\vec{x}   & = \vec{x}^T\vec{x} 
 \end{align*}
-En lo cual, las matrices $\Theta$ se definen como ortogonales, o sea que, $\Theta^T\Theta= I$
+En donde, si las matrices $\Theta$ se definen como ortogonales, o sea, $\Theta^T\Theta= I$, entocnes se tiene
 \begin{align*}
   ds^2  & = c^2dt^2 - dx^2 - dy^2 - dz^2 \\
   & = c^2d\tilde{t}^2 - d\tilde{x}^2 - d\tilde{x}^2 - d\tilde{z}^2
@@ -98,7 +111,8 @@ En lo cual se usa la siguiente propiedad
   \xi^T C \xi = C 
 \end{align*}
 Siendo c una matriz antisimétrica con respecto a la diagonal y además diagonal nula. \\
-Definición: Diremos que un arreglo denotado por $A^\alpha$ es un vector contravariante de Lorentz si bajo una transoformación de Lorentz: 
+\\
+\textbf{Definición}: Diremos que un arreglo denotado por $A^\alpha$ es un vector contravariante de Lorentz si bajo una transoformación de Lorentz: 
 \begin{equation}
   \tilde{A}^\alpha = \Lambda_\beta^\alpha A^\beta
 \end{equation}
@@ -133,7 +147,7 @@ versus
 \begin{equation*}
   \tilde{x} = \frac{x-\frac{V}{c}(c\tilde{t})}{\sqrt{1-\frac{V^2}{c^2}}}
 \end{equation*}
-Definición: 4-momenta o cuadrivector de momentum , de define como 
+\textbf{Definición}: 4-momenta o cuadrivector de momentum , se define como 
 \begin{align}
   p^\mu = \left( \frac{E}{c},\vec{p} \right)\quad , \quad \tilde{p}^\mu = \left(\frac{\tilde{E}}{c}, \tilde{\vec{p}}\right)
 \end{align}

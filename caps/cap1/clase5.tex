@@ -48,7 +48,9 @@ Obsevarmos que si $p=0 \rightarrow E=mc^2$. Queremos hacer cuántica la relativi
 \begin{equation}
   E^2=p^2c^2 + c^2p^4
 \end{equation}
-Argumento eurístico que lleva a la ecuación de Schödinger 
+\subsection{Ecuación de Klein Gordon}
+Mediante la promoción de el momento, posición y energía a operadores como lo es en la mecánica cuántica podremos encontrar una ecuación a partir de la relación de dispersión relativista. \\
+Argumento eurístico que lleva a la ecuación de Schödinger.
 \begin{align*}
   p & \rightarrow -i\hbar \frac{\partial}{\partial x} \\
   E & \rightarrow i\hbar\frac{\partial}{\partial t}
@@ -84,24 +86,25 @@ Con lo cual, hemos llegado a la siguiente ecuación
 \begin{equation}
   \boxed{\frac{1}{c^2}\partial^2_t\Psi - \partial^2_x\Psi + \frac{m^2c^2}{\hbar^2}\Psi = 0}
 \end{equation}
-La cual corresponde a la ecuación de Klein-Gordon ¿ Podemos demostrar la constancia de una cantidad definida positiva? con $c= 1$ y $\hbar=1$. En este caso, $c=1$ significa que se mueve a la rapidez de la luz, y para rapideces menores sería en factor de por ejemplo un 80$\%$ o $c=0.8$.  \\ 
+La cual corresponde a la ecuación de Klein-Gordon ¿ Podemos demostrar la constancia de una cantidad definida positiva? Con $c= 1$ y $\hbar=1$. En cuyo caso, $c=1$ significa que se mueve a la rapidez de la luz, y para rapideces menores sería en factor de por ejemplo un 80$\%$ o $c=0.8$.  \\ 
 \begin{align*}
   \Psi^*  \partial^2_t \Psi - \Psi^* \partial^2_x - m^2 \Psi^* \Psi  & = 0 \\
   \Psi \partial^2_t \Psi^* - \Psi \partial^2_x \Psi^* + m^2 \Psi \Psi^*  & = 0 \\ 
   \Psi^*\partial^2_t \Psi^* - \Psi \partial^2_t \Psi^* \Psi \partial^2_x \Psi^*- \Psi^*\partial^2_x \Psi & = 0 \\
   \partial_t \left( \Psi^*\partial_t\Psi - \Psi\partial_t\Psi^* \right) + \partial_x\left( \Psi\partial_x \Psi^* - \partial_x\Psi \right) & = 0
 \end{align*}
-Luego, de ello definimos lo siguiente
+Luego, de ello definimos la siguiente densidad de probabilidad asociada a la ecuación de Klein-Gordon.
 \begin{equation}
   \rho = \Psi^*\partial_t\Psi - \Psi\partial_t\Psi^*
 \end{equation}
-Lo cual no es definido positivo, a diferencia del $\rho_{SSHR}= \Psi^*\Psi>0$, si bien $\rho$ es conservado, no admite una interpretación probabilística. Más aún $\rho^*=-\rho \rightarrow \rho$ es puramente imaginario. \\
-$\tilde{\rho}=i\rho$ en donde $\rho\in\mathfrak{R}$ pero su signo no está definido. \\
-Además se define la siquiente corriente de función de onda
+La cual no es definido positiva, a diferencia de la densidad de probabilidad asociada a la ecuación de Schrödinger, dada por $\rho_{SSHR}= \Psi^*\Psi>0$, si bien la cantidad $\rho$ es conservada, no admite una interpretación probabilística debido a su posible valor negativo. Más aún $\rho^*=-\rho \rightarrow \rho$ es puramente imaginario, lo cual probabilísticamente, no tiene ningún sentido. \\
+ También es posible definir $\tilde{\rho}=i\rho$ en donde $\rho\in\mathfrak{R}$ pero su signo no está definido, con lo cual tampoco es posible interpretarla probabilísticamente. \\
+  \\
+Se define la \textbf{corriente de la función de onda},
 \begin{equation}
   j= \Psi\partial_x\Psi^* - \Psi^*\partial_x\Psi 
 \end{equation}
-La cual corresponde a una corriente de la función de onda, la cual denotará, en un flujo, cuánta de la función de onda se escapa de la frontera del volumen en la cual está definida. Así, similarmente al caso electromagnético, pero con ondas, podemos escribir una ecuación de continuidad para ondas, la cual está dada por la siguiente expresión:
+La cual denotará, en un flujo, cuánta de la función de onda se escapa de la frontera del volumen en la cual esta es definida. Así, similarmente al caso electromagnético, pero con ondas, podemos escribir una ecuación de continuidad para ondas, la cual está dada por la siguiente expresión,
 \begin{equation}
   \frac{d}{dt}\left( \int_VdV\rho \right) + \int_{\partial V}\vec{j}\cdot d\vec{S} = 0
 \end{equation}
