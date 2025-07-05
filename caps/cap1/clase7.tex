@@ -79,7 +79,7 @@ En donde se han sumado los momenta. \\
 Al final, luego del choque, pasará lo siguiente.(inserte dibujo de Julio posterior al choque en el cual se observa la dirección aleatoria en la cual el fotón sale volando, ángulo de dispersión). \\
 El fotón sadrá en una direción con ángulo $\alpha$ y el fotón saldrá en un ángulo $\theta$, el cual daremos como conocido, ahora la pregunta es, dado un $\theta$ conocido, cuál es el color del fotón?  \\
 \begin{equation}
-  p^\mu_{FT} = p^\mu_{EF} + p^\mu_{gamma ' }
+  p^\mu_{FT} = p^\mu_{EF} + p^\mu_\gamma
 \end{equation}
 La velocidad de un electrón es una variable aleatoria como también lo es su energía, pero estas están relacionadas con el ángulo.
 \begin{equation*}
@@ -93,24 +93,24 @@ Ahora para la energía final del electrón, tendremos que
 \begin{equation*}
   p^\mu_{EF} = \left(\frac{E_{ef}}{c},\vec{p}_{ef}\right)
 \end{equation*}
-Ahora, usando la relación de dispersión tenemos que
+Y a su vez, usando la relación de dispersión,
 \begin{equation*}
-  p^\mu_{ef} =  \frac{1}{c}\sqrt{m^2c^4+|\vec{p}_{ef}|^2c^2}, \vec{p}_{ef}
+  p^\mu_{EF} =  \left(\frac{1}{c}\sqrt{m^2c^4+|\vec{p}_{ef}|^2c^2}, \vec{p}_{ef}\right)
 \end{equation*}
-Con lo cual ahora nos queda sumar los momenta para obtener el momentum final
+Con lo cual solo queda sumar los momenta para obtener el momentum final
 \begin{equation*}
   p^\mu_{TF} = \left(\frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^4 + |\vec{p}_{ef}|^2c^2} , (p)^x_{ef},(p)^y_{ef} + \frac{E_{\gamma '}}{c}\sin{\theta}, (p)^z_{ef}+\frac{E_{\gamma'}}{c}\right)
 \end{equation*}
-Este scattering es completamente elástico, lo cual nos indica que el electrón no tiene energía interna, ya que si tuviera energína interna estaría cuantizada y dicha energía debería ser considerada en el choque ya que parte de la energía del choque iría hacia la estructura interna del elctrón, lo que, por ahora se ha probado que no, aunque no sabemos.  \\
+Este scattering es completamente elástico, lo cual nos indica que el electrón no tiene energía interna, ya que si tuviera energína interna estaría cuantizada y dicha energía debería ser considerada en el choque ya que parte de la energía del choque iría hacia la estructura interna del elctrón, lo que hasta ahora no se ha probado existe, aunque no sabemos.  \\
 \begin{align*}
   p_{TI}^\mu  & = p^\mu_{TF} 
 \end{align*}
 Haremos esto índice por índice del cuadri-momento 
 \begin{align*}
-  p_{TI}^0  & = p_{TF}^0 \rightarrow mc + \frac{E_\gamma}{c} & = \frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^2 + |\vec{p_{ef}}|^2c^2} \\
-  p_{TI}^1 & = p_{TF}^1 \rightarrow 0  & = (p)^x_{ef} \\
-  p_{TI}^2 & = p_{TF}^2 \rightarrow 0 & = (p^y)_{eff} + \frac{E_{\gamma '}}{c}\sin{\theta} \\
-  p_{TI}^3 & = p_{TF}^3 \rightarrow (p^z)_{ef} + \frac{E_{\gamma '}}{c}\cos{\theta}
+  p_{TI}^0  & = p_{TF}^0 &\rightarrow mc + \frac{E_\gamma}{c}  = \frac{E_{\gamma '}}{c} + \frac{1}{c}\sqrt{m^2c^2 + |\vec{p_{ef}}|^2c^2} \\
+  p_{TI}^1 & = p_{TF}^1 &\rightarrow 0   = (p)^x_{ef} \\
+  p_{TI}^2 & = p_{TF}^2 &\rightarrow 0  = (p^y)_{eff} + \frac{E_{\gamma '}}{c}\sin{\theta} \\
+  p_{TI}^3 & = p_{TF}^3 &\rightarrow (p^z)_{ef} + \frac{E_{\gamma '}}{c}\cos{\theta}
 \end{align*}
 Ahora, podemos notar inmediatamente que $(p^x)_{ef}=0$, con lo cual nos queda el siguiente sistema de ecuaciones.
 \begin{align*}
@@ -118,7 +118,7 @@ Ahora, podemos notar inmediatamente que $(p^x)_{ef}=0$, con lo cual nos queda el
   mc^2 + E_\gamma & = E_{\gamma '} + \sqrt{m^2c^4 + c^2\left( \frac{E_{\gamma '}^2}{c^2}\sin{\theta}^2 + \frac{E_{\gamma}^2}{c} + \frac{E_{\gamma '}^2}{c^2}\cos{\theta}* ^2 - \frac{2E_{\gamma}E_{\gamma '}}{c^2}\cos{\theta}\right)} \\
   mc^2 + E_\gamma & = E_{\gamma '} + \sqrt{m^2c^4 + E^2_{\gamma '} + E^2_\gamma - 2E_\gamma E_{\gamma `}\cos{\theta}}
 \end{align*}
-Al profe le aburrió el álgebra, con lo cual, la energía inicial del fotón es
+Despues de resolver el sistema de ecuaciones se encuentra que la energía inicial del fotón es,
 \begin{equation*}
 E_\gamma=\hbar\omega = \frac{\hbar c2\pi}{\lambda} = \frac{hc}{\lambda}  
 \end{equation*}
@@ -130,5 +130,5 @@ Con lo cual, de todo esto concluimos lo siguiente
 \begin{equation}
   \lambda ' = \lambda + \frac{h}{mc}(1-\cos{\theta})
 \end{equation}
-A lo cual, podemos llamar $\lambda_c=\frac{h}{mc}$, lo cual es llamada la longitud de compton del electrón. 
+A lo cual, podemos llamar $\lambda_c=\frac{h}{mc}$, la longitud de compton del electrón. 
 \end{document}
