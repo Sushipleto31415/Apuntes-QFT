@@ -1,0 +1,367 @@
+%CONFIGURACIÓN DEL DOCUMENTO Y HOJA
+
+ \documentclass[12pt,letterpaper]{article}
+\setlength{\parindent}{0em}                  %DISTANCIA SANGRÍA
+\setlength{\parskip}{0.5em}                  %DISTANCIA ENTRE PÁRRAFOS
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+
+%PAQUETES DEL TEMPLATE
+\usepackage[utf8]{inputenc}
+\usepackage{epsfig,graphicx}
+\usepackage{multicol}
+\usepackage{physics} %Para símbolos físicos más bonitos
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=3cm]{geometry} %Forma estándar
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} %Original de la plantilla
+\usepackage[spanish]{babel}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{upgreek}
+\usepackage{siunitx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{mdframed}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+%Fuentes clásicas
+\usepackage{mathpazo}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{microtype}
+\usepackage{siunitx}
+\usepackage[colorlinks]{hyperref}
+%Estilo vintage
+\usepackage[pages=all]{background}
+\backgroundsetup{
+    contents={}, % ← Vacío para eliminar "Draft"
+    opacity=1,
+    angle=0,
+    scale=1
+}
+\usepackage{xcolor}
+\pagecolor{yellow!5}
+\usepackage{fancyhdr}
+\usepackage{lettrine}
+
+% Configuración de fancyhdr (encabezados estilo vintage)
+\pagestyle{fancy}
+\fancyhf{} % Limpiar encabezados/pies predeterminados
+\renewcommand{\headrulewidth}{0.4pt} % Línea decorativa
+\fancyhead[L]{\small\scshape\leftmark} % Encabezado izquierdo (small caps)
+\fancyfoot[C]{\thepage} % Número de página al centro
+
+%Ajustes matemáticos
+\usepackage{bm}
+
+%Biblioteca (Referencias)
+\usepackage[numbers]{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{multicol}
+\newcommand*\vtick{\textsc{\char13}}
+%DEFINICIÓN DE COLORES EXTRAS
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\hypersetup{colorlinks=true,linkcolor=codegreen,citecolor=blue,filecolor=blue,urlcolor=magenta,}
+
+%CONFIGURACIÓN DE LSTLISTINGS PARA CÓDIGOS
+
+\lstset{ %
+language=python,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it is 1 each line will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)}          % if you want to add a comment within your code
+}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{red},
+	keywordstyle=\bfseries\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codegreen},
+	basicstyle=\footnotesize\ttfamily,
+	identifierstyle=\color{blue},
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                     
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%CONFIGURACIÓN DE MINTED PARA CÓDIGOS
+
+\usemintedstyle{vs}
+
+
+
+
+
+%COMIENZA EL DOCUMENTO
+
+\begin{document}
+%CONFIGURACIÓN DEL ENCABEZADO
+
+\usetikzlibrary{positioning}
+\tikzset{every picture/.style={line width=0.75pt}}    
+\pagestyle{plain}
+\begin{flushleft}
+Departamento de Física \hfill Introducción a las partículas elementales y QFT\\
+Facultad de Cs. Físicas y Matemáticas\\
+\underline{Universidad de Concepción}
+\end{flushleft}
+
+\begin{flushright}\vspace{-5mm}
+\includegraphics[height=1.5cm]{escudo .jpg}
+\end{flushright}
+ 
+\begin{center}\vspace{-1cm}
+\textbf{\large Informe Tarea 3}\\   %TITULO
+Amaro A. Díaz Concha\\                         %NOMBRE
+\end{center}
+\rule{\linewidth}{0.1mm}
+
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+  Este informe define las transformaciones y grupo de Lorentz para así definir el grupo y álgebra de Poincaré, el cual es muy importante en la física de Teoría Cuántica de Campos relativista ya que este álgebra induce operadores unitarios que dictan la transformación del campo de Hilbert o campo spinorial a través de observadores inerciales y traslaciones espacio-temporales.
+\end{abstract}
+\rule{\linewidth}{0.1mm}
+\section{Introducción}
+\section{Grupo de Poincaré y subgrupo de Lie }
+En la teoría especial de la Relatividad \cite{r-especial} se menciona la equivalencia de unos tales observadores \textbf{inerciales}\footnote{Un observador inercial corresponde a un observador para el cual mediante experimentos físicos no puede distinguir entre moverse a una velocidad constante con respecto a otro observador inercial, o el reposo.} tal que, mediante un cambio entre un observador inercial a otro, o sea un cambio de coordenadas $x^\mu \to x^\mu '$ se satisfaga la preservación o invariancia del intervalo,
+\begin{equation}
+  \eta_{\mu \nu}dx^\mu'd^\nu' = \eta_{\mu \nu}dx^\mu dx^\nu
+\end{equation}
+En donde $\eta_{\mu\nu}$ corresponde a la métrica de Minkowsky\footnote{Usaremos la convención de $\eta_{\mu \nu}=diag(+,-,-,-)$} que representa un espacio-tiempo plano. Estas transformaciones tienen cierta propiedad, la cual corresponde a que la velocidad de la luz es constante para todos los sistemas de referencia, estas son las transformaciones de Lorentz, las cuales forman un grupo llamado \textbf{Grupo de Lorentz} (SO(1,3)), cuya transformación asociada que preserva el intervalo corresponden a las transformaciones de Lorentz.
+\subsection{Transformaciones y grupo de Lorentz}
+Una transformación de Lorentz se divide en dos categorías cada una de las cuales puede ser realizada de 3 formas diferentes,
+\begin{itemize}
+  \item 3 Llamados ¨Boosts¨ que corresponden al cambio de sistema de un referencia inercial a otro, un boost por cada dirección que puede tomar la velocidad relativa $\vec{\beta}=\frac{\vec{v}}{c}=(\beta_x,\beta_y,\beta_z)$ entre dichos observadores (además incluyen el facor de Lorentz $\gamma=\frac{1}{\sqrt{1-\beta^2}}$, con $\beta=|\vec{\beta}|$).
+  \item 3 Rotaciones espaciales, una por cada plano.
+\end{itemize}
+Un Boost ¨puro¨ puede ser escrito de forma general \cite{goldstein}, es decir, para una velocidad en una dirección cualquiera, mediante la siguiente matriz simétrica,
+\begin{equation}
+  L_0 = \begin{pmatrix}
+    \gamma & -\gamma \beta_x & -\gamma\beta_y & -\gamma\beta_z \\
+    -\gamma \beta_x & 1 + (\gamma-1)\frac{\beta_x^2}{\beta^2} & (\gamma-1)\frac{\beta_x\beta_y}{\beta^2} & (\gamma-1)\frac{\beta_x\beta_z}{\beta^2} \\
+    -\gamma\beta_y & (\gamma-1)\frac{\beta_y\beta_x}{\beta^2} & 1+(\gamma-1)\frac{\beta_y^2}{\beta^2} & (\gamma-1)\frac{\beta_y\beta_z}{\beta^2} \\
+    -\gamma\beta_z & (\gamma-1)\frac{\beta_z\beta_x}{\beta^2} & (\gamma-1)\frac{\beta_z\beta_y}{\beta^2} & 1+(\gamma-1)\frac{\beta_z^2}{\beta^2}
+  \end{pmatrix}
+\end{equation}
+Y además una matriz de rotaciones del siguiente modo,
+\begin{equation}
+  R = \begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & \cos{\theta} & -\sin{\theta} & 0 \\
+    0 & \sin{\theta} & \cos{\theta} & 0 \\
+    0 & 0 & 0 & 1
+  \end{pmatrix}
+\end{equation}
+Tal que, se define una transformación de Lorentz como el actuar de un boost cualquiera y una rotación cualquiera de la forma
+\begin{equation}
+  \Lambda^\mu_{\;\nu} = L_0R
+\end{equation}
+En donde las transformaciones $\Lambda$ satisfacen,
+\begin{equation}
+  \left( Det(\Lambda) \right)^2 = 1
+\end{equation}
+lo que implica que para cualquier transformación de Lorentz existe una transformación de Lorentz inversa $\Lambda^{-1}=\eta \Lambda^T\eta$. \\
+Así, las transformaciones de Lorentz preservan el intervalo \cite{weinberg-v1}.
+\begin{equation}
+  \eta_{\mu \nu} \Lambda^\mu_{\; \rho} \Lambda^\nu_{\; \sigma} = \eta_{\rho\sigma}
+  \label{eq:intervalo}
+\end{equation}
+\subsection{Grupo de Poincaré}
+Las transformaciones de Lorentz actuán para un origen fijo $x^\mu=0$ hacia otro origen fijo $x^\mu'=0$ , sin embargo, para ser aún mas generales, se pueden añadir traslaciones espacio temporales junto a $\Lambda^\mu_{\;\nu}$. \\
+Para una transformación de coordenadas cualquiera que satisface la preservación del intervalo,
+\begin{equation}
+  x^\mu' = \Lambda^\mu_{\;\nu}x^\nu + a^\nu
+\end{equation}
+en donde $a^\mu$ son constantes arbitrarias. \\
+Esto corresponde a la \textbf{suma semidirecta} entre el grupo de Lorentz y el grupo de las traslaciones espacio-temporales.
+\begin{equation}
+  ISO(1,3) = SO(1,3)\ltimes \mathbb{R}^{1,3}
+\end{equation}
+En donde $ISO(1,3)$ corresponde al grupo de Poincaré y sigue la siguiente ley de composición \cite{weinberg-v1}, para $x^\mu'\rightarrow x^\mu$
+\begin{align}
+  x^\mu' = \left(\bar{\Lambda}^\mu_{\; \rho} \Lambda^\rho_{\; \nu}\right)x^\nu + \left( \bar{\Lambda}^\mu_{\;\rho}a^\rho + \bar{{a}}^\nu\right)
+\end{align}
+O escrito de otra forma \cite{weinberg-v1}
+\begin{equation}
+  T(\bar{\Lambda},\bar{{a}}) T(\Lambda,a) = T(\bar{\Lambda}\Lambda, \bar{\Lambda}a + \bar{{a}}) 
+\end{equation}
+Este grupo de Poincaré\footnote{También llamado grupo de Lorentz inhomogéneo \cite{apunte}} tiene varios subgrupos importantes, como lo es el subgrupo de Lorentz homogéneo, los que serían transformaciones del tipo $a^\mu=0$
+\begin{equation}
+  T(\bar{\Lambda},0) T(\Lambda,0) = T(\bar{\Lambda}\Lambda,0)
+\end{equation}
+\subsection{Subgrupo de Lie}
+Las transformaciones de $Det(\Lambda)=1$ también forman un subgrupo ya sea del grupo de Poincaré o del grupo de Lorentz homogéneo, que cuando $\Lambda^0_{\; 0} =1$ es llamado el subgrupo propio ortocrono de Lorentz, $\mathfrak{{L}}^\uparrow_+$. Ya que no es posible llegar, mediante un cambio de parámetros continuo, desde $Det(\Lambda)=1$ hacia $Det(\Lambda)=-1$ o desde $\Lambda^0_{\;0}=1$ hacia $\Lambda^0_{\;}=-1$.
+Las combinaciones posibles entre estos dos parámetros, $Det(\Lambda)=\pm1$ y $\Lambda^0_{\;0}=\pm$ dan lugar a cuatro subespacios (en donde sólo uno de ellos corresponde a un subgrupo, o sea $\mathfrak{{L}}_+^\uparrow$)
+\begin{itemize}
+  \item $\mathfrak{{L}}^\uparrow_+$: \textbf{Subgrupo propio Ortocrono} (rotaciones + boosts)
+  \item $\mathfrak{{L}}^\downarrow_+$: Transformaciones propias no ortocronas (i.e. inversión temporal)
+  \item $\mathfrak{{L}}^\uparrow_-$: Impropias ortocronas (i.e. paridad)
+  \item $\mathfrak{{L}}^\downarrow_-$: Impropias no ortocronas (i.e paridad e inversión temporal)
+\end{itemize}
+Estos espacios corresponden a espacios no-conexos, es decir, no existe una trayectoria continua en el espacio de parámetros del grupo de Lorentz que conecte todos estos espacios. \\
+Como ya notamos, el único que corresponde a un subgrupo, es $\mathfrak{{L}}^\uparrow_+$ que en sí es el único \textbf{subgrupo de Lie} de Lorentz, o sea, el único que corresponde a una vecindad de su identidad y es el único que puede representarse mediante operadores unitarios continuos en el espacio de Hilbert físico, lo que es escencial si se quiere hacer una teoría cuántica de campos relativista \cite{weinberg-v1}. Dicho operador unitario transformaría de la siguiente forma
+\begin{equation}
+  \Psi \rightarrow U(\Lambda,a)\Psi
+\end{equation}
+\section{Àlgebra de Poincaré y representaciones unitarias}
+Estudiamos el subgrupo de Lie en el grupo de Poincaré, tal que, la información de una simetría de Lie está contenida en las propiedades de los elementos del grupo en una vecindad de su elemento neutro o identidad \cite{weinberg-v1}. En este caso, el elemento identidad corresponde a
+\begin{equation}
+  \Lambda^\mu_{\;\nu} = \delta^\mu_{\;\nu} \;\wedge \; a^\mu =0\Rightarrow e_{P} = \delta^\mu_{\;\nu}
+\end{equation}
+Tal que, un elemento del grupo infinitesimalmente cerca de la identidad cumple con
+\begin{equation}
+  \Lambda^\mu_{\; \nu} =\delta^\mu + \omega^\mu_{\;\nu},\quad a^\mu = \epsilon^\mu
+\end{equation}
+En donde $\omega^\mu_{\;\nu}$ y $\epsilon^\mu$ correpsonden a cantidades infinitesimales. Recordando que las transformaciones de Lorentz preservan el intervalo \eqref{eq:intervalo}
+\begin{align*}
+  \left( \delta^\mu_{\;\alpha} + \omega^\mu_{\;\alpha} \right) \left( \delta^\nu_{\;\beta} + \omega^\nu_{\;\beta} \right)\eta_{\mu\nu} & = \eta_{\alpha \beta} \\
+  \left( \delta^\mu_{\;\alpha} \delta^\nu_{\;\beta} + \omega^\mu_{\;\alpha}\delta^\nu_{\;\beta} + \delta^\mu_{\;\alpha}\omega^\nu_{\;\beta} + \mathcal{O}(\omega^2)\right)\eta_{\mu\nu} & =  \\
+  \eta_{\alpha \beta} + \omega^\mu_{\;\alpha}\eta_{\mu \beta} + \omega^\nu_{\;\beta}\eta_{\alpha \nu} & = \\
+  \eta_{\mu\beta} \omega^\mu_{\;\alpha} +\eta_{\alpha \nu} \omega^\nu_{\;\beta} & = 0
+\end{align*}
+Ahora se define \cite{apunte},
+\begin{equation}
+  \boxed{ \eta_{\alpha \nu} \omega^\nu_{\;\beta} := \omega_{\alpha \beta}}
+\end{equation}
+Con lo cual, esta condición se reduce a
+\begin{equation}
+  \omega_{\mu\nu} = -\omega_{\nu\mu} 
+\end{equation}
+la antisimetría $\omega_{\mu\nu}$. Además este tiene 6 elementos independientes, que concuerda finalmente con los 3 boosts, uno por cada dirección, y 3 rotaciones espaciales, una por cada plano. \\
+Ahora, como el operador $U(1,0)$ actúa sobre rayos del espacio de Hilbert, pero no cambia el estado físico, implica que este deber ser proporcional al operador unitario,
+\begin{equation}
+  U(1,0)\propto \mathbb{{I}} 
+\end{equation}
+Se busca una expresión para transformaciones en el espacio de Hilbert del tipo $U(1+\omega,\epsilon)$ y que, como actúa en un espacio de Hilbert, este operador debe ser unitario,
+\begin{equation}
+  U(1+\omega,\epsilon)^{\dagger}U(1+\omega,\epsilon) = 1
+\end{equation}
+Con lo cual, mediante una expansión en serie de Taylor \cite{weinberg-v1}
+\begin{equation}
+  U(1+\omega,\epsilon) = 1 + \propto \left( \omega \wedge \epsilon \right)
+\end{equation}
+Tal que el resultado permita la unitariedad, la expansión más general es
+\begin{equation}
+ U(1+\omega,\epsilon) = 1 + \frac{1}{2}i\omega_{\mu\nu} J^{\mu\nu} - i\epsilon_\mu P^\mu + \mathcal{O}(\omega^2,\epsilon^2,\omega \epsilon)
+\end{equation}
+En donde $J^{\mu\nu}$ y $P^\mu$ son operadores independientes de $\omega$ y $\epsilon$. Además, para que se cumpla con la unitariedad, los operadores deben ser hermíticos 
+\begin{equation}
+  \left( J^{\mu\nu} \right)^\dagger = J^{\mu\nu},\quad \left( P^\mu \right)^\dagger = P^\mu
+\end{equation}
+En particular, como la transformación infinitesimal $\omega$ es antisimétrica, entonces también podemos tomar al operador $J^{\mu\nu}$ como antisimétrico
+\begin{equation}
+  J^{\mu\nu} = -J^{\nu\mu}
+\end{equation}
+De lo que podemos notar que el factor $1/2$ en la definición de $U(1+\omega,\epsilon)$ es para evitar contar dos veces en la suma sobre índices antisimétricos. 
+\\
+El operador $P^\mu$ está asociado con el momento y la energía, en concreto, sus componentes $1,2,3$ corresponden a componentes del operador momento y la componente cero corresponde a la energía o el Hamiltoniano. \\
+Además, el operador $J^{\mu\nu}$ está asociado con el momento angular. En particular se divide en dos contribuciones \cite{apunte}.
+\begin{equation}
+  J^{\mu\nu} = L^{\mu\nu} + S^{\mu\nu}
+\end{equation}
+En donde
+\begin{itemize}
+  \item $L^{\mu\nu}=x^\mu P^\nu - x^\nu P^\mu$ es el operador momento angular orbital.
+  \item $S^{\mu\nu}$ es el generador intrínseco de espín, que dependerá de la representación del campo. 
+\end{itemize}
+Las propiedades de dichos operadores en una transformación
+\begin{equation}
+  U(\Lambda,a) U(1+\omega,e) U^{-1}(\Lambda,a)
+\end{equation}
+en donde $\Lambda$ y $a$ son cantidades no infinitesimales, con lo cual, si se desarolla la expresión \cite{weinberg-v1}, en donde $U^{-1}(\Lambda,a) = U(\Lambda^{-1},\Lambda^{-1}a)$
+\begin{equation}
+  U(\Lambda,a)U(1+\omega,\epsilon)U^{-1}(\Lambda,a) = U(\Lambda(1+\omega)\Lambda^{-1},\Lambda \epsilon - \Lambda\omega\Lambda^{-1}a)
+\end{equation}
+A primer orden en $\omega$ y $\epsilon$ se obtiene que
+\begin{align*}
+  U(\Lambda,a) \left[ 1+\frac{1}{2}i\omega_{\mu\nu}J^{\mu\nu} - i\epsilon_\mu P^\mu \right]U^{-1}(\Lambda,a) P^\mu & = 1+ \frac{i}{2}\left( \Lambda \omega \Lambda^{-1} \right) J^{\mu\nu} - i(\Lambda \epsilon - \Lambda\omega\Lambda^{-1}a)P^\mu \\
+  U(\Lambda,a) \left[ \frac{1}{2}\omega_{\mu\nu}J^{\mu\nu}-\epsilon_\mu P^\mu \right]U^{-1}(\Lambda,a) & = \frac{1}{2} \left( \Lambda \omega \Lambda^{-1} \right)J^{\mu\nu} - \left(\Lambda\epsilon- \Lambda\omega\Lambda^{-1}a \right)P^\mu
+\end{align*}
+De lo cual, se pueden separar los términos dependientes tanto de $\omega$ como de $\epsilon$
+\begin{align}
+  U(\Lambda,a)P^\mu U^{-1}(\Lambda,a) & = \Lambda^\mu_{\;\nu}P^\nu \\
+  U(\Lambda,a)\frac{1}{2}\omega_{\mu\nu}J^{\mu\nu} U^{-1}(\Lambda,a) & = \frac{1}{2}\left( \Lambda\omega\Lambda^{-1} \right)_{\mu\nu} J^{\mu\nu} + \left[ \left(\Lambda\omega\Lambda^{-1}\right)a \right]_\mu P^\mu 
+\end{align} 
+En concreto, para poder aislar los términos dependientes de $\omega$ se tienen que como $\Lambda^{-1}=\eta \Lambda^T\eta$  y $(\Lambda^{-1})_\gamma^\beta a^\gamma=a^\beta$, pues, transforma como un escalar,
+\begin{align*}
+  \frac{1}{2}\omega_{\mu\nu} U(\Lambda,a) J^{\mu\nu} U^{-1}(\Lambda,a) & = \frac{1}{2}\omega_{\mu\nu}\Lambda^\mu_{\;\rho}\Lambda^\nu_{\;\sigma}J^{\rho\sigma} + \omega_{\mu\nu} \left( \Lambda^\mu_{\;\alpha}a^\nu \right)P^\alpha \\
+  U(\Lambda,a)J^{\mu\nu}U^{-1}(\Lambda,a) & = \Lambda^\mu_{\;\rho}\Lambda^\nu_{\;\sigma}J^{\rho\sigma} + \Lambda^{[\mu}_{\;\alpha}a^{\nu]}P^\alpha \\
+  & = \Lambda^\mu_{\;\rho}\Lambda^\nu_{\;\sigma} J^{\rho\sigma} + \Lambda^{\mu}_{\;\alpha}a^\nu P^\alpha - \Lambda^\nu_{\;\alpha}a^\mu P^\alpha
+\end{align*}
+Con lo cual se tiene que
+\begin{equation}
+  U(\Lambda,a)J^{\mu\nu}U^{-1}(\Lambda,a) = \Lambda^\mu_{\;\rho} \Lambda^\nu_{\;\sigma} J^{\rho\sigma} + \Lambda^\mu_{\;\alpha}a^\nu P^\alpha - \Lambda^\nu_{\;\alpha} a^\mu P^\alpha
+\end{equation}
+Lo que, para transformaciones del grupo de Lorentz homogéneo, $a^\mu=0$, simplemente nos dica que $J$ corresponde a un tensor y $P$ a un vector. \\
+Ante traslaciones espacio temporales puras, es decir, $\Lambda^\mu_{\;\nu} = \delta^\mu_{\;\nu}$ y $a^\mu\neq 0$ nos dice que $P^\mu$ es invariante ante traslaciones espacio-temporales, al contrario de $J$ que sí cambia ante traslaciones, pero de la forma esperada para el momento angular. \\
+Téngase ahora, una transformación infinitesimal $\Lambda^\mu_{\;\nu} = \delta^\mu_{\;\nu} + \omega^\mu_{\;\nu}$ y $a^\mu=\epsilon^\mu$, en donde los nuevos $\omega$ y $\epsilon$ no tienen nada que ver con los antiguos utilizados y corresponden a una transformación nueva, en donde, para términos a primer orden de ambos, se tiene \cite{weinberg-v1}
+\begin{align}
+  i \left[ \frac{1}{2}\omega_{\mu\nu}J^{\mu\nu} - \epsilon_\mu P^\mu, J^{\rho\sigma} \right] & = \omega^{\;\rho}_\mu J^{\mu\sigma} + \omega^{\;\sigma}_\nu J^{\rho\nu} - \epsilon^\rho P^\sigma + \epsilon^\sigma P^\rho  \mathcal{{O}}(\omega^2,\epsilon^2,\omega\epsilon)\\
+  I \left[ \frac{1}{2}\omega_{\mu\nu} J^{\mu\nu} - \epsilon_\mu P^\mu , P^\rho \right] & = \omega^{\;\rho}_\mu P^\mu + \mathcal{{O}}(\omega^2,\epsilon^2,\omega\epsilon)
+\end{align}
+Esto finalmente corresponderá, al separarlo nuevamente en los componentes dependientes de $\omega$ y $\epsilon$, en los generadores del álgebra de Lie asociada al grupo de Poincaré \cite{weinberg-v1}, dados por
+\begin{align}
+ i \left[ J^{\mu\nu} , J^{\rho\sigma} \right] & = \eta^{\nu\rho}J^{\mu\sigma} - \eta^{\mu\rho}J^{\nu\sigma} - \eta^{\sigma\mu}J^{\rho\nu} + \eta^{\sigma\nu}J^{\rho\mu} \\
+  i \left[ P^\mu , J^{\rho\sigma} \right] & = \eta^{\mu\rho} P^\sigma - \eta^{\mu\sigma} P^\rho \\
+  i \left[ P^\mu,P^\rho \right] & =0
+\end{align}
+El que se hayan encontrado generadores de un álgebra de Lie asociados al grupo de Poincaré quiere decir que transformaciones infinitesimales de estos generadores constan de una simetría y por ende, via teorema de Noether, es una corriente conservada a lo largo de dicha transformación para un campo en el espacio de Hilbert \cite{apunte}. \\
+Ahora bien, de los generadores, podemos recuperar información que fue definida antes, se tiene un 3-vector $P^i$ que corresponde al momento lineal
+\begin{equation}
+  \vec{P} = \left( P^1, P^2, P^3 \right)
+\end{equation}
+La componente cero de $P^\mu$ corresponderá a la energía o Hamiltoniano del campo. El vector momento angular se define por
+\begin{equation}
+  \vec{J} = \left( J^{23} , J^{31} , J^{12} \right)
+\end{equation}
+Los demás generadores correspoderán a los 3 boosts, tal que se define el vector de boost $K$
+\begin{equation}
+  \vec{K} = \left( J^{10} , J^{20}, J^{30} \right)
+\end{equation}
+En particular, según los generadores, los vectores de momento lineal $\vec{P}$ y momento angular $\vec{J}$ conmutan con el operador energía $H=P^0$ lo que juega un rol especial para lograr introducir la mecánica cuántica con la teoría de campos relativista. En cambio, el vector boost $\vec{K}$  no conmuta con el operador energía $H$. Es posible, además, expresar los generadores en función de dichos vectores, tal que
+\begin{align}
+  \left[ J_i,J_j \right] & = i\varepsilon_{ijk}J_k\\
+  \left[ J_i , K_j \right] & = i\verpsilon_{ijk}K_k \\
+  \left[ K_i,K_j \right] & =-i\verpsilon_{ijk}J_k \\
+  \left[ J_i , P_j\right] & = i\verpsilon_{ijk}P_k \\
+  \left[ K_i,P_j \right] & = iH\delta_{ij} \\
+  \left[ J_i , H \right] & = \left[ P_i, H \right] = \left[ H , H \right] = 0  \\
+  \left[ K_i, H \right] & = iP_i
+\end{align}
+En donde $i=1,2,3$ y $\epsilon_{ijk}$ correponde al símbolo de Levi-Civita. \\ 
+Información importante que podemos interpretar de inmediato es que los boosts no conmutan consigo mismos, lo que es parte de la estructura del ya estudiado grupo de Lorentz.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+newpage
+\bibliography{Informe_QFT}
+\end{document}
