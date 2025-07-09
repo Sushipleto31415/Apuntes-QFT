@@ -1,0 +1,187 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigésimo sexta clase}
+De una forma abstracta supondremos que,
+\begin{equation}
+  g\in SU(N) \Rightarrow g^\dagger g = I \wedge det(g) = 1
+ \end{equation}
+ Y asumimos que en cada punto del espacio tiempo, hay un elemento del grupo. Todos los elementos que están conectados con la identidad pueden ser escritos como
+ \begin{equation}
+   g(x) = e^{e\lambda_a(x)T_a}, \quad \text{suma en a}
+  \end{equation}
+En el grupo $SU(N)$ se tiene que $a=1,\dots,N^2-1$ y los parámetros $\lambda_a(x)\in\mathbb{R}$ y las matrices $T_a$ son hermíticas y sin traza o que es consecuencia directa de las propiedades que cumple $g$. El punto $x$ corresponde a una etiqueta en el espacio tiempo, tal que, a cada punto del espacio tiempo\footnote{En este contexto se habla del espacio-tiempo plano de Minkowsky.} En el conexto de Grand Unified Theories se usa el grupo de $SU(5)$. Al considerar el espacio-tiempose piensa como, en cada punto, el grupo será una línea que por ejemplo, en el caso de $SU(2)$ las línea, que son llamadas fibras, serían 3-esferas\footnote{Esto es llamado la Teoría de Fibrados.} tal que a cada punto del espacio se le asocia una copia completa del grupo hacia una dirección abstracta. \\
+\\
+Asumamos que existe un campo
+\begin{equation}
+  \varphi(x) \longrightarrow \tilde{\varphi}(x) = g(x) \varphi(x)
+ \end{equation}
+ La que no corresponde a una transformación del espacio-tiempo. Es una transformación interna local. Los
+ \begin{equation*}
+   \varphi(x) = \begin{pmatrix}
+     \varphi_1(x) \\
+     \varphi_2(x) \\
+     .\\
+     .\\
+     \varphi_N(x)
+   \end{pmatrix}
+ \end{equation*}
+En donde el índice $N$ cuentan spinores y no índices spinoriales\footnote{Similar a como en teoría de campos clásica se usa la notación $\phi_a$}. Recordemos que conocemos una simetría interna global:
+\begin{equation}
+  I[\phi_1,\phi_2] = \int d^4 x \left( \frac{1}{2} \left( \partial \phi_1 \right)^2 + \frac{1}{2} \left( \partial \phi_2 \right)^2 - \frac{m^2}{2} \left( \phi_1^2 + \phi_2^2 \right) \right)
+ \end{equation}
+ y es invariante bajo la transformación
+ \begin{equation}
+   \begin{pmatrix}
+     \phi_1(x) \\
+     \phi_2(x)
+   \end{pmatrix}
+   \longrightarrow
+   \begin{pmatrix}
+     \tilde{\phi_1}(x) \\
+     \tilde{\phi_2}(x)
+   \end{pmatrix}
+  = 
+   \begin{pmatrix}
+     \cos{\theta} & -\sin{\theta} \\
+     \sin{\theta} & \cos{\theta}
+   \end{pmatrix}
+   \begin{pmatrix}
+     \phi_1(x) \\
+     \phi_2(x)
+   \end{pmatrix}
+  \end{equation}
+Una transformación local, sí es simetría de la acción 
+\begin{equation}
+  \tilde{\varphi}(x) = g(\theta)\varphi(x)
+ \end{equation}
+ Sin embargo, la siguiente transfomración no será simetría de la acción
+ \begin{equation}
+   g(\theta) = g(\theta(x))
+  \end{equation}
+Ya que, al la transformación depender del punto, entonces surge un problema con las derivadas y así ya no es simetría de la acción. \\
+Otro ejemplo de una teoría con simetría interna global:
+\begin{equation}
+  I[\Psi,\bar{\Psi}] = \int d^4 \bar{\Psi} \left( i\gamma^\mu \partial_\mu - m \right)\Psi
+ \end{equation}
+ La cual será invariante bajo la siguiente transformación
+ \begin{align*}
+   \Psi \rightarrow \tilde{\Psi}(x)  & = e^{i\alpha} \Psi(x) \\
+   \bar{\Psi} \rightarrow \tilde{\bar{\Psi}} & = \bar{\Psi}e^{-i\alpha},\quad a\in\mathbb{R}
+ \end{align*}
+Pero, en el caso que el parámetro $\alpha$ dependiera del punto en el espacio, o sea, $\alpha(x)$ , entonces ya no sería una simetría de la acción,
+\begin{align*}
+  \Psi \rightarrow \tilde{\Psi} (x) & = e^{i\alpha(x)} \Psi(x) \\
+  \bar{\Psi} \rightarrow \tilde{\bar{\Psi}} (x) & 0 \bar{\Psi}(x) e^{i\alpha(x)}
+\end{align*}
+Supongamos que tenemos una teoría de campos con simetría interna global:
+\begin{equation}
+  \varphi(x) \longrightarrow \tilde{\varphi}(x) = g\varphi(x)
+ \end{equation}
+ ¿ Es posible Gaugear esta simetría? \\\
+ ¿ Es posible modificar la teoría tal que ahora
+ \begin{equation*}
+   \varphi(x)\longrightarrow \tilde{\varphi}(x) = g(x)\varphi(x)
+ \end{equation*}
+ sea una invariancia de la acción nueva? \\
+ Concentrémonos en el campo de Dirac, el cual en la acción tiene dos términos:
+ \begin{itemize}
+  \item El término de masa:
+   \begin{align*}
+     m\bar{\Psi}(x)\Psi(x) \rightarrow m\tilde{\bar{\Psi}}(x)\tilde{\Psi}(x) & = \bar{\Psi}(x) e^{i\alpha(x)} e^{i\alpha(x)} \Psi(x) \\
+     & = m\bar{\Psi}(x) \Psi(x)
+   \end{align*}
+    Con lo cual, el término de masa es invariante bajo la transformación interna local.
+    \item Término cinético:
+    \begin{align*}
+      \bar{\Psi}(x) i \gamma^\mu \partial_\mu \Psi(x) \rightarrow \tilde{\bar{\Psi}}(x) i \gamma^\mu \partial_\mu \tilde{\Psi}(x) & = \bar{\Psi}(x) e^{i\alpha(x)} i \gamma^\mu \partial_\mu \left( e^{i\alpha(x)} \Psi(x) \right) \\
+       & = \bar{\Psi}(x) e^{-i\alpha(x)} i \gamma^\mu e^{i\alpha(x)} \partial_\mu \Psi(x) + \bar{\Psi}(x) e^{-i\alpha(x)} i\gamma^\mu i \partial_\mu\alpha(x) e^{i\alpha(x)}\Psi(x) \\
+       & = \bar{\Psi}(x) i \gamma^\mu \partial_\mu \Psi(x) - \bar{\Psi}(x) \gamma^\mu \partial_\mu\alpha(x) \Psi(x)
+    \end{align*}
+    En donde claramente sobra un término y no es simetría de la acción bajo una transformación interna local.
+ \end{itemize}
+ Si logramos definir una nueva noción de derivada, que llamaremos derivada covariante y denotaremos por
+ \begin{equation}
+   D_\mu \Psi
+  \end{equation}
+  Tal que, bajo la transformación local
+  \begin{equation}
+    D_\mu \Psi(x) \rightarrow \left( D_\mu \Psi(x) \right) ' = e^{i\alpha(x)} (  D_\mu\Psi(x) )
+   \end{equation}
+  Seríamos sumamente felices, pues el nuevo término cinético sería invariante bajo la transformación interna local.
+  \begin{equation}
+    \bar{\Psi}(x) i\gamma^\mu D_\mu \Psi(x) \rightarrow \tilde{\bar{\Psi}} (x) i \gamma^\mu \left( D_\mu \Psi(x) \right)' = \bar{\Psi}(x) e^{-i\alpha(x)} i\gamma^\mu e^{i\alpha(x)}D_\mu \Psi(x) = \bar{\Psi}(x) i \gamma^\mu D_\mu \Psi(x)
+   \end{equation}
+   ¿ Qué costo hay que pagar para poder definir $D_\mu \Psi(x)$ ? \\
+   Hay que introducir otro campo. \\
+  \subsection{Introducción de la derivada covariante para el campo de Dirac}
+  Se define la derivada covariante como
+  \begin{equation}
+    D_\mu \Psi(x) := \partial_\mu \Psi(x) - i eA_\mu(x) \Psi(x) = \left[ \partial_\mu - ieA_\mu(x) \right] \Psi(x)
+   \end{equation}
+   Pero ¿ A qué corresponderá el campo $A_\mu(x)$? \\
+   Para implementar
+   \begin{equation*}
+     \left( D_\mu \Psi(x) \right)'  = e^{i\alpha(x)} \left( D_\mu \Psi(x) \right)
+   \end{equation*}
+   Necesitamos que $A_\mu(x)$ transforme bajo la transformaciñon interna local.
+   \begin{align*}
+     e^{i\alpha(x)} \left( D_\mu \Psi \right) & = \left( D_\mu \Psi \right)',\\
+    \text{Usando la definición de la derivada covariante} \\
+     & = \left( \partial_\mu \Psi - ieA_\mu \Psi \right)' \\
+     & = \partial_\mu \Psi' - ie A_\mu' \Psi' \\
+     e^{i\alpha(x)} \partial_\mu \Psi - ie^{i\alpha} A_\mu\Psi  & = \partial_\mu \left( e^{i\alpha(x)} \Psi \right) - ieA_\mu'e^{i\alpha(x)} \Psi \\
+     iee^{i\alpha(x)} \left[ A_\mu'(x) - A_\mu(x) - \frac{1}{e} \partial_\mu\alpha(x) \right] \Psi(x) & = 0 \Rightarrow A_\mu'(x) = A_\mu(x) + \partial_\mu \left( \frac{\alpha(x)}{e}  \right)
+   \end{align*}
+  Y esto podemos identificarlo como la trasformación del 4-potencial electromagnético bajo una transformación de Gauge. \\
+  En resumen, la acción de Dirac modificada
+  \begin{equation}
+  I[\Psi,\bar{\Psi}] = \int d^4x \left(\bar{\Psi}i\gamma^\mu D_\mu \Psi - m\bar{\Psi}\Psi\right)
+   \end{equation}
+   En donde,
+   \begin{equation}
+     D_\mu \Psi := \partial_\mu\Psi - ieA_\mu \Psi
+    \end{equation}
+  y que básicamente y de forma expandida será
+  \begin{equation*}
+    I[\Psi,\bar{\Psi}] = \int d^4x \left( \bar{\Psi}i\gamma^\mu \partial_\mu \Psi - m\bar{\Psi}\Psi \right) + e\int d^4x \bar{\Psi} \gamma^\mu \Psi A_\mu(x)
+  \end{equation*}
+  En donde el primer término corresponde a la acción de Dirac libre y el segundo término consta de 
+  \begin{itemize}
+    \item $e:=$ La constante de acoplamiento.
+    \item $\bar{\Psi}\gamma^\mu\Psi:=$ La corriente vectorial.
+    \item $A_\mu(x):=$ Es el campo de Gauge. 
+  \end{itemize}
+    Esta nueva acción es invarinte bajo la acción del grupo $U(1)$ local,
+    \begin{align*}
+      \Psi(x)\rightarrow \Psi(x)' & = e^{i\alpha(x)} \Psi(x) \\
+      \bar{\Psi}(x) \rightarrow \bar{\Psi}(x)' & = \Psi(x)e^{-i\alpha(x)} \\
+      A_\mu(x)\rightarrow A_\mu(x)' & = A_\mu(x) + \partial_\mu \left( \frac{\alpha(x)}{e} \right)
+    \end{align*}
+También existe una convención en la cual, la constante $e$ diferente al número de Euler, estará presente en la exponencial, como por ejemplo
+\begin{equation*}
+  \Psi(x)\rightarrow \Psi(x)' = e^{ie\beta(x)}\Psi(x)
+\end{equation*}
+Esto cuando la física del campo lo requiera.\\
+Ahora, cómo podemos saber el cómo se comporta dinánicamente el campo $A_\mu$?, porque en la acció de Dirac modificada este actúa como un campo de background. Así, queremos agregar un término dinámico para el campo de Gauge, tal que la acción siga siendo invariante de Gauge. \\
+Si usamos $F_{\mu\nu}$ tendremos asegurada la invariancia de Gauge, pero \textbf{solo para teorías de Gauge abelianas}. \\
+\subsection{Acción de la electrodinḿica quántica (QED)}
+La acción de la electrodinámica cuántica, que aún no es cuántica pero la llamaremos así, está dada por,
+\begin{equation}
+  I[\Ps,\bar{\Psi},A_\mu] = \int d^4x \bar{\Psi} \left( i\gamma^\mu D_\mu - m \right)\Psi - \frac{1}{4} \int d^4x F_{\mu\nu} F^{\mu\nu}
+ \end{equation}
+O sea,
+\begin{equation}
+  I_{QED}[\Psi,\bar{\Psi}] = I_{Free-Dirac} [\Psi,\bar{\Psi}] + I_{Maxwell} [A_\mu] + I_{Int}[\Psi,\bar{\Psi},A_\mu]
+ \end{equation}
+Aplicando las ecuaciones de Euler-Lagrange se obtiene que
+\begin{align}
+  \delta_{\bar{\Psi}}I  = 0 \Rightarrow \left( i\gamma^\mu D_\mu  -m  \right)\Psi(x) & = 0 \\
+  \delta_{A_\mu}I = 0\Rightarrow \partial_\mu F^{\mu\nu} & = e\bar{\Psi}\gamma^\nu \Psi
+\end{align}
+en donde podemos recordar que 
+\begin{equation}
+  \partial_\mu F^{\mu\nu} = j^\nu 
+ \end{equation}
+ genera las ecuaciones de Gauss y Ampére-Maxwell
+\end{document}
