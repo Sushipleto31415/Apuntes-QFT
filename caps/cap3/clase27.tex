@@ -1,0 +1,188 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\chapter{Teoría cuántica de campos}
+\section{Vigésima séptima clase}
+Se tiene que, para la convención de la métrica en $(+,-,-,-)$, el Lagrangeano del cmpo escalar real está dado por;
+\begin{equation}
+  \mathfrak{L} = \frac{1}{2} \partial_\mu \phi \partial^\mu \pji - \frac{m^2}{2} \phi^2 - V(\phi)
+ \end{equation}
+ Y luego, para un campo escalar complejo;
+ \begin{equation}
+   \mathfrak{L} = \partial_\mu \varphi \partial^\mu \varphi - m^2 \varphi^* \varphi - V(\varphi,\varphi^*)
+ \end{equation}, en donde el potencial debe ser $V(\varphi,\varphi^*)\in\mathbb{R}$. \\
+ Recordemos también que, para un campo spinorial, el Lagrangeano de Dirac está dado por;
+ \begin{equation}
+   \mathfrak{L} = \bar{\psi} \left( i\gamma^\mu \partial_\mu - m \right)\psi
+  \end{equation}
+  en donde;
+  \begin{equation}
+    \bar{\psi} = \psi^\dagger \gamma^0,\quad \{\gamma^\mu , \gamma^\nu\} = 2\eta^{\mu\nu} \mathbb{I}_4
+   \end{equation}
+   Y $\bar{\psi}$ es llamado el conjugado de Dirac. \\
+   Si se tiene un campo de Guage $\A_\mu$ en $U(1)$, el Lagrangeano está dado por;
+   \begin{equation}
+     \mathfrak{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu}
+    \end{equation}
+  En comparación, si se tiene un campo de Gauge no abeliano, $A^a_{\mu}$ en $SU(N)$, el Lagrangeano está dado por;
+  \begin{equation}
+    \mathfrak{L} = \sum_{a=1}^{N^2-1} \left( -\frac{1}{4} F^{(a)}_{\mu\nu}F^{(a)\mu\nu} \right)
+   \end{equation}
+   En donde $F^{(a)}_{\mu\nu}$ es el tensor de Faraday;
+   \begin{equation}
+     F_{\mu\n}^{(a)} = \partial_\mu A^{(a)}_\nu - \partial_\nu A^{(a)}_{\mu} - f_{bca} A^{(b)}_\mu A^{(c)}_\nu
+    \end{equation}
+Los elementos del grupo estarán dados por;
+\begin{equation}
+  g= e^{-i\lambda_a(x)T_a}
+ \end{equation}
+ en donde $T_a$ son los generadores del grupo;
+ \begin{equation}
+   \left[ T_a,T_b \right]= if_{abc}T_c
+  \end{equation}
+  Las constantes $f_{abc}$ son llamadas constantes de estructura. Para $SU(N)$ siempre existe una base $T_a$ tal que;
+  \begin{equation}
+    tr(T_aT_b) = #\delta_{ab}
+   \end{equation}
+   \subsection{Propiedades comunnes}
+\subsubsection{Son invariantes bajo traslaciones espacio-temporales}
+Por lo tanto, siempre existirá un tensor de energía momento $T^\nu_{\;\nu}$;
+\begin{align*}
+  \x^\mu\rightarrow \tilde{x}^\mu = x^\mu + a^\mu \\
+  \Phi_A(x) \rightarrow \tilde{\Phi}_A(\tilde{x}) & = \Phi_A(x)\\
+  \tilde{\Phi}_A = \Phi_A(x-a)
+\end{align*}
+Tal que;
+\begin{equation}
+  \delta \Phi_A = -a^\mu \partial_\mu \Phi_A
+ \end{equation}
+ \subsubsection{Son invariantes bajo rotaciones y boosts}
+ Por lo tanto, tiene sentido asignarle a una configuración de campo un momento angular $\vec{J}$;
+ \begin{align*}
+   x^\mu \rightarrow \tilde{x}^\mu & = \Lambda^\mu_{\;\nu} x^\nu \\
+   \Lambda^\mu_{\;\nu} & = \delta^\mu_{\;\nu} + \omega^\mu_{\;\nu} \\
+   \Phi_{A}(x) \rightarrow \tilde{\Phi}_A(\tilde{x}) & = D[\Lambda]_{AB} \Phi_B(x) \\
+   \tilde{\Phi}_A (x) = D[\Lambda]_{AB}\Phi_B(\Lambda^{-1}x)
+ \end{align*}
+ \subsubsection{Para el campo escalar real}
+ \begin{equation}
+   A=1,\quad D[\Lambda]=1,\quad \forall \Lambda
+  \end{equation}
+  \subsubsection{Para el campo escalar complejo}
+  \begin{equation}
+    A=1,2,\quad D[\Lambda] = \begin{pmatrix}
+      1 & 0 \\ 0 & 1 
+    \end{pmatrix},\quad \forall \Lambda
+   \end{equation}
+   \subsubsection{Para el campo de Dirac}
+   \begin{equation}
+     A=1,2,3,4,\quad D[\Lambda] = e^{\frac{1}{2}\omega^{\mu\nu}S_{\mu\nu}}
+    \end{equation}
+    en donde;
+    \begin{equation}
+      S_{\mu\nu} = \frac{1}{4} \left[ \gamma_\mu,\gamma_\nu \right]
+     \end{equation}
+\subsubsection{Para el campo de Gauge SU(N)}
+\begin{equation}
+  A=0,1,2,3,\quad D[\Lambda] = \Lambda^{\mu}_{\;\nu} = e^{\frac{1}{2}\omega^{\alpha\beta}J_{\alpha \beta}}
+ \end{equation}
+ en donde;
+ \begin{equation}
+   \left( J_{\alpha \beta} \right)^\mu_{\;\nu} = \delta^\mu_{\;\nu}\eta_{ \beta \nu} - \delta^{\mu}_{\;\nu}\eta_{\alpha \nu}
+  \end{equation}
+  Y el campo de Gauge;
+  \begin{equation}
+    A^{(a)}_\mu(x) \rightarrow \tilde{A}_{\mu}^{(a)} (x) = \Lambda^{\nu}_{\;\mu}A^{(a)}_\nu(\Lambda^{-1}x)
+   \end{equation}
+\subsubsection{Rompimiento espontáneo del la simetría:}
+La acción tiene más simetría que la \textbf{solución de enería mínima}\footnote{Se acostumbra llamar a la solución de enegía mínima como el vacío de la teoría.}.
+\subsubsection{Mecanismo de Higgs}
+Podemos obtener \textbf{Bosones de Gauge masivos}\footnote{Se observan en la naturaleza.} haciendo uso del rompimiento espontáneo de la simetría. \\
+¿No es suficiente incluir un término de masa explícito en la acción? 
+\begin{equation}
+  \mathfrak{L} = -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} + \frac{m^2}{2}A_{\mu} A^{\mu}
+ \end{equation}
+ Sin embargo, esta teoría no es predictiva, es decir, no es renormalizable. \\
+ \subsubsection{Campo escalar complejo}
+ \begin{equation}
+   \mathfrak{L} = \partial_\mu \varphi^* \partial^\mu \varphi -\mu^2 \varphi^*\varphi - \lambda \left( \varphi^* \varphi \right)^2,\quad \mu^2 \in \mathbb{R} \wedge \lambda >0
+  \end{equation}
+  Simetría $U(1)$ global;
+\begin{align*}
+  \varphi \rightarrow \tilde{\varphi}(x) & = e^{-i\alpha}\varphi(x) \\
+  \varphi^* \rightarrow \tilde{\varphi^*}(x) & = \varphi^* e^{i\alpha}
+\end{align*} 
+A lo cual notemos que cuando se tiene un término del tipo $\varphi^*\varphi$ las fases desaparecen, con lo cual, es una simetría global. \\
+La energía, que está asociada a la cantidad conservad a través de traslaciones temporales, o también, la cantiadad $00$ del tensor de energía momento, está dada por;
+\begin{equation}
+  E=\int d^3x \left[ \partial_t\varphi^* \partial_t \varphi + \nabla\varphi^* \cdot \nabla \varphi + \mu^2 \varphi^* \varphi + \lambda \left( \varphi^*\varphi \right)^2 \right]
+ \end{equation}
+ Cuando $\mu^2>0$ la configuración de menor energía es cuando;
+ \begin{align*}
+   \varphi_{VAC}(x) = 0 \; \wedge \; \varphi_{VAC}^*(x) = 0
+ \end{align*}
+Notar que se usó la palabra configuración, como ejercicio \textbf{calcular las ecuaciones de Euler Lagrang} y comprobar que dicha configuración cumple con ella. Notemos que, los campos transforman como;
+\begin{align*}
+  \tilde{\varphi}(x)& = e^{-i\alpha}\varphi_{VAC}(x) = 0 \\
+  \tilde{\varphi^*}(x) & = \varphi^*_{VAC}e^{i\alpha} = 0
+\end{align*}
+De lo cual, se dice que, el vacío es invariante $U(1)$ global, tal como la acción. \\
+\\
+Para $\mu^2<0$ vale la pena sumarle una constante a la acción y escribir;
+\begin{align*}
+  \mathfrak{L} & = \partial_\mu \varphi^* \partial^\mu \varphi - \lambda \left( \varphi^* \varphi - \nu^2 \right)^2 \\
+  & = \partial_\mu \varphi^* \partial^\mu\varphi + 2\lambda \nu^2 \varphi^* \varphi - \lambda \left( \varphi^* \varphi \right)^2 - \lambda \nu^4
+ \end{align*}
+ Es invariante $U(1)$ global;
+ \begin{equation}
+   E = \int d^3x \left[ \partial_t\varphi^* \partial_t\varphi + \nabla\varphi^* \cdot \nabla \varphi + \lambda \left( \varphi^* \varphi - \nu^2 \right)^2 \right]
+  \end{equation}
+  En donde, $\varphi_{VAC}$ es tal que $\varphi^*_{VAC}\varphi_{VAC} = \nu^2$. \\
+  Ahora, un vacío posible es;
+  \begin{equation}
+    \varphi(x) = \nu + 0i
+   \end{equation}
+  Sin embargo, este vacío no es invariante bajo la simetría $U(1)$ global de la acción, pues;
+  \begin{align*}
+    \tilde{\varphi}_{VAC}(x) & = e^{-i\alpha}\varphi_{VAC}(x) \\
+    & = \left( \cos{\alpha} - i\sin{\alpha} \right) \left( \nu+0i \right) \\
+    & \cos{\alpha} \nu - i\sin{\alpha} \neq nu = \varphi_{VAC}(x)
+  \end{align*}
+  Esto es el quiebre espontáneo de la simetría: La configuración de menor energía tiene menos simetría que la acción. Esto puede ser pensado como en física estadística, en donde, cuando la temperatura sobre una temporatura crítica, el parámetro de orden es cero $<\hat{n}>=0$, pero, bajo la temperatura crítica, este es diferente a cero $<\hat{n}>\neq 0$. \\
+  \subsection{Teorema de Goldstone}
+  Por cada simetría continua espontáneamente rota, aparece una partícula sin maasa, esta partícula es llamada \textbf{Bosón de Goldstone}. \\
+  Consideramos el escalar complejo con simetría $U(1)$ global espontáneamente rota;
+  \begin{equation}
+    \mathfrak{L} = \partial_\mu \varphi^* \partial^\mu \varphi - \lambda \left( \varphi^* \varphi - \nu^2 \right)^2
+   \end{equation}
+   $\varphi$ es un campo complejo;
+\begin{equation}
+  \varphi(x) = \frac{\rho(x)}{\sqrt{2}} e^{i\phi(x)}
+ \end{equation}
+ Tal que las derivadas de este campo y su complejo conjugado serán;
+ \begin{align}
+   \partial_\mu \varphi(x) & = \frac{1}{\sqrt{2}} \partial_\mu e^{i\phi(x)} + \frac{\rho}{\sqrt{2}} \partial_\mu \phi(x) e^{i\phi(x)} \\
+   \partial_\mu \varphi^*(x) & = \frac{1}{\sqrt{2}} \partial_\mu \rho e^{i\phi(x)} - \frac{\rho}{\sqrt{2}} \partial_\mu \phi(x) e^{-i\phi(x)}
+ \end{align} 
+Con lo cual, el Lagrangeano es tal que;
+\begin{align*}
+  \mathfrak{L} & = \left( \frac{\partial_\mu\rho}{\sqrt{2}} + \frac{i\rho}{\sqrt{2}} \partial_\mu \phi(x) \right) \left( \frac{\partial^\mu \rho}{\sqrt{2}} - \frac{i\rho \partial^\mu \phi(x)}{\sqrt{2}} \right) - \lambda \left( \frac{\rho^2}{2} - \nu^2 \right)^2 \\
+  & = \frac{1}{2} \partial_\mu \rho \partial^\mu \rho + \frac{\rho^2}{2} \partial_\mu \phi\partial^\mu \phi - \lambda \left( \frac{\rho^2}{2} - \nu^2 \right)^2
+\end{align*}
+Este corresponde al potencial de sombrero Mexicano, si tuvieramos un proyecto para experimentos, y no tenemos un súper gigante presupuesto, solo podríamos detectar un pedacito de esta teoría. \\
+Por ello nos interesa ¿cómo luce esta teoría cerca del vacío?
+\begin{equation}
+  \varphi(x) = \nu + \delta \varphi(x) = \frac{\rho(x)}{\sqrt{2}} e^{i\phi(x)} \Rightarrow \rho(x) = \sqrt{2}\nu + h(x), \quad h(x)<<1
+ \end{equation}
+ Por lo tanto, cerca del vacío;
+ \begin{align*}
+   \mathfrak{L} & = \frac{1}{2} \partial_\mu h \partial^\mu h + \frac{1}{2} \left( \sqrt{2}\nu + h(x) \right)^2 \partial_\mu \phi \partial^\mu \phi - \frac{\lambda}{2} \left( \frac{\left( \sqrt{2}\nu + h(x) \right)^2}{2} - \nu^2 \right)^2 \\
+   & = \frac{1}{2} \partial_\mu h \partial^\mu h + \nu^2 \partial_\mu \phi\partial^\mu \phi +c\sqrt{2} \nu h(x) \partial_\mu \phi \partial^\mu \phi + \frac{h^2(x)}{2} \partial_\mu \phi \partial^\mu \phi - \frac{\lambda}{2} \left( \sqrt{2} \nu h(x) + \frac{h^2(x)}{2} \right)^2 \\
+   & = \frac{1}{2} \partial_\mu h \partial^\mu + \nu^2 \partial_\mu \phi \partial^\mu \phi - \lambda \nu^2 h^2(x) + h(\partial\phi)^2 + h^2(\partial\phi)^2 + O(h^3)
+ \end{align*}
+ Ahora si;
+ \begin{equation}
+   \phi(x) = \frac{\xi(x)}{\sqrt{2}\nu} \Rightarrow \mathfrak{L} = \frac{1}{2} \partial_\mu h \partial^\mu h + \frac{1}{2} \partial_\mu \xi \partial^\mu \xi - \lambda \nu^2 h^2 + \dots
+  \end{equation}
+  En donde el primer término es el hermano menor del campo de Higgs, el segundo es el campo de Goldstone y el resto serán términos de interacción.
+\end{document}
