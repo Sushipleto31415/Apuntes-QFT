@@ -1,0 +1,189 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigésima novena clase}
+\subsection{Mecanismo de Higgs no abeliano}
+El grupo de Gauge del modelo estándar es;
+\begin{equation}
+  SU(3)_c\times SU(2)_L\times U(1)_y
+ \end{equation}
+En donde;
+\begin{itemize}
+  \item c : Color.
+  \item L : Left.
+  \item Y : Hypercarga.
+\end{itemize}
+\subsubsection{Teoría de Gauge para SU(N)}
+Sea un campo spinorial;
+\begin{equation}
+  \psi \rightarrow \psi'=U(c)\psi,\quad U^\dagger U = I,\quad det(U)=\pm 1
+ \end{equation}
+Asumamos que $U(x)$ vive en la representación fundamental de $SU(N)$ y $\psi$ transforma en la representación fundamental de $SU(N)$.
+\begin{itemize}
+  \item $SU(2)$:
+  \begin{equation}
+    U(x) = e^{i\alpha_A(x)T_A}
+   \end{equation}
+   con $T_A=\frac{\sigma_A}{2}$ y $A=1,2,3$. 
+   \item $SU(3)$:
+   \begin{equation}
+     U(x) = e^{-i\alpha_A(x)T_A}
+    \end{equation}
+    con $T_A=\frac{\lambda_A}{2}$ y $A=1,\dots,8$, $\lambda_A$ son las matrices de Gellmann. 
+\end{itemize}
+En el caso de $SU(2)$;
+\begin{align*}
+  \mathfrak{L}&  = \bar{\psi}_1i\gamma^\mu \partial_\mu \psi_1 + \bar{\psi}_2\gamma^\mu \partial_\mu \psi_2 \\
+  & = \bar{\Psi}\i\gamma^\mu \partial_\mu \Psi, \quad \Psi=\begin{pmatrix}
+    \psi_1 \\ \psi_2
+  \end{pmatrix}
+  \\
+  \bar{\Psi} = \left( \psi_1^\dagger \gamma^0, \psi^\dagger_2\gamma^0] \right) = (\psi_1^\dagger,\psi_2^\dagger)\gamma^0 \\
+  & = \left( \psi_1^\dagger\gamma^0 , \gamma_2^\dagger\gamma^0 \right) \begin{pmatrix}
+    i\gamma^\mu \partial_\mu \psi_1 \\ i\gamma^\mu \partial_\mu \psi_2
+  \end{pmatrix}
+\end{align*}
+Los índices spinoriales están escondidos. \\
+Se introduce, además un campo de gauge no abeliano que permitirá que los campos spinoriales se hablen;
+\begin{align*}
+  \partial_\mu \Psi \rightarrow D_\mu \Psi& = \partial_\mu \Psi + ig_{YM}A_\mu \Psi \\
+  A_\mu & = A^A_\mu T_A \stackrel{SU(2)}{=} A^A_\mu \frac{\sigma_A}{2}
+\end{align*}
+Con $A_\mu$ una conexión de gauge, o también llamado campo de Gauge no abeliano, y $g_{YM}$ es la constante de acoplamiento de Yang-Mills.  \\
+En $SU(2)$ el doblete transforma como;
+\begin{align*}
+  \Psi'&=e^{-i\alpha_A(x)\frac{\sigma_A}{2}} \Psi,\quad \text{finita} \\
+  & = \left( I - i\alpha_A(x)\frac{\sigma_A}{2} \right) \Psi, \quad \text{infinitesimal} \\
+  \Psi'-\Psi & = \delta \Psi = -i\alpha_A(x) \frac{\spigma_A}{2} \Psi \\
+  \Rightarrow \delta \Psi & = \left[ i\frac{\alpha_1(x)}{2} \begin{pmatrix}
+    0 & 1 \\ 1 & 0
+  \end{pmatrix}
+  - i\frac{\alpha_2(x)}{2} \begin{pmatrix}
+    0 & -i \\ i & 0
+  \end{pmatrix}
+  i \frac{\alpha_3}{2} \begin{pmatrix}
+    1 & 0 \\ 0 & -1
+  \end{pmatrix}
+  \right] \begin{pmatrix}
+    \psi_1 \\ \psi_2
+  \end{pmatrix} = \begin{pmatrix}
+    -i\frac{\alpha_2}{2} & i\frac{\alpha_1}{2} - \frac{\alpha_2}{2} \\ \frac{i\alpha_1}{2} + \frac{\alpha_2}{2} & i\frac{\alpha_3}{2}
+  \end{pmatrix} \begin{pmatrix}
+    \psi_1 \\  \psi_1
+  \end{pmatrix} = \begin{pmatrix}
+    \delta \psi_1 \\ \delta \psi_2
+  \end{pmatrix}
+\end{align*}
+Con lo cual;
+\begin{align*}
+  \delta \psi_1 & = -\frac{i\alpha_3}{2}\psi_1 - \frac{1}{2} \left( i\alpha_1 + \alpha_2 \right)\psi_2 \\
+  \delta \psi_2 & = \frac{1}{2} \left( -i\alpha_1 + \alpha_2 \right)\psi_1 + \frac{i\alpha_3}{2}\psi_2
+\end{align*}
+Necesitamos imponer que bajo la transformación local;
+\begin{equation}
+  \Psi\rightarow \Psi' = U(x) \Psi
+ \end{equation}
+La derivada covariante transforme;
+\begin{equation}
+  \left( D_\mu \Psi \right)\rightarrow \left( D_\mu \Psi \right)'=U(x) \left( D_\mu\Psi \right)
+ \end{equation}
+ Pues en este caso;
+ \begin{align*}
+   \mathfrak{L}' & = \bar{\Psi}' i \gamma^\mu \left( D_\mu \Psi \right)'
+ \end{align*}
+ Pero, ¿Cómo transforma $\bar{\Psi}'$?;
+ \begin{align*}
+   \bar{\Psi}' & = \left( \Psi^\dagger \gamma^0 \right) \\
+   &  = \left( U\Psi \right)^\dagger \gamma^0 \\
+   & = \Psi^\dagger U^\dagger \gamma^0 \\
+   & = \Psi^\dagger \gamma^0 U^\dagger \\
+   & = \bar{\Psi} U^\dagger \\
+   & = \bar{\Psi} U^{-1}
+ \end{align*}
+ con lo cual seguimos;
+ \begin{align*}
+   & = \bar{\Psi} U^{-1}(x) i \gamma^\mu \left( D_\mu \Psi \right) \\
+   & = \Psi i \gamma^\mu D_\mu \Psi
+\end{align*}
+Por lo tanto, la acción es invariante de Gauge. \\
+Se le llama acoplamiento minimal a;
+\begin{equation}
+  \partial_\mu \Psi \rightarrow D_\mu \Psi := \partial_\mu \Psi + ig_{YM}A_\mu \Psi
+ \end{equation}
+ Imponemos;
+ \begin{align*}
+   \left( D_\mu \Psi \right)' & = U(x)\left( D_\mu \Psi \right) \\
+   \left( \partial_\mu \Psi + ig_{YM}\Psi \right)' & = U \left( \partial_\mu \Psi + ig_{YM} A_\mu\Psi \right) \\
+   \partial_\mu \Psi' + ig_{YM} A_\mu' \Psi' & = U\partial_\mu \Psi + ig_{YM} U A_\mu \Psi \\
+   \partial_\mu U \Psi + U \partial_\mu \Psi + i g_{YM} A_\mu'U\Psi & = U\partial_\mu\Psi + ig_{YM} U A_\mu \Psi
+ \end{align*}
+ Esto debe ser válido para todo $\Psi$.
+ \begin{align*}
+   \partial_\mu U + ig_{YM} A_\mu'U & = ig_{YM}A_\mu \\
+   A'_\mu U & = UA_\mu - \frac{i}{g_{YM}} \partial_\mu U \\
+   A_\mu' = UA_\mu U^{-1} + \frac{i}{g_{YM}} \partial_\mu U U^{-1}
+ \end{align*}
+ Lo que es similar a como uno encuentra las derivadas covariantes asociadas a cómo transforman las conexiones de un manifold. \\
+ Las conexiones transforman como;
+ \begin{equation}
+   \tilde{\Gamma}_{\;\nu \lambda}^{\mu } = \partial_\alpha \tilde{x}^\mu \partial_{\tilde{\nu}}x^\beta \partial_{\tilde{\lambda}}x^\gamma \Gamma^\alpha_{\; \beta\gamma} + \left( \partial^2_{\tilde{x}\tilde{x}} x \partial_x\tilde{x} \right)
+  \end{equation}
+  De lo cual se define una derivada covariante como;
+  \begin{align*}
+    \tilde{\left( \nabla_\mu A_\beta \right)}& := \partial_{\tilde{\mu}}x^\alpha \partial_{\tilde{\beta}}x^\delta \nabla_\alpha A_\delta \\
+    \nabla_\alpha A_\delta & := \partial_\mu A_\delta - \Gamma^\sigma_{\;\alpha \delta}A_\sigma
+  \end{align*}
+  La conexión de gauge transforma en la adjunta del grupo global.
+ \\
+ Consideramos la transformación de $A_\mu$, bajo el grupo global;
+ \begin{align*}
+   U(x) = U ,\quad U^{-1} = U^\dagger = e^{i\alpha_AT_A} \\
+   A_\mu'& = UA_\mu U^{-1} \\
+   & = e^{-i\alpha_AT_A} A_\mu e^{i\alpha_BT_B} \\
+   & = \left( I -i\alpha_AT_A \right)A_\mu \left( I + i\alpha_B T_B \right)
+ \end{align*}
+ Ahora si hacemos Taylor a primer orden en los alpha;
+ \begin{align*}
+   A_\mu'& = A_\mu - i\alpha_AT_A A_\mu + A_\mu i\alpha_AT_A + \mathcal{O}(\alpha^2)\\
+   A_\mu'-A_\mu  = \delta A_\mu & = -i\alpha_A \left[ T_A,A_\mu \right]\\
+   &  = -i\alpha_A \left[ T_A, A^B_\mu T_B \right] \\
+   & = -i\alpha_A A^B_\mu \left[ T_A,T_B \right] \\
+   & = -i\alpha_AA_\mu^B \left( if_{ABC} T_C \right) \\
+   \delta A_\mu = \delta A_\mu^C T_C & = -i\alpha_A A^B_\mu i f_{ABC} T_C \\
+   \delta A^C_\mu & = -i\alpha_A A^B_\mu if_{ABC} \\
+   \delta A^C_\nmu = -i\alpha_A \left( T_A \right) A^B_\mu \\
+   \left( T_A \right)_{CB} = if_{ABC}
+ \end{align*}
+ Notemos que;
+ \begin{equation}
+   (T_A)_{CB} (T_D)_{BE} -(T_D)_{CB} (T_A)_{BE} = if_{ADP} (T_P)_{CE}
+  \end{equation}
+  con lo cual, $(T_A)_{CB} = if_{ABC}$ forman una representación del álgebra. 
+  \begin{equation}
+    \left[ T_A,T_B \right] = if_{ABC}T_C
+   \end{equation}
+   ¿Cómo se acopla un doblete de escalares de $SU(2)$ a la conexión de gauge?
+   \begin{equation}
+     \vec{\Phi}(x) = \begin{pmatrix}
+       \varphi_1(x) \\ \varphi_2(x)
+     \end{pmatrix} 
+    \end{equation}
+Con $\varphi_1(x)$ y $\varphi_2(x)$ son campos escalares complejos. Asumamos que transforman en la representación fundamental de $SU(2)$.\\
+Bajo $SU(2)$ local;
+\begin{align*}
+  \vec{\Phi}(x) \rightarrow \vec{\Phi}(x)' & = U\vec{\Phi}(x) \\
+  & \rightarrow U = e^{-i\alpha_A(x)\frac{\sigma_A}{2}}
+\end{align*}
+Con lo cual, la densidad Lagrangeana;
+\begin{align*}
+  \mathfrak{L} & = \partial_\mu \varphi_1^* \partial^\mu \varphi_1 + \partial_\mu \varphi^*_2 \partial^\mu \varphi_2 \\
+  & = \partial_\mu \vec{\Phi}^\dagger \partial^\mu \vec{\Phi} = \partial_\mu \left( \varphi^*_1, \varphi^*_2 \right) \partial^\mu \begin{pmatrix}
+    \varphi_1 \\ \varphi_2
+  \end{pmatrix}
+\end{align*}
+Luego, se tienen las siguientes derivadas covariantes;
+\begin{align*}
+   \partial_\mu
+\end{align*}
+ \end{document}
+

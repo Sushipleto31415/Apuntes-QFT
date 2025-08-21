@@ -1,0 +1,196 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Vigésimo octava clase}
+\subsection{Quiebre espontáneo de simetría}
+Cuyo Lagrangeano es dado por;
+\begin{equation}
+  \mathfrak{L} = \partial_\mu \varphi^* \partial^\mu \varphi - \lambda \left( \varphi^* \varphi - \nu^2 \right)^2
+ \end{equation}
+Cuya simetría $U(1)$ es;
+\begin{equation}
+  \varphi \rightarrow \tilde{\varphi}= e^{i\alpha}\varphi, \quad \varphi^* \rightarrow \tilde{\varphi^*}=\varphi e^{i\alpha}
+ \end{equation}
+Recordemos que la energía asociada a la acción, o la componente $00$ del tensor de densidad de energía-momento, está dada por;
+\begin{equation}
+  E = \int d^3x \left( \partial_t\varphi^* \partial_t \varphi + \nabla \varphi \cdot \nabla \varphi + \lambda \left( \varphi^* \varphi - \nu^2 \right)^2 \right)
+ \end{equation}
+Ahora, con $E\geq 0$  y $E=0$ , junto  con $\varphi=C^{te}$, tal que;
+\begin{align*}
+  \varphi^* \varphi&  = \nu^2 \\
+  \varphi_{VAC} & = \nu \\
+  \tilde{\varphi}_{VAC} & = e^{i\alpha}\varphi_{VAC} \\
+& = e^{-i\alpha}\nu \\
+  & = \cos{\alpha}\nu - \sin{\alpha}\nu \\
+  & \neq \nu = \varphi_{VAC}
+\end{align*}
+Por lo tanto;
+\begin{equation}
+  \tilde{\varphi}_{VAC} \neq \varphi_{VAC}
+ \end{equation}
+ Decimos que el vacío tiene menos simetría que la teoría; lo que corresponde a $SSB$ (Spontaneous Symmetry Breaking) . \\
+ El potencial asociado a SSB es el potencial de sombrero Mexicano;
+ \begin{equation}
+   V(\varphi,\varphi^*) = \lambda \left( \varphi^* \varphi - \nu^2 \right)^2
+  \end{equation}
+  HACER GRÁFICO DE ESTE POTENCIAL EN PYTHON. \\
+Consideramos el campo complejo como (Teorema de Goldstone);
+\begin{equation}
+  \varphi(x) = \frac{\rho(x)}{\sqrt{2}} e^{i\xi(X)/\nu}
+ \end{equation}
+ En donde la función $\rho(x)$;
+ \begin{equation}
+   \rho(x) = \sqrt{2}\nu + h(x), \quad h(x)\leftarrow \; \text{Chico}
+  \end{equation}
+Cuando $h(x)$ es chico y despreciamos los términos de interacción;
+\begin{equation}
+  \mathfrak{L} = \frac{1}{2}\partial_\mu h(x)\partial^\mu h(x) - \lambda \nu^2 h^2(x) + \frac{1}{2} \partial_\mu \xi(x) \partial^\mu \xi(x)
+ \end{equation}
+ \begin{itemize}
+   \item El campo escalar $h(x)$ es un campo escalar con masa, o sea, campo de Higgs.
+   \item Campo escalar sin masa $\xi(x)$, el cual es llamado el bosón de Goldstone.
+ \end{itemize}
+ Queremos dar cuenta de manera predictiva de la existencia de campos vectoriales masivos para describir la interacción débil;
+ \begin{equation*}
+   \boxed{
+   "A_\mu"}
+  \end{equation*}
+Está prohibido el hacer lo siguiente;
+\begin{equation}
+  \mathfrak{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \frac{m^2}{2} A_{\mu}A^\mu
+ \end{equation}
+ Ya que esta teoría acoplada a electrones no es renormalizable.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \subsection{Modelo de Higgs abeliano}
+Se tiene la siguiente transformación de gauge;
+\begin{equation}
+  A_\mu \rightarrow \tilde{A}_\mu = A_\mu+ \partial_\mu X (x)
+ \end{equation}
+ Transfomación la cual deja invariante al tensor de Farday;
+ \begin{equation}
+   \tilde{F}_{\mu\nu} = F_{\mu\nu} = \partial_\mu A_\nu - \partia_\nu A_\mu
+  \end{equation}
+  La acción de Maxwell está dada por;
+  \begin{equation}
+    I_{Max} = -\frac{1}{4} \int d^4x F_{\mu\nu} F^{\mu\nu}
+   \end{equation}
+   La cual, al cuantizarse dará cuenta de los dos grados de libertad que corresponden a las dos polarizaciones del fotón que viaja a la rapidez de la luz, y esto implica que \textbf{los fotones tienen masa cero}.
+   \subsubsection{Acoplamos Maxwell a un campo escalar complejo}
+Introducimos una derivada covariante de la forma;
+\begin{align}
+  \parital_\mu \varphi \rightarrow D_\mu \varphi & := \partial_\mu \varphi +ie A_\mu \varphi\\
+  \partial_\mu \varphi^* \rightarrow (D_\mu \varphi)^* & := \partial_\mu \varphi^* - ieA_\mu \varphi^*
+ \end{align}
+Con lo cual, el Lagrangeano queda;
+\begin{equation}
+  \mathfrak{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu} + \left( D_\mu\varphi \right)^* \left( D^\mu \varphi \right) - V(\varphi^*\varphi)
+ \end{equation}
+ Esta teoría es invariante bajo la siguiente transformación;
+ \begin{align*}
+   A_\mu \rightarrow \tilde{A}_\mu & = A_\mu + \partial_\mu X(x) \\
+   \varphi \rightarrow \tilde{\varphi}(x) &= e^{-i\alpha X(x)} \varphi(x) \\
+   \varphi^* \rightarrow \left( \varphi(x) \right)^*' & = \varphi^*(x) e^{ieX(x)}
+ \end{align*}
+ Ahora, la derivada covariante;
+\begin{align*}
+  \tilde{(D_{\mu\varphi})} & = \left( \partial_\mu \varphi + ieA_\mu\varphi \right)' \\
+  & = \partial_\mu \varphi' + ieA_\mu'\varphi' \\
+  & = \partial_\mu \left( e^{-ieX(x)} \varphi(x) \right)+ie \left( A_\mu + \partial_\mu X \right)e^{-ieX(x)}\varphi(x) \\
+  & = e^{ieX(x)} \left( \partial_\mu \varphi + ie A_\mu \varphi \right) \\
+  & = e^{-ieX(x)} \left( D_\mu \varphi \right)
+\end{align*}
+Queda de \textbf{tarea} calcular lo siguiente;
+\begin{equation}
+  \left( \left( D_\mu\varphi \right)^* \right)' = \left( D_\mu \varphi \right)^* e^{ieX(x)}
+ \end{equation}
+ Así, el Lagrangenano bajo una transformación de gauge es;
+ \begin{align*}
+   \mathfrak{L}& = -\frac{1}{4} F_{\mu\nu}'F^{\mu\nu}' + \left(\left( D_\mu \varphi \right)^* \right)' \left( D_\mu\varphi \right)' - V(\varphi,\varphi^*) \\
+   & = -\frac{1}{4} F_{\mu\nu} F^{\mu\nu} + \left( D_\mu \varphi \right)^* e^{ieX(x)} e^{ieX(x)} e^{-ieX(x)} \left( D_\mu \varphi \right) - V(\varphi^*\varphi) \\
+   & = \mathfrak{L}
+ \end{align*}
+ Ahora el potencial es tal que rompe la simetría global;
+ \begin{equation}
+   \mathfrak{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu} + \left( D_\mu\varphi \right)^* \left( D^\mu \varphi \right) - \lambda \left( \varphi^* \varphi-\nu^2 \right)^2
+  \end{equation}
+  Cuya energía está dada por;
+  \begin{equation}
+    E = \int d^3 \left[ |\vec{E}|^2 + |\vec{B}|^2 + f(A_\mu,\varphi) + \partial_t \varphi^* \partial_t\varphi  + \nabla \varphi^* \cdot \nabla \varphi + \lambda \left( \varphi^* \varphi - \nu^2 \right)^2\right]
+   \end{equation}
+   Para lo cual la energía siempre será positiva, $E\geq 0$, y será $E=0$ si $A_\mu=0$  y además $\varphi^*\varphi=\nu^2$, con $\varphi=C^{te}$, o sea;
+   \begin{align*}
+     A^{VAC}_\mu & = 0\\
+     \varphi_{VAC} & = \nu
+  \end{align*}
+  Y además $\varphi$ tiene un valor de expectación en el vacío V.E.V \footnote{Con sus siglas en inglés Vacuum Expectation Value} \\
+  ¿Cómo conduce esta teoría acoplada al campo $U(1)$ cuando estamos cerca del vacío? 
+  \begin{align*}
+    A_\mu\rightarrow A_\mu'  & = A_\mu  \\
+    \varphi \rightarrow \varphi' & = e^{-i\alpha}\varphi \\
+    \varphi^*\rightarrow \varphi^*' = \varphi^* e^{i\alpha}
+  \end{align*}
+  El campo complejo $\varphi$ será de la siguiente forma,
+  \begin{equation}
+    \varphi(x) = \frac{\rho(x)}{\sqrt{2}} e^{i \phi (x)}
+   \end{equation}
+  Lo cual aplicamos en las transformaciones;
+  \begin{align*}
+    A_\mu \rightarrow A_\mu'& = A_\mu + \partial_\mu X(x) \\
+    \varphi \rightarrow' &= e^{-ieX(x)}\varpgi \\
+    \varphi\rightarrow* &= \varphi \\
+    \varphi \rightarrow \varphi'^*& = \varphi^* e^{ieX(x)}
+  \end{align*}
+  En donde se ha usado la invariancia de $U(1)$ local. Tal que el campo $\varphi$ está dado por;
+  \begin{equation}
+    \varphi = \frac{\rho(x)}{\sqrt{2}}
+   \end{equation}
+Lo que corresponde a una transformación de gauge con;
+\begin{equation}
+  X(x) = -\frac{\phi(x)}{e}
+ \end{equation}
+ Ahora, el Lagrangeano está dado por;
+ \begin{equation}
+   \mathfrak{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \frac{1}{2}\left( \partial_\mu \rho - ieA_\mu\rho \right) \left( \partial^\mu \rho + ieA^\mu \rho \right) - \frac{\lambda}{4} \left( \frac{\rho^2}{2} - \nu^2 \right)^2
+  \end{equation}
+\textbf{El campo de gauge se comío al bosón de Goldstone.}
+\begin{equation}
+  \mathfrak{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \frac{1}{2} \partial_\mu \rho \partial^\mu \rho + \frac{e^2}{2} \rho^2 A_\mu A^\mu + \frac{\lambda}{16} \left( \rho^2 - \nu^2 \right)^2
+ \end{equation}
+ Expandamos aldededor del vacío dejando términos hasta antes de cuadráticos en los campos;
+ \begin{align*}
+   \rho_{VAC} & = \sqrt{2}\nu \\
+   \rho(x) & = \rho_{VAC} + h(x)
+ \end{align*}
+ Con lo cual;
+\begin{equation}
+  \mathfrak{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \frac{1}{2} \partial_\mu \rho \partial^\mu \rho + \frac{e^2}{2} \left( \sqrt{2}\nu + h(x) \right)^2A_\mu A^\mu - \frac{\lambda}{16} \left[ \left( \sqrt{2}\nu + h(x) \right)^2 - 2\nu^2 \right]^2
+ \end{equation} 
+ Ahora expandimos hasta el término cuártico;
+ \begin{equation}
+   \mathfrak{L} = -\frac{1}{4}F_{\mu\nu} F^{\mu\nu} + \frac{1}{2}\partial_\mu h \partial^\mu h + e^2\nu^2 A_\mu A^\mu - \frac{\lambda\nu^2}{2} h^2(x) + e^2 \sqrt{2}h(x) A_\mu A^\mu - \lambda \frac{\sqrt{2}}{4}\nu h(x)^3 + O(4) 
+  \end{equation}
+  Todos los parámetros en esta teoría dependen solo de 3 constantes, $e$, $\nu$, $\lambda$. 
+  Lo que puede significar que hay más simetrías asociadas a la acción del sistema.\\
+  Contemos los grados de libertad;
+  \begin{itemize}
+    \item Inicialmente: 2 polarizaciones del fotón + 2 campos escalares reales.
+     \item Final: 3 grados de libertad campo vectorial masivo + 1 escalar real.
+  \end{itemize}
+  \subsubsection{Grados de libertad de Maxwell}
+  \begin{align*}
+    \partial_\mu F^{\mu\nu} & = 0 \\
+    A_\mu \rightarrow A_\mu'& = A_\mu + \partial_\mu X(x) \\
+    \partial_\mu \partial^\mu A^\nu - \partial_\mu \partial^\nu A^\mu & = 0
+  \end{align*}
+Para lo cual tenemos la siguiente trasformada de Fourier;
+\begin{equation}
+  A^\mu(x) = \frac{1}{(2\pi)^n}\int d^4 e^{ik_\alpha x^\alpha}\tilde{A}^\mu(k)
+ \end{equation}
+ Aplicamos la transformdada de Fourier a última ecuación;
+ \begin{align*}
+   \int \frac{d^4}{(2\pi)^n} e^{ik_\alpha x^\alpha} \left[ \left( -ik_\alpha \right) \left( -ik^\alpha \right) \tilde{A}^\nu(k) - \left( -ik_\alpha \right)  \left( -ik^\nu \right)\tilde{A}^\alpha(k)\right] & = 0 \\
+   -k_\alpha k^\alpha \tilde{A}^\nu + k_\alpha k^\nu \tilde{A}^\alpha(k) & = 0 
+ \end{align*}
+ \end{document}

@@ -1,0 +1,144 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Trigésima clase}
+Tenemos el doblete de campo escalar;
+\begin{equation}
+  \vec{\Phi} = \begin{pmatrix}
+    \varphi_1(x) \\ \varphi_2(x)
+  \end{pmatrix}
+ \end{equation}
+ En donde, $\varphi_1, \varphi_2\in \mathbb{C}$, tal que;
+ \begin{equation}
+   \vec{\Phi}(x) \rightarrow \vec{\Phi}(x)' = U(x)\Phi(x), \quad U(x)\in SU(2)\; \text{Fundamental}
+  \end{equation}
+  Se define la derivada covairante como;
+  \begin{equation}
+    D_\mu \vec{\Phi} = \partial_\mu \vec{\Phi} + g_{YM} A^A_\mu T_A \vec{\Phi}
+   \end{equation}
+  En donde las matrices $T_A=\frac{\sigma_A}{2}$
+Si:
+\begin{equation}
+  A_\mu \righarrow A_\mu' = UA_\mu U^{-1} + \frac{i}{g_{YM}} \partial_\mu U U^{-1}
+ \end{equation}
+ Entonces;
+ \begin{equation}
+   D_\mu \vec{\Phi} \rightarrow \left( D_\mu \vec{\Phi} \right)' = U \left( D_\mu \vec{\Phi} \right)
+  \end{equation}
+  Ahora para;
+  \begin{align*}
+    \left( D_\mu \Phi \right)^+ & = \partial_\mu \Phi^+ - ig_{YM} \Phi^+ A_\mu A^A_\mu T_A \\
+    \left( D_\mu \Phi \right)^+ \rightarrow \left( D_\mu \Phi \right)^+' = \left( D_\mu \Phi \right)U^{-1}
+  \end{align*}
+Luego, el Lagrangeano;
+\begin{align*}
+  \mathfrak{L} & = \left( D_\mu \Phi \right)^+ \left( D^\mu \Phi \right) \\
+  & = \left( \partial_\mu \Phi^+ - ig_{YM} A_\mu \right) \left( \partial^\mu \Phi + ig_{YM} A^\mu \Phi \right) \\
+  & = \partial_\mu \Phi^+ \partial^\mu \Phi + ig_{YM} \left[ \partial_\mu \Phi^+ A^\mu \Phi - \Phi^+ A_\mu \partial^\mu \Phi \right] + g^2_{YM} \Phi^+ A_\mu A^\mu \Phi \\
+\end{align*}
+El primer término del Lagrangeano es del tipo, $\partial_\mu \varphi_1^* \partial^\mu \varphi_1 + \partial_\mu \varphi^*_2 \partial^\mu \varphi_2$. Luego, el segundo término es algo más complicado. 
+\subsection{Field strengh no-abeliano:}
+Hacemos la cuenta del conmutador de las derivadas covariantes sobre un $\Phi$;
+\begin{align*}
+  \left[ D_\mu , D_\nu \right] \Phi & = D_\mu \left( D_\nu \Phi \right)  - D_\nu \left( D_\mu \Phi \right) \\
+  & = \partial_\mu \left( D_\nu \Phi \right) + i g_{YM} A_\mu D_\nu \Phi - \left( \nu \leftrightarrow \mu \right) \\
+  & = \partial_\mu \left( \partial_\nu \Phi + ig_{YM} A_\nu \Phi \right) + ig_{YM} A_\mu \left( \partial_\nu \Phi + ig_{YM} A_\nu \Phi \right)  - \left( \nu \leftrightarrow \mu \right) \\
+  & = \partial_\mu \partial_\nu \Phi + i g_{YM} \partial_\mu A_\nu \Phi + i g_{YM} A_\nu \partial_\mu \Phi + i g_{YM} A_\mu \partial_\nu \Phi - g^2_{YM} A_\mu A_\nu \Phi \\ &- \partial_\nu \partial_\mu \Phi - ig_{YM} \partial_\nu A_\mu \Phi - i g_{YM} A_\mu \partial_\nu \Phi - i g_{YM} A_\nu \partial_\mu \Phi + g^2_{YM} A_\nu A_\mu \Phi
+\end{align*}
+Con lo cual , después de cancelar los términos;
+\begin{align*}
+  \left[ D_\mu , D_\nu \right] \Phi & = ig_{YM} \left( \partial_\mu A_\nu - \partial_\nu A_\mu + g_{YM} \left( A_\mu A_\nu - A_\nu A_\mu \right) \right) \Phi \\
+\end{align*}
+El tensor de Field strengh está dado por;
+\begin{equation}
+  \mathbb{F}_{\mu\nu} = \partial_\mu \mathbb{A}_\nu - \partial_\nu \mathbb{A}_\mu + ig_{YM} \left[ A_\mu , A_\nu \right]
+ \end{equation}
+Tal que el conmutador de las derivadas covariantes;
+\begin{equation}
+  \left[ D_\mu , D_\nu  \right]\Phi = ig_{YM} F_{\mu\nu} \Phi, \quad A_\mu'=UA_\mu U^{-1}+ \frac{i}{g_{YM}} \partial_\mu U U^{-1}
+ \end{equation}
+ Y el tensor de Field strengh;
+ \begin{equation}
+   F_{\mu\nu}'= \partial_\mu A_\nu' - \partial_\n A_\mu' + ig_{YM}\left[ A_\mu',A_\nu' \right] = U F_{\mu\nu}U^{-1}
+  \end{equation}
+Con lo cual, el conmutador de derivadas covariantes actuando sobre el doblete transforman como;
+\begin{align*}
+  \left( \left[ D_\mu , D_\nu  \right]\Phi \right)' & = +ig_{YM} F_{\mu\nu}' \Phi \\
+  U \left[ D_\mu , D_\nu \right]\Phi & = ig_{YM} F_{\mu}' U \Phi \\
+  U ig_{YM} F_{\mu} \Phi & = i g_{YM} F_{\mu \nu} U \Phi
+\end{align*}
+Si $\Phi$ es arbitrario;
+\begin{equation}
+  U F_{\mu\nu} & = F'_{\mu\nu} U^{1},\quad /U^{-1}
+  F_{\mu\nu}' & = U F_{\mu\nu} U^{-1}
+ \end{equation}
+¿ Cómo construyo la acción de Yang-Mills que dará la dinámica a $A_\mu$?
+\begin{equation}
+  I_{YM}[A^A_{\mu}] = \int d^4x \left( -\frac{1}{2} tr \left( F_{\mu\nu} F^{\mu\nu} \right) \right)
+ \end{equation}
+ Lo que, bajo la transformació del grupo $SU(N)$;
+ \begin{align*}
+   I_{YM}[A] & = -\frac{1}{2} \int d^4x tr \left( F_{\mu\nu}'F^{\mu\nu} \right) \\
+   & = -\frac{1}{2} \int d^4x tr \left( UF_{\mu\nu}U^{-1} U F^{\mu\nu} U^{-1} \right) \\
+   & = -\frac{1}{2} \int d^4x tr \left( F_{ \mu\nu}F^{\mu\nu} \right) \\
+   I_{YM}[A]
+ \end{align*}
+ Si escribimos el Field strengh tensor en función de los generadores del grupo;
+ \begin{align*}
+   \mathbb{F}_{\mu\nu} & = \partial_\mu A_\nu^C T_C - \partial_\nu A_\mu^CT_C + i g_{YM} \left[ A^A_{\mu}T_A , A_\nu^BT_B \right] \\
+   & = \partial_\mu A_\nu^C T_C - \partial_\nu A_\mu^C T_C + ig_{YM} A^A_\mu A_\nu^B \left[ T_A,T_B \right] \\
+   & = \left( \partial_\mu A_\nu^C - \partial_\nu A_\mu^C - g_{YM} f_{ABC} A^A_{\mu} A^B_{\nu} \right) T_C = F_{\mu\nu} T_C 
+ \end{align*}
+ Con lo cual podemos escribir;
+ \begin{equation}
+   F^C_{\mu\nu} = \partial_\mu A_\nu^C - \partial_\nu A^C_\mu - g_{YM} f_{ABC} A^A_\mu A^B_\nu
+  \end{equation}
+¿ Como luce la acción de Yang-Mills en términos de las componentes de $F_{\mu\nu}$, es decir, en términos de los $F^C_{\mu\nu}$?
+\begin{align*}
+  I \left[ A_\mu^A \right]& = -\frac{1}{2} \int d^4x\; tr \left( F^A_{\mu\nu}T_A F_B^{\mu\nu}T_B \right) \\
+  & = -\frac{1}{2} \int d^4x F^A_{\mu\nu} F_B^{\mu\nu} \; tr \left( T_AT_B \right)
+ \end{align*}
+ Ahora;
+ \begin{align*}
+   SU(2), \; T_A & = \frac{\sigma_A}{2} \Rightarrow tr \left( T_AT_B \right) = \frac{\delta_{AB}}{2} \\
+   SU(3),\; T_A & = \frac{\lambda_A}{2}\Rightarrow tr \left( T_AT_B \right) = \frac{\delta_{AB}}{2}
+ \end{align*}
+ Es decir, en $SU(2)$ y en $SU(3)$ tenemos que;
+ \begin{equation}
+   I[A_\mu^A] = -\frac{1}{4} \int d^4x \left[ F_{(1)\mu\nu}F^{\mu\nu}_{(1)} + F_{(2)\mu\nu}F^ {\mu\nu}_{(2)} + F_{(3)\mu\nu} F_{(3)}^{\mu\nu} + \dots \right]
+  \end{equation}
+  Para $SU(2)$;
+  \begin{align*}
+    F_{\mu\nu}^{(1)} & = \partial_\mu A^{(1)}_\nu - \partial_\nu A^{(1)}_\nu - g_{YM} e_{AB1} A^A_\mu A^B_\nu \\
+    & = \partial_\mu A^{(1)}_\nu - \partial_\nu A^{(1)}_{\nu} - g_{YM} \left( -1 \right) A^{(3)}_{\mu} A^{(2)}_\nu - g_{YM}\left( +1 \right) A^{(2)}_\mu A^{(3)}_\nu
+  \end{align*}
+Recordemos que, el grupo de Gauge del modelo estándar;
+\begin{equation}
+  SU(3)_C\times SU(2)_L \times U(1)_\gamma
+ \end{equation}
+ En donde;
+ \begin{itemize}
+   \item $SU(3)$ es el sector de QCD.
+   \item $SU(2)\times U(1)$ es el sector electrodébil. 
+ \end{itemize}
+ \subsection{QCD}
+ En el modelo estándar, los quark son las partículas fundamentales que sienten la interacción fuerte. Cada quark transforma en la representación fundamental de $SU(3)$. Tal que la acción de QCD será;
+ \begin{align*}
+   I_{QCD} & = I_{YM} (SU(3)) + I_{\text{Dirac}} \left( \partial\rightarrow D \right) \\
+   &  = -\frac{1}{4} \int d^4x F_{\mu\nu}^A F_{A\mu\nu} + \int d^4 \bar{\Psi} i \gamma^\mu D_\mu \Psi \\
+   D_\mu \Psi& = \partial_\mu \Psi + ig_{s} \mathbb{A} \Psi, \text{Yang-Mills}\rightarrow \text{Strong}, \quad \mathbb{A_\mu } = A^A_\nu T_A = A^A_\mu \frac{\lambda}{2}
+  \end{align*}
+  \begin{equation}
+    u = \begin{pmatrix}
+      u_b \\ u_r \\ u_g
+    \end{pmatrix}, \quad \text{3 colores}
+   \end{equation}
+  Existen en la naturaleza 6 quarks: up, down, strange, charmed, bottom, up. Cada uno de ellos está descrito por un spinor de Dirac
+  \begin{equation}
+    \Psi_1 , \Psi_2, \Psi_3, \Psi_4, \Psi_5, \Psi_6
+   \end{equation}
+   Y se dice que los quak vienen en 6 sabores=flavor.
+   \begin{equation}
+     I_{QCD} = -\frac{1}{4} \int d^4x F_{A\mu\nu}F^{A\mu\nu} + \int d^4x \sum^6_{j=1} \bar{\Psi}_j i \gamma^\mu \left( \mathbb{I}_3\partial_\mu + ig_s A_\mu^B \frac{\lambda}{2} \right)\Psi_j
+    \end{equation}
+De esta acción, debiera ser posible obtener la masa del protón y el neutrón, ya que estos son estados discretizados de quarks, esto y más efectos cuánticos, sin embargo, nadie sabe hacerlo analíticamenDe esta acción, debiera ser posible obtener la masa del protón y el neutrón, ya que estos son estados discretizados de quarks, esto y más efectos cuánticos, sin embargo, nadie sabe hacerlo analíticamente.
+\end{document}
