@@ -1,0 +1,129 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Trigésima primera clase}
+Se observa en la naturaleza que la interacción electromagnética es mediada por campos vectoriales sin masa, cuyos quanta son los fotones.
+\begin{equation}
+  m_{\gamma}< \text{algo} 
+ \end{equation}
+Se oberva en la naturaleza que la interacción débil es mediada por campos vectoriales con masa, dos de ellos con carga eléctrica y uno neutro:
+\begin{align}
+  m_{z^0}& \approx 91 [\text{GeV}] \\
+  m_{W^{\pm}}& \approx 80 [\text{GeV}]
+\end{align}
+La descripcción conjunta de estas dos afirmaciones recive el nombre de sector electrodébil. \\
+Podríamos argumentar que el sector electrodébil está compuesto por dos teorías de Gauge, una para $U(1)_{EM}$ y una segunda teoría de Gauge para $SU(2)_{Weak}$\footnote{Recordemos que en $SU(2)$ hay tantos campos de Gauge como hay generadores. } más mecanismo de Higgs en este segundo sector. 
+\\
+Esta propuesta lleva a una partícula sin masa y 3 partículas masivas neutras, y con la misma masa. \\
+Esto está constantemente en tensió con la afirmación en la cual necesitamos dos partículas con la misma masa y cargadas, más una neutra y con maasa distinta.
+\\
+El modelo que describe apropiadamente las dos afimaciones está basado en el grupo;
+\begin{equation}
+  U(1)\times SU(2)
+ \end{equation}
+ Notar que el $U(1)$ que se menciona, no es el del electromagnetismo. 
+ \begin{itemize}
+   \item $U(1)$ : Hypercarga.
+   \item $SU(2)$ : Left. 
+ \end{itemize}
+ Más mecanismo de Higgs para $SU(2)_L$. El modelo final \footnote{En el modelo, el grupo $U(1)$ tendrá un generador que es combinación lineal del generador de $U(1)_{Hy}$ con el tercer generador de $SU(2)$. }, luego de qiebre espontáneo de la simetría tiene invariancia;
+ \begin{equation}
+   U(1)_{EM}\rightarrow \; \text{Fotón}
+  \end{equation}
+  más $w^{\pm}_\mu$ campos vectoriale cargados y un campo $z^0$ neutro. \\
+  Consideremos una teoría de Gauge para;
+  \begin{equation}
+    SU(2)_L\times U(1)
+   \end{equation}
+y un campo de Higgs en la fundamental de $SU(2)$ con Hypercarga $1/2$. Los campos son;
+\begin{equation}
+  SU(2) \quad W_\mu = W^A_\mu T_A, \quad T_A \; : \; \text{Generadores de}\; SU(2), \; A=1,2,3.
+ \end{equation}
+ y el otro campo;
+ \begin{equation}
+   U(1)_Y\quad B_\mu 
+  \end{equation}
+Co un doblete de Higgs;
+\begin{equation}
+  H(x) = \begin{pmatrix}
+    H^+(x) \\ H^o(X)
+  \end{pmatrix},\quad H^{+0}(x) \in \mathbb{C}
+ \end{equation}
+E introducimos los números cuánticos en el modelo estádar del campo de Higgs:
+\begin{equation}
+  \left( 1,2,1/2 \right)
+ \end{equation}
+ Para la cual $(1)$ correpsonde a la transformación trivial de $SU(3)_c$, o sea que;
+ \begin{equation}
+   g(x) = e^{-i\alpha^A(x)\mathbb{T}_A}, \quad \left[ \mathbb{T}_A , \mathbb{T}_B \right] = if_{ABC}\mathbb{T}_C
+\end{equation}
+Con lo cual, el doblete de Higgs no sentírá $SU(3)_c$ o que sería como si, al transformar en $SU(3)_c$ , al campo de Higgs le pega con una identidad. \\
+El 2, en los números cuánticos de Higgs trasnforma en la representación fundamental de $SU(2)_L$. El campo de Higgs se hablará con el campo de Gauge por medio de la derivada covariante. La cual está dada por;
+\begin{equation}
+  D_\mu  =\partial_\mu H +  ig_{SU(3)_c}C_\mu^a \mathbb{T}_aH + ig_{SU(2)_L} W^A_\mu \frac{\sigma_A}{2} H + ig_{U(1)_Y}\frac{1}{2}B_\mu H, \quad A=1,2,3 
+ \end{equation}
+ En donde $\mathbb{T}_a$ son los 8 generadors de $SU(3)_c$ que en la representación trivial, la que siente Higgs, son;
+ \begin{equation}
+   \mathbb{T}_a = 0
+  \end{equation}
+  Con lo cual la derivada covariante del campo de Higgs es;
+  \begin{equation}
+    D_\mu H = \partial_\mu H + igW^A_\mu \frac{\sigma_A}{2}H + ig'\frac{1}{2}B_\mu H 
+   \end{equation}
+   Queda de tarea demostrar que en efecto, esta derivada es covariante, es decir;
+   \begin{itemize}
+     \item Bajo 
+     \begin{equation*}
+       H(x)\rightarrow \tilde{H}(x)= U(x)H(x)$
+      \end{equation*}
+       y hago;
+     \begin{align*}
+       W_\mu \rightarrow \tilde{W}_\mu = U(x)W_\mu U^{-1}(x) + \frac{i}{g} \partial_\mu U(x)U^{-1}(x) \\
+       B_\mu \rightarrow \tilde{B}_\mu = B_\mu
+     \end{align*}
+     Entonces;
+     \begin{equation}
+       D_\mu H \rightarrow \tilde{D_\mu H} = U(x)D_\mu H 
+      \end{equation}
+      \item Bajo;
+      \begin{align*}
+        H(x)\rightarrow \tilde{H}(x) = e^{i\alpha_A \frac{g'}{2}} \\
+        W_\mu \rightarrow \tilde{W}_\mu = W_\mu \\
+        B_\mu \rightarrow \tilde{B}_\mu = B_\mu + \partial_\mu \alpha(x)
+      \end{align*}
+      Entonces;
+      \begin{equation}
+        D_\mu H \rightarrow \tilde{D_\mu H} = e^{i\alpha_A\frac{g'}{2}} D_\mu H 
+       \end{equation}
+   \end{itemize}
+ Ahora tomamos la transformación del doblete de Higgs bajo $U(1)_y$ tal que;
+ \begin{align*}
+   D_\mu \tilde{H} & = \partial_\mu \tilde{H} + ig_{YM} W_\mu \tilde{H} + i\frac{1}{2}g_y\tilde{B}_\mu \tilde{H}  \\
+   & = \partial_\mu \left( e^{-\frac{i}{2}\alpha(x)}\tilde{H} \right) + i\frac{1}{2}g_y \left( B_\mu + \partial_\mu \alpha(x) \right) \left( e^{-\frac{i}{2}\alpha(x)}H \right) + ig_{YM}W_\mu e^{-\frac{i}{2}g_y\alpha(x)} H \\
+  & = -i\frac{g_y}{2} e^{-\frac{i}{2}} \partial_\mu \alpha(x) + e^{-\frac{i}{2}\alpha(x)}\partial_\mu H + i\frac{1}{2} g_y B_\mu e^{-i\frac{g_y}{2}\alpha(x)}H + i\frac{1}{2}g_y \partial_\mu \alpha(x) e^{-i\frac{g_y}{2}\alpha(x)}H + ig_{YM}W_\mu e^{-i\frac{g_y}{2}\alpha(x)}H \\
+  & = e^{-i\frac{g_y}{2}\alpha(x)} \left( \partial_\mu H + ig_{YM}W_\mu H + i\frac{g_y}{2}B_\mu \right) \\
+   & = e^{-i\frac{g_y}{2}\alpha(x)} D_\mu H
+ \end{align*}
+ El hermítico conjugado de la derivada covariante transforma como; 
+ \begin{align*}
+   \left( D_\mu H \right)^\dagger & = \partial_\mu H^\dagger - ig_{YM} H^\dagger W_\mu - i\frac{g_y}{2}B_\mu H^\dagger \\
+   \left( D_\mu H  \right)^\dagger \rightarrow \left( D_\mu H \right)^\dagger '& = \left( \partial_\mu H^\dagger - ig_{YM}H^\dagger W_\mu + i\frac{g_y}{2}B_\mu H^\dagger \right)' \\
+   & = D_\mu  H^\dagger e^{i\frac{g_y}{2}\alpha(x)}
+ \end{align*}
+En consecuencia, podemos escribir la acción de Yang-Mills para un campo de Guauge $SU(2)$ acoplado a un doblete en la representación fundamental de $SU(2)$, y con una hypercarga de $+\frac{1}{2}$, con un potencial de Higgs;
+\begin{equation}
+  I_{YM} = \int d^4x \; -\frac{1}{4}B_{\mu\nu} B^{\mu\nu} - \frac{1}{4}F_{\mu\nu}^A F^{\mu\nu}_A + \left( D_\mu H \right)^\dagger D_\mu H - \lambda \left( H^\dagger H \right)^2 + \mu^2 H^\dagger H
+ \end{equation}
+ En donde podemos notar que, como la conexión de Yang-Mills la hemos escalar o por su constante de acoplamiento $g_{YM}$, entonces
+ \begin{equation}
+   \mathfrak{L} = -\frac{1}{4g_{YM}^2} F^A_{\mu\nu}F_A^{\mu\nu} \rightarrow -\frac{1}{4}F_{\mu\nu}^A F_A^{\mu\nu}
+  \end{equation}
+  En donde el tensor de Faraday generalizado, o de field strenght;
+  \begin{equation}
+    F^C_{\mu\nu} = \partial_\mu A^C_\nu - \partial_\nu A^C_\mu - g_{YM} e_{ABC} A^A_\mu A^B_\nu
+   \end{equation}
+  Similarmente, el tensor asociado al campo $B_\mu$ es;
+  \begin{equation}
+    B_{\mu\nu} = \partial_\mu B_\nu - \partial_\nu B_\mu
+   \end{equation}
+\end{document}
