@@ -1,0 +1,193 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Trigésima segunda clase}
+Teoría de Gauge para;
+\begin{equation}
+  SU(2)_L\times U(1)_Y
+ \end{equation}
+ Con un campo de Higgs que transforma en la fundamental de $SU(2)$; dicho campo de Higgs es un doblete de campos escalares complejos;
+ \begin{equation}
+   H = \begin{pmatrix}
+     H^+(x) \\ H^0(x)
+   \end{pmatrix}
+  \end{equation}
+  Al cual se le asocian 3 números cuánticos;
+  \begin{itemize}
+    \item \textbf{1} : Transforma en la representación trivial de $SU(3)_C$ , o sea que los gluones no interactúan con el Higgs.
+    \item \textbf{2} Transfomra en la representación fundamental de $SU(2)_L$.
+    \item $1/2$ : Está asociado con la hypercarga y el grupo $U(1)_Y$
+  \end{itemize}
+  Bajo esto, a la transformación bajo el grupo de $U(1)_Y$ se le asocia el campo de Gauge $B_\mu$, tal que su término término cinétio está dado por;
+  \begin{equation}
+    B_{\mu\nu} := \partial_\mu B_\nu - \partial_\nu B_\mu
+   \end{equation}
+   Además, a la transformación del grupo $SU(2)_L$ se le asocia el campo de Gauge que depende de los generadores de la representación fundamental del grupo;
+   \begin{equation}
+     W_\mu = W^A_\mu T_A, \quad T_A: \text{generadores de }SU(2)_L
+    \end{equation}
+El campo de Higgs, se habla con los campos de Gauge via la derivada covariante;
+\begin{equation}
+  D_\mu H = \partial_\mu H + ig_{YM} W^A_\mu \frac{\sigma_A}{2} H + ig_{y}\frac{1}{2}B_\mu H
+ \end{equation}
+ A lo cual, la conexión asociada a $U(1)_y$ transforma como;
+ \begin{equation}
+   B_\mu \rightarrow \tilde{B}_\mu=B_\mu + \partial_\mu \alpha(x)
+  \end{equation}
+  Y el doblete de Higgs transforma como;
+  \begin{equation}
+    H(x)\rightarrow \tilde{H}(x) = e^{-i\frac{g_y}{2}\alpha(x)} H(x)
+   \end{equation}
+   transformación que deja invariante la conexión asociada al grupo de $SU(2)_L$;
+   \begin{equation}
+     W^A_\mu \rightarrow \tilde{W}^A_{\mu} = W^A_\mu(x)
+    \end{equation}
+    Tal que, la derivada covariante, transformando bajo el grupo $U(1)_y$;
+    \begin{equation}
+      \tilde{D_\mu H} := \partial_\mu \tilde{H} + ig_{YM} \tilde{W}^A_\mu \frac{\sigma_A}{2} \tilde{H} + ig_y \frac{1}{2} \tilde{B}_\mu \tilde{H} = e^{-ig_y\frac{1}{2}\alpha(x)}\left( D_\mu H \right)
+    \end{equation}
+Luego, la transformación bajo la representación fundamental del grupo $SU(2)_L$, la conexión $B_\mu$ no se ve afectada bajo esta transformación;
+\begin{equation}
+  B_\mu \rightarrow \tilde{B}_\mu(x) = B_\mu(x)
+ \end{equation}
+ El campo de Higgs en doblete;
+ \begin{equation}
+   H(x)\rightarrow \tilde{H}(x) = U(x) H(x)
+  \end{equation}
+ La conexión asociada a $SU(2)$ transforma como;
+ \begin{equation}
+   \mathbb{W}_\mu \rightarrow = \tilde{\mathbb{W}}_\mu (x) = U(x)\mathbb{W}_\mu (x)U^{1}(x)+\frac{i}{g_{YM}} \partial_\mu U(x) U^{-1}(x).
+  \end{equation}
+  Tal que la derivada covariante transforma, bajo $SU(2)_L$ en su representación fundamental;
+  \begin{equation}
+    \tilde{D_\mu H} = U(x) \left( D_\mu H \right)
+   \end{equation}
+\subsection{Lagrangeano en el sector electrodébil sin fermiones}
+El Lagrangeano del sector electrodébil del modelo estándar, bajo la convención $(+,-,-,-)$ es (fin feriomes);
+\begin{equation}
+  \mathfrak{L} = \left( D_\mu H \right)^\dagger \left( D_\mu H \right) - \frac{1}{2}tr \left( \mathbb{W}_{\mu\nu}\mathbb{W}_{\mu\nu} \right) - \frac{1}{4}B_{\mu\nu} B^{\mu\nu} - V(H)
+ \end{equation}
+ Con el potencial de Higgs;
+ \begin{equation}
+   V(H) = -\mu^2 H^\dagger H + \lambda \left( H^\dagger H \right)^2
+  \end{equation}
+  En donde la derivada covariate está dad por;
+  \begin{equation}
+    D_\mu H = \partial_\mu H +i \frac{g_{YM}}{2} \mathbb{W} + ig_y \frac{1}{2}B_\mu H
+   \end{equation}
+   Y si hermítico conjugado;
+   \begin{equation}
+     \left( D_\mu H \right)^\dagger =\partial_\mu H^\dagger -ig_{Y}W^A_\mu H^\dagger \frac{\sigma_A}{2} - ig_y \frac{1}{2}H^\dagger B_\mu 
+   \end{equation}
+   Con lo cual esta teoría es invariante local bajo;
+   \begin{equation}
+     SU(2)_L \times U(1)_y
+    \end{equation}
+ En $SU(2)_L$;
+ \begin{align*}
+   \tilde{H}^\dagger \tilde{H} & = \left( U(x)H \right)^\dagger \left( U(x)H \right) \\
+   & = H^\dagger U^\dagger U H  =H^\dagger H
+\end{align*}
+y en $U(1)_y$;
+\begin{align*}
+  \tilde{H}^\dagger \tilde{H} = \left( e^{-i\alpha(x)\frac{g_y}{2}} H \right)^\dagger \left( e^{-i\alpha(x)\frac{g_y}{2}} H\right) = H^\dagger H
+\end{align*}
+\subsection{Mecanismo de Higgs}
+Para una función;
+\begin{equation}
+  f(x) = -\mu^2x + \lambda x^2
+ \end{equation}
+ tal que su derivada es;
+ \begin{equation}
+   f'(x) = -\mu^2 + 2\lambda x
+  \end{equation}
+Tal que el $x$ mínimo estará dado por;
+\begin{equation}
+  x_{min} = \frac{\mu^2}{2\lambda}
+ \end{equation}
+ En el caso abelian o el potencial es del tipo sombrero mexicano;
+ \begin{equation}
+   V(\phi,\phi^*) = -\mu^2 \phi^* \phi + \lambda \left( \phi^* \phi \right)^2
+  \end{equation}
+  Con $\phi=\nu$ y $\phi^* \phi= \nu^2$ 
+  El mínimo del potencial de Higgs no-abeliano está en;
+  \begin{equation}
+    H^\dagger H = \frac{\mu^2}{2\lambda}
+   \end{equation}
+   Los vacíos posibles de la teoría, que minimizan el potecial de Higgs, serán configuraciones de $H$ constantes, tal que, un $H$ tal es;
+   \begin{equation}
+     H = \frac{1}{\sqrt{2}} \begin{pmatrix}
+       0 \\ \nu 
+     \end{pmatrix} , \quad \text{con}\; \nu = \sqrt{\frac{\mu^2}{\lambda}}
+    \end{equation}
+    Así, término por sus componentes;
+    \begin{align*}
+      H^\dagger H & = \frac{1}{2} (0\; ,\; \nu) \begin{pmatrix}
+        0 \\ \nu
+      \end{pmatrix} \\
+      & = \frac{1}{2}\frac{\nu^2}{\lambda}
+    \end{align*}
+    Lo que concuerda con el resultado obtenido anteriormente.\\
+    H está definido por 4 números reales y se puede parametrizar en general, de la siguiente forma;
+    \begin{equation}
+      \begin{pmatrix}
+        H^+(x) \\ H^0(x)
+      \end{pmatrix} = H = e^{i\xi^A(x)\frac{\sigma_A}{2}}\begin{pmatrix}
+        0 \\ \chi(x)
+      \end{pmatrix}, \quad \text{4 campos.}
+     \end{equation}
+Ahora podemos transformar nuestro Higgs, pero bajo la paramtrización;
+\begin{align*}
+  \tilde{H}& = e^{i\xi^A(x)\frac{\sigma_A}{2}} H(x) \\
+ & = \begin{pmatrix}
+   0 \\ \chi(x)
+ \end{pmatrix}
+\end{align*}
+Gaugear away, 
+\begin{equation}
+  H(x) = \begin{pmatrix}
+    0 \\ \chi(x)
+  \end{pmatrix}
+  = \frac{1}{\sqrt{2}}\begin{pmatrix}
+    0 \\ \nu + h(x)
+  \end{pmatrix}
+  = H(x),\quad h(x)\in \mathbb{R}
+ \end{equation}
+ Luego, construimos la derivada covariante con este Higgs;
+ \begin{align*}
+   D_\mu H & = \left( \partial_\mu  + ig_{YM} \frac{\sigma^A}{2} W^A_{\mu} + i g_y \frac{1}{2}B-\mu \right)  \frac{1}{\sqrt{2}} \begin{pmatrix}
+     0 \\ \nu + h(x)
+   \end{pmatrix} \\
+   & = \left[ \begin{pmatrix}
+    1 & 0 \\ 0 & 1
+   \end{pmatrix}\partial_\mu + \frac{i}{2} \begin{pmatrix}
+     g_{YM} W^3_\mu + g_y B_\mu & g \left( W^1_\mu -i W^2_\mu \right) \\ g_{YM} \left( W^1_\mu + i W^2_\mu  \right) & - g_{YM} W^3_\mu + g_y B_\mu
+   \end{pmatrix} \right] \frac{1}{\sqrt{2}} \begin{pmatrix}
+     0 \\ \nu + h(x)
+   \end{pmatrix}
+ \end{align*}
+ Queda de tarea expandir la expresión. \\
+A su vez, el término cinético de Higgs es;
+\begin{align*}
+  \left( D_\mu H \right)^\dagger \left( D_\mu H \right) & = \frac{1}{2}\partial_\mu h(x) \partial^\mu h(x) + \frac{g_{YM}^2}{8} \left[ W^1_\mu W^{1\mu} + W^2_\mu W^{2\mu} \right] \left( 1 + \frac{h^2(x)}{\nu} \right)^2 \\ & + \frac{\nu^2}{8} \left( g_{YM}W^3_\mu - g_yB_mu  \right) \left( g_{YM} W^{3\mu} - B^\mu \right) \left( 1 + \frac{h(x)}{\nu} \right)^2
+\end{align*}
+Ahora definimos;
+\begin{align}
+  z^0_\mu & = \cos{\theta}W^3_\mu - \sin{\theta}B_\mu, \quad \theta: \text{Weak mixing angle} \\
+  A_\mu & = \sin{\theta}W^3_\mu + \cos{\theta}B_\mu, \quad \tan{\theta} = \frac{g_{y}}{g_{YM}}
+\end{align}
+El que tenía la pinta de ser el campo de Gauge de electrodinámica, o sea, $B_\mu$ es en verdad el campo $A_\mu$ que es combinación de este, junto con el tercer campo de Gauge $W^3_\mu$.  
+Con lo cual, podemos obtener finalmente;
+\begin{equation}
+  \left( D_\mu H \right)^\dagger \left( D_\mu H  \right) = \frac{1}{2}\partial_\mu h \partial^\mu h + \frac{g_{YM}^2}{8} \left[ W^1_\mu W^{1\mu} + W^2_\mu W^{2\mu} \right] \left( 1 + \frac{2h(x)}{\nu} + \frac{h^2(x)}{\nu^2} \right) + \frac{1}{8} \frac{\nu^2g_{YM}^2}{\cos^2{\theta}} z^0_\mu z^{0\theta}
+ \end{equation}
+ Con lo cual hemos encontrado dos campos vectoriales masivos iguales y otro más con masa diferente, que era lo que buscabamos;
+ \begin{align*}
+   m_{W^\pm} & = \frac{g\nu}{2} \\
+   m_z & = \frac{g\nu}{2\cos{\theta}}
+ \end{align*}
+tal que;
+\begin{equation}
+  m_{z^0} > m_{W^\pm}
+ \end{equation}
+\end{document}
