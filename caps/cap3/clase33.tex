@@ -1,0 +1,250 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Trigésima tercera clase}
+Introducimos la constante de plank reducida;
+\begin{equation}
+  h \sim 10^{-34}[J\cdot s]
+ \end{equation}
+ En un sistema físico de $n$ grados de libertar;
+ \begin{equation}
+   q_i = q_i(t), \quad i=1,\dots ,n
+  \end{equation}
+  Cuyas ecuaciones de movimiento estarán dadas por las ecuacione de Euler-Lagrange;
+  \begin{equation}
+    \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i}=0
+   \end{equation}
+En donde se introcuce la función Lagrangana, la cual dependerá de las coordenadas y su derivada total con respecto al tiempo;
+\begin{equation}
+  L = L (q_i(t),\dot{q}_i(t))
+ \end{equation}
+ Además, por una transformacion de Legengre es posible bajarle en un grado a las ecuaciones de movimiento, introduciendo el Hamintoniano;
+ \begin{equation}
+   H = \sum_{i=1}^n q_i p_i - L
+  \end{equation}
+  En donde la cantidad o variable $p_i$ es llamada el momento canónico conjugado a $q_i$, dado por;
+  \begin{equation}
+    p_i := \frac{\partial L}{\partial \dot{q}_i}\Rightarrow \dot{q}_i = \dot{q}_i(q_i,p_i)
+   \end{equation}
+Lo que, como se mencionó, se obtiene el Hamiltoniano;
+\begin{equation}
+  H = H(q_i,p_i)
+ \end{equation}
+ La dinámica en el espacio de fase está controlada por las ecuaciones de Hamilton;
+ \begin{align}
+   \dot{q}_i & = \frac{\partial H}{\partial p_i} \\
+   \dot{p}_i & = -\frac{\partial H}{\partial q_i}
+ \end{align}
+ Se introduce además el llamado, "corchete de Poisson", que, para dos funciones $F(q_i,p_i),G(q_i,p_i)\in \mathbb{R}$, que está dado por;
+ \begin{equation}
+   \{F,G\} = \frac{\partial F}{\partial q_i} \frac{\partial G}{\partial p_i} - \frac{\partial G}{\partial q_i} \frac{\partial F}{\partial p_i}
+  \end{equation}
+  El cual cumple con las siguientes propiedades;
+  \begin{align}
+    \{F,G\} & = -\{G,F\} \\
+    \{\alpha F_1 + \beta F_2, G\} & = \alpha \{F_1,G\} + \beta \{F_2,G\} \\
+    \{F_1,\{F_2,F_3\}\} + \{F_2,\{ F_3,F_1 \} \} + \{F_3 ,\{F_1,F_2\} \} \equiv &  0
+  \end{align}
+  Las funciones definidas sobre el espacio de fase forman un espacio vectorial sobre los reales, y junto al corchete de Poisson dotan a este conjunto de la estructura de un álgebra de Lie.
+\\
+Téngase ahora la deivad total de una función $F(q_i,p_i,t)$ con respecto al tiempo;
+\begin{equation}
+  \frac{dF}{dt} = \frac{\partial F}{\partial q_i}\frac{dq_i}{dt} + \frac{\partial F}{\partial p_i}\frac{d p_i}{dt} + \frac{\partial F}{\partial dt}
+ \end{equation}
+ El cual podemos agrupar de tal forma que;
+ \begin{align*}
+   \frac{dF}{dt} & =  \frac{\partial F}{\partial q_i}\frac{\partial H}{\partial p_i} - \frac{\partial F}{\partial p_i} \frac{\partial H}{\partial q_i} + \frac{\partial F}{\partial t} \\
+   & = \frac{\partial F}{\partial t} - \{H,F\}
+ \end{align*}
+ Ahora, si imponemos que la función no depende explícitamente del tiempo, entonces $F(q_i,p_i)$.Podemos escribir una derivada o evolución temporal discreta para esta expresión tal que;
+ \begin{equation}
+   F(q_i(t+\Delta t), p_i(t+\Delta t))  = f(q_i(t),p_i(t)) + \{-\Delta t\; H,F\}
+  \end{equation}
+  La evolución temporal ess implementada por el Hamiltoniano via el corchete de Poisson;
+\begin{equation}
+  \delta F = -\Delta t \{H,F\}
+ \end{equation}
+ \subsection{Teorema de Poisson}
+ Sean $F$ y $G$ cantidades conservadas;
+ \begin{equation}
+   \frac{dF}{dt} = 0 \quad \wedge \quad \frac{dG}{dt} = 0
+  \end{equation}
+   y $\{F,G\}$ también es una cantidad conservada. \\
+   Si $F$ es conservada y no depende explícitamente de $t$;
+   \begin{equation}
+     \{H,F\} = 0
+    \end{equation}
+    En donde el corchete de Poisson de las dos funciones está dado por;
+    \begin{equation}
+      \{F;G\} = \frac{\partial F}{\partial q_i}\frac{\partial G}{\partial p_i} - \frac{\partial G}{\partial q_i} \frac{\partial G}{\partial q_i}\frac{\partial F}{\partial p_i}
+     \end{equation}
+     Notemos que si calculamos el corchete de Poisson del Hamiltoniano con la coordenada generalizada;
+     \begin{align*}
+       \{H,q_i\} & = \frac{\partial H}{\partial q_i} \cancel{\frac{\partial q_i}{p_i}} - \frac{\partial q_i}{\partial q_i} \frac{\partial H}{\partial p_i} \\
+        & = -\dot{q}_i = \{q_j,H\}
+     \end{align*}
+     Y además con respecto al momento canónico;
+     \begin{align*}
+       \{H,p_i\} & = \frac{\partial H}{\partial q_i} \frac{\partial p_i}{p_i} - \frac{\partial p_i}{\partial q_i} \frac{\partial H}{\partial p_i} \\
+       & = \frac{\partial H}{\partial q_i} = -\dot{p}_i = \{p_i,H\}
+     \end{align*}
+  Y finalmente, calculamos el conmutador entre la coordenada generalizada y el momento canónico;
+  \begin{align*}
+    \{q_j,p_k\} & = \frac{\partial q_j}{\partial q_i} \frac{\partial p_k}{\partial p_i} - \frac{\partial p_k}{\partial q_i} \frac{\partial q_j}{\partial p_i}  \\
+     & = \delta_{jk}
+  \end{align*}
+  Lo que nos deja las siguientes relaciones;
+  \begin{align}
+    \{q_j,p_k\} & = \delta{jk} \\
+    \{q_j,q_k\} & = 0\\
+    \{p_j,p_k\} & = 0 
+  \end{align} 
+  \subsection{Cuantización canónica}
+  Promovemos las variables a operadores de la siguiente forma;
+  \begin{align}
+    q_i \rightarrow & \hat{q}_i \\
+    p_i \rightarrow &\hat{p}_i \\
+    \{,\} \rightarrow &\frac{1}{i\hbar} [,]
+  \end{align}
+  Estos operadores actúan sobre un espacio vectorial (sobre $\mathbb{C}$) (Completo), que es un espacio de Hilbert. Además, el estado del sistema cuántico será un rayo en el espacio de Hilbert;
+  \begin{equation}
+    e^{i\alpha }\ket{\psi}, \quad \alpha\in\mathbb{R}
+   \end{equation}
+   Lo cual llamaremos un rayo en el espacio de Hilbert. \\
+   Dado un sistema físico ¿como caracterizamos su espacio de Hilbert asociado? \\
+   Dado que el espacio de Hilbert es un espacio vectorial, nos gustaría encontrar un base en tal espacio. \\
+   Podemos conseguir una base si logramos encontrar el conjunto completo de autovectores de un operador hermítico (tales estados resultan ser ortogonales)
+   \begin{equation}
+     \hat{A}^\dagger = \hat{A}
+    \end{equation}
+El siguiente Hamiltoniano es necesario sabérselo de memoria y tenerlo en el corazón;
+\begin{equation}
+  H = \frac{p^2}{2} + \frac{1}{2}\omega^2 q^2
+ \end{equation}
+ que corresponde al Hamiltoniano del oscilador armónico simple. Necesitamos promover sus variables a operadores tal que;
+ \begin{align}
+   p \rightarrow & \hat{p} \\
+   q \rightarrow & \hat{q} \\
+   \{,\}\rightarrow & \frac{1}{i\hbar}[,]
+ \end{align}
+ Además, como el corchete de Poisson entre la coordenada generalizada y el momento canónico corresponde a la identidad, entonces;
+ \begin{equation}
+   \{q,p\} = 1 \rightarrow \hat{\mathbb{1}} = \frac{1}{i\hbar}[\hat{q},\hat{p}] 
+  \end{equation}
+  Por lo tanto nos queda la siguiente relación de conmutación;
+  \begin{equation}
+    [\hat{q},\hat{p}] = i\hbar
+   \end{equation}
+   Supongamos que el espacio vectorial sobre el que actúan estos operadores, es el espacio de las funciones de la variable clásica $q$, que son de cuadrado integrables.
+   \begin{equation}
+     \text{Hilbert} \; \left\{ \int_{-\infty}^{\infty}|f(q)|^2dq <\infty  \right\}\quad , |f(q)|^2 = f^*(q)f(q)
+    \end{equation}
+  ¿Cómo actúan los operadores $\hat{q}$ y $\hat{p}$  sobre la función $f(q)$?
+  \begin{align*}
+    \hat{q} f(q) & = qf(q) \\
+    \hat{p}f(q) & = \left( -i\hbar \frac{\partial}{\partial q} \right)f(q) \\
+    \left[ \hat{q},\hat{p} \right]f(q) & = \hat{q} (\hat{p}f(q)) - \hat{p}(\hat{q}f(q)) \\
+    & = q \left( -i\hbar \frac{\partial f(q)}{\partial q} \right) - \left( -i\hbar \frac{\partial}{\partial q} \right) \left( qf(q) \right) \\
+    & = -i\hbar q \frac{\partial f}{\partial q} + ih\hbar f(q) + i\hbar q \frac{\partial f(q)}{\partial q} \\
+    & = i\hbar f(q)
+  \end{align*}
+  Por lo tanto hemos obtenido la siguiente relación de conmutación;
+  \begin{equation}
+    \left[ \hat{q}, \hat{p} \right]f(q) & = i\hbar f(q)
+   \end{equation}
+   y además recuperamos la relación anteriormente derivada, $[\hat{q},\hat{p}]=i\hbar$
+\subsection{Oscilador armónico en mecánica cuántica}
+Promovemos las variables del Hamiltoniano del oscilador armónico hacia operadores;
+\begin{align*}
+  H\righarrow \bar{H}& = \frac{1}{2}\hat{p}^2 + \frac{1}{2}\omega^2\hat{q}^2 \\
+  & = \frac{1}{2}\left(-i\hbar \frac{\partial}{\partial q} \right)^2  + \frac{1}{2}\omega^2 q^2\hat{\mathbb{1}}
+\end{align*}
+Con lo cual nos queda el siguiente operador;
+\begin{equation}
+  \hat{H} = -\frac{\hbar^2}{2}\frac{\partial^2}{\partial q^2} + \frac{1}{2}\omega^2q^2
+ \end{equation}
+ Con lo cual en la ecuación de Schrodinger, entonces;
+ \begin{equation}
+   i\hbar \frac{\patrial \psi}{\partial t} = \hat{H} \psi(q,t)
+  \end{equation}
+  Ahora, la probabilidad que la función de onda esté en una cierta coordenada generalizada;
+  \begin{align*}
+    P(q_1<q<q_2) = \int_{q_1}^{q_2}\psi^*\psi dq
+  \end{align*}
+  Luego, la función de onda, si resolvemos la ecuación diferencial de primer orden;
+  \begin{equation}
+    \psi(q,t) = e^{-i\frac{H}{\hbar}t}\phi(q)
+   \end{equation}
+   Con lo cual esto se convierte en un problema de autovalores;
+   \begin{align*}
+     \hat{H}\phi(q) & = E\phi(q)   \\
+     \left( -\frac{\hbar^2}{2}\frac{\partial^2}{\partial q^2} + \frac{1}{2}\omega^2 q^2 \right)\phi(q) & = E\phi(q)
+   \end{align*}
+   Ahora si la energía es discreta, como se encuentra;
+   \begin{equation}
+     E = \hbar \omega \left( n + \frac{1}{2} \right), \quad n=0,1,2,3,\dots
+    \end{equation}
+    y la función será;
+    \begin{equation}
+      \phi_n(q) = C_l C_n H_n(C_2 q) e^{-C_3 q^2}
+     \end{equation}
+  Por lo tanto, hemos encontrado una base del espacio de Hilbert;
+  \begin{equation}
+    \psi(q,t) = \sum_{n=0}^\infty C_n \psi_n(q,t)
+   \end{equation}
+   \subsection{Método algebraico}
+   \begin{equation}
+     \hat{q},\hat{p} \rightarrow \hat{a},\hat{a}^\dagger \\
+    \end{equation}
+    En donde los operadores de creacion y aniquilación;
+   \begin{align}
+     \hat{a} & = \sqrt{\frac{\omega}{2}} \hat{q} + \frac{i}{\sqrt{2\omega}}\hat{p}\\
+     \hat{a}^\dagger & = \sqrt{\frac{\omega}{2}}\hat{q} - \frac{i}{\sqrt{2\omega}}\hat{p}
+   \end{align}
+   ¿Cómo se escribe el Hamiltoniano en función de los operadores de creación y aniquilación, $\hat{a}, \hat{a}^\dagger$?
+   \begin{equation}
+     \hat{H} = \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right) 
+    \end{equation}
+    En donde se han usado las siguientes relaciones de conmutación;
+    \begin{align}
+      \left[ \hat{a}, \hat{a}^\dagger  \right] & = 1 \\
+      \left[ \hat{H} , \hat{a}^\dagger  \right] & = \omega \hat{a}^\dagger \\
+      \left[ \hat{H} , \hat{a} \right] & = -\omega \hat{a}
+    \end{align}
+    De lo que, como $\hat{H}\ket{n} = E_N\ket{n}$
+      \begin{equation}
+        \hat{H} \left( \hat{a}\ket{n} \right) = \left( E_n - \hbar\omega \right) \left( \hat{a}\ket{n} \right)
+       \end{equation}
+    Y además;
+    \begin{align*}
+      \hat{a} \ket{0} = 0 \\
+      \hat{H}\ket{0} = \frac{1}{2}\hbar\omega \ket{0} \\
+      \hat{H} \left( \hat{a}^\dagger \ket{0} \right) = \hbar\omega \left( 1 + \frac{1}{2} \right) \left( \hat{a}^\dagger \ket{0} \right)
+    \end{align*}
+\subsection{Campo escalar}
+Tenemos el siguiente principio de acción para un campo escalar;
+\begin{equation}
+  I = \int d^4x \; \left( \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2}\phi^2 \right)
+ \end{equation}
+ De lo cual las ecuaciones de movimiento son las siguientes;
+ \begin{equation}
+   \square \phi + m^2\phi = 0
+  \end{equation}
+  En donde la función $\phi$ es un campo escalar que depende de la coordenada espacial y del tiempo, $\phi=\phi(t,\vec{x})$. La transformada de Fourier para la función $\phi$ está dada por;
+  \begin{equation}
+    \phi(t,\vec{x}) = \frac{1}{\left( 2\pi \right)^3} \int d^3\vec{h} e^{+i\vec{k}\cdot{x}} \tilde{\phi}(t,\vec{k})
+   \end{equation}
+   Lo cual lo reemplazamos en la ecuación de movimiento para $\phi$;
+   \begin{align*}
+     \frac{\partial^2}{\partial t^2} \left( \int \frac{d^3\vec{h}}{(2\pi)^3} e^{i\vec{k}\cdot{x}} \tilde{\phi}(t,\vec{k}) \right) - \nabla^2  \left( \int \frac{d^3\vec{h}}{(2\pi)^3} e^{i\vec{k}\cdot{x}} \tilde{\phi}(t,\vec{k}) \right) + m^2 \left( \left( \int \frac{d^3\vec{h}}{(2\pi)^3} e^{i\vec{k}\cdot{x}} \tilde{\phi}(t,\vec{k}) \right) \right) = 0
+   \end{align*}
+   Lo que nos deja con
+   \begin{align*}
+     \int \frac{d^3\vec{h}}{(2\pi)^3} \left[ \frac{\partial^2\phi}{\partial t^2}(t,\vec{k}) + \omega^2_{\vec{k}} \tilde{\phi}(t,\vec{k}) \right] e^{i\vec{k}\cdot{x}} = 0
+   \end{align*} 
+   Con $\omega_{\vec{k}}^2= |\vec{k}|^2 + m^2$. A lo cual hemos obtenido infinitos osciladores armónicos para nuestro sistema, así;
+   \begin{align*}
+     \hat{H} \left( \hat{a}_{\vec{k}}\ket{0} \right) = \sqrt{|\vec{k}|^2 + m^2} \left( \hat{a}^\dagger \ket{0} \right) \\
+     \ket{p} \left( \hat{a}_{\vec{k}}\ket{0} \right) = \vec{k} \left( \hat{a}_{\vec{k}}\hat{a}^\dagger \ket{0} \right)
+   \end{align*}
+   \end{document}
