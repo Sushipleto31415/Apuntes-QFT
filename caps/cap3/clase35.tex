@@ -1,0 +1,124 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Trigésima quinta clase}
+\textbf{Afirmación}
+\begin{align*}
+  \hat{H} & = \int d^3x \left( \frac{\pi^2}{2} + \frac{1}{2}|\nabla \phi|^2 + \frac{m^2}{2}\phi^2 \right) \\
+  & = \frac{1}{2} \int \frac{d^3h}{(2\pi)^2} \omega_k \left( a^\dagger_k a_k + a_k a^\dagger_k \right)
+\end{align*}
+Ahora, los momenta canómico;
+\begin{align*}
+  \pi(\vec{x}) = \int \frac{d^3l}{(2\pi)^2} (-i) \sqrt{\frac{\omega_l}{2}} \left( a_l e^{i\vec{l}\cdot \vec{x}} - a_l e^{i\vec{l}\cdot \vec{x}} \right) 
+\end{align*}
+Calculemos el Hamiltonian por términos;
+\subsubsection{Primer término}
+El primer término corresponde al de
+\begin{equation*}
+  T_1 = \int d^3x \frac{\pi^2}{2}, \quad \omega_l  = \sqrt{|\vec{l}|^2 + m^2}
+\end{equation*}
+Con lo cual, calculamos;
+\begin{align*}
+  T-1 & = \int \frac{d^3xd^3k_1d^3k_2}{2(2\pi)^6}\frac{(-1)}{2} \sqrt{\omega_{k_1}\omega_{k_2}}  \left( a_{k_1} e^{ik_1\cdot x} - a^\dagger_{k_1} e^{-ik_1\codt x} \right) \left( a_{k_2}e^{ik_2 \cdot x} - a^\dagger_{k_2} e^{-ik_2\cdot x} \right) \\
+  & = \int \frac{d^3xd^3k_1d^3k_2}{4(2\pi)^6} (-1) \sqrt{\omega_{k_1}\omega_{k_2}} \left( a_{k_1}a_{k_2} e^{i(k_1+k_2)\cdot x} + a^\dagger_{k_1}a^\dagger_{k_2} e^{-i(k_1 + k_2)\cdot x} - a^\dagger_{k_1}a_{k_2} e^{-i(k_1-k_2)\cdot x} - a_{k_1}a_{k_2} e^{i(k_1 - k_2)\cdot x} \right) \\
+  & = \int \frac{d^3xd^3k_1d^3k_2}{2(2\pi)^6} (-1) \left( \omega_{k_1}a_{k_1} a_{-k_1} + \omega_{k_1} a^\dagger_{k_1}a^\dagger_{-k_1} - a^\dagger_{k_1} a_{k_1} \omega_{k_1} - a_{k_1}a^\dagger_{k_1} \omega_{k_1} \right)
+\end{align*} 
+Esto gracia a la propiedad de la integral de las exponenciales que nos dan una delta de dirac a la 3 tanto de argumento $k_1+k_2$ como en $k_1-k_2$.
+\subsubsection{Segundo término}
+El segundo término del Hamiltoniano está dado por;
+\begin{equation*}
+  T_2 = \int d^3x |\nabla \phi|^2
+\end{equation*}
+De lo cual calculamos el término;
+\begin{align*}
+  \nabla \phi & = \nabla \left( \int \frac{d^3k}{(2\pi)^3} \frac{1}{\sqrt{2\omega_k}} \left( a_k e^{ik\cdot x} + a^\dagger_ke^{-ik \cdot x} \right)\right) \\
+  & = \int \frac{d^3k}{(2\pi)^3} \frac{1}{\sqrt{2\omega_k}} \left( ik a_k e^{ik\cdot x} - ik e^{-ik\cdot x}\right)
+\end{align*}
+\subsubsection{Operador Hamiltoniano}
+Con lo cual, el Hamiltoniano quedará tal que;
+\begin{align*}
+  \hat{H} & = \int \frac{d^3k}{(2\pi)^3} \frac{1}{4} \frac{1}{\omega_k} \left[ \left( -\omega^2_k + k^2 + m^2 \right) \left( a_ka_{-k} + a^\dagger_k a^\dagger_{-k} \right) + \left( \omega_k^2 + k^2 + m^2 \right) \left( a_k a_k^\dagger + a^\dagger_{k}a_k \right) \right] \\
+  & = \int \frac{d^3k}{(2\pi)^3} \frac{1}{2}\omega_k \left( a_ka_k^\dagger + a^\dagger_k a_k \right)
+\end{align*}
+A lo cual, si aplicamos el operador de ordenamiento; $:H:$, tenemos;
+\begin{equation}
+  \hat{H} = \int \frac{d^3k}{(2\pi)^3} \omega_k a^\dagger_k a_k
+ \end{equation}
+ \subsubsection{Operador momento lineal}
+ Tenemos que, el Lagrangeano para el campo escalar es;
+ \begin{equation}
+   \mathfrak{L} = \frac{1}{2} \partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2} \phi^2
+  \end{equation}
+  Bajo una transformación espacio-temporal;
+  \begin{align*}
+    x^\mu \rightarrow \tilde{x}^\mu = x^\mu + a^\mu \quad \tilde{\phi}(\tilde{x}) = \phi(x) \\
+    \delta \phi = -a^\mu \partial_\mu \phi,\quad j^\mu = \partial^\mu \left( -a^\nu \partial_\nu \phi \right) = -(-a^\mu \mathfrak{L})\\
+    \delta \mathfrak{L} = a^\mu \partial_\mu \mathfrak{L} \\
+    j^\mu = \frac{\partial \mathfrak{L}}{\partial \partial_\mu \phi} \delta \phi - B^\mu
+  \end{align*}
+  Tal que, el tensor de densidad de Energía-Momento;
+  \begin{equation}
+     T^\mu_{\;\nu} = \partial^\mu\phi \partial_\nu \phi + \frac{\delta^\mu_\nu}{2} \left( \partial_\alpha \phi \partial^\alpha \phi  m^2 \phi^2 \right)
+   \end{equation}
+   Para transiciones espaciales la cantidad asociada será;
+   \begin{equation*}
+     (\vec{P})_i = \int d^3x T^0_{\;i} = \int d^3x \partial^t \phi \partial_i\phi
+    \end{equation*}
+    Con lo cual
+    \begin{equation}
+      \vec{P} = \int d^3x \dot{\phi}\nabla \phi
+     \end{equation}
+     Lo que también puede ser escrito como;
+     \begin{equation}
+       \vec{P} = \int d^3x \pi \nabla \phi
+      \end{equation}
+      Lo que, si promovemos a operadores que cumplen con el Álgebra canónica, entonces;
+      \begin{equation}
+        \hat{P} = \int d^3\vec{x} \hat{\pi}(\vec{x})\nabla \hat{\phi}(\vec{x})
+       \end{equation}
+Ahora, queda de tarea en escribir el operador momento lineal como;
+\begin{equation}
+  \hat{\vec{P}} = \int \frac{d^3\vec{k}}{(2\pi)^3} \vec{a} \hat{a}^\dagger_{\vec{k}}\hat{a}_{\vec{k}}
+ \end{equation}
+ Además que el operador Hamiltoniano estaba dado por;
+ \begin{equation}
+   \hat{H} = \int \frac{d^3\vec{l}}{(2\pi)^3} \omega_{\vec{l}}\hat{a}^\dagger_{\vec{l}} \hat{a}_{\vec{l}}
+  \end{equation}
+  Ahora uno se puede preguntar, tiene el estado cero una energía y un momento lineal bien definido?
+  \begin{align*}
+    \hat_{\vec{k}} \ket{0} = 0, \quad \forall \vec{k} \\
+    \hat{H}\ket{0} = 0 \ket{0}
+  \end{align*}
+  Con lo cual $\ket{0}$ tiene una energía bien definida $E_0=0$.
+  Además, como;
+  \begin{equation}
+    \hat{\vec{P}}\ket{0} = \vec{0}\ket{0}
+   \end{equation}
+   El estado $\ket{0}$ tiene un momento lineal bien definido. Luego, podemos definir el estado de momento lineal;
+   \begin{equation}
+     \ket{\vec{P}} := \hat{a}^\dagger_{\vec{P}}\ket{0}
+    \end{equation}
+    Ahora hacemos actual este estado al operador Hamiltoniano;
+    \begin{align*}
+      \hat{H} \ket{\vec{P}}& = \left( \int \frac{d^3\vec{l}}{(2\pi)^3} \omega_{\vec{l}} \hat{a}^\dagger_{\vec{l}} \hat{a}_{\vec{l}} \right)\left( \hat{a}^\dagger_{\vec{P}} \ket{0}\right)  \\
+      & = \int d^3\vec{l} \omega_{\vec{l}}\hat{a}^\dagger_{\vec{l}} \hat{a}^\dagger_{\vec{l}} \delta^{(3)}(\vec{P}-\vec{l}) \ket{0} \\
+      & = \omega_{\vec{P}} \hat{a}^\dagger_{\vec{P}}\ket{0} \\
+      & = \omega_{\vec{P}}\ket{\vec{P}}
+    \end{align*}
+    Con lo cual, el operador Hamiltoniano actuando sobre el estado momento lineal es;
+    \begin{equation}
+      \hat{H}\ket{\vec{P}} = \omega_{\vec{P}}\ket{\vec{P}} = \sqrt{|\vec{P}|^2+ m^2}\ket{\vec{P}}
+    \end{equation}
+Ahora ¿Qué pasa si hacemos actual el operador momento lineal sobre el estado de una partícula?
+\begin{align*}
+  \hat{\vec{P}}\ket{\vec{P}} & = \left(\int \frac{d^3\vec{l}}{(2\pi)^3} \vec{l}\hat{a}^\dagger_{\vec{l}}\hat{a}_{\vec{l}} \right)\left( \hat{a}^\dagger_{\vec{p}}\ket{0} \right) \\
+  & = \int d^4\vec{l}\; \vec{l}\hat{a}^\dagger_{\vec{l}} \delta^{(3)}(\vec{l}-\vec{p}) \ket{0} \\
+  & = \vec{p}\hat{a}^\dagger_{\vec{p}}\ket{0} \\
+  & = \vec{p}\ket{\vec{p}}
+\end{align*}
+Con lo cual;
+\begin{equation}
+  \hat{\vec{P}}\ket{\vec{p}} = \vec{p}\ket{\vec{p}}, \quad \hat{H} \ket{\vec{p}} = \sqrt{|\vec{p}|^2 + m^2} \ket{\vec{p}}
+ \end{equation}
+Con lo cual, $\ket{\vec{p}}=\hat{a}_{\vec{p}}^\dagger \ket{0}$ es una partívula estad de una partícula (one particle state), a la partícula $\ket{\vec{p}}$ le llamaremos \textbf{mesón}.
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\section{Trigésima cuarta clase}
+Necesitamos cuantizar el campo escalar, con lo cual, recordando , la acción del campo escalar es del tipo;
+\begin{equation}
+   I = \int d^4x \left( \frac{1}{2}\partial_\mu \phi \partial^\mu \phi - \frac{m^2}{2}\phi^2 \right)
+ \end{equation}
+en donde necesitamos encontrar el espectro de los operadores, en particular del operador Hamiltoniano.
+\\
+Para las coordenadas generalizadas $q_i(t)$ con $i=1,\dots, N$ los campo escalares $\phi(t,\vec{x})$, en donde $\phi_{\vec{x}}(t)$. \\
+Hay tantos grados de libertad mecánicos como puntos hay en $\mathbb{R}^3$, con lo cual son $\infty$. Pero desde el punto de vista de la teoría de campos, hay solo un grado de libertad para cada punto.
+\\
+¿Cuál es el operador Hamiltoniano del campo escalar?, dada la densidad Lagrangeana del campo escalar ;
+\begin{equation}
+  \mathfrak{L} = \frac{1}{2}\dot{\phi}^2 - \frac{1}{2} |\vec{\nabla}\phi|^2 - \frac{m^2}{2}\phi^2
+ \end{equation}
+ En donde podemos definir la densidad de momenta canónicos;
+ \begin{equation}
+   \phi = \frac{\partial \mathfrak{L}}{\partial \dot{\phi}} \Rightarrow \dot{\phi}  =\pi
+  \end{equation}
+Con lo cual, aplicando una transformada de Lengendre, podemos definir la densidad Hamiltoniana clásico
+\begin{equation}
+  \mathcal{H}  =\phi \dot{\phi} - \mathfrak{L}
+ \end{equation}
+ En donde, luego de trabajar el álgebra, la densidad Hamiltoniana para el campo escalar clásico está dada por;
+ \begin{equation}
+   \mathfrak{H} = \frac{\phi^2}{2}  + \frac{1}{2} |\vec{\nabla}\phi|^2 + \frac{m^2}{2}\phi^2
+  \end{equation}
+  Con lo cual, el Hamitoniano será la integral de la densiddad Hamiltoniana en todo el espacio;
+  \begin{equation}
+    H = \int d^3x \mathfrak{H}
+   \end{equation}
+\subsection{Cuantización canónica en el cuadro de Schrödinger}
+Elevamos las siguientes cantidades físicas a operadores;
+\begin{align}
+  q(t) & \longrightarrow \hat{q} \\
+  \phi_{\vec{x}}(t) \longrightarrow \hat{\phi}(\vec{x}) \\
+  \pi_{\vec{y}}(t) \rightarrow \hat{\pi}(\vec{y})
+\end{align}
+Tal que estos operadores satisfacen la llamada \textbf{Álgebra canónica}, cuyos generadores satisfacen la siguiente regla de conmutación;
+\begin{align}
+  \left[ \hat{\phi}(\vec{x}) , \hat{\pi}(\vec{y}) \right] & = i\hbar \delta^{(3)}(\vec{x}-\vec{y}) \\
+  \left[ \hat{\phi}(\vec{x}) , \hat{\phi}(\vec{y}) \right] & = 0 \\
+   \left[ \hat{\pi}(\vec{x}) , \hat{\pi}(\vec{y}) \right] & = 0 
+\end{align}
+Esta regla de comutación no está definida por derivada funcional, como podría ser aparente por la delta de Dirac, esta aparece como análoga de la delta de Kronecker cuando nos pasamos a operadores continuos. \\
+El operador Hamiltoniano está dado por;
+\begin{equation}
+  \hat{H}  = \int d^3 x \left( \frac{1}{2}\hat{\pi}^2 + \frac{1}{2}|\vec{\nabla}\hat{\phi}|^2  + \frac{m^2}{2} \hat{\phi}^2\right)
+ \end{equation}
+¿Para este operador Hamiltoniano se cumplirá algo como $\hat{H}\ket{\Psi}= E \ket{\Psi}$?, defimos los operadores
+\begin{equation}
+  \begin{aligned}
+    & \hat{\pi}(\vec{x}) \\
+    & \hat{\phi}(\vec{x}) 
+  \end{aligned} \quad
+  \Rightarrow \quad \begin{aligned}
+    & \hat{a}_{\vec{k}} \\
+    & \hat{a}^\dagger_{\vec{k}}
+  \end{aligned}
+\end{equation}
+En donde $\hat{a}_{\vec{h}} \in \mathbb{R}^3$, tal que, los operadores $\hat{\phi}$  y $\hat{\pi}$ en función de los nuevos, se definen como;
+\begin{align}
+  \hat{\phi}(\vec{x}) & := \int \frac{d^3\vec{k}}{(2\pi)^3} \frac{1}{\sqrt{2\omega_{\vec{k}}}} \left( \hat{a}_{\vec{k}}e^{i\vec{k}\cdot \vec{x}} + \hat{a}_{\vec{k}}^\dagger e^{-i\vec{k}\cdot \vec{x}} \right) \\
+  \hat{\phi}(\vec{y}) & := \int \frac{d^3\vec{l}}{(2\pi)^3} (-i)\sqrt{\frac{2\omega_{\vec{k}}}{2}}\left( \hat{a}_{\vec{l}}e^{i\vec{l}\cdot \vec{x}} - \hat{a}_{\vec{l}}^\dagger e^{-i\vec{l}\cdot \vec{x}} \right)
+\end{align}
+En donde se ha definido;
+\begin{equation}
+  \omega_{\vec{k}} := \sqrt{|\vec{k}|^2 + m^2}
+ \end{equation}
+ ¿Cómo se escribe $\hat{a}_{\vec{h}}$ en térmimos de $\hat{\phi}(\vec{x})$ y $\hat{\pi}(\vec{y})$?, para ello necesitaremos el siguiente resultado;
+ \begin{equation}
+   \int d^{n}\vec{A} e^{i\vec{A}\cdot \vec{B}} = \left( 2\pi \right)^n \delta^{(n)}(\vec{B})
+  \end{equation}
+  Con lo cual, desarrollamos;
+  \begin{align*}
+    \int d^3\vec{x} \hat{\phi}(\vec{x}) e^{i\vec{P}\cdot \vec{x}} & = \int d^3 x \int \frac{d^3\vec{k}}{(2\pi)^3} \frac{1}{\sqrt{2\omega_{\vec{k}}}} \left( \hat{a}_{\vec{k}} e^{i (\vec{h}+\vec{p}) \cdot \vec{x} } + \hat{a}^\dagger_{\vec{k}} e^{-i(\vec{h}-\vec{p}\cdot \vec{x})} \right) \\
+    & = \int \frac{d^3\vec{k}}{(2\pi)^3} \frac{1}{\sqrt{\omega_{\vec{k}}}} \left( \hat{a}_{\vec{k}} (2\pi)^3 \delta^{(3)}(\vec{h}+\vec{p}) + \hat{a}^\dagger_{\vec{k}}   (2\pi)^3 \delta^{(3)}(\vec{h}-\vec{p})\right) \\
+    & = \frac{1}{\sqrt{2\omega_{\vec{k}}}} \left( \hat{a}_{\vec{-p}} + \hat{a}^\dagger_{\vec{p}} \right)\\
+    & \Rightarrow \hat{a}_{\vec{p}}^\dagger + \hat{a}_{-\vec{p}} = \sqrt{2\omega_{\vec{p}}} \int d^3\vec{x} \hat{\phi}(\vec{x}) e^{i\vec{P}\cdot\vec{x}} \\
+    &  \hat{a}_{\vec{p}}^\dagger - \hat{a}_{-\vec{p}} =\frac{1}{(-i)} \sqrt{\frac{2}{\omega_{\vec{p}}}} \int d^3\vec{x} \hat{\pi}(\vec{x}) e^{i\vec{P}\cdot\vec{x}}
+  \end{align*}
+\textbf{Afirmación:} Dada la relación entre el par $\hat{\phi}(\vec{x})$ y $\hat{\pi}(\vec{y})$ 
+con $\hat{a}_{\vec{k}}$ y $\hat{a}^\dagger_{\vec{k}}$;
+\begin{equation}
+ \begin{aligned}
+  \left[ \hat{\phi}(\vec{x}) , \hat{\pi}(\vec{y}) \right] & = i\hbar \delta^{(3)}(\vec{x}-\vec{y}) \\
+  \left[ \hat{\phi}(\vec{x}) , \hat{\phi}(\vec{y}) \right] & = 0 \\
+   \left[ \hat{\pi}(\vec{x}) , \hat{\pi}(\vec{y}) \right] & = 0 
+\end{aligned} \quad \Rightarrow \quad
+\begin{aligned}
+  \left[ \hat{a}_{\vec{k}} ,\hat{a}^\dagger_{\vec{l}} \right] & = (2\pi)^3 \delta^{(3)}(\vec{h}-\vec{l}) \\
+  \left[ \hat{a}_{\vec{k}} ,\hat{a}_{\vec{l}} \right] & = 0  \\
+  \left[ \hat{a}^\dagger_{\vec{k}} ,\hat{a}^\dagger_{\vec{l}} \right] & = 0\end{aligned}
+ \end{equation}
+Lo que establece la relación entre el Álgebra Canónica con el Álgebra de osciladores bosónicos.
+Calculelos el primer conmutador del Álgebra canónica, pero escrito en función de los operadores $\hat{a}_{\vec{k}}$ y $\hat{a}^\dagger_{\vec{k}}$;
+\begin{align*}
+  \left[ \hat{\phi}(\vec{x}) , \hat{\phi}(\vec{y}) \right] & = \left[ \int \frac{d^3\vec{k}}{(2\pi)^3} \frac{1}{\sqrt{2\omega_{\vec{k}}}} \left( \hat{a}_{\vec{k}}e^{i\vec{k}\cdot \vec{x}} + \hat{a}_{\vec{k}}^\dagger e^{-i\vec{k}\cdot \vec{x}} \right) 
+, \int \frac{d^3\vec{l}}{(2\pi)^3} (-i)\sqrt{\frac{2\omega_{\vec{k}}}{2}}\left( \hat{a}_{\vec{l}}e^{i\vec{l}\cdot \vec{x}} - \hat{a}_{\vec{l}}^\dagger e^{-i\vec{l}\cdot \vec{x}} \right)\right] \\
+  & = \int \frac{d^3\hat{k}}{(2\pi)^6} \frac{d^3}\vec{l}{\sqrt{2\omega_{\vec{k}}}} \sqrt{\frac{\omega_{\vec{l}}}{2}} (-i) \left( - \left[ \hat{a}_{\vec{k}} , \hat{a}_{\vec{l}}^\dagger \right] e^{i\vec{k}\cdot \vec{x}- i\vec{l}\cdot \vec{y}} + \left[ \hat{a}^\dagger_{\vec{k}} , \hat{a}_{\vec{l}} \right] e^{-i\vec{k}\cdot\vec{x} - i\vec{l}\cdot \vec{y}} \right) \\
+  & = \frac{i}{2} \int \frac{d^3\vec{l}}{(2\pi)^3} e^{i\vec{l}\cdot (\vec{x}-\vec{y})} + \frac{i}{2} \int \frac{d^3\vec{l}}{(2\pi)^3} e^{-i\vec{l}\cdot (\vec{x}-\vec{y})} \\
+  & = i\delta^{(3)}(\vec{x}-\vec{y})
+\end{align*}
+\textbf{Afirmación:}
+\begin{align*}
+  \hat{H} & = \frac{1}{2} \int \frac{d^3\vec{k}}{(2\pi)^3} \omega_{\vec{k}} \left( \hat{a}^\dagger_{\vec{k}} \hat{a}_{\vec{k}} + \hat{a}_{\vec{k}} \hat{a}^\dagger_{\vec{k}} \right) \\
+  & = \int \frac{d^3\vec{k}}{(2\pi)^3} \omega_{\vec{k}} \left( \hat{a}_{\vec{k}}^\dagger \hat{a}_{\vec{k}} + \frac{(2\pi)^3}{2} \delta^{(3)}(\vec{k}-\vec{k}) \right)
+\end{align*}
+Asumamos que existe $\ket{0}$ tal que;
+\begin{equation}
+  \hat{a}_{\vec{k}}\ket{0} = 0 ,\quad \forall \vec{k}
+ \end{equation}
+ Por lo tanto;
+ \begin{equation}
+   \hat{H} \ket{0} = \left( \int \frac{d^3\vec{k}}{2}  \omega_{\vec{k}} \delta^{(3)}(\vec{0}) \right) \ket{0}
+  \end{equation}
+  en donde, el término bajo paréntesis será llamado $E_0$. \\
+  $E_0$ es divergente por razones distintas:
+  \begin{itemize}
+    \item $\delta^{(3)}(\vec{0})$ es llamada una divergencia \textbf{infrared} 
+    \item $\int^{+\infty}_{-\infty}dk_x \int^{+\infty}_{-\infty} dhk_y \int^{+\infty}_{-\infty}dk_z \sqrt{k_x^2 + k_y^2 + k_z^2} = 4\pi \int^{\Delta_{\mu\nu}}_0 d|\vec{k}||\vec{k}|^2 \sqrt{|\vec{k}|^2 + m^2} \sim \Delta^4_{\mu\nu}$ 
+  \end{itemize}
+  En donde, en el segundo punto hemos hecho el siguiente cambio de coordenadas;
+  \begin{align}
+    k_x & = |\vec{k}|\sinh{k_\theta} \cosh{k_{\phi}}, \quad & 0\leq k_\theta \leq \pi \\
+    k_y & = |\vec{k}| \sinh{h_\theta} \sinh{k_\phi}, \quad & 0\leq h_\phi \leq 2\pi \\
+    h_z & = |\vec{k}|\cosh{k_{\theta}}, \quad & 0\leq |\vec{k}| < +\infty 
+  \end{align}
+  Y $\Delta_{\mu\nu}$ es el cutoff ultravioleta. \\
+  Ahora haremos la siguiente operación de ordenamiento al operador Hamiltoniano;
+  \begin{align*}
+    :\hat{H }: & = \frac{1}{2}\int \frac{d^3\vec{k}}{(2\pi)^3} \omega_{\vec{k}} \left( :\hat{a}^\dagger_{\vec{k}} \hat{a}_{\vec{k}}: + :\hat{a}_{\vec{k}} \hat{a}^\dagger_{\vec{k}}:\right) \\
+    & = \frac{1}{2} \int \frac{d^3\vec{k}}{(2\pi)^3} \omega_{\vec{k}} \left( \hat{a}^\dagger_{\vec{k}} \hat{a}_{\vec{k}}  + \hat{a}^\dagger_{\vec{k}}\hat{a}_{\vec{k}}\right)
+  \end{align*}
+  Con lo cual el nuevo Hamiltoniano estará definido por;
+  \begin{equation}
+    :\hat{H}: = \int \frac{d^3\vec{k}}{(2\pi)^3} \omega_{\vec{k}} \hat{a}^\dagger_{\vec{k}} \hat{a}_{\vec{k}} \longrightarrow \hat{H}
+   \end{equation}
+\end{document}
