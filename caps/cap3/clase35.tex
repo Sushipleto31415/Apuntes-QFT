@@ -19,7 +19,7 @@ El primer término corresponde al de
 \end{equation*}
 Con lo cual, calculamos;
 \begin{align*}
-  T-1 & = \int \frac{d^3xd^3k_1d^3k_2}{2(2\pi)^6}\frac{(-1)}{2} \sqrt{\omega_{k_1}\omega_{k_2}}  \left( a_{k_1} e^{ik_1\cdot x} - a^\dagger_{k_1} e^{-ik_1\codt x} \right) \left( a_{k_2}e^{ik_2 \cdot x} - a^\dagger_{k_2} e^{-ik_2\cdot x} \right) \\
+  T-1 & = \int \frac{d^3xd^3k_1d^3k_2}{2(2\pi)^6}\frac{(-1)}{2} \sqrt{\omega_{k_1}\omega_{k_2}}  \left( a_{k_1} e^{ik_1\cdot x} - a^\dagger_{k_1} e^{-ik_1\cdot x} \right) \left( a_{k_2}e^{ik_2 \cdot x} - a^\dagger_{k_2} e^{-ik_2\cdot x} \right) \\
   & = \int \frac{d^3xd^3k_1d^3k_2}{4(2\pi)^6} (-1) \sqrt{\omega_{k_1}\omega_{k_2}} \left( a_{k_1}a_{k_2} e^{i(k_1+k_2)\cdot x} + a^\dagger_{k_1}a^\dagger_{k_2} e^{-i(k_1 + k_2)\cdot x} - a^\dagger_{k_1}a_{k_2} e^{-i(k_1-k_2)\cdot x} - a_{k_1}a_{k_2} e^{i(k_1 - k_2)\cdot x} \right) \\
   & = \int \frac{d^3xd^3k_1d^3k_2}{2(2\pi)^6} (-1) \left( \omega_{k_1}a_{k_1} a_{-k_1} + \omega_{k_1} a^\dagger_{k_1}a^\dagger_{-k_1} - a^\dagger_{k_1} a_{k_1} \omega_{k_1} - a_{k_1}a^\dagger_{k_1} \omega_{k_1} \right)
 \end{align*} 
@@ -86,7 +86,7 @@ Ahora, queda de tarea en escribir el operador momento lineal como;
   \end{equation}
   Ahora uno se puede preguntar, tiene el estado cero una energía y un momento lineal bien definido?
   \begin{align*}
-    \hat_{\vec{k}} \ket{0} = 0, \quad \forall \vec{k} \\
+    \hat{a}_{\vec{k}} \ket{0} = 0, \quad \forall \vec{k} \\
     \hat{H}\ket{0} = 0 \ket{0}
   \end{align*}
   Con lo cual $\ket{0}$ tiene una energía bien definida $E_0=0$.
@@ -120,5 +120,5 @@ Con lo cual;
 \begin{equation}
   \hat{\vec{P}}\ket{\vec{p}} = \vec{p}\ket{\vec{p}}, \quad \hat{H} \ket{\vec{p}} = \sqrt{|\vec{p}|^2 + m^2} \ket{\vec{p}}
  \end{equation}
-Con lo cual, $\ket{\vec{p}}=\hat{a}_{\vec{p}}^\dagger \ket{0}$ es una partívula estad de una partícula (one particle state), a la partícula $\ket{\vec{p}}$ le llamaremos \textbf{mesón}.
+Con lo cual, $\ket{\vec{p}}=\hat{a}_{\vec{p}}^\dagger \ket{0}$ es una partívula estad de una partícula (one particle state), a la partícula $\ket{\vec{p}}$ le llamaremos \textbf{mesón}
 \end{document}

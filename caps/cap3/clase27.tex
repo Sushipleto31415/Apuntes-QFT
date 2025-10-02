@@ -3,15 +3,15 @@
 \begin{document}
 \chapter{Teoría cuántica de campos}
 \section{Vigésima séptima clase}
-Se tiene que, para la convención de la métrica en $(+,-,-,-)$, el Lagrangeano del cmpo escalar real está dado por;
+Se tiene que, para la convención de la métrica en $(+,-,-,-)$, el Lagrangeano del campo escalar real está dado por;
 \begin{equation}
   \mathfrak{L} = \frac{1}{2} \partial_\mu \phi \partial^\mu \pji - \frac{m^2}{2} \phi^2 - V(\phi)
  \end{equation}
- Y luego, para un campo escalar complejo;
+Que para un campo escalar complejo;
  \begin{equation}
    \mathfrak{L} = \partial_\mu \varphi \partial^\mu \varphi - m^2 \varphi^* \varphi - V(\varphi,\varphi^*)
- \end{equation}, en donde el potencial debe ser $V(\varphi,\varphi^*)\in\mathbb{R}$. \\
- Recordemos también que, para un campo spinorial, el Lagrangeano de Dirac está dado por;
+ \end{equation} en donde el potencial debe ser $V(\varphi,\varphi^*)\in\mathbb{R}$. \\
+ Recordemos también que, para un campo espinorial, el Lagrangeano de Dirac está dado por;
  \begin{equation}
    \mathfrak{L} = \bar{\psi} \left( i\gamma^\mu \partial_\mu - m \right)\psi
   \end{equation}
@@ -20,7 +20,7 @@ Se tiene que, para la convención de la métrica en $(+,-,-,-)$, el Lagrangeano 
     \bar{\psi} = \psi^\dagger \gamma^0,\quad \{\gamma^\mu , \gamma^\nu\} = 2\eta^{\mu\nu} \mathbb{I}_4
    \end{equation}
    Y $\bar{\psi}$ es llamado el conjugado de Dirac. \\
-   Si se tiene un campo de Guage $\A_\mu$ en $U(1)$, el Lagrangeano está dado por;
+   Si se tiene un campo de Guage $A_\mu$ en $U(1)$, el Lagrangeano asociado a dicho campo de gauge está dado por;
    \begin{equation}
      \mathfrak{L} = -\frac{1}{4} F_{\mu\nu}F^{\mu\nu}
     \end{equation}
@@ -28,7 +28,7 @@ Se tiene que, para la convención de la métrica en $(+,-,-,-)$, el Lagrangeano 
   \begin{equation}
     \mathfrak{L} = \sum_{a=1}^{N^2-1} \left( -\frac{1}{4} F^{(a)}_{\mu\nu}F^{(a)\mu\nu} \right)
    \end{equation}
-   En donde $F^{(a)}_{\mu\nu}$ es el tensor de Faraday;
+   En donde $F^{(a)}_{\mu\nu}$ es el tensor de Faraday generalizado (o Field Strength), el cual cuenta con índices que transforman en el espacio-tiempo de Minkowsky y otro que transforma según el grupo $SU(N)$ al cual está asociado;
    \begin{equation}
      F_{\mu\n}^{(a)} = \partial_\mu A^{(a)}_\nu - \partial_\nu A^{(a)}_{\mu} - f_{bca} A^{(b)}_\mu A^{(c)}_\nu
     \end{equation}
@@ -44,20 +44,20 @@ Los elementos del grupo estarán dados por;
   \begin{equation}
     tr(T_aT_b) = #\delta_{ab}
    \end{equation}
-   \subsection{Propiedades comunnes}
+   \subsection{Propiedades comunes}
 \subsubsection{Son invariantes bajo traslaciones espacio-temporales}
-Por lo tanto, siempre existirá un tensor de energía momento $T^\nu_{\;\nu}$;
+Por lo tanto, al ser invariantes bajo transformaciones espacio temporales, siempre existirá un tensor de densidad de energía momento $T^\mu_{\;\nu}$;
 \begin{align*}
-  \x^\mu\rightarrow \tilde{x}^\mu = x^\mu + a^\mu \\
+  x^\mu\rightarrow \tilde{x}^\mu = x^\mu + a^\mu \\
   \Phi_A(x) \rightarrow \tilde{\Phi}_A(\tilde{x}) & = \Phi_A(x)\\
   \tilde{\Phi}_A = \Phi_A(x-a)
 \end{align*}
-Tal que;
+Tal que, como ya se ha hecho muchas veces, por serie de Taylor se obtiene;
 \begin{equation}
   \delta \Phi_A = -a^\mu \partial_\mu \Phi_A
  \end{equation}
  \subsubsection{Son invariantes bajo rotaciones y boosts}
- Por lo tanto, tiene sentido asignarle a una configuración de campo un momento angular $\vec{J}$;
+ A lo cual, tiene sentido asignarle a una configuración de campo un momento angular $\vec{J}$;
  \begin{align*}
    x^\mu \rightarrow \tilde{x}^\mu & = \Lambda^\mu_{\;\nu} x^\nu \\
    \Lambda^\mu_{\;\nu} & = \delta^\mu_{\;\nu} + \omega^\mu_{\;\nu} \\
@@ -113,7 +113,7 @@ Podemos obtener \textbf{Bosones de Gauge masivos}\footnote{Se observan en la nat
   \varphi^* \rightarrow \tilde{\varphi^*}(x) & = \varphi^* e^{i\alpha}
 \end{align*} 
 A lo cual notemos que cuando se tiene un término del tipo $\varphi^*\varphi$ las fases desaparecen, con lo cual, es una simetría global. \\
-La energía, que está asociada a la cantidad conservad a través de traslaciones temporales, o también, la cantiadad $00$ del tensor de energía momento, está dada por;
+La energía, que está asociada a la cantidad conservada a través de traslaciones temporales, o también, la cantidad $00$ del tensor de densidad de energía momento, está dada por;
 \begin{equation}
   E=\int d^3x \left[ \partial_t\varphi^* \partial_t \varphi + \nabla\varphi^* \cdot \nabla \varphi + \mu^2 \varphi^* \varphi + \lambda \left( \varphi^*\varphi \right)^2 \right]
  \end{equation}
@@ -121,7 +121,7 @@ La energía, que está asociada a la cantidad conservad a través de traslacione
  \begin{align*}
    \varphi_{VAC}(x) = 0 \; \wedge \; \varphi_{VAC}^*(x) = 0
  \end{align*}
-Notar que se usó la palabra configuración, como ejercicio \textbf{calcular las ecuaciones de Euler Lagrang} y comprobar que dicha configuración cumple con ella. Notemos que, los campos transforman como;
+Notar que se usó la palabra configuración, como ejercicio \textbf{calcular las ecuaciones de Euler Lagrange} y comprobar que dicha configuración cumple con ella. Notemos que, los campos transforman como;
 \begin{align*}
   \tilde{\varphi}(x)& = e^{-i\alpha}\varphi_{VAC}(x) = 0 \\
   \tilde{\varphi^*}(x) & = \varphi^*_{VAC}e^{i\alpha} = 0
@@ -146,11 +146,11 @@ Para $\mu^2<0$ vale la pena sumarle una constante a la acción y escribir;
   \begin{align*}
     \tilde{\varphi}_{VAC}(x) & = e^{-i\alpha}\varphi_{VAC}(x) \\
     & = \left( \cos{\alpha} - i\sin{\alpha} \right) \left( \nu+0i \right) \\
-    & \cos{\alpha} \nu - i\sin{\alpha} \neq nu = \varphi_{VAC}(x)
+    & \cos{\alpha} \nu - i\sin{\alpha} \neq \nu + 0i = \varphi_{VAC}(x)
   \end{align*}
-  Esto es el quiebre espontáneo de la simetría: La configuración de menor energía tiene menos simetría que la acción. Esto puede ser pensado como en física estadística, en donde, cuando la temperatura sobre una temporatura crítica, el parámetro de orden es cero $<\hat{n}>=0$, pero, bajo la temperatura crítica, este es diferente a cero $<\hat{n}>\neq 0$. \\
+  Esto es el quiebre espontáneo de la simetría: La configuración de menor energía tiene menos simetría que la acción. Esto puede ser pensado como en física estadística, cuando la temperatura sobre una temporatura crítica, el parámetro de orden es cero $<\hat{n}>=0$, pero, bajo la temperatura crítica, este es diferente a cero $<\hat{n}>\neq 0$. \\
   \subsection{Teorema de Goldstone}
-  Por cada simetría continua espontáneamente rota, aparece una partícula sin maasa, esta partícula es llamada \textbf{Bosón de Goldstone}. \\
+  Por cada simetría continua espontáneamente rota, aparece una partícula sin masa, esta partícula es llamada \textbf{Bosón de Goldstone}. \\
   Consideramos el escalar complejo con simetría $U(1)$ global espontáneamente rota;
   \begin{equation}
     \mathfrak{L} = \partial_\mu \varphi^* \partial^\mu \varphi - \lambda \left( \varphi^* \varphi - \nu^2 \right)^2
@@ -162,7 +162,7 @@ Para $\mu^2<0$ vale la pena sumarle una constante a la acción y escribir;
  Tal que las derivadas de este campo y su complejo conjugado serán;
  \begin{align}
    \partial_\mu \varphi(x) & = \frac{1}{\sqrt{2}} \partial_\mu e^{i\phi(x)} + \frac{\rho}{\sqrt{2}} \partial_\mu \phi(x) e^{i\phi(x)} \\
-   \partial_\mu \varphi^*(x) & = \frac{1}{\sqrt{2}} \partial_\mu \rho e^{i\phi(x)} - \frac{\rho}{\sqrt{2}} \partial_\mu \phi(x) e^{-i\phi(x)}
+   \partial_\mu \varphi^*(x) & = \frac{1}{\sqrt{2}} \partial_\mu \rho e^{-i\phi(x)} - \frac{\rho}{\sqrt{2}} \partial_\mu \phi(x) e^{-i\phi(x)}
  \end{align} 
 Con lo cual, el Lagrangeano es tal que;
 \begin{align*}

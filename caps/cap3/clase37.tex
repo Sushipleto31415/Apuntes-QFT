@@ -1,0 +1,203 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Trigésima séptima clase}
+\subsection{Teoría con interacciones de dimensión 4}
+\subsubsection{Campo escalar complejo}
+
+El Lagrangeano del campo escalar complejo está dado por;
+\begin{equation}
+  \mathfrak{L} = \partial_\mu \psi \partial^\mu \psi^* -m^2 \psi\psi^* 
+ \end{equation}
+En donde el campo escalar complejo es;
+\begin{equation}
+  \psi = \frac{1}{\sqrt{2}} \left( \phi_1 + i\phi_2 \right), \quad \psi\rightarrow \psi'=e^{-i\alpha}\psi
+ \end{equation}
+Con el complejo conjugado;
+\begin{equation}
+  \psi^* = \frac{1}{\sqrt{2}} \left( \phi_1 - i \phi_2 \right)
+ \end{equation}
+ Tal que, estos campos escalares $\phi$ siguen la regla de transformación;
+ \begin{align*}
+   \begin{pmatrix}
+     \phi_1 \\ \phi_2
+   \end{pmatrix} \rightarrow \begin{pmatrix}
+     \phi_1 \\ \phi_2
+   \end{pmatrix} ' = O \begin{pmatrix}
+     \phi_1 \\ \phi_2
+   \end{pmatrix}, \quad O \in O(2)
+ \end{align*}
+ Con lo cual, el Lagrangeano con el campo escalar real explícito es;
+ \begin{equation}
+   \mathfrak{L} = \frac{1}{2}\partial_\mu \phi_1 \partial^\mu \phi_1 + \frac{1}{2}\partial_\mu \phi_2\partial^\mu \phi_2 - \frac{m^2}{2} \left( \phi_1^2 + \phi_2^2 \right)
+  \end{equation}
+ Recordemos que el Hamiltoniano y el momenta canónico están definidos por;
+ \begin{align*}
+   H = \sum_A p_A\dot{q}_A - L \\
+   p_A = \frac{\partial L}{\partial \dot{q}_A}
+ \end{align*}
+ Por tanto, la densidad Hamiltoniana estará dada por;
+ \begin{equation}
+   \mathcal{H} = \frac{\partial \mathfrak{L}}{\partial \dot{\psi}} \dot{\psi}  + \frac{\partial \mathfrak{L}}{\partial \dot{\psi}^*} \dot{\psi}^* - \mathfrak{L}
+  \end{equation}
+  Calculamos las derivadas parciales;
+  \begin{align*}
+  \frac{\partial \mathfrak{L}}{\partial \dot{\psi}} = \frac{\partial}{\partial \dot{\psi}} \left( \dot{\psi}\dot{\psi}^* - \nabla \psi \cdot \nabla \psi^*  \right)  = \dot{\psi}^* = : \pi_\psi \\
+    \frac{\partial \mathfrak{L}}{\partial \dot{\psi}^*} = \dot{\psi} = : \pi_{\psi^*}
+  \end{align*}
+Lo que reemplazamos en la densidad Hamiltoniana
+\begin{align*}
+  \mathcal{H} & = \dot{\psi}^* \dot{\psi} +  \dot{\psi}\dot{\psi}^* - \left( \dot{\psi} \dot{\psi}^* - \nabla \psi \cdot \nabla \psi^* - m^2 \psi^* \psi \right) \\
+  & = \dot{\psi}^* \dot{\psi} + \nabla \psi \cdot \nabla \psi^*  + m^2 \psi^* \psi
+\end{align*}
+Con lo cual hemos obtenido la densidad Hamiltoniana asociada al campo escalar complejo libre.
+\subsubsection{Cuantización canónica}
+\begin{align*}
+  q_A & \longrightarrrow \hat{q}_A \\
+  p_A & \longrightarrow \hat{p}_A
+\end{align*}
+Tal que cumplen con el álgebra canónica
+\begin{align*}
+  \left[ \hat{q}_A , \hat{p}_B \right] & = i\hbar \delta_{AB} \\
+  \left[ \hat{q}_A , \hat{q}_B \right] & 0 \\
+  \left[ \hat{p}_A , \hat{p}_B \right] & = 0
+\end{align*}
+Y luego los campos escalares serán;
+\begin{align*}
+  \psi \longrightarrow \hat{\psi}(\vec{x}) & = \int \frac{d^3\vec{h}}{\left( 2\pi \right)^3} \frac{1}{\sqrt{2\omega_{\vec{h}}}} \left( \hat{b}_{\vec{h}} e^{i\vec{h}\cdot\vec{x}} + \hat{c}_{\vec{h}}^\dagger e^{-i\vec{h}}\cdot\vec{x} \right) \\
+  \psi^* \longrightarrow \hat{\psi}^\dagger(\vec{x}) & = \text{Completar} \\
+  \pi_\psi \longrightarrow \hat{\pi}_\psi(\vec{x}) & = \int \frac{d^3\vec{l}}{(2\pi)^3} (-i) \sqrt{\frac{\omega_{\vec{l}}}{2}} \left( \hat{b}_{\vec{l}} e^{-i\vec{l}\cdot\vec{x}}  -\hat{c}_{\vec{l}}^\dagger e^{i\vec{l}\cdot\vec{x}} \right) \\
+  \phi_{\psi^*}\longrightarrow \hat{\pi}^\dagger(\vec{x}) &  = \text{Completar} 
+\end{align*}
+Tal que;
+\begin{align*}
+  \left[ \hat{\psi}(\vec{x}) , \hat{\pi}_\psi (\vec{y}) \right] & = i\hbar \delta^{(3)}(\vec{x}-\vec{y}) \\
+  \left[ \hat{\psi}^\dagger (\vec{x}) , \hat{\pi}^\dagger(\vec{y}) \right] & = i\hbar \delta^{(3)}(\vec{x}-\vec{y})\\
+  \left[ \hat{b}_{\vec{h}} , \hat{b}_{\vec{l}}^\dagger \right] & = (2\pi)^3 \delta^{(3)}(\vec{h}-\vec{l}) \\
+  \left[ \hat{c}_{\vec{h}} , \hat{c}_{\vec{l}}^\dagger \right] & = (2\pi)^3 \delta^{(3)} (\vec{h}-\vec{l})
+\end{align*}
+A lo cual, es necesario promover la densidad Hamiltoniana a un operador de densidad Hamiltoniana;
+\begin{equation}
+  \mathcal{H} \longrightarrow \hat{\mathcal{H}} 
+ \end{equation}
+Y así;
+\begin{equation}
+  :\hat{H}: = \int d^3x :\hat{\mathcal{H}}: = \int \frac{d^3\vec{l}}{(2\pi)^3} \omega_{\vec{l}} \left( \hat{b}^\dagger_{\vec{l}}\hat{b}_{\vec{l}} + \hat{c}^\dagger_{\vec{l}}\hat{c}_{\vec{l}} \right)
+ \end{equation}
+ En donde;
+ \begin{equation}
+   \omega_{\vec{l}} = \sqrt{|\vec{l}|^2 + M^2}
+  \end{equation}
+  Que luego podremos escribir como;
+\begin{align}
+  :\hat{H}:= \int \frac{d^3\vec{h}}{(2\pi)^3}  \omega_{\vec{h}} \hat{a}^\dagger_{\vec{h}} \hat{a}_{\vec{h}} \\
+  \hat{\vec{p}} \left( \hat{a}^\dagger_{\vec{h}} \ket{0}\right) & = \vec{h} \left( a^\dagger_{\vec{h}} \ket{0}\right) \\
+  \hat{H} \left( a^\dagger_{\vec{h}} \ket{0} \right) & = \sqrt{ |\vec{k}|^2 + m^2 } \left( a^\dagger_{\vec{h}} \ket{0}\right)
+\end{align} 
+Asumamos que existe el estado $\ket{0;0}$
+\begin{align*}
+  \hat{b}_{\vec{h}} \ket{0;0} =  0\ket{e_1} + 0 \ket{e_2} + \dots \\
+  \hat{c}_{\vec{h}} \ket{0;0} = 0 \forall \vec{h}
+  \hat{H} \ket{0;0} = 0 \ket{0;0}
+\end{align*}
+Luego, definimos
+\begin{align*}
+  \ket{\vec{k};0} & := \hat{b}^\dagger_{\vec{h}} \ket{0;0} \\
+  \ket{0;\vec{h}} &:= \hat{c}^\dagger_{\vec{h}} \ket{0;0} \\
+  \hat{H}\ket{\vec{h};0} & = \sqtr{|\vec{h}|^2+m^2} \ket{\vec{h};0} \\
+  \hat{H}\ket{0;\vec{k}} & =  \sqrt{|\vec{h}|^2+m^2} \ket{0;\vec{h}} \\
+  \hat{\vec{P}} & = \int \frac{d^3\vec{h}}{(2\pi)^2} \vec{h} \left( \hat{b}^\dagger_{\vec{h}} \hat{b}_{\vec{h}} + \hat{c}_{\vec{h}}^\dagger \hat{c}_{\vec{h}} \right) \\
+  \hat{p}\ket{\vec{h};0} & = \vec{h}\ket{\vec{h};0} \\
+  \hat{\vec{p}} \ket{0;\vec{h}} & = \vec{h} \ket{0;\vec{h}}
+\end{align*}
+Para el campo escalar complejo, el momento lineal no remueve la degeneración del Hamiltoniano, necesitamos otro operador. \par
+Con lo cual, cocinamos el siguiente operador;
+\begin{equation}
+  \hat{Q} := \int \frac{d^3\vec{l}}{(2\pi)^3} \left( \hat{b}_{\vec{l}}^\dagger \hat{b}_{\vec{l}} - \hat{c}^\dagger_{\vec{l}}\hat{c}_{\vec{l}}\right) 
+ \end{equation}
+ La cual, actuando sobre el estado;
+ \begin{align*}
+   \hat{Q}\ket{\vec{h};0} &  = (+1) \ket{\vec{h};0} \\
+   \hat{Q}\ket{0;\vec{h}} & = (-1) \ket{0;\vec{h}}
+ \end{align*}
+ El conjunto $\{\hat{H}, \hat{\vec{P}}, \hat{Q} \}$ distingue todos los estados del tipo $\ket{\vec{h};0}$; $\ket{0;\ket{h}}$
+ \textbf{Tarea:} Calcular o mostrar lo siguiente;
+ \begin{equation}
+   \left[ \hat{H} , \hat{Q} \right] = 0
+  \end{equation}
+  El operador $\hat{Q}$ es el operador asociado a la cantidad conservada de la acción clásica debido a la invariancia asociada a $U(1)$. \\
+  Tendremos una carga conservada debido a teorema de Noether dada por;
+  \begin{equation*}
+    Q = \int d^3x j^0, \quad \frac{dQ}{dt} = 0
+  \end{equation*}
+  Y la corriente conservada estará dada por;
+  \begin{align*}
+    j^\mu = \frac{\partial \mathfrak{L}}{\partial \partial_\mu \psi} \delta \psi + \frac{\partial \mathfrak{L}}{\partial \partial_\mu \psi^*}\delta \psi^* - B^\mu \\
+    \psi \longrightarrow \psi'= e^{-i\alpha}\psi \Rightarrow \delta \psi = -i\alpha \psi \\
+    \psi^* \longrightarrow \psi^*' = e^{i\alpha}\psi \Rightarrow \delta \psi^* = i\alpha \psi^*
+  \end{align*}
+  \subsection{Campos interactuantes:}
+  \begin{equation}
+    I \left[ \phi , \psi , \psi^* \right] = I_{libre} \left[ \phi \right] + L_{libre} \left[ \psi, \psi^* \right] + I_{interacción} \left[ \phi, \psi , \psi^* \right]
+   \end{equation}
+   Lo que, si lo escribimos de forma explícita será;
+   \begin{equation}
+     I = \int d^4x \frac{1}{2} \partial_\mu \phi \partial^\mu \partial^\mu\phi - \frac{m^2}{2} \phi^2 + \int d^4x \partial_\mu \psi^* \partial^\mu \psi - m^2 \psi^*\psi + \int d^4x \left( -g \right) \psi^* \phi \psi
+    \end{equation}
+    A este último término le llamaremos acomplamiento de Yukawa
+El término $I[\phi,\psi^*,\psi]$ es invairante de Poincaré, y los siguientes términos serán invariantes de $U(1)$ 
+\begin{align*}
+  \phi \longrightarrow \phi'&= e^{-i\alpha 0}\phi \\
+  \psi \longrightarrow \psi'&=e^{-i\alpha}\psi \\
+  \psi^* \longrightarrow \psi^*'&=e^{i\alpha}\psi^*
+\end{align*}
+El Hamiltoniano estará dado por;
+\begin{equation}
+  H = \int d^3x \mathcal{H} = \int d^3x \left( \mathcal{H}_{Libre}(\phi) + \mathcal{H}_{Libre}(\psi,\psi^*) + \mathcal{H}_{Int}(\phi,\psi,\psi^*) \right)
+ \end{equation}
+ El operador Hamiltoniano será;
+ \begin{align*}
+   \hat{H} & = \hat{H}_0 + \hat{H}_{int} \\
+   \hat{H}_{int} & = \int d^3x h\hat{g}(\vec{x}) \hat{\psi}^\dagger (\vec{x}) \hat{\psi}(\vec{x})
+ \end{align*}
+ El Hamiltoniano de interacción en el cuadro de Schrödinger
+ \subsubsection{Cuadro de interacción}
+\begin{align*}
+  \hat{O}_I := e^{i\hat{H}_0t}\hat{O}_s e^{-i\hat{H}_0t} \\
+  \ket{\psi}_I := e^{i\hat{H}_0} \ket{\psi}_S \\
+  \ket{\psi}_S  = e^{-i\hat{H}_0t}\ket{\psi}_I
+\end{align*}
+En donde;
+\begin{align*}
+  i\hbar \frac{\partial \ket{\psi}_S}{\partial t} = \hat{H}\ket{\psi}_S \\
+  i \partial \left( e^{-i\hat{H}_0t} \ket{\psi}_I\right) = \left( \hat{H}_0 + \hat{H}_{int} \right) \left( e^{-i\hat{H}_0t} \ket{\psi}_I \right) \\
+  \hat{H}_0 e^{-i\hat{H}_ot} \ket{\psi}_I + ie^{-i\hat{H}_0t}\partial_t \ket{\psi}_I = \hat{H}_0 e^{-i\hat{H}_0t} \ket{\psi}_I + \hat{H}_{int} e^{-i\hat{H}_0t}\ket{\psi}_I \\
+  i\partial\ket{\psi}_I = e^{i\hat{H}_0t}\hat{H}_{int} e^{-i\hat{H}_0t} \ket{\psi}_I
+\end{align*}
+En donde al término $e^{i\hat{H}_0t}\hat{H}_{int}e^{-i\hat{H}_0t}$ le llamaremos el hamiltoniano de interacción en el cuadro de interacción;
+\begin{equation}
+  \i\partial_t \ket{\psi} = \hat{H}_I \ket{\psi}
+ \end{equation}
+ Definimos un operador de evolución;
+ \begin{align*}
+   \ket{\psi(t)}_I = \hat{U}(t,t_0) \ket{\psi(t_0)}_I
+ \end{align*}
+ Al cual le pediremos lo siguiente
+ \begin{align}
+   \hat{U}(t_2,t_1)^\dagger \hat{U}(t_2,t_1) &= I \\
+   \hat{U}(t_0,t_0) & = I \\
+   \hat{U}(t_3,t_2)\hat{U}(t_2,t_1) & = \hat{U}(t_3,t_1) \\
+   \hat{U}(t_1,t_2) & = \hat{U}^{-1}(t_2,t_1)
+ \end{align}
+ Con lo cual;
+ \begin{align*}
+   i\parial_t \left(\hat{U}(t,t_0) \ket{\psi(t_0)}_I \right) = \hat{H}_I \left( \hat{U}(t,t_0)\ket{\psi(t_0)}_I \right) \\
+   i\partial_t \hat{U}(t,t_0) \ket{\psi(t_0)}_I = \hat{H}_I \hat{U}(t,t_0) \ket{\psi(t_0)}
+ \end{align*}
+ Con lo cual;
+ \begin{equation}
+   i\parial_t \hat{U} (t,t_0) = \hat{H}_I(t) \hat{U}(t,t_0)
+  \end{equation}
+A lo cual queremos llegar a la fórmula de Dyson
+\end{document}  
+
